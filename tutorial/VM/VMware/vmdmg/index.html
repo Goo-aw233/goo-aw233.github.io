@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Workstation 用 DMG 镜像安装 macOS | GuCATs'摸鱼站</title><meta name="author" content="GuCATs"><meta name="copyright" content="GuCATs"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="在 VMware Workstation 下用 DMG 镜像和其他工具引导进系统安装界面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Workstation 用 DMG 镜像安装 macOS">
+<meta property="og:url" content="https://goo-aw233.github.io/tutorial/VM/VMware/vmdmg/index.html">
+<meta property="og:site_name" content="GuCATs&#39;摸鱼站">
+<meta property="og:description" content="在 VMware Workstation 下用 DMG 镜像和其他工具引导进系统安装界面">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.apple.com.cn/v/mac/home/bk/images/overview/monterey/tile_monterey__bm1x7sttegty_large.jpg">
+<meta property="article:published_time" content="2022-02-13T14:52:13.000Z">
+<meta property="article:modified_time" content="2023-01-05T02:24:07.510Z">
+<meta property="article:author" content="GuCATs">
+<meta property="article:tag" content="VMware Workstation">
+<meta property="article:tag" content="macOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.apple.com.cn/v/mac/home/bk/images/overview/monterey/tile_monterey__bm1x7sttegty_large.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Favicon.png"><link rel="canonical" href="https://goo-aw233.github.io/tutorial/VM/VMware/vmdmg/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":31,"position":"top","messagePrev":"Woops，这个文章已经有","messageNext":"天没有更新惹, 可能有小部分内容会有所变化捏"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Workstation 用 DMG 镜像安装 macOS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-05 10:24:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="baidu-site-verification" content="code-hnmJsugex8" /><meta name="msvalidate.01" content="0F4E55A98D34BC9B4ABBE33CB4988150" /><meta name="google-site-verification" content="b1jg-ZW0xRTOyo9xjdP9dhkmPRXMiG8fxtHKU1eXGSI" /><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3261359_5icwcail1xh.css"><link rel="stylesheet" href="/css/mouse.css"><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/css/scroll.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="GuCATs'摸鱼站" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">51</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-wenzhang2"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-guanli"></i><span> 归档</span></a></li><li><a class="site-page child" href="/notes/"><i class="fa-fw fa fa-sticky-note"></i><span> 记事本</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/help/"><i class="fa-fw fa fa-question-circle"></i><span> 帮助</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw iconfont icon-browser"></i><span> 站点地图</span></a></li><li><a class="site-page child" href="/resources/"><i class="fa-fw iconfont icon-wenjianjia"></i><span> 资源列表</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-language"></i><span> 切换语言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/en-us/"><i class="fa-fw fa-solid fa-earth-americas"></i><span> English (United States)</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fa-solid fa-earth-asia"></i><span> 简体中文 (中国大陆)</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.apple.com.cn/v/mac/home/bk/images/overview/monterey/tile_monterey__bm1x7sttegty_large.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="GuCATs'摸鱼站"><span class="site-name">GuCATs'摸鱼站</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-wenzhang2"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-guanli"></i><span> 归档</span></a></li><li><a class="site-page child" href="/notes/"><i class="fa-fw fa fa-sticky-note"></i><span> 记事本</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/help/"><i class="fa-fw fa fa-question-circle"></i><span> 帮助</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw iconfont icon-browser"></i><span> 站点地图</span></a></li><li><a class="site-page child" href="/resources/"><i class="fa-fw iconfont icon-wenjianjia"></i><span> 资源列表</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-solid fa-language"></i><span> 切换语言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/en-us/"><i class="fa-fw fa-solid fa-earth-americas"></i><span> English (United States)</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fa-solid fa-earth-asia"></i><span> 简体中文 (中国大陆)</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Workstation 用 DMG 镜像安装 macOS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-13T14:52:13.000Z" title="发表于 2022-02-13 22:52:13">2022-02-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-05T02:24:07.510Z" title="更新于 2023-01-05 10:24:07">2023-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/">VMware</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/">Workstation</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">812</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Workstation 用 DMG 镜像安装 macOS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="用前说明"><a href="#用前说明" class="headerlink" title="用前说明"></a>用前说明</h2><h3 id="把话说在前面"><a href="#把话说在前面" class="headerlink" title="把话说在前面"></a>把话说在前面</h3><p>macRecovery 是从 Apple 服务器下载镜像，安装速度因人而异<br>方法启发于<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/130692555">知乎</a><br>如果安装 macOS Big Sur 或更高版本安装时出现更新错误之类的报错，请把以下代码添加到 vmx 文件的最末端<br>（取自<a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/install-macos-by-using-vmware-in-windows.html">黑苹果星球</a>）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">board-id = &quot;Mac-7BA5B2D9E42DDD94&quot;</span><br><span class="line">hw.model = &quot;iMacPro1,1&quot;</span><br><span class="line">uuid.action = &quot;keep&quot;</span><br><span class="line">smc.version = &quot;0&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><p><a target="_blank" rel="noopener" href="https://www.python.org/">Python</a><br><a target="_blank" rel="noopener" href="https://github.com/balena-io/etcher/releases/tag/v1.4.9">Etcher</a> （建议选带 Portable 的版本）<br>DMG 镜像</p>
+<hr>
+<p>如果没有DMG 镜像可在下面截取命令来获取<br>先下载 <a target="_blank" rel="noopener" href="https://github.com/acidanthera/OpenCorePkg/releases">OpenCore</a><br>将压缩包解压后在 \Utilities\macrecovery 下按住 Shift 不放然后单击右键选择 PowerShell<br>（Windows 11 或安装终端的 Windows 10 可以直接右键选择 Open in Terminal）<br>下载好的镜像在 macrecovery 目录</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10.7</span>:（实测不能用）</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-2E6FAB96566FE58C</span> <span class="literal">-m</span> <span class="number">00000000000</span>F25Y00 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.8</span>:</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-7DF2A3B5E5D671ED</span> <span class="literal">-m</span> <span class="number">00000000000</span>F65100 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.9</span>:</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-F60DEB81FF30ACF6</span> <span class="literal">-m</span> <span class="number">00000000000</span>FNN100 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.10</span>:</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-E43C1C25D4880AD6</span> <span class="literal">-m</span> <span class="number">00000000000</span>GDVW00 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.11</span>:</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-FFE5EF870D7BA81A</span> <span class="literal">-m</span> <span class="number">00000000000</span>GQRX00 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.12</span>:</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-77F17D7DA9285301</span> <span class="literal">-m</span> <span class="number">00000000000</span>J0DX00 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.13</span>：</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-7BA5B2D9E42DDD94</span> <span class="literal">-m</span> <span class="number">00000000000</span>J80300 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.14</span>：</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-7BA5B2DFE22DDD8C</span> <span class="literal">-m</span> <span class="number">00000000000</span>KXPG00 download</span><br><span class="line"></span><br><span class="line"><span class="number">10.15</span>：</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-00BE6ED71E35EB86</span> <span class="literal">-m</span> <span class="number">00000000000000000</span> download</span><br><span class="line"></span><br><span class="line"><span class="number">11</span>：</span><br><span class="line">python macrecovery.py <span class="literal">-b</span> Mac<span class="literal">-E43C1C25D4880AD6</span> <span class="literal">-m</span> <span class="number">00000000000000000</span> download</span><br><span class="line"></span><br><span class="line">（如果是 macOS 或 Linux 则需要在 macrecovery.py 前加上 .\）</span><br><span class="line">更多下载可参考 GitHub：https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="创建虚拟硬盘"><a href="#创建虚拟硬盘" class="headerlink" title="创建虚拟硬盘"></a>创建虚拟硬盘</h2><p>同时按下 Windows 徽标键 和 R 键打开运行，然后输入 diskmgmt.msc 并回车<br>在打开的窗口中选择 操作–创建 VHD<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/UxSc1EKbPjIGCld.png"><br>位置随意，如果是完整的镜像推荐 15GB，macRecovery 镜像 4GB 即可<br>以下设置保持不动<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/AJ5Py4w9HhNUmTd.png"><br>找到新建的虚拟磁盘，在左边栏右键，选择初始化磁盘(I)<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/1rzVkQMEBixSR4b.png"><br>选择 GPT 模式<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/l1qdrKVLQi3sE4t.png"></p>
+<h2 id="创建引导分区"><a href="#创建引导分区" class="headerlink" title="创建引导分区"></a>创建引导分区</h2><p>打开 Etcher，如果有更新弹窗选择 Skip，不要更新<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/YE1UNC9LeZJHF4b.png"></p>
+<p>点击 Select image 并选择下载好的 DMG 镜像<br>一般来说会默认选择好目标磁盘，如果有插入 USB 请选择 Change<br>最后点击 Flash 即可<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/yFdOMXa24TBugfZ.png"></p>
+<p>如果出现 UAC 弹窗点击确定即可<br>等待一下，写入过程还是很快的<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/DwxLHAYE8nRt2Fs.png"></p>
+<p>这样就是写入成功了<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/yRiPqvgl7oj2FZU.png"></p>
+<p>然后回到磁盘管理<br>找到 VHD，在左边栏右键，选择分离 VHD<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/ETpGqVXAJdBFhOY.png"></p>
+<p>—-例外情况—-<br>遇到如上情况则代表你的镜像不可引导，需要更换一个<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/QAKb2uOTB9M8DEP.png"></p>
+<h2 id="在虚拟机中使用"><a href="#在虚拟机中使用" class="headerlink" title="在虚拟机中使用"></a>在虚拟机中使用</h2><p>先创建好一个 macOS 的虚拟机，然后编辑虚拟机设置<br>点击下面的添加(A)…并选择硬盘，然后点击下一步(N)&gt;<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/wGVAcqa1XLKQPFd.png"><br>磁盘类型选择 SATA 即可，然后选择使用现有虚拟磁盘(E)<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/lfdZmVCykO6LBvA.png"><br>在浏览磁盘时，点击右下角的菜单栏选项，然后点击所有文件 (.)并选择刚刚写入好的 VHD<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/JIvcZbiY1xQyaeB.png"><br>在这里选择保持现有格式即可<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/Te7ylds1x3prNCh.png"><br>完成后点击编辑虚拟机设置，将网络适配器改为桥接（可能需要在虚拟网络编辑器里更改桥接对象）<br>然后启动虚拟机并等待一下就能进入到系统安装界面了<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/gPqbV8tfEde9HLz.png"></p>
+<h2 id="关于-VirtualBox-能不能用"><a href="#关于-VirtualBox-能不能用" class="headerlink" title="关于 VirtualBox 能不能用"></a>关于 VirtualBox 能不能用</h2><p>这是 VMware Workstation 的<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/Bfz7HFNT9Xk3xnG.png"></p>
+<p>这是 VirtualBox 的，同 CDR 一样会无限重启<br>（可能得注入机型之类的）<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/30/byNv5G1CnTlQD3Y.gif"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://goo-aw233.github.io">GuCATs</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://goo-aw233.github.io/tutorial/VM/VMware/vmdmg/">https://goo-aw233.github.io/tutorial/VM/VMware/vmdmg/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://goo-aw233.github.io" target="_blank">GuCATs'摸鱼站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/VMware-Workstation/">VMware Workstation</a><a class="post-meta__tags" href="/tags/macOS/">macOS</a></div><div class="post_share"><div class="social-share" data-image="https://www.apple.com.cn/v/mac/home/bk/images/overview/monterey/tile_monterey__bm1x7sttegty_large.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/WeChat_Reward.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/WeChat_Reward.png" alt="WeChat（微信赞赏码）"/></a><div class="post-qr-code-desc">WeChat（微信赞赏码）</div></li><li class="reward-item"><a href="https://afdian.net/@GuCATs" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Afdian.png" alt="Afdian（爱发电，请优先用这个）"/></a><div class="post-qr-code-desc">Afdian（爱发电，请优先用这个）</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/AliPay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/AliPay.png" alt="AliPay（支付宝）"/></a><div class="post-qr-code-desc">AliPay（支付宝）</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/tutorial/Windows/WSA3in1-old/" title="安装 WSA 及其它三件套（旧版）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://store-images.s-microsoft.com/image/apps.51780.14545790782662156.958792d4-4b5d-4ce0-8679-8d56984ee999.901bcb54-d2db-4a30-a7ad-391f73965392?mode=scale&amp;q=90&amp;h=270&amp;w=270&amp;background=%230078D7" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/404Page.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">安装 WSA 及其它三件套（旧版）</div></div></a></div><div class="next-post pull-right"><a href="/others/MSPCManager/" title="微软电脑管家"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://media.antipa.cn/gucats/Hexo/MSPCManager/cover.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/404Page.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">微软电脑管家</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/tutorial/VM/VMware/vmmacOS-ws/" title="Workstation 安装 macOS"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.apple.com.cn/v/mac/home/bk/images/overview/monterey/tile_monterey__bm1x7sttegty_large.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-28</div><div class="title">Workstation 安装 macOS</div></div></a></div><div><a href="/tutorial/DOS/MS-DOS3.x/" title="安装 MS-DOS 3.x"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Archive.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-09</div><div class="title">安装 MS-DOS 3.x</div></div></a></div><div><a href="/tutorial/DOS/MS-DOS7.10/" title="安装 MS-DOS 7.10"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://media.antipa.cn/gucats/Hexo/MS-DOS7.10/MS-DOS7.10-top_img.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-08</div><div class="title">安装 MS-DOS 7.10</div></div></a></div><div><a href="/tutorial/Windows/Win3.1/" title="虚拟机安装 Windows 3.1"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://winworldpc.com/res/img/screenshots/eaf36386209604f84929572ff2b13effe1af00b2624962e63458ba9fd58baf73.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-15</div><div class="title">虚拟机安装 Windows 3.1</div></div></a></div><div><a href="/tutorial/VM/VMware/PEinstallOS/" title="Workstation 使用 PE 装系统"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Archive.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-20</div><div class="title">Workstation 使用 PE 装系统</div></div></a></div><div><a href="/tutorial/VM/VMware/vmtool/" title="解决 Workstation 问题合集（1）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/07/31/SkExKePhFpizCVb.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-24</div><div class="title">解决 Workstation 问题合集（1）</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">GuCATs</div><div class="author-info__description">None is better than open source and sharing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">51</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" href="/atom.xml"><i class="fa-solid fa-rss"></i><span>订阅 RSS</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/647468830" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a><a class="social-icon" href="https://github.com/Goo-aw233" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a><a class="social-icon" href="mailto:GodDog322@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://answers.microsoft.com/zh-hans/profile/4529be9f-c173-4b4b-929d-e390323c9535" target="_blank" title="Microsoft Community"><i class="fa-brands fa-microsoft"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=3156867357&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a><a class="social-icon" href="https://steamcommunity.com/profiles/76561198974178875" target="_blank" title="Steam"><i class="fa-brands fa-steam"></i></a><a class="social-icon" href="https://t.me/GuCATs" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a><a class="social-icon" href="https://account.xbox.com/profile?gamertag=Goo%20aw233" target="_blank" title="Xbox"><i class="fa-brands fa-xbox"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCdCNY0WoH_PRvojUHHbM_wg" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><font color=green>网站加载较慢，15s 内未做出反应为正常现象</font> <br>格式炸辣，至于什么时候修以后再说罢（ <br><font color=red>有关博客任何疑问及网页内元素无法正常加载，请转到“网站”>“帮助”页</font></br></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E5%89%8D%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">用前说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E8%AF%9D%E8%AF%B4%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.1.</span> <span class="toc-text">把话说在前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">1.2.</span> <span class="toc-text">实验环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98"><span class="toc-number">2.</span> <span class="toc-text">创建虚拟硬盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BC%95%E5%AF%BC%E5%88%86%E5%8C%BA"><span class="toc-number">3.</span> <span class="toc-text">创建引导分区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">在虚拟机中使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-VirtualBox-%E8%83%BD%E4%B8%8D%E8%83%BD%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">关于 VirtualBox 能不能用</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By GuCATs</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Woody! Welcome to my website,欢迎试用<b><a target="_blank" rel="noopener" href="https://pcmanager.microsoft.com">微软电脑管家</a></b></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">簡</button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '9a6831dc7f4f2d306c4a',
+      clientSecret: 'f43c7637a8da0ec142712a6c46af0b52ab553edf',
+      repo: 'WebSiteResources',
+      owner: 'Goo-aw233',
+      admin: ['Goo-aw233'],
+      id: '80888fad6b25a813aca32284849751b9',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

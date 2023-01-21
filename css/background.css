@@ -1,0 +1,25 @@
+/* 主页所有文章页面背景 */
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(35px);
+}
+/*侧边栏页面*/
+#aside-content>.card-widget  {
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(35px);
+}
+#aside-content>.sticky_layout>.card-widget{
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(35px);
+}
+/*文章页面*/
+.layout>#post{
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(35px);
+}
+/*分类页面*/
+.layout>#page{
+    
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(35px);
+}
