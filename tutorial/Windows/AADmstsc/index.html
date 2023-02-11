@@ -161,14 +161,14 @@
 <hr>
 <p>在“搜索”中搜索 <code>PowerShell</code>，右键选择“以管理员身份运行”<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/AADmstsc/AADmstsc2.png" alt="运行 PowerShell"><br>接着在 PowerShell 中输入以下内容</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net localgroup <span class="string">&quot;Remote Desktop Users&quot;</span> /add <span class="string">&quot;AzureAD\&lt;Azure AD 的账户域名&gt;&quot;</span></span><br></pre></td></tr></table></figure>
-<p>比如我的 Azure AD 账户域名是 <code><a href="mailto:&#x31;&#x31;&#x34;&#53;&#49;&#x34;&#x40;&#104;&#111;&#x6d;&#x6f;&#46;&#99;&#x6f;&#x6d;">&#x31;&#x31;&#x34;&#53;&#49;&#x34;&#x40;&#104;&#111;&#x6d;&#x6f;&#46;&#99;&#x6f;&#x6d;</a></code>，则命令就是（包括引号）</p>
+<p>比如我的 Azure AD 账户域名是 <code><a href="mailto:&#49;&#x31;&#x34;&#53;&#49;&#x34;&#64;&#x68;&#x6f;&#x6d;&#x6f;&#x2e;&#99;&#x6f;&#109;">&#49;&#x31;&#x34;&#53;&#49;&#x34;&#64;&#x68;&#x6f;&#x6d;&#x6f;&#x2e;&#99;&#x6f;&#109;</a></code>，则命令就是（包括引号）</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net localgroup <span class="string">&quot;Remote Desktop Users&quot;</span> /add <span class="string">&quot;AzureAD\114514@homo.com&quot;</span></span><br></pre></td></tr></table></figure>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/AADmstsc/AADmstsc3.png" alt="添加用户"></p>
 <hr>
 <p>如果操控设备为 Windows 10 1607 及更高版本的 Windows，则需要在<a href="ms-settings:workplace">设置</a>中登录到与被操控的设备同样的 Azure AD 域中<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/AADmstsc/AADmstsc4.png" alt="登录 Azure AD"></p>
 <p>最后在登录时，登录的账户应为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AzureAD\&lt;Azure AD 的账户域名&gt;</span><br></pre></td></tr></table></figure>
-<p>比如我的 Azure AD 账户域名是 <code><a href="mailto:&#49;&#49;&#52;&#53;&#49;&#x34;&#64;&#104;&#x6f;&#x6d;&#111;&#x2e;&#99;&#111;&#109;">&#49;&#49;&#52;&#53;&#49;&#x34;&#64;&#104;&#x6f;&#x6d;&#111;&#x2e;&#99;&#111;&#109;</a></code>，账户就是</p>
+<p>比如我的 Azure AD 账户域名是 <code><a href="mailto:&#49;&#49;&#x34;&#53;&#x31;&#x34;&#x40;&#104;&#x6f;&#109;&#111;&#46;&#x63;&#111;&#109;">&#49;&#49;&#x34;&#53;&#x31;&#x34;&#x40;&#104;&#x6f;&#109;&#111;&#46;&#x63;&#111;&#109;</a></code>，账户就是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AzureAD\114514@homo.com</span><br></pre></td></tr></table></figure>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/AADmstsc/AADmstsc5.png" alt="登录到设备"></p>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><li>本地和远程电脑都必须运行 Windows 10 1607 或更高版本，不支持与运行早期版本的 Windows 10 与已加入 Azure AD 的电脑建立远程连接</li>
