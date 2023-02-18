@@ -1,111 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/anterceptedappx/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/blockWin11upd/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/blockfeatureupd/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/AADmstsc/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/appxbak/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/Downgrade_Windows/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/UUP/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/Remove_installation_restrictions/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/MicaForEveryone/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/WSA3in1/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/VM/QEMU/WindowsARMonQEMU/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/mobile/phone/USAidcreate/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/iOSdualOS/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/iOSuseQQVX/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/ipaunpack/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/afc+appsync/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/ipadown/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/macOS/macOSswit/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/DOS/MS-DOS7.10/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/DOS/MS-DOS3.x/</loc>
-    <lastmod>2023-02-05</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/others/tools/</loc>
-    <lastmod>2023-02-05</lastmod>
+    <lastmod>2023-02-18</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/others/MSPCManager/</loc>
-    <lastmod>2023-02-05</lastmod>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/DOS/MS-DOS7.10/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/DOS/MS-DOS3.x/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/macOS/macOSswit/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/iOSdualOS/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/iOSuseQQVX/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/ipaunpack/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/afc+appsync/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/mobile/jailbreak/ipadown/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/mobile/phone/USAidcreate/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/VM/QEMU/WindowsARMonQEMU/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/AADmstsc/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/anterceptedappx/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/DISM_instOS_UEFI/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/blockWin11upd/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/MicaForEveryone/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/appxbak/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/blockfeatureupd/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/DISM_instOS_BIOS/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/Downgrade_Windows/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/edge-visual/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/repairsystem/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/Remove_installation_restrictions/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/UUP/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/Win7instPS/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/Win7SecureBoot/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/Win7SKUlang/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/Win11oobenetbypass/</loc>
+    <lastmod>2023-02-18</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/tutorial/Windows/WSA3in1/</loc>
+    <lastmod>2023-02-18</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/tutorial/Other/upload_to_winget_pkgs/</loc>
     <lastmod>2023-01-29</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/DISM_instOS_BIOS/</loc>
-    <lastmod>2023-01-14</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/DISM_instOS_UEFI/</loc>
-    <lastmod>2023-01-14</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/tutorial/Windows/WSA3in1-old/</loc>
-    <lastmod>2023-01-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/Win7SecureBoot/</loc>
     <lastmod>2023-01-05</lastmod>
   </url>
   <url>
@@ -130,10 +150,6 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/tutorial/Windows/reinstallOS/</loc>
-    <lastmod>2023-01-05</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/repairsystem/</loc>
     <lastmod>2023-01-05</lastmod>
   </url>
   <url>
@@ -169,24 +185,8 @@
     <lastmod>2023-01-04</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/edge-visual/</loc>
-    <lastmod>2022-10-29</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/Win7SKUlang/</loc>
-    <lastmod>2022-09-25</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/tutorial/Windows/XPact/</loc>
     <lastmod>2022-09-24</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/Win7instPS/</loc>
-    <lastmod>2022-09-18</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/tutorial/Windows/Win11oobenetbypass/</loc>
-    <lastmod>2022-09-10</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/tutorial/VM/VMware/vmusetpm/</loc>
