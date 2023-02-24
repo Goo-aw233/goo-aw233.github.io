@@ -597,14 +597,14 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/tags/GitHub/</loc>
+    <loc>https://goo-aw233.github.io/tags/Hexo/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/tags/Hexo/</loc>
+    <loc>https://goo-aw233.github.io/tags/GitHub/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -655,7 +655,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/GitHub/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -669,7 +669,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/GitHub/</loc>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -711,7 +711,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VirtualBox/</loc>
+    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -725,7 +725,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/</loc>
+    <loc>https://goo-aw233.github.io/categories/VMware/Workstation/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -739,7 +739,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/categories/VMware/Workstation/</loc>
+    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VirtualBox/</loc>
     <lastmod>2023-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
