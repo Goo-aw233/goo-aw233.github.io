@@ -1,13 +1,13 @@
 @font-face{
     font-family: 'CascadiaMonoPLItalic';
     font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Font/CascadiaMonoPLItalic.ttf') format("TrueType")
+    src: url('https://s.cky.qystu.cc/gh/Goo-aw233/WebSiteResources/Font/CascadiaMonoPLItalic.ttf') format("TrueType")
 }
 
 @font-face{
     font-family: 'sf-pro-icons_regular';
     font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Font/sf-pro-icons_regular.woff2') format("woff")
+    src: url('https://s.cky.qystu.cc/gh/Goo-aw233/WebSiteResources/Font/sf-pro-icons_regular.woff2') format("woff")
 }
 
 body {
