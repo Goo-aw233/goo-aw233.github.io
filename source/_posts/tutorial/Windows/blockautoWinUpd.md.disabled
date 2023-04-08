@@ -1,0 +1,9 @@
+---
+title: 阻止 Windows 自动更新
+date: 2023-01-10 20:12:11
+categories: 
+	- 教程
+	- Windows
+tags: Windows
+description: 使用组策略功能来阻止 Windows 自动安装任何更新
+---

@@ -1,0 +1,67 @@
+- class_name: 友情链接
+  class_desc: 事一个一个一个我觉得不错的站点）
+  link_list:
+    - name: GuCATs'摸鱼站
+      link: https://goo-aw233.github.io
+      avatar: https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Blog/Avatar.jpg
+      descr: GitHub Pages 版
+
+    - name: GuCATs'Blog - EN
+      link: https://goo-aw233.github.io/en-us
+      avatar: https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Blog/Avatar.jpg
+      descr: GitHub Pages 版英文站点
+
+    #- name: ANTI
+    #  link: https://antipa.cn
+    #  avatar: https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Blog/Anti.png
+    #  descr: 老设备 iOS APP 下载网
+
+    #- name: Noah(Rita2)
+    #  link: http://noah.antipa.cn
+    #  avatar: https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Blog/Rita2.jpg
+    #  descr: 老设备在线视频流媒体网（提供了服务器捏）
+
+    - name: 微软电脑管家
+      link: https://pcmanager.microsoft.com
+      avatar: https://pcmanager.microsoft.com/assets/logo2.png
+      descr: 微软的杀软捏
+
+    - name: ecomter 的博客
+      link: https://ecomter.live
+      avatar: https://ecomter.live/img/logo.png
+      descr: 鹅鹅鹅，我是 ecomter
+
+    - name: Q 派小栈
+      link: https://www.paicns.cn
+      avatar: https://www.paicns.cn/wp-content/uploads/2022/12/TXN.jpg
+      descr: 我是 Q 派
+
+    - name: 云萧的咕咕屋
+      link: https://blog.crrashh.cn
+      avatar: https://res.crrashh.cn/img/avatars/crrashh1542.jpg
+      descr: Creating makes miracles.
+
+    - name: CrnEilns 饮茶室
+      link: https://blog.crneilns.top
+      avatar: https://user-images.githubusercontent.com/104747696/211587915-78c276b7-9114-4384-98fc-9f0d0fcb4725.jpeg
+      descr: 这个猫傻掉了捏
+
+    - name: Souiken 的博客
+      link: https://blog.soda.net.cn
+      avatar: https://blog.soda.net.cn/images/le.png
+      descr: The website only is a blog.
+
+    - name: mail_set 的不知道是什么东西
+      link: https://mailset.top
+      avatar: https://mailset.top/img/favicon.png
+      descr: IPv6 我好喜欢你啊，为了你我要买域名！
+
+    - name: 云默安的博客
+      link: https://yma.zyghit.cn
+      avatar: https://i.zyghit.cn/img/QQ%E5%9B%BE%E7%89%8720210523212348.jpg
+      descr: 追随心中的信念
+
+    - name: 其它教程网站
+      link: about:blank
+      avatar: https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Blog/Thanks.png
+      descr: 由衷的感谢

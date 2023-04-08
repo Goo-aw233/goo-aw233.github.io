@@ -1,0 +1,7 @@
+bottom:
+    - class_name: user-map
+      id_name: user-map
+      name: 全球访客分布
+      icon: fa-solid fa-globe
+      order:
+      html: <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ'></script>
