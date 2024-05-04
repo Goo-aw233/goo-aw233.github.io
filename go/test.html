@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta property="article:author" content="GuCATs">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Favicon.png">
+        <title>正在跳转... | GuCATs'摸鱼站</title>
+    </head>
+    <body>
+        <h1 align="center">页面将会在 <span id="timeout">5</span>s 后重定向</h1>
+        <script>
+            let countTime = 5;
+            
+            function count() {
+            
+              document.getElementById('timeout').textContent = countTime;
+              countTime -= 1;
+              if(countTime === 0){
+                location.href = '/';
+              }
+              setTimeout(() => {
+                count();
+              }, 1000);
+            }
+            
+            count();
+            </script>
+    </body>
+</html>
