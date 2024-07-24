@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-PowerShell/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-PowerShell/</loc>
-    <lastmod>2024-06-08</lastmod>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
+    <lastmod>2024-07-24</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
-    <lastmod>2024-06-08</lastmod>
+    <loc>https://goo-aw233.github.io/en/tutorial/Windows/msstore/</loc>
+    <lastmod>2024-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
+    <lastmod>2024-07-24</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/QEMU/WindowsARMonQEMU/</loc>
@@ -31,10 +35,6 @@
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmmacOS-ws/</loc>
     <lastmod>2024-04-20</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/en/tutorial/Windows/msstore/</loc>
-    <lastmod>2024-03-09</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/en/test/</loc>
