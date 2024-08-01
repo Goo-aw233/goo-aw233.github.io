@@ -2501,7 +2501,7 @@ mark.search-keyword {
 }
 header.header {
   background: var(--content-bg-color);
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px 8px 8px 8px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 @media (max-width: 991px) {
@@ -2538,7 +2538,7 @@ header.header {
   }
 }
 .main-inner {
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px 8px 8px 8px;
   box-sizing: border-box;
   width: calc(100% - 252px);
 }
@@ -2679,7 +2679,7 @@ header.header {
 }
 .sidebar-inner {
   background: var(--content-bg-color);
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   box-sizing: border-box;
   color: var(--text-color);
@@ -2745,11 +2745,11 @@ header.header {
 .main-inner .comment-position .comments,
 .main-inner .pagination {
   background: var(--content-bg-color);
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px 8px 8px 8px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .main-inner .post-block:not(:first-child):not(:first-child) {
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin-top: 12px;
 }
@@ -2767,7 +2767,7 @@ header.header {
 .main-inner > .comments,
 .main-inner .comment-position .comments,
 .main-inner .pagination {
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin-top: 12px;
 }
@@ -2836,12 +2836,12 @@ header.header {
 @font-face {
   font-family: 'CascadiaMonoPLItalic';
   font-display: swap;
-  src: url("https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Font/CascadiaMonoPLItalic.ttf") format("TrueType");
+  src: url("https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets/Font/CascadiaMonoPLItalic.ttf") format("TrueType");
 }
 @font-face {
   font-family: 'sf-pro-icons_regular';
   font-display: swap;
-  src: url("https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Font/sf-pro-icons_regular.woff2") format("woff");
+  src: url("https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets/Font/sf-pro-icons_regular.woff2") format("woff");
 }
 body {
   font-family: 'CascadiaMonoPLItalic', 'sf-pro-icons_regular';
@@ -2873,12 +2873,12 @@ body {
   content: "\e681";
 }
 body {
-  cursor: url("https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Cursor0.png"),;
+  cursor: url("https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets/Pics/Blog/Cursor0.png"),;
 default
 }
 a,
 img {
-  cursor: url("https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources/Pics/Blog/Cursor1.png"),;
+  cursor: url("https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets/Pics/Blog/Cursor1.png"),;
 default
 }
 ::-webkit-scrollbar {
@@ -2902,7 +2902,7 @@ default
   background-color: #2d5573;
 }
 body {
-  background-image: url("https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Blog/Background.jpg");
+  background-image: url("https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -2919,4 +2919,18 @@ body {
 }
 .popup {
   opacity: 0.9;
+}
+.links-of-recent-posts {
+  font-size: 0.8125em;
+  margin-top: 10px;
+}
+.links-of-recent-posts-title {
+  font-size: 1.03em;
+  font-weight: 600;
+  margin-top: 0;
+}
+.links-of-recent-posts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
