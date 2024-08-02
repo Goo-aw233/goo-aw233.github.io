@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/msstore/</loc>
+    <lastmod>2024-08-02</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/en/tutorial/Windows/msstore/</loc>
+    <lastmod>2024-08-02</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/convert-system-edition-to-LTS/</loc>
     <lastmod>2024-08-01</lastmod>
   </url>
@@ -14,10 +22,6 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
-    <lastmod>2024-07-24</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/en/tutorial/Windows/msstore/</loc>
     <lastmod>2024-07-24</lastmod>
   </url>
   <url>
@@ -82,10 +86,6 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
-    <lastmod>2023-12-23</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/msstore/</loc>
     <lastmod>2023-12-23</lastmod>
   </url>
   <url>
