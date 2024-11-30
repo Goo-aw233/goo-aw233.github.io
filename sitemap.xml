@@ -2,6 +2,96 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7SKUlang/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/unattended_files/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/repairsystem/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MountImage-DISM/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_BIOS/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-PowerShell/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
+    
+    <lastmod>2024-11-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/others/tools/</loc>
+    
+    <lastmod>2024-10-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://goo-aw233.github.io/link/index.html</loc>
     
     <lastmod>2024-09-07</lastmod>
@@ -20,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/Hyper-V/vmmacOS-hv/</loc>
-    
-    <lastmod>2024-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmmacOS-ws/</loc>
     
     <lastmod>2024-08-31</lastmod>
@@ -39,15 +120,6 @@
   
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VirtualBox/vmmacOS-vb/</loc>
-    
-    <lastmod>2024-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/others/tools/</loc>
     
     <lastmod>2024-08-31</lastmod>
     
@@ -155,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-PowerShell/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -164,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_BIOS/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/updateIPCC/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -209,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1-old/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -218,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1-old/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -236,15 +308,6 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11oobenetbypass/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
     
     <lastmod>2024-08-22</lastmod>
@@ -254,7 +317,16 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7SKUlang/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11oobenetbypass/</loc>
+    
+    <lastmod>2024-08-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DIY_WePE_features/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -264,15 +336,6 @@
   
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -299,6 +362,15 @@
   </url>
   
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
+    
+    <lastmod>2024-08-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
     
     <lastmod>2024-08-22</lastmod>
@@ -309,24 +381,6 @@
   
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/convert-system-edition-to-LTS/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DIY_WePE_features/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -362,43 +416,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/repairsystem/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/customuup/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/unattended_files/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/updateIPCC/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -416,25 +434,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/macOSVMModelEmulation/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/PEinstallOS/</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MountImage-DISM/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -461,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/macOSVMModelEmulation/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -480,15 +480,6 @@
   
   <url>
     <loc>https://goo-aw233.github.io/notes/index.html</loc>
-    
-    <lastmod>2024-08-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
     
     <lastmod>2024-08-22</lastmod>
     
@@ -679,7 +670,7 @@
 
   <url>
     <loc>https://goo-aw233.github.io/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -687,84 +678,77 @@
   
   <url>
     <loc>https://goo-aw233.github.io/tags/DOS/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/tags/VMware-Workstation/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/tags/Hexo/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/tags/Windows/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/tags/Software/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/tags/macOS/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <loc>https://goo-aw233.github.io/tags/Windows/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/tags/iOS/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/tags/Software/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/tags/Android/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/tags/Hyper-V/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/tags/VirtualBox/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/tags/QEMU/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/tags/VirtualBox/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -773,140 +757,133 @@
   
   <url>
     <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/tutorial/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/DOS/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Hexo/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/tutorial/Windows/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/DOS/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/iOS/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Hexo/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/tutorial/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/tutorial/Windows/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Android/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/VMware/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/Hyper-V/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VirtualBox/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/QEMU/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/VMware/Workstation/</loc>
-    <lastmod>2024-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/VMware/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/QEMU/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VirtualBox/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/VMware/Workstation/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/</loc>
+    <lastmod>2024-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/</loc>
+    <lastmod>2024-11-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
