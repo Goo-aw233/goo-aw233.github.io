@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
+    <lastmod>2025-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11ie/</loc>
+    <lastmod>2025-05-09</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/QEMU/install-Windows-on-ARM-in-QEMU/</loc>
     <lastmod>2025-02-04</lastmod>
   </url>
@@ -21,10 +29,6 @@
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/isorepackage/</loc>
-    <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MountImage-DISM/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
@@ -34,6 +38,10 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/XPact/</loc>
+    <lastmod>2025-02-03</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/isorepackage/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
@@ -47,10 +55,6 @@
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
     <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11ie/</loc>
-    <lastmod>2025-01-11</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/updateIPCC/</loc>
@@ -109,19 +113,15 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Downgrade_Windows/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MicaForEveryone/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Downgrade_Windows/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -153,6 +153,10 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/anterceptedappx/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -181,7 +185,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -198,10 +206,6 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/anterceptedappx/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
