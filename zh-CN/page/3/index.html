@@ -172,7 +172,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,19 +211,19 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Configuring_oh-my-posh_in_Windows/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Configuring_oh-my-posh_in_Windows&#x2F;">在 Windows 中为 PowerShell 配置 oh-my-posh</a>
+        </li>
+        <li class="links-of-recent-posts-item">
           <a href="/zh-CN/tutorial/Windows/Enable_Windows_Hello_Face_to_Work_Properly_in_Low_Light_Conditions/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Enable_Windows_Hello_Face_to_Work_Properly_in_Low_Light_Conditions&#x2F;">在暗光下正常使用 Windows Hello Face</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Enable_SMBv3_Client_Require_Encryption&#x2F;">开启 SMBv3 端到端加密</a>
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Add_Full_Language_Support_to_Windows&#x2F;">为 Windows 添加完整的语言包</a>
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/zh-CN/tutorial/Windows/disable-Device-Credential-Guard/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;disable-Device-Credential-Guard&#x2F;">为你的电脑关闭 Device/Credential Guard</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/" title="zh-CN&#x2F;tutorial&#x2F;macOS&#x2F;install-macOS-and-Windows-on-NUC8&#x2F;">在 NUC8i5BEH 安装黑苹果与 Windows</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/zh-CN/tutorial/VM/VMware/macOSVMModelEmulation/" title="zh-CN&#x2F;tutorial&#x2F;VM&#x2F;VMware&#x2F;macOSVMModelEmulation&#x2F;">macOS 虚拟机机型模拟</a>
         </li>
     </ul>
   </div>
@@ -246,6 +246,232 @@
 
 
   <div class="posts-expand">
+  	    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Remove_installation_restrictions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GuCATs'摸鱼站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/tutorial/Windows/Remove_installation_restrictions/" class="post-title-link" itemprop="url">移除 Appx 类与 Msix 类应用程序包的安装限制</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-01-12 19:54:10" itemprop="dateCreated datePublished" datetime="2023-01-12T19:54:10+08:00">2023-01-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-23 01:28:16" itemprop="dateModified" datetime="2024-08-23T01:28:16+08:00">2024-08-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/" itemprop="url" rel="index"><span itemprop="name">PowerShell</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>745</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>通过修改 AppxManifest.xml 来移除 Appx 类与 Msix 类应用程序包对 Windows 版本的安装限制</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/zh-CN/tutorial/Windows/Remove_installation_restrictions/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  	    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | GuCATs'摸鱼站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/tutorial/Hexo/update/" class="post-title-link" itemprop="url">更新 Hexo 和插件、主题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-01-04 20:36:04" itemprop="dateCreated datePublished" datetime="2023-01-04T20:36:04+08:00">2023-01-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-23 01:28:16" itemprop="dateModified" datetime="2024-08-23T01:28:16+08:00">2024-08-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>269</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>给你的 Hexo 更新 Hexo 版本、主题版本与插件以获取新版本功能或修复 bug</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/zh-CN/tutorial/Hexo/update/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
   	    
 
 
@@ -946,7 +1172,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/tutorial/Windows/Win7instPS/" class="post-title-link" itemprop="url">给 Windows 7 升级 PowerShell</a>
+          <a href="/zh-CN/tutorial/Windows/Win7instPS/" class="post-title-link" itemprop="url">给 Windows 7 升级 Windows PowerShell</a>
         </h2>
 
         <div class="post-meta-container">
@@ -964,7 +1190,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-23 22:09:37" itemprop="dateModified" datetime="2024-11-23T22:09:37+08:00">2024-11-23</time>
+      <time title="修改时间：2025-10-15 15:50:35" itemprop="dateModified" datetime="2025-10-15T15:50:35+08:00">2025-10-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -991,7 +1217,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>215</span>
+      <span>205</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1009,7 +1235,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在 Windows 7 SP1 和 Windows Server 2008 R2 SP1/Home Server 2011 中安装新版 PowerShell</p>
+          <p>在 Windows 7 SP1 和 Windows Server 2008 R2 SP1/Home Server 2011 中安装新版 Windows PowerShell</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/zh-CN/tutorial/Windows/Win7instPS/">
@@ -1146,228 +1372,6 @@
 
 
 
-  	    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/zh-CN/tutorial/DOS/MS-DOS3.x/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
-      <meta itemprop="name" content="GuCATs">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GuCATs'摸鱼站">
-      <meta itemprop="description" content="海納百川，有容乃大">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GuCATs'摸鱼站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/tutorial/DOS/MS-DOS3.x/" class="post-title-link" itemprop="url">安装 MS-DOS 3.x</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-09 12:22:03" itemprop="dateCreated datePublished" datetime="2022-08-09T12:22:03+08:00">2022-08-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-08-23 01:28:17" itemprop="dateModified" datetime="2024-08-23T01:28:17+08:00">2024-08-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/DOS/" itemprop="url" rel="index"><span itemprop="name">DOS</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>506</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用软盘，给 Workstation 虚拟机安装 MS-DOS 3.x</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/tutorial/DOS/MS-DOS3.x/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  	    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11oobenetbypass/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
-      <meta itemprop="name" content="GuCATs">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GuCATs'摸鱼站">
-      <meta itemprop="description" content="海納百川，有容乃大">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | GuCATs'摸鱼站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/tutorial/Windows/Win11oobenetbypass/" class="post-title-link" itemprop="url">Windows 11 激活跳过联网</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-08-05 10:24:57" itemprop="dateCreated datePublished" datetime="2022-08-05T10:24:57+08:00">2022-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-03 11:58:41" itemprop="dateModified" datetime="2025-02-03T11:58:41+08:00">2025-02-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>216</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用命令行跳过 Windows 11 开箱体验的联网过程或使用离线账户</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/tutorial/Windows/Win11oobenetbypass/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   </div>
   <nav class="pagination">
     <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/zh-CN/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/zh-CN/">1</a><a class="page-number" href="/zh-CN/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/zh-CN/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/zh-CN/page/7/">7</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/zh-CN/page/4/"><i class="fa fa-angle-right"></i></a>
@@ -1412,14 +1416,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">49k</span>
+    <span title="站点总字数">50k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:44</span>
+    <span title="站点阅读时长">2:47</span>
   </span>
 </div>
 <div class="busuanzi-count">
