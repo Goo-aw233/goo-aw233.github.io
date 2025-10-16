@@ -6,7 +6,7 @@
   <link href="https://goo-aw233.github.io/atom.xml" rel="self"/>
   
   <link href="https://goo-aw233.github.io/"/>
-  <updated>2025-10-16T13:22:27.206Z</updated>
+  <updated>2025-10-16T14:10:38.595Z</updated>
   <id>https://goo-aw233.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/VMware_Workstation_Pro_Add_Additional_Languages/"/>
     <id>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/VMware_Workstation_Pro_Add_Additional_Languages/</id>
     <published>2025-10-16T09:57:11.000Z</published>
-    <updated>2025-10-16T13:22:27.206Z</updated>
+    <updated>2025-10-16T14:10:38.595Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>VMware Workstation Pro 25H2 开始，Broadcast 就与 VMware ESXi 一样砍掉了除英语、法语、日语和西班牙语的本地化支持。但是 VMware Workstation Pro 的本地化文件是放在 DLL 里的，完全可以通过通过外挂本地化文件的形式来实现继续本地化</p><p>关于改名 25H2 这件事，我想说，早在 2020 年的 Tech Preview 20H1 中就出现了（再往前的没找到），详见：<a href="https://blogs.vmware.com/cloud-foundation/2020/01/21/vmware-workstation-tech-preview-20h1">VMware Workstation Tech Preview 20H1 — Hyper-V/Host VBS Support</a></p><h2 id="文件获取"><a href="#文件获取" class="headerlink" title="文件获取"></a>文件获取</h2><p>你可以从 <a href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/EkOg-vOIqfFLmSP09686_SABj3aM25ybqOZmfbpzWRxkdA?e=J7ful1">OneDrive</a> 中获取 <code>17.6.4</code> 的本地化文件，抑或是使用我在 <code>17.6.4</code> 基础上添加翻译的本地化文件<br>你也可以自己在英语的 DLL 的基础上去修改</p><h2 id="放置文件"><a href="#放置文件" class="headerlink" title="放置文件"></a>放置文件</h2><p>找到 VMware Workstation Pro 的快捷方式，并选择“打开文件所在的位置”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Open_File_Location.png" alt="打开文件所在的位置"></p><p>再打开 <code>messages</code> 文件夹，将压缩包内的最上层文件夹解压至 <code>messages</code> 文件夹内</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Extract_to_Messages_Folder.png" alt="解压文件夹至 messages 文件夹"></p><h2 id="修改快捷方式"><a href="#修改快捷方式" class="headerlink" title="修改快捷方式"></a>修改快捷方式</h2><p>右键 VMware Workstation Pro 的快捷方式，并选择“属性”</p><p>在“目标(T)”中，结尾添加代码（<code>--</code> 之前<strong>有 1 个空格</strong>，需要自行修改 <code>&lt;空格&gt;</code> 为 <code> </code>）</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;空格&gt;--locale zh_CN</span><br></pre></td></tr></table></figure><p>例如，我的路径为 <code>&quot;C:\Program Files (x86)\VMware\VMware Workstation\vmware.exe&quot;</code>，那么最终效果如下</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files (x86)\VMware\VMware Workstation\vmware.exe&quot; --locale zh_CN</span><br></pre></td></tr></table></figure><p>最后点击“确定”即可。同时不要忘记修改“开始”菜单的快捷方式</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/VMware_Workstation_Pro_Shortcut_Properties.png" alt="快捷方式目标路径"></p><p>最终效果如下<br>因为在 Windows Sandbox 内演示的原因，CJK 字形没有能正常显示，但是主窗口内的中文还是正常显示了出来的</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Final_Result.png" alt="最终效果"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="https://yourui0604.blogspot.com/2024/09/vmware-workstation-tw-locale-change.html">VMware Workstation Pro 17 專業虛擬機軟體的繁體中文化 - 那個叡哥</a><br><a href="https://bbs.pcbeta.com/viewthread-2054852-1-1.html">VMware Workstation 挂载外部语言 - 远景论坛</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>VMware Workstation Pro 25H2 开始，Broadcast 就与 VMware ESXi 一样砍掉了除英语、法语、日语和西班牙语的本地化支持。但是 VMware Workstation Pro 的本地化文件是放在 DLL 里的，完全可以通过通过外挂本地化文件的形式来实现继续本地化</p><p>关于改名 25H2 这件事，我想说，早在 2020 年的 Tech Preview 20H1 中就出现了（再往前的没找到），详见：<a href="https://blogs.vmware.com/cloud-foundation/2020/01/21/vmware-workstation-tech-preview-20h1">VMware Workstation Tech Preview 20H1 — Hyper-V/Host VBS Support</a></p><h2 id="文件获取"><a href="#文件获取" class="headerlink" title="文件获取"></a>文件获取</h2><p>你可以从 <a href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/EkOg-vOIqfFLmSP09686_SABj3aM25ybqOZmfbpzWRxkdA?e=J7ful1">OneDrive</a> 中获取 <code>17.6.4</code> 的本地化文件，抑或是使用我在 <code>17.6.4</code> 基础上添加翻译的本地化文件<br>你也可以自己在英语的 DLL 的基础上去修改</p><h2 id="放置文件"><a href="#放置文件" class="headerlink" title="放置文件"></a>放置文件</h2><p>找到 VMware Workstation Pro 的快捷方式，并选择“打开文件所在的位置”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Open_File_Location.png" alt="打开文件所在的位置"></p><p>再打开 <code>messages</code> 文件夹，将压缩包内的最上层文件夹解压至 <code>messages</code> 文件夹内</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Extract_to_Messages_Folder.png" alt="解压文件夹至 messages 文件夹"></p><h2 id="修改快捷方式"><a href="#修改快捷方式" class="headerlink" title="修改快捷方式"></a>修改快捷方式</h2><blockquote><p>远景论坛中还提供了这样的方法，不需要修改快捷方式<br>在 <code>%AppData%\VMware\preferences.ini</code> 中加一行<br><code>pref.locale = &quot;zh_CN&quot;</code></p></blockquote><p>右键 VMware Workstation Pro 的快捷方式，并选择“属性”</p><p>在“目标(T)”中，结尾添加代码（<code>--</code> 之前<strong>有 1 个空格</strong>，需要自行修改 <code>&lt;空格&gt;</code> 为 <code> </code>）</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;空格&gt;--locale zh_CN</span><br></pre></td></tr></table></figure><p>例如，我的路径为 <code>&quot;C:\Program Files (x86)\VMware\VMware Workstation\vmware.exe&quot;</code>，那么最终效果如下</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files (x86)\VMware\VMware Workstation\vmware.exe&quot; --locale zh_CN</span><br></pre></td></tr></table></figure><p>最后点击“确定”即可。同时不要忘记修改“开始”菜单的快捷方式</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/VMware_Workstation_Pro_Shortcut_Properties.png" alt="快捷方式目标路径"></p><p>最终效果如下<br>因为在 Windows Sandbox 内演示的原因，CJK 字形没有能正常显示，但是主窗口内的中文还是正常显示了出来的</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Final_Result.png" alt="最终效果"></p><h2 id="扩展-自行修改语言文件"><a href="#扩展-自行修改语言文件" class="headerlink" title="扩展 - 自行修改语言文件"></a>扩展 - 自行修改语言文件</h2><p>你可以使用 Resource Hacker 这个应用来编辑 <code>vmappsdk-...dll</code> 文件，展开 <code>Dialog</code> 等目录树后可以看到大部分的语言翻译值列出在里面（图源那個叡哥）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/VMware_Workstation_Pro_Add_Additional_Languages/Modify_The_Language_File.jpg" alt="修改 DLL（图源那個叡哥）"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="https://yourui0604.blogspot.com/2024/09/vmware-workstation-tw-locale-change.html">VMware Workstation Pro 17 專業虛擬機軟體的繁體中文化 - 那個叡哥</a><br><a href="https://bbs.pcbeta.com/viewthread-2054852-1-1.html">VMware Workstation 挂载外部语言 - 远景论坛</a></p>]]></content>
     
     
     <summary type="html">通过修改 DLL 文件并附加到 VMware Workstation Pro 并使其生效</summary>
@@ -41,9 +41,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1113,9 +1113,9 @@
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1380,9 +1380,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
     <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
+    
+    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
@@ -1409,9 +1409,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1604,9 +1604,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
     <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
+    
+    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
@@ -1704,9 +1704,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
