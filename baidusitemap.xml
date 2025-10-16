@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Switch_to_Dark_Mode_When_Inactive/</loc>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/VMware_Workstation_Pro_Add_Additional_Languages/</loc>
     <lastmod>2025-10-16</lastmod>
   </url>
@@ -49,6 +53,10 @@
     <lastmod>2025-05-09</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/</loc>
+    <lastmod>2025-02-03</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
@@ -74,10 +82,6 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/repairsystem/</loc>
-    <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
@@ -153,10 +157,6 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1-old/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -173,19 +173,19 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/anterceptedappx/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/convert-system-edition-to-LTS/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -205,7 +205,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -218,6 +218,10 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>

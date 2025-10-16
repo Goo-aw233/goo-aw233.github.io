@@ -6,7 +6,7 @@
   <link href="https://goo-aw233.github.io/atom.xml" rel="self"/>
   
   <link href="https://goo-aw233.github.io/"/>
-  <updated>2025-10-16T14:10:38.595Z</updated>
+  <updated>2025-10-16T16:01:30.849Z</updated>
   <id>https://goo-aw233.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 未激活时切换暗色模式</title>
+    <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Switch_to_Dark_Mode_When_Inactive/"/>
+    <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Switch_to_Dark_Mode_When_Inactive/</id>
+    <published>2025-10-16T15:30:02.000Z</published>
+    <updated>2025-10-16T16:01:30.849Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 未激活时不允许切换主题，但是可以通过注册表的方式让暗色主题生效</p><h2 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h2><details><summary>最快的方法就是直接在控制面板中修改主题，不需要重启 Explorer（虽然可能很快就没了）</summary><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入以下命令后按下 <kbd>Enter</kbd> 以打开控制面板的个性化页面</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explorer.exe shell:::&#123;ED834ED6-4B5A-4bfe-8F11-A626DCB6A921&#125;</span><br></pre></td></tr></table></figure></details><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>regedit.exe</code> 再按下 <kbd>Enter</kbd> 以打开注册表编辑器<br>接着定位到以下路径</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</span><br></pre></td></tr></table></figure><p>找到名为 <code>AppsUseLightTheme</code> 和 <code>SystemUsesLightTheme</code> 这两个注册表项目，双击打开后将他们的值都设为 <code>0</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Switch_to_Dark_Mode_When_Inactive/Modify_Registry_Key.png" alt="修改注册表项"></p><details><summary>直接写一个 <code>.reg</code> 文件更快</summary><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]</span><br><span class="line">&quot;AppsUseLightTheme&quot;=dword:00000000</span><br><span class="line">&quot;SystemUsesLightTheme&quot;=dword:00000000</span><br></pre></td></tr></table></figure></details><p>完成后发现只有“开始”菜单变成暗色主题了，这时候需要再重启 <code>explorer.exe</code> 即可立即生效<br>按下 <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ESC</kbd> 以打开任务管理器，搜索 <code>explorer.exe</code> 并选择“重启任务”即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Switch_to_Dark_Mode_When_Inactive/Restart_Explorer.png" alt="重启 explorer.exe"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="https://winmoes.com/noticetutorial/study/11161.html">Windows 10中添加或删除个性化（经典）上下文菜单 ★ 枫の主题社</a></p>]]></content>
+    
+    
+    <summary type="html">在未激活的情况下通过注册表修改 Windows 为暗色模式</summary>
+    
+    
+    
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>VMware Workstation Pro 添加额外语言</title>
@@ -41,9 +64,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -1113,9 +1136,9 @@
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -1380,9 +1403,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1409,9 +1432,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -1604,9 +1627,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1704,9 +1727,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
