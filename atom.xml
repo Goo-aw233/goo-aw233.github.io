@@ -6,7 +6,7 @@
   <link href="https://goo-aw233.github.io/atom.xml" rel="self"/>
   
   <link href="https://goo-aw233.github.io/"/>
-  <updated>2025-10-20T15:22:26.015Z</updated>
+  <updated>2025-10-24T13:25:45.234Z</updated>
   <id>https://goo-aw233.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 manage-bde 管理 BitLocker</title>
+    <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/"/>
+    <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/</id>
+    <published>2025-10-24T12:02:48.000Z</published>
+    <updated>2025-10-24T13:25:45.234Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在安装 Windows 11 24H2 之后会默认开启 BitLocker，部分 Windows 在安装之后没有完成 BitLocker 功能，设备加密也显示未开启，但依旧显示 BitLocker 图标，此时可以通过 <code>manage-bde.exe</code> 来管理 BitLocker 功能<br>所有的操作都需要管理员身份，执行前请按下 <kbd>WIN</kbd> + <kbd>Q</kbd>打开 Windows 搜索，搜索 <code>wt.exe</code> 或 <code>cmd.exe</code> 并选择“以管理员身份运行”</p><h2 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bd.exe -status</span><br></pre></td></tr></table></figure><p>若在末尾追加盘符，如 <code>C:</code> 则只显示目标分区的 BitLocker 状态</p><h2 id="启用加密"><a href="#启用加密" class="headerlink" title="启用加密"></a>启用加密</h2><p>将 <code>&lt;drive&gt;</code> 修改为具体盘符，如 <code>C:</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -on &lt;drive&gt;</span><br></pre></td></tr></table></figure><p>以下是更多可追加的参数</p><blockquote><p>添加恢复密码，<code>-recoverypassword</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -on &lt;drive&gt; -recoverypassword</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>将恢复密钥保存到可移动驱动器，<code>-recoverykey &lt;drive&gt;</code>。将 <code>&lt;drive&gt;</code> 修改为具体盘符，如 <code>D:</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -on &lt;drive&gt; -recoverykey &lt;drive&gt;</span><br></pre></td></tr></table></figure></blockquote><blockquote><p>使用外部密钥保护程序（如 USB 密钥）解锁系统驱动器，<code>-startupkey &lt;drive&gt;</code>。将 <code>&lt;drive&gt;</code> 修改为具体盘符，如 <code>D:</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -on &lt;drive&gt; -startupkey &lt;drive&gt;</span><br></pre></td></tr></table></figure></blockquote><h2 id="禁用加密"><a href="#禁用加密" class="headerlink" title="禁用加密"></a>禁用加密</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -off</span><br></pre></td></tr></table></figure><p>若在末尾追加盘符，如 <code>C:</code> 则只禁用目标分区的 BitLocker</p><h2 id="暂停加密"><a href="#暂停加密" class="headerlink" title="暂停加密"></a>暂停加密</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -pause</span><br></pre></td></tr></table></figure><p>若在末尾追加盘符，如 <code>C:</code> 则只暂停目标分区的 BitLocker 加密进程</p><h2 id="恢复加密"><a href="#恢复加密" class="headerlink" title="恢复加密"></a>恢复加密</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -resume</span><br></pre></td></tr></table></figure><p>若在末尾追加盘符，如 <code>C:</code> 则只恢复目标分区的 BitLocker 解密进程</p><h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -changepassword</span><br></pre></td></tr></table></figure><p>若在末尾追加盘符，如 <code>C:</code> 则只修改目标分区的 BitLocker 密码</p><h2 id="升级加密版本"><a href="#升级加密版本" class="headerlink" title="升级加密版本"></a>升级加密版本</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">manage-bde.exe -upgrade</span><br></pre></td></tr></table></figure><p>若在末尾追加盘符，如 <code>C:</code> 则只升级目标分区的 BitLocker 版本</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="https://learn.microsoft.com/windows-server/administration/windows-commands/manage-bde/?wt.mc_id=studentamb_265231">manage-bde | Microsoft Learn</a></p>]]></content>
+    
+    
+    <summary type="html">使用 manage-bde.exe 管理 BitLocker 与设备加密</summary>
+    
+    
+    
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
+    <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/"/>
+    <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/</id>
+    <published>2025-10-24T07:59:55.000Z</published>
+    <updated>2025-10-24T10:00:27.217Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用 Windows Server Core 时虽然没有预装 Windows 安全中心，但 Microsoft Defender 防病毒程序依旧会正常运行，使用 PowerShell 管理 Microsoft Defender 防病毒可以代替 Windows 安全中心在 Windows Server Core 的作用  </p><p>但是能力有限，仅能介绍几个参数的作用  </p><p>此文编写时按 Windows Server 2025 及 Windows 11 版本编写，更新或更旧的版本可能会有些许出入</p><h2 id="Add-MpPreference"><a href="#Add-MpPreference" class="headerlink" title="Add-MpPreference"></a>Add-MpPreference</h2><p>此条目为 <code>添加排除项目</code></p><h3 id="添加文件夹到排除列表"><a href="#添加文件夹到排除列表" class="headerlink" title="添加文件夹到排除列表"></a>添加文件夹到排除列表</h3><p>将 <code>&lt;path\to\folder&gt;</code> 修改为文件夹路径，如 <code>C:\Temp</code><br>使用 <code>,</code> 隔开多个路径，如 <code>&quot;&lt;path\to\folder1&gt;&quot;, &quot;&lt;path\to\folder2&gt;&quot;</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-MpPreference</span> <span class="literal">-ExclusionPath</span> <span class="string">&quot;&lt;path\to\folder&gt;&quot;</span></span><br></pre></td></tr></table></figure><h3 id="添加特定文件扩展名称到排除列表"><a href="#添加特定文件扩展名称到排除列表" class="headerlink" title="添加特定文件扩展名称到排除列表"></a>添加特定文件扩展名称到排除列表</h3><p>将 <code>&lt;Filename Extension&gt;</code> 修改为扩展名称，如 <code>.exe</code><br>使用 <code>,</code> 隔开多个扩展名称，如 <code>&quot;.&lt;Filename Extension1&gt;&quot;, &quot;.&lt;Filename Extension2&gt;&quot;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add-MpPreference -ExclusionExtension &quot;.&lt;Filename Extension&gt;&quot;</span><br></pre></td></tr></table></figure><h3 id="添加特定进程名称到排除列表"><a href="#添加特定进程名称到排除列表" class="headerlink" title="添加特定进程名称到排除列表"></a>添加特定进程名称到排除列表</h3><p>将 <code>&lt;Process Name&gt;</code> 修改为进程名称，如 <code>cmd.exe</code><br>使用 <code>,</code> 隔开多个进程名称，如 <code>&quot;.&lt;Process Name.Filename Extension1&gt;&quot;, &quot;.&lt;Process Name.Filename Extension2&gt;&quot;</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-MpPreference</span> <span class="literal">-ExclusionProcess</span> <span class="string">&quot;&lt;Process Name&gt;&quot;</span></span><br></pre></td></tr></table></figure><h2 id="Get-MpComputerStatus"><a href="#Get-MpComputerStatus" class="headerlink" title="Get-MpComputerStatus"></a>Get-MpComputerStatus</h2><p>此条目为 <code>获取防病毒状态</code></p><h3 id="获取防病毒状态"><a href="#获取防病毒状态" class="headerlink" title="获取防病毒状态"></a>获取防病毒状态</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-MpComputerStatus</span></span><br></pre></td></tr></table></figure><h2 id="Get-MpPreference"><a href="#Get-MpPreference" class="headerlink" title="Get-MpPreference"></a>Get-MpPreference</h2><p>此条目为 <code>获取防病毒首选项</code></p><h3 id="获取防病毒首选项"><a href="#获取防病毒首选项" class="headerlink" title="获取防病毒首选项"></a>获取防病毒首选项</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-MpPreference</span></span><br></pre></td></tr></table></figure><h2 id="Get-MpThreat"><a href="#Get-MpThreat" class="headerlink" title="Get-MpThreat"></a>Get-MpThreat</h2><p>此条目为 <code>获取威胁历史记录</code></p><h3 id="获取威胁历史记录"><a href="#获取威胁历史记录" class="headerlink" title="获取威胁历史记录"></a>获取威胁历史记录</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-MpThreat</span></span><br></pre></td></tr></table></figure><h2 id="Get-MpThreatCatalog"><a href="#Get-MpThreatCatalog" class="headerlink" title="Get-MpThreatCatalog"></a>Get-MpThreatCatalog</h2><p>此条目为 <code>获取威胁类型目录</code></p><h3 id="获取威胁类型目录"><a href="#获取威胁类型目录" class="headerlink" title="获取威胁类型目录"></a>获取威胁类型目录</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-MpThreatCatalog</span></span><br></pre></td></tr></table></figure><h2 id="Remove-MpPreference"><a href="#Remove-MpPreference" class="headerlink" title="Remove-MpPreference"></a>Remove-MpPreference</h2><p>此条目为 <code>移除排除项目</code></p><h3 id="移除文件夹的排除列表"><a href="#移除文件夹的排除列表" class="headerlink" title="移除文件夹的排除列表"></a>移除文件夹的排除列表</h3><p>将 <code>&lt;path\to\folder&gt;</code> 修改为文件夹路径，如 <code>C:\Temp</code><br>使用 <code>,</code> 隔开多个路径，如 <code>&quot;&lt;path\to\folder1&gt;&quot;, &quot;&lt;path\to\folder2&gt;&quot;</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Remove-MpPreference</span> <span class="literal">-ExclusionPath</span> <span class="string">&quot;&lt;path\to\folder&gt;&quot;</span></span><br></pre></td></tr></table></figure><h3 id="移除特定文件扩展名称的排除列表"><a href="#移除特定文件扩展名称的排除列表" class="headerlink" title="移除特定文件扩展名称的排除列表"></a>移除特定文件扩展名称的排除列表</h3><p>将 <code>&lt;Filename Extension&gt;</code> 修改为扩展名称，如 <code>.exe</code><br>使用 <code>,</code> 隔开多个扩展名称，如 <code>&quot;.&lt;Filename Extension1&gt;&quot;, &quot;.&lt;Filename Extension2&gt;&quot;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Remove-MpPreference -ExclusionExtension &quot;.&lt;Filename Extension&gt;&quot;</span><br></pre></td></tr></table></figure><h3 id="移除特定进程名称的排除列表"><a href="#移除特定进程名称的排除列表" class="headerlink" title="移除特定进程名称的排除列表"></a>移除特定进程名称的排除列表</h3><p>将 <code>&lt;Process Name&gt;</code> 修改为进程名称，如 <code>cmd.exe</code><br>使用 <code>,</code> 隔开多个进程名称，如 <code>&quot;.&lt;Process Name.Filename Extension1&gt;&quot;, &quot;.&lt;Process Name.Filename Extension2&gt;&quot;</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Remove-MpPreference</span> <span class="literal">-ExclusionProcess</span> <span class="string">&quot;&lt;Process Name&gt;&quot;</span></span><br></pre></td></tr></table></figure><h2 id="Remove-MpThreat"><a href="#Remove-MpThreat" class="headerlink" title="Remove-MpThreat"></a>Remove-MpThreat</h2><p>此条目为 <code>移除计算机中的活动威胁</code></p><h3 id="移除计算机中的活动威胁"><a href="#移除计算机中的活动威胁" class="headerlink" title="移除计算机中的活动威胁"></a>移除计算机中的活动威胁</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Remove-MpThreat</span></span><br></pre></td></tr></table></figure><h2 id="Set-MpPreference"><a href="#Set-MpPreference" class="headerlink" title="Set-MpPreference"></a>Set-MpPreference</h2><p>此条目为 <code>设定防病毒偏好设置</code></p><h3 id="基本防护控制参数"><a href="#基本防护控制参数" class="headerlink" title="基本防护控制参数"></a>基本防护控制参数</h3><h4 id="启用-禁用实时防护"><a href="#启用-禁用实时防护" class="headerlink" title="启用/禁用实时防护"></a>启用/禁用实时防护</h4><p>将 <code>&lt;Boolean&gt;</code> 修改为具体的布尔值，<code>$true</code> 为禁用，<code>$false</code> 为启用</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableRealtimeMonitoring</span> &lt;Boolean&gt;</span><br></pre></td></tr></table></figure><h4 id="禁用行为监控"><a href="#禁用行为监控" class="headerlink" title="禁用行为监控"></a>禁用行为监控</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableBehaviorMonitoring</span></span><br></pre></td></tr></table></figure><h4 id="禁用脚本扫描"><a href="#禁用脚本扫描" class="headerlink" title="禁用脚本扫描"></a>禁用脚本扫描</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableScriptScanning</span></span><br></pre></td></tr></table></figure><h4 id="禁用压缩文件扫描"><a href="#禁用压缩文件扫描" class="headerlink" title="禁用压缩文件扫描"></a>禁用压缩文件扫描</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableArchiveScanning</span></span><br></pre></td></tr></table></figure><h4 id="禁用电子邮件扫描"><a href="#禁用电子邮件扫描" class="headerlink" title="禁用电子邮件扫描"></a>禁用电子邮件扫描</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableEmailScanning</span></span><br></pre></td></tr></table></figure><h4 id="禁用可移动驱动器扫描"><a href="#禁用可移动驱动器扫描" class="headerlink" title="禁用可移动驱动器扫描"></a>禁用可移动驱动器扫描</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableRemovableDriveScanning</span></span><br></pre></td></tr></table></figure><h4 id="禁用网络文件扫描"><a href="#禁用网络文件扫描" class="headerlink" title="禁用网络文件扫描"></a>禁用网络文件扫描</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-DisableScanningNetworkFiles</span></span><br></pre></td></tr></table></figure><h3 id="扫描配置参数"><a href="#扫描配置参数" class="headerlink" title="扫描配置参数"></a>扫描配置参数</h3><h4 id="计划扫描日期"><a href="#计划扫描日期" class="headerlink" title="计划扫描日期"></a>计划扫描日期</h4><p><code>&lt;Day&gt;</code> 可配置的数值如下</p><blockquote><p>0: 每天<br>1: 周日<br>2: 周一<br>3: 周二<br>4: 周三<br>5: 周四<br>6: 周五<br>7: 周六<br>8: 从不</p></blockquote><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-ScanScheduleDay</span> &lt;Day&gt;</span><br></pre></td></tr></table></figure><h4 id="计划扫描时间"><a href="#计划扫描时间" class="headerlink" title="计划扫描时间"></a>计划扫描时间</h4><p>将 <code>&lt;TimeSpan&gt;</code> 修改为当前计算机的具体的时间，格式为 HH:MM:SS（时:分:秒），默认为凌晨两点。如 <code>01:23:45</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-MpPreference</span> <span class="literal">-ScanScheduleTime</span> &lt;TimeSpan&gt;</span><br></pre></td></tr></table></figure><h2 id="Start-MpScan"><a href="#Start-MpScan" class="headerlink" title="Start-MpScan"></a>Start-MpScan</h2><p>此条目为 <code>启动防病毒扫描</code></p><h3 id="启动防病毒扫描"><a href="#启动防病毒扫描" class="headerlink" title="启动防病毒扫描"></a>启动防病毒扫描</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Start-MpScan</span></span><br></pre></td></tr></table></figure><h4 id="指定扫描路径"><a href="#指定扫描路径" class="headerlink" title="指定扫描路径"></a>指定扫描路径</h4><p>将 <code>&lt;String&gt;</code> 修改为扫描路径，如 <code>C:\Temp</code></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Start-MpScan</span> <span class="literal">-ScanPath</span> <span class="string">&quot;&lt;String&gt;&quot;</span></span><br></pre></td></tr></table></figure><h4 id="指定扫描等级"><a href="#指定扫描等级" class="headerlink" title="指定扫描等级"></a>指定扫描等级</h4><p>将 <code>&lt;ScanType&gt;</code> 修改为扫描等级。<code>FullScan</code> 为全盘扫描；<code>QuickScan</code> 为快速扫描；<code>CustomScan</code> 为自定义扫描，需要搭配 <code>-ScanPath</code> 使用</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Start-MpScan</span> <span class="literal">-ScanType</span> &lt;ScanType&gt;</span><br></pre></td></tr></table></figure><h2 id="Start-MpWDOScan"><a href="#Start-MpWDOScan" class="headerlink" title="Start-MpWDOScan"></a>Start-MpWDOScan</h2><p>此条目为 <code>启动 Microsoft Defender 防病毒脱机扫描</code></p><h3 id="启动-Microsoft-Defender-防病毒脱机扫描"><a href="#启动-Microsoft-Defender-防病毒脱机扫描" class="headerlink" title="启动 Microsoft Defender 防病毒脱机扫描"></a>启动 Microsoft Defender 防病毒脱机扫描</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Start-MpWDOScan</span></span><br></pre></td></tr></table></figure><h2 id="Update-MpSignature"><a href="#Update-MpSignature" class="headerlink" title="Update-MpSignature"></a>Update-MpSignature</h2><p>此条目为 <code>更新防病毒软件定义</code></p><h3 id="更新防病毒软件定义"><a href="#更新防病毒软件定义" class="headerlink" title="更新防病毒软件定义"></a>更新防病毒软件定义</h3><h4 id="从默认源更新"><a href="#从默认源更新" class="headerlink" title="从默认源更新"></a>从默认源更新</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Update-MpSignature</span></span><br></pre></td></tr></table></figure><h4 id="从指定源更新"><a href="#从指定源更新" class="headerlink" title="从指定源更新"></a>从指定源更新</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Update-MpSignature</span> <span class="literal">-UpdateSource</span> &lt;Source Name&gt;</span><br></pre></td></tr></table></figure><blockquote><p>从 Microsoft 更新服务器获取签名<br>Update-MpSignature -UpdateSource MicrosoftUpdateServer</p></blockquote><blockquote><p>从 MMPC 获取签名<br>Update-MpSignature -UpdateSource MMPC</p></blockquote><blockquote><p>从内部服务器获取签名（企业环境）<br>Update-MpSignature -UpdateSource InternalDefinitionUpdateServer</p></blockquote><h2 id="通用参数"><a href="#通用参数" class="headerlink" title="通用参数"></a>通用参数</h2><h3 id="AsJob"><a href="#AsJob" class="headerlink" title="-AsJob"></a>-AsJob</h3><p><code>-AsJob</code> 将在后台完成操作，不阻塞当前窗口进程。此操作将耗费一定的时间完成</p><h3 id="Force"><a href="#Force" class="headerlink" title="-Force"></a>-Force</h3><p><code>-Force</code> 将强制执行命令。此参数在部分命令中不可用</p><h3 id="CimSession"><a href="#CimSession" class="headerlink" title="-CimSession"></a>-CimSession</h3><p><code>-CimSession</code> 会对远程计算机进行操作</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="https://learn.microsoft.com/powershell/module/defender/?wt.mc_id=studentamb_265231">Defender Module | Microsoft Learn</a></p>]]></content>
+    
+    
+    <summary type="html">使用 PowerShell 管理 Microsoft Defender 防病毒，应对 Windows 安全中心缺失时不能操作的问题</summary>
+    
+    
+    
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>通过注册表修改 Windows 区域设定</title>
@@ -116,9 +164,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -261,9 +309,9 @@
     
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    
     <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
@@ -1188,9 +1236,9 @@
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -1455,9 +1503,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1484,9 +1532,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -1679,9 +1727,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1779,9 +1827,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
-    
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
   </entry>
   
