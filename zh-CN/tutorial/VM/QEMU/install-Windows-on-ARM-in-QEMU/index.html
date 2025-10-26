@@ -65,7 +65,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-Windows-on-ARM-in-QEMU/install-Windows-on-ARM-in-QEMU_28.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-Windows-on-ARM-in-QEMU/install-Windows-on-ARM-in-QEMU_29.png">
 <meta property="article:published_time" content="2022-07-10T13:33:43.000Z">
-<meta property="article:modified_time" content="2025-10-23T12:55:01.641Z">
+<meta property="article:modified_time" content="2025-10-26T11:25:07.580Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="QEMU">
@@ -237,7 +237,7 @@
   </div>
 
 <!-- 访客来源统计 -->
-<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_265231">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
+<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_474966">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
 <!-- ClustrMaps -->
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=300&t=tt&d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
 <!-- RevolverMaps -->
@@ -328,7 +328,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-10-23 20:55:01" itemprop="dateModified" datetime="2025-10-23T20:55:01+08:00">2025-10-23</time>
+      <time title="修改时间：2025-10-26 19:25:07" itemprop="dateModified" datetime="2025-10-26T19:25:07+08:00">2025-10-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -423,7 +423,7 @@
 
 <summary>你也可以创建 VHDX 或 VHD 而不是使用以上硬盘格式</summary>
 
-<p>使用 VHDX 或 VHD 的好处是可以直接挂载到<code>文件资源管理器</code>，可以直接简单地操作里面的文件，性能更好，<strong>也可以挂载后直接使用 Dism++ 安装系统，安装完成后再启动到虚拟机</strong><br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-server/storage/disk-management/manage-virtual-hard-disks/?wt.mc_id=studentamb_265231">管理虚拟硬盘 (VHD) | Microsoft Learn</a></p>
+<p>使用 VHDX 或 VHD 的好处是可以直接挂载到<code>文件资源管理器</code>，可以直接简单地操作里面的文件，性能更好，<strong>也可以挂载后直接使用 Dism++ 安装系统，安装完成后再启动到虚拟机</strong><br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-server/storage/disk-management/manage-virtual-hard-disks/?wt.mc_id=studentamb_474966">管理虚拟硬盘 (VHD) | Microsoft Learn</a></p>
 </details>
 
 <p><font color=red><strong>由于硬盘文件较脆弱，切勿强制关机，否则会造成硬盘文件损坏（特别是 VHD(X)）</strong></font></p>
@@ -539,7 +539,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /set testsigning on</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>关于加载已进行测试签名的驱动程序，请参阅 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/drivers/install/the-testsigning-boot-configuration-option/?wt.mc_id=studentamb_265231">允许加载已进行测试签名的驱动程序 - Windows drivers | Microsoft Learn</a></p>
+<p>关于加载已进行测试签名的驱动程序，请参阅 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/drivers/install/the-testsigning-boot-configuration-option/?wt.mc_id=studentamb_474966">允许加载已进行测试签名的驱动程序 - Windows drivers | Microsoft Learn</a></p>
 </blockquote>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-Windows-on-ARM-in-QEMU/install-Windows-on-ARM-in-QEMU_24.png" alt="开启测试模式"></p>
 <p>在文件资源管理器里打开 VirtIO-Win 光驱，然后定位到 <code>\NetKVM\w11\ARM64</code>（如果是 Windows 10 就选择 <code>w10</code> 文件夹，以此类推）<br>右键类型为“安装信息”的 netkvm 文件，选择“安装”</p>
@@ -563,7 +563,7 @@
 </li>
 <li><p>对应驱动<br>默认情况下，Windows 不会加载测试签名的内核模式驱动程序，需要加载则必须启用测试签名的驱动程序</p>
 <blockquote>
-<p>关于加载已进行测试签名的驱动程序，请参阅 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/drivers/install/the-testsigning-boot-configuration-option/?wt.mc_id=studentamb_265231">允许加载已进行测试签名的驱动程序 - Windows drivers | Microsoft Learn</a></p>
+<p>关于加载已进行测试签名的驱动程序，请参阅 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/drivers/install/the-testsigning-boot-configuration-option/?wt.mc_id=studentamb_474966">允许加载已进行测试签名的驱动程序 - Windows drivers | Microsoft Learn</a></p>
 </blockquote>
 </li>
 </ol>
@@ -580,13 +580,13 @@
 </li>
 <li><p>其他<br>你可以使用 Dism++ 手动添加所有驱动到 <code>install.wim</code> 和 <code>boot.wim</code>，这样在安装过程中就不用这么麻烦<br>或者将 Dism++ 等工具放在 <code>Image.iso</code> 或 <code>virtio-win.iso</code> 里，这样可以在 Windows Setup 环境下解决问题<br>ARM64 的 PE 或 Setup 可以运行 x64 的应用，无需额外支持（仅 Windows 11 及以上，Windows 10 仅支持运行 x86 应用）</p>
 </li>
-<li><p>缩短时间成本<br>使用 VHD(X)（教程参阅<a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-server/storage/disk-management/manage-virtual-hard-disks/?wt.mc_id=studentamb_265231">管理虚拟硬盘 (VHD) | Microsoft Learn</a>） 作为硬盘，在宿主机内往 VHD(X) 创建分区（教程参阅 <a href="/zh-CN/tutorial/Windows/DISM_instOS_UEFI/" title="UEFI 使用 DISM 命令安装系统">UEFI 使用 DISM 命令安装系统</a>章节中 <code>#操作磁盘</code> 的部分），再使用 Dism++ 释放映像到 VHD(X)，再在 QEMU 中引导到 Windows 镜像后，使用 <code>drvload</code> 命令添加硬盘驱动，修复引导（教程参阅 <a href="/zh-CN/tutorial/Windows/DISM_instOS_UEFI/" title="UEFI 使用 DISM 命令安装系统">UEFI 使用 DISM 命令安装系统</a>章节中 <code>#修复引导</code> 的部分），完成后重启，即可解决安装过程过慢的问题</p>
+<li><p>缩短时间成本<br>使用 VHD(X)（教程参阅<a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-server/storage/disk-management/manage-virtual-hard-disks/?wt.mc_id=studentamb_474966">管理虚拟硬盘 (VHD) | Microsoft Learn</a>） 作为硬盘，在宿主机内往 VHD(X) 创建分区（教程参阅 <a href="/zh-CN/tutorial/Windows/DISM_instOS_UEFI/" title="UEFI 使用 DISM 命令安装系统">UEFI 使用 DISM 命令安装系统</a>章节中 <code>#操作磁盘</code> 的部分），再使用 Dism++ 释放映像到 VHD(X)，再在 QEMU 中引导到 Windows 镜像后，使用 <code>drvload</code> 命令添加硬盘驱动，修复引导（教程参阅 <a href="/zh-CN/tutorial/Windows/DISM_instOS_UEFI/" title="UEFI 使用 DISM 命令安装系统">UEFI 使用 DISM 命令安装系统</a>章节中 <code>#修复引导</code> 的部分），完成后重启，即可解决安装过程过慢的问题</p>
 </li>
 <li><p>PE 或 Setup 无驱动情况下加载驱动<br>在 PE 或 Setup 下，可以使用 <code>drvload</code> 命令来加载驱动</p>
 </li>
 </ol>
 <blockquote>
-<p>更多关于 Devload 的命令，请参阅 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/drvload-command-line-options/?wt.mc_id=studentamb_265231">Drvload 命令行选项 | Microsoft Learn</a></p>
+<p>更多关于 Devload 的命令，请参阅 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/drvload-command-line-options/?wt.mc_id=studentamb_474966">Drvload 命令行选项 | Microsoft Learn</a></p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drvload &quot;path\to\fileName.inf&quot;</span><br></pre></td></tr></table></figure>
 

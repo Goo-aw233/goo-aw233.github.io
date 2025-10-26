@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Win7SKUlang/Win7SKUlang5.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Win7SKUlang/Win7SKUlang6.png">
 <meta property="article:published_time" content="2022-09-25T00:40:21.000Z">
-<meta property="article:modified_time" content="2024-11-23T14:09:48.000Z">
+<meta property="article:modified_time" content="2025-10-26T11:25:07.579Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -208,7 +208,7 @@
   </div>
 
 <!-- 访客来源统计 -->
-<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_265231">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
+<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_474966">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
 <!-- ClustrMaps -->
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=300&t=tt&d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
 <!-- RevolverMaps -->
@@ -299,7 +299,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-11-23 22:09:48" itemprop="dateModified" datetime="2024-11-23T22:09:48+08:00">2024-11-23</time>
+      <time title="修改时间：2025-10-26 19:25:07" itemprop="dateModified" datetime="2025-10-26T19:25:07+08:00">2025-10-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -352,7 +352,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="用前说明"><a href="#用前说明" class="headerlink" title="用前说明"></a>用前说明</h2><p>以下文本中，系统/语言包镜像指以 ISO 为后缀的文件；映像是指 install.wim<br>参考文献：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/add-language-packs-to-windows/?wt.mc_id=studentamb_265231">Microsoft Learn</a><br>因为先做试验再写文章的原因，文章中部分图片与命令与文本中所打出来的内容不同，请以文本为主</p>
+        <h2 id="用前说明"><a href="#用前说明" class="headerlink" title="用前说明"></a>用前说明</h2><p>以下文本中，系统/语言包镜像指以 ISO 为后缀的文件；映像是指 install.wim<br>参考文献：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/add-language-packs-to-windows/?wt.mc_id=studentamb_474966">Microsoft Learn</a><br>因为先做试验再写文章的原因，文章中部分图片与命令与文本中所打出来的内容不同，请以文本为主</p>
 <h2 id="创建文件夹并提取所需文件"><a href="#创建文件夹并提取所需文件" class="headerlink" title="创建文件夹并提取所需文件"></a>创建文件夹并提取所需文件</h2><p>在 D 盘根目录下创建名为 <code>test</code>的文件夹，然后再在里面创建四个文件夹：<code>mount</code>,<code>Scratch</code>,<code>Image</code>,<code>packages</code>，并在 <code>packages</code> 文件夹下创建名为 <code>zh-cn</code> 的文件夹<br>用压缩软件打开系统镜像，找到 <code>sources</code> 文件夹下的 install.wim，将其复制到 <code>Image</code> 文件夹下<br>然后再用压缩软件打开语言包镜像，把你所需要的语言文件复制到 <code>packages\语言名称</code> 下的文件夹<br><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Win7SKUlang/Win7SKUlang1.png" alt="所需文件"></p>
 <h2 id="装载-卸载映像"><a href="#装载-卸载映像" class="headerlink" title="装载/卸载映像"></a>装载/卸载映像</h2><p>右键开始菜单，选择 Windows 终端（管理员）/Windows PowerShell（管理员），二选一即可，因人而异</p>
 <p>在 PowerShell 中输入以下内容来挂载映像</p>

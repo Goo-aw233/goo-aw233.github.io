@@ -1,20 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/QEMU/install-Windows-on-ARM-in-QEMU/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-PowerShell/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MountImage-DISM/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7SKUlang/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/unattended_files/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Configuring_oh-my-posh_in_Windows/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_BIOS/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/</loc>
-    <lastmod>2025-10-24</lastmod>
+    <lastmod>2025-10-26</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/</loc>
-    <lastmod>2025-10-24</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/QEMU/install-Windows-on-ARM-in-QEMU/</loc>
-    <lastmod>2025-10-23</lastmod>
+    <lastmod>2025-10-26</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Modifying_Windows_Region_Settings_via_Registry/</loc>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/repairsystem/</loc>
+    <lastmod>2025-10-26</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/VMware_Workstation_Pro_Add_Additional_Languages/</loc>
@@ -33,10 +85,6 @@
     <lastmod>2025-10-15</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
-    <lastmod>2025-10-15</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1/</loc>
     <lastmod>2025-10-15</lastmod>
   </url>
@@ -45,23 +93,7 @@
     <lastmod>2025-10-15</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Configuring_oh-my-posh_in_Windows/</loc>
-    <lastmod>2025-10-15</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_Windows_Hello_Face_to_Work_Properly_in_Low_Light_Conditions/</loc>
-    <lastmod>2025-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
-    <lastmod>2025-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
-    <lastmod>2025-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
     <lastmod>2025-10-15</lastmod>
   </url>
   <url>
@@ -73,15 +105,7 @@
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-DISM/</loc>
-    <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DIY_WePE_features/</loc>
-    <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MountImage-DISM/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
@@ -93,36 +117,12 @@
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/repairsystem/</loc>
-    <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/isorepackage/</loc>
-    <lastmod>2025-02-03</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_BIOS/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/updateIPCC/</loc>
     <lastmod>2025-01-01</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7SKUlang/</loc>
-    <lastmod>2024-11-23</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/unattended_files/</loc>
-    <lastmod>2024-11-23</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AppxManagement-PowerShell/</loc>
-    <lastmod>2024-11-23</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
-    <lastmod>2024-11-23</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/others/tools/</loc>
@@ -157,11 +157,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MicaForEveryone/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -169,7 +165,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MicaForEveryone/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/NT6upd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -177,15 +173,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/NT6upd/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1-old/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -193,11 +181,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win8.xkeybypass/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win8.xkeybypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -213,7 +201,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/edge-visual/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -221,7 +209,19 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/edge-visual/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -233,11 +233,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>

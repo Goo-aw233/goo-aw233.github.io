@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/repairsystem/repairsystem8.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/repairsystem/repairsystem9.png">
 <meta property="article:published_time" content="2022-07-06T12:15:35.000Z">
-<meta property="article:modified_time" content="2025-02-03T03:58:41.000Z">
+<meta property="article:modified_time" content="2025-10-26T11:25:07.578Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,7 @@
   </div>
 
 <!-- 访客来源统计 -->
-<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_265231">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
+<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_474966">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
 <!-- ClustrMaps -->
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=300&t=tt&d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
 <!-- RevolverMaps -->
@@ -302,7 +302,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-03 11:58:41" itemprop="dateModified" datetime="2025-02-03T11:58:41+08:00">2025-02-03</time>
+      <time title="修改时间：2025-10-26 19:25:07" itemprop="dateModified" datetime="2025-10-26T19:25:07+08:00">2025-10-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -355,14 +355,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="用前说明"><a href="#用前说明" class="headerlink" title="用前说明"></a>用前说明</h2><p>本教程节选改编自 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/troubleshoot/windows-server/deployment/fix-windows-update-errors/?wt.mc_id=studentamb_265231">Microsoft Learn</a></p>
+        <h2 id="用前说明"><a href="#用前说明" class="headerlink" title="用前说明"></a>用前说明</h2><p>本教程节选改编自 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/troubleshoot/windows-server/deployment/fix-windows-update-errors/?wt.mc_id=studentamb_474966">Microsoft Learn</a></p>
 <h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><p>系统版本≥Windows 7 SP1 或 Windows Server 2008</p>
 <ul>
 <li>（不是 SP1？<a href="/zh-CN/tutorial/Windows/NT6upd/" title="点这里看升级教程">点这里看升级教程</a>）</li>
 </ul>
 <p>PowerShell<br>—-以下根据你的系统版本来选择—-<br><a target="_blank" rel="noopener" href="https://aka.ms/DownloadWindows11">Windows 11</a><br><a target="_blank" rel="noopener" href="https://aka.ms/DownloadWindows10">Windows 10</a><br><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows8ISO">Windows 8.1</a><br><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewiso">Windows 预览版</a></p>
 <h2 id="SFC-amp-DISM-命令修复"><a href="#SFC-amp-DISM-命令修复" class="headerlink" title="SFC&amp;DISM 命令修复"></a>SFC&amp;DISM 命令修复</h2><hr>
-<p>该部分不适用于 Windows 7 SP1 或 Windows Server 2008，请转到<a target="_blank" rel="noopener" href="https://learn.microsoft.com/troubleshoot/windows-server/deployment/fix-windows-update-errors/?wt.mc_id=studentamb_265231">Microsoft Learn</a></p>
+<p>该部分不适用于 Windows 7 SP1 或 Windows Server 2008，请转到<a target="_blank" rel="noopener" href="https://learn.microsoft.com/troubleshoot/windows-server/deployment/fix-windows-update-errors/?wt.mc_id=studentamb_474966">Microsoft Learn</a></p>
 <hr>
 <p>在任意页面按下 Windows 徽标键+X 打开，单击 Windows PowerShell（管理员）（Windows 10）或 Windows 终端（管理员）（Windows 11）<br>系统版本≤Windows 8.1 或 Windows Server 2012 则需要按下 Windows 徽标键+Q 打开搜索框 ，搜索 PowerShell，并右键以管理员身份运行</p>
 <h3 id="检查映像是否可修复"><a href="#检查映像是否可修复" class="headerlink" title="检查映像是否可修复"></a>检查映像是否可修复</h3><p>扫描映像以检查损坏，此操作将需要几分钟时间</p>
