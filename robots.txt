@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://goo-aw233.github.io/sitemap.xml

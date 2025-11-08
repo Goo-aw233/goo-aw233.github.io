@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png" color="#222">
+  <meta name="google-site-verification" content="b1jg-ZW0xRTOyo9xjdP9dhkmPRXMiG8fxtHKU1eXGSI">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=CascadiaMonoPLItalic:300,300italic,400,400italic,700,700italic%7Csf-pro-icons_regular:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/white/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"goo-aw233.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="通过电脑给 Google Pixel 5 进行线刷与使用 Magisk Root 设备">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pixel 5 刷机与 Root">
+<meta property="og:url" content="https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/index.html">
+<meta property="og:site_name" content="GuCATs&#39;摸鱼站">
+<meta property="og:description" content="通过电脑给 Google Pixel 5 进行线刷与使用 Magisk Root 设备">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot1.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot2.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot3.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot4.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot5.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot6.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot7.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot8.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot9.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot10.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot11.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot12.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot13.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot14.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot15.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot16.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot17.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot18.png">
+<meta property="article:published_time" content="2023-08-15T02:14:58.000Z">
+<meta property="article:modified_time" content="2025-02-03T03:58:41.000Z">
+<meta property="article:author" content="GuCATs">
+<meta property="article:tag" content="Android">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot1.png">
+
+
+<link rel="canonical" href="https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/","path":"zh-CN/tutorial/Android/Pixel5FlashAndRoot/","title":"Pixel 5 刷机与 Root"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Pixel 5 刷机与 Root | GuCATs'摸鱼站</title>
+  
+
+
+
+
+
+
+
+<script type="text/javascript">
+    // Wait for the page to load first
+    var _prevOnload = window.onload;
+    window.onload = function() {
+        var switchLang = document.getElementById("menu").getElementsByClassName("menu-item-switch_lang")[0].childNodes[1];
+            var href = window.location.href;
+            var indexOfEn = href.toLowerCase().indexOf('/en/');
+            if(indexOfEn !== -1) {
+                switchLang.href = href.replace('/en/', '/');
+            }
+            else {
+                switchLang.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
+            }
+    }
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="GuCATs'摸鱼站" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GuCATs'摸鱼站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海納百川，有容乃大</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-分类"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw fa-fw"></i>分类</a></li><li class="menu-item menu-item-归档"><a href="/archives/" rel="section"><i class="fa fa-folder-tree fa-fw"></i>归档</a></li><li class="menu-item menu-item-记事本"><a href="/notes/" rel="section"><i class="fa fa-sticky-note fa-fw"></i>记事本</a></li><li class="menu-item menu-item-帮助"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-关于我"><a href="/about/" rel="section"><i class="fa fa-id-card fa-fw"></i>关于我</a></li><li class="menu-item menu-item-友链"><a href="/link/" rel="section"><i class="fas fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-站点地图"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-资源列表"><a href="/resources/" rel="section"><i class="fa fa-file-export fa-fw"></i>资源列表</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E7%AF%87%E6%8F%90%E9%86%92"><span class="nav-number">1.</span> <span class="nav-text">开篇提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%9B%BA%E4%BB%B6%E3%80%81%E9%A9%B1%E5%8A%A8%E4%B8%8E-ADB"><span class="nav-number">2.</span> <span class="nav-text">下载安装固件、驱动与 ADB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%94%81-BootLoader-%E4%B8%8E%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">解锁 BootLoader 与调试模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%94%81-Bootloader"><span class="nav-number">3.1.</span> <span class="nav-text">解锁 Bootloader</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF-USB-%E8%B0%83%E8%AF%95"><span class="nav-number">4.</span> <span class="nav-text">开启 USB 调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA"><span class="nav-number">5.</span> <span class="nav-text">刷机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E6%B8%85"><span class="nav-number">5.1.</span> <span class="nav-text">双清</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B7%E5%85%A5%E5%9B%BA%E4%BB%B6"><span class="nav-number">5.2.</span> <span class="nav-text">刷入固件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Root"><span class="nav-number">6.</span> <span class="nav-text">Root</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number">7.</span> <span class="nav-text">升级系统</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GuCATs"
+      src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">GuCATs</p>
+  <div class="site-description" itemprop="description">海納百川，有容乃大</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa-solid fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+<!-- 访客来源统计 -->
+<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_474966">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
+<!-- ClustrMaps -->
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=300&t=tt&d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
+<!-- RevolverMaps -->
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5wxv7tzuiaw&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=ubuntu&amp;l=49" async="async"></script>
+</div>
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      近期文章
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Managing_BitLocker_via_manage-bde&#x2F;">使用 manage-bde 管理 BitLocker</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Manage_Microsoft_Defender_AntiVirus_via_PowerShell&#x2F;">使用 PowerShell 管理 Microsoft Defender 防病毒</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Modifying_Windows_Region_Settings_via_Registry/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Modifying_Windows_Region_Settings_via_Registry&#x2F;">通过注册表修改 Windows 区域设定</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Switch_to_Dark_Mode_When_Inactive/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Switch_to_Dark_Mode_When_Inactive&#x2F;">Windows 未激活时切换暗色模式</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/VM/Hyper-V/Install_WSL1/" title="zh-CN&#x2F;tutorial&#x2F;VM&#x2F;Hyper-V&#x2F;Install_WSL1&#x2F;">安装 WSL 1</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Pixel 5 刷机与 Root | GuCATs'摸鱼站">
+      <meta itemprop="description" content="通过电脑给 Google Pixel 5 进行线刷与使用 Magisk Root 设备">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Pixel 5 刷机与 Root
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-08-15 10:14:58" itemprop="dateCreated datePublished" datetime="2023-08-15T10:14:58+08:00">2023-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-03 11:58:41" itemprop="dateModified" datetime="2025-02-03T11:58:41+08:00">2025-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>767</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">通过电脑给 Google Pixel 5 进行线刷与使用 Magisk Root 设备</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="开篇提醒"><a href="#开篇提醒" class="headerlink" title="开篇提醒"></a>开篇提醒</h2><p><strong>如果你没有 Root 请记得退出你的 Google 账户，若有重要数据，请备份</strong></p>
+<h2 id="下载安装固件、驱动与-ADB"><a href="#下载安装固件、驱动与-ADB" class="headerlink" title="下载安装固件、驱动与 ADB"></a>下载安装固件、驱动与 ADB</h2><p><a target="_blank" rel="noopener" href="https://developers.google.cn/android/images?hl=zh-cn#redfin">从 Google Play service 下载固件</a> | <a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/usb_driver_r13-windows.zip?hl=zh-cn">usb_driver</a> | <a target="_blank" rel="noopener" href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip?hl=zh-cn">ADB 工具（Android SDK Platform-Tools）</a></p>
+<p>在 developers.google 下载好你需要的系统固件，点击 <code>Link</code> 并下载</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot1.png"></p>
+<p>将 usb_driver 解压后右键 <code>android_winusb.inf</code> 并选择“安装(I)”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot2.png"></p>
+<p>同时将 <code>platform-tools</code>解压到空白文件夹，并确保路径内没有空格，然后再将下载好的固件解压到 platform-tools 所在目录</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot3.png"></p>
+<p>打开 <code>platform-tools</code> 文件夹，在地址栏复制右键，以管理员身份运行 CMD，并输入如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;platform-tools 所在路径&gt;</span><br><span class="line">&lt;盘符&gt;:</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot4.png"></p>
+<h2 id="解锁-BootLoader-与调试模式"><a href="#解锁-BootLoader-与调试模式" class="headerlink" title="解锁 BootLoader 与调试模式"></a>解锁 BootLoader 与调试模式</h2><h3 id="解锁-Bootloader"><a href="#解锁-Bootloader" class="headerlink" title="解锁 Bootloader"></a>解锁 Bootloader</h3><p><strong>解除 Bootloader 会导致设备数据清空，请先备份资料</strong><br>在“设置” – “关于手机”里，连续点几次<code>版本号</code>来打开开发者模式</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot5.png"></p>
+<p>然后在“系统” – “开发者选项”中找到名为<code> OEM 解锁</code>的选项，并将它开启</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot6.png"></p>
+<p>或者使用 ADB 命令解锁</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot flashing unlock</span><br></pre></td></tr></table></figure>
+
+<p>然后通过音量键选择选项，电源键确认解锁<br>完成后输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure>
+
+<p>即可重启</p>
+<h2 id="开启-USB-调试"><a href="#开启-USB-调试" class="headerlink" title="开启 USB 调试"></a>开启 USB 调试</h2><p>在“系统” – “开发者选项”中找到名为 <code>USB 调试</code>的选项，并将它开启</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot7.png"></p>
+<h2 id="刷机"><a href="#刷机" class="headerlink" title="刷机"></a>刷机</h2><p>在 CMD 中输入命令，进入到 Bootloader 界面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br></pre></td></tr></table></figure>
+
+<h3 id="双清"><a href="#双清" class="headerlink" title="双清"></a>双清</h3><p>进入到 Bootloader 后使用音量键切换到 <code>Recovery Mode</code>，然后按下电源键，这样就会进入到倒地的 Android 界面并显示“no command” 的界面</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot8.png"></p>
+<p>接着长按开机键，接着按下音量上键即可进入 Recovery</p>
+<p>进入 Recovery 后用音量下键选择到 <code>Wipe data/factory reset</code>，并按下电源键</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot9.png"></p>
+<p>接着用音量下键选择到 <code>Factory data reset</code>，并按下电源键</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot10.png"></p>
+<p>接着就会清理 data 与 factory 的数据，完成后用音量下键选择到 <code>Reboot to bootloader</code>，并按下电源键</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot11.png"></p>
+<h3 id="刷入固件"><a href="#刷入固件" class="headerlink" title="刷入固件"></a>刷入固件</h3><p>在 <code>platform-tools</code> 文件夹中找到 <code>flash-all.bat</code>，并双击打开，等待刷机</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot12.png"></p>
+<p>刷机完成后按下任意键即可退出</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot13.png"></p>
+<h2 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h2><p>从 GitHub 下载 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/topjohnwu/magisk-files/canary/app-release.apk">Magisk Canary</a> 并安装<br>并从 <code>platform-tools</code> 文件夹中找到 <code>image.xxx.zip</code>，解压出里面的 <code>boot.img</code>，并复制到设备里的 <code>Download</code> 文件夹内</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot14.png"></p>
+<p>在设备上打开 <code>Magisk</code>，选择<code>安装</code> – <code>选择并修补一个文件</code>，然后在下载文件夹找到 <code>boot.img</code> 文件，并选择<code>开始</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot15.png"></p>
+<p>完成后将修补好的 <code>magisk_patched-xxx.img</code> 复制到 <code>platform-tools</code> 文件夹<br>复制完成后右键 <code>magisk_patched-xxx.img</code> 并选择 <code>复制路径</code>，在 CMD 中输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br><span class="line">fastboot boot &lt;magisk_patched-xxx.img 所在路径&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后就会修补镜像到 Android，至此 Root 就成功了</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot16.png"></p>
+<p>完成后再次打开 <code>Magisk</code>，选择<code>安装</code> – <code>直接按照（推荐）</code> – <code>开始</code>，完成后点击<code>重启</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot17.png"></p>
+<h2 id="升级系统"><a href="#升级系统" class="headerlink" title="升级系统"></a>升级系统</h2><p>与上面差不多，只需要<a target="_blank" rel="noopener" href="https://developers.google.cn/android/images?hl=zh-cn#redfin">从 Google Play service 下载固件</a>，然后将编辑 <code>flash-all.bat</code>，并将里面的 <code>-w </code>给删除并保存即可</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pixel5FlashAndRoot/Pixel5FlashAndRoot18.png"></p>
+<p>然后再按照上面的 Root 方法重新将设备 Root 即可</p>
+<p>如果你愿意走 OTA 可以另寻他法</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/AFDIAN.png" alt="GuCATs AFDIAN">
+        <span>AFDIAN</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>GuCATs
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/" title="Pixel 5 刷机与 Root">https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"># Android</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh-CN/tutorial/Windows/Win11setupbypass/" rel="prev" title="在不兼容的平台升级 Windows 11">
+                  <i class="fa fa-chevron-left"></i> 在不兼容的平台升级 Windows 11
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh-CN/tutorial/Windows/AppxManagement-PowerShell/" rel="next" title="使用 PowerShell 管理 APPX 与 MSIX 包">
+                  使用 PowerShell 管理 APPX 与 MSIX 包 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>简体中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/tutorial/Android/Pixel5FlashAndRoot/" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/tutorial/Android/Pixel5FlashAndRoot/" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+
+<div class="copyright">
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa-solid fa-tower-cell"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GuCATs</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">53k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:58</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时间...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("11/15/2021 00:00:00");
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" d "; 
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " min " + snum + " s"; 
+    } 
+setInterval("createtime()",250);
+</script>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+
+  <a href="https://github.com/Goo-aw233" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#fff',
+  buttonColorLight: '#100f2c',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>

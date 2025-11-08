@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Favicon.png" color="#222">
+  <meta name="google-site-verification" content="b1jg-ZW0xRTOyo9xjdP9dhkmPRXMiG8fxtHKU1eXGSI">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=CascadiaMonoPLItalic:300,300italic,400,400italic,700,700italic%7Csf-pro-icons_regular:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/white/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"goo-aw233.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="通过 Intel NUC8i5BEH 安装黑苹果与 Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 NUC8i5BEH 安装黑苹果与 Windows">
+<meta property="og:url" content="https://goo-aw233.github.io/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/index.html">
+<meta property="og:site_name" content="GuCATs&#39;摸鱼站">
+<meta property="og:description" content="通过 Intel NUC8i5BEH 安装黑苹果与 Windows">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/BaseSystem.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/balenaEtcher.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/OpenCoreBoot.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/loading.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/disk-utility.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/erase.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/install-macOS.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/select-disk.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/mount-EFI.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/EFI.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/config.plist.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/UUID.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/repair-sleep.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/OCLP.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/patch-wireless.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/OCLP-reboot.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/Wi-Fi.png">
+<meta property="article:published_time" content="2024-08-21T13:45:16.000Z">
+<meta property="article:modified_time" content="2025-10-15T08:11:36.049Z">
+<meta property="article:author" content="GuCATs">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="macOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/BaseSystem.png">
+
+
+<link rel="canonical" href="https://goo-aw233.github.io/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/","path":"zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/","title":"在 NUC8i5BEH 安装黑苹果与 Windows"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>在 NUC8i5BEH 安装黑苹果与 Windows | GuCATs'摸鱼站</title>
+  
+
+
+
+
+
+
+
+<script type="text/javascript">
+    // Wait for the page to load first
+    var _prevOnload = window.onload;
+    window.onload = function() {
+        var switchLang = document.getElementById("menu").getElementsByClassName("menu-item-switch_lang")[0].childNodes[1];
+            var href = window.location.href;
+            var indexOfEn = href.toLowerCase().indexOf('/en/');
+            if(indexOfEn !== -1) {
+                switchLang.href = href.replace('/en/', '/');
+            }
+            else {
+                switchLang.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
+            }
+    }
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="GuCATs'摸鱼站" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GuCATs'摸鱼站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海納百川，有容乃大</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fas fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fas fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-分类"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw fa-fw"></i>分类</a></li><li class="menu-item menu-item-归档"><a href="/archives/" rel="section"><i class="fa fa-folder-tree fa-fw"></i>归档</a></li><li class="menu-item menu-item-记事本"><a href="/notes/" rel="section"><i class="fa fa-sticky-note fa-fw"></i>记事本</a></li><li class="menu-item menu-item-帮助"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-关于我"><a href="/about/" rel="section"><i class="fa fa-id-card fa-fw"></i>关于我</a></li><li class="menu-item menu-item-友链"><a href="/link/" rel="section"><i class="fas fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-站点地图"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-资源列表"><a href="/resources/" rel="section"><i class="fa fa-file-export fa-fw"></i>资源列表</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">2.</span> <span class="nav-text">使用情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%90%E6%96%99%EF%BC%88%E4%B8%A4%E7%A7%8D%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F%E4%BA%8C%E9%80%89%E4%B8%80%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">材料（两种安装方式二选一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="nav-number">3.1.</span> <span class="nav-text">在线安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.</span> <span class="nav-text">离线安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-BIOS"><span class="nav-number">4.</span> <span class="nav-text">设置 BIOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">5.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85-macOS"><span class="nav-number">5.1.</span> <span class="nav-text">在线安装 macOS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%81%A2%E5%A4%8D%E9%95%9C%E5%83%8F"><span class="nav-number">5.1.1.</span> <span class="nav-text">创建恢复镜像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85-macOS"><span class="nav-number">5.2.</span> <span class="nav-text">离线安装 macOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-macOS"><span class="nav-number">6.</span> <span class="nav-text">安装 macOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%B9%E6%8E%89%E7%A3%81%E7%9B%98"><span class="nav-number">6.1.</span> <span class="nav-text">抹掉磁盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">6.2.</span> <span class="nav-text">开始安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2"><span class="nav-number">6.3.</span> <span class="nav-text">部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E5%96%84"><span class="nav-number">7.</span> <span class="nav-text">完善</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%81%E7%A7%BB-EFI"><span class="nav-number">7.1.</span> <span class="nav-text">迁移 EFI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B4%97%E7%99%BD-%E6%B3%A8%E5%85%A5%E4%B8%89%E7%A0%81"><span class="nav-number">7.2.</span> <span class="nav-text">洗白&#x2F;注入三码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E5%A4%8D%E7%9D%A1%E7%9C%A0"><span class="nav-number">7.3.</span> <span class="nav-text">修复睡眠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E8%A1%A5%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1"><span class="nav-number">7.4.</span> <span class="nav-text">修补无线网卡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Windows"><span class="nav-number">8.</span> <span class="nav-text">安装 Windows</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GuCATs"
+      src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">GuCATs</p>
+  <div class="site-description" itemprop="description">海納百川，有容乃大</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml" rel="noopener me"><i class="fa-solid fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+<!-- 访客来源统计 -->
+<div class="m-list-title" style="display: block;"><span><i class="fas fa-globe"></i> 访客来源<br>(关闭拦截以正常加载)<br><br>小广告<br>如果你觉得文章对你有帮助，可以浏览 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/?wt.mc_id=studentamb_474966">Microsoft Learn</a>，使用跟踪符可以帮助我完成学生大使任务（需要暂时关闭防跟踪）</br></span>
+<!-- ClustrMaps -->
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=0e1633&w=300&t=tt&d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ&co=0b4975&cmo=3acc3a&cmn=ff5353&ct=cdd4d9'></script>
+<!-- RevolverMaps -->
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5wxv7tzuiaw&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=ubuntu&amp;l=49" async="async"></script>
+</div>
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      近期文章
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Managing_BitLocker_via_manage-bde&#x2F;">使用 manage-bde 管理 BitLocker</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Manage_Microsoft_Defender_AntiVirus_via_PowerShell&#x2F;">使用 PowerShell 管理 Microsoft Defender 防病毒</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Modifying_Windows_Region_Settings_via_Registry/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Modifying_Windows_Region_Settings_via_Registry&#x2F;">通过注册表修改 Windows 区域设定</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/Windows/Switch_to_Dark_Mode_When_Inactive/" title="zh-CN&#x2F;tutorial&#x2F;Windows&#x2F;Switch_to_Dark_Mode_When_Inactive&#x2F;">Windows 未激活时切换暗色模式</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/zh-CN/tutorial/VM/Hyper-V/Install_WSL1/" title="zh-CN&#x2F;tutorial&#x2F;VM&#x2F;Hyper-V&#x2F;Install_WSL1&#x2F;">安装 WSL 1</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="在 NUC8i5BEH 安装黑苹果与 Windows | GuCATs'摸鱼站">
+      <meta itemprop="description" content="通过 Intel NUC8i5BEH 安装黑苹果与 Windows">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 NUC8i5BEH 安装黑苹果与 Windows
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-21 21:45:16" itemprop="dateCreated datePublished" datetime="2024-08-21T21:45:16+08:00">2024-08-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-10-15 16:11:36" itemprop="dateModified" datetime="2025-10-15T16:11:36+08:00">2025-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/macOS/" itemprop="url" rel="index"><span itemprop="name">macOS</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">通过 Intel NUC8i5BEH 安装黑苹果与 Windows</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><ul>
+<li>Intel NUC8i5BEH</li>
+<li>SK hynix BC501 500 GB<a target="_blank" rel="noopener" href="https://heipg.cn/tutorial/diy-hackintosh-2020.html">（海力士 SK Hynix PC601/PC611/PC711/BC501：主要见于联想和戴尔笔记本，部分批次无法安装）</a></li>
+<li>Kingston KHX2666C15S4/8G * 2</li>
+<li>BCM94360CS2（SD 卡通道硬改）</li>
+</ul>
+<h2 id="使用情况"><a href="#使用情况" class="headerlink" title="使用情况"></a>使用情况</h2><p>不太全，我只讲了我目前用的，未提到的（比如连接显示器）则未尝试<br>正常：</p>
+<ul>
+<li>前后所有 USB 口</li>
+<li>后置 ThunderBolt 3 传输文件</li>
+<li>HDMI 输出图像（物理 1920 x 1080）</li>
+<li>RJ45 网口</li>
+<li>iCloud、App Store </li>
+<li>Wi-Fi、蓝牙</li>
+<li>自动休眠</li>
+<li>睡眠唤醒</li>
+<li>无线鼠标在 BIOS、OpenCore 引导界面使用</li>
+<li>AirDrop</li>
+</ul>
+<p>不正常：</p>
+<ul>
+<li>系统 OTA 更新（已知关闭安全启动引起的问题）</li>
+<li>从 Windows 输出源切换到 macOS 时，有几率雪花屏，重新切换就正常</li>
+<li>开机时不插入 HDMI 无法进入 OpenCore 引导界面等</li>
+</ul>
+<h2 id="材料（两种安装方式二选一）"><a href="#材料（两种安装方式二选一）" class="headerlink" title="材料（两种安装方式二选一）"></a>材料（两种安装方式二选一）</h2><p>你可以直接从 <a target="_blank" rel="noopener" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/EkkZgNLKf51IgYBJPKySMfoBboWi7Wbb-y8Ld7X5oYu3nQ?e=fqpKS7">OneDrive</a> 下载懒人包（不附带镜像，且工具版本不一定最新）</p>
+<details>
+
+<summary>EFI 支持的 macOS 版本</summary>
+
+<p>macOS Mojave &gt;&gt;&gt; 10.14<br>macOS Catalina &gt;&gt;&gt; 10.15<br>macOS Big Sur &gt;&gt;&gt; 11.0<br>macOS Monterey &gt;&gt;&gt; 12.0<br>macOS Ventura &gt;&gt;&gt; 13.0<br>macOS Sonoma &gt;&gt;&gt; 14.0</p>
+</details>
+
+<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p><a target="_blank" rel="noopener" href="https://github.com/Jiangmenghao/NUC8i5BEH">EFI</a>（如果你正在尝试安装 macOS Sonoma，请使用 <a target="_blank" rel="noopener" href="https://github.com/Jiangmenghao/NUC8i5BEH/tree/sonoma-only">sonoma-only</a> 分支的 EFI）<br>如果你正在尝试安装 macOS 14.5 + 的版本，请使用新版的 <a target="_blank" rel="noopener" href="https://heipg.lanzoue.com/inr482456lgf"><code>IOSkywalkFamily.kext</code> 和 <code>IO80211FamilyLegacy.kext</code>（密码：he9c）</a>，删除 <code>EFI</code> &gt; <code>OC</code> &gt; <code>Kexts</code> 下对应文件后再复制<sup><a href="#ref2">[2]</a></sup><br>Windows 镜像文件<br>EasyUEFI<br>PE（<a target="_blank" rel="noopener" href="https://www.wepe.com.cn/">微 PE</a> 或 <a target="_blank" rel="noopener" href="https://firpe.cn/page-247">FirPE</a> 都可以）<br><a target="_blank" rel="noopener" href="https://github.com/acidanthera/OpenCorePkg/releases">OpenCorePkg</a><br><a target="_blank" rel="noopener" href="https://www.python.org/">Python</a><br><a target="_blank" rel="noopener" href="https://github.com/benbaker76/Hackintool/releases">Hackintool</a><br><a target="_blank" rel="noopener" href="https://github.com/dortania/OpenCore-Legacy-Patcher/releases">OpenCore Legacy Patcher</a>（如果要安装在 macOS 14.3 + 或者 macOS 15.0 Beta 请使用 <a target="_blank" rel="noopener" href="https://github.com/dortania/OpenCore-Legacy-Patcher/actions">Nightly 构建</a>，随意点击一个构建后在底部点击下载 <code>OpenCore-Patcher.pkg</code>）<br><a target="_blank" rel="noopener" href="https://github.com/ic005k/OCAuxiliaryTools/releases">OCAuxiliaryTools</a></p>
+<h3 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h3><p><a target="_blank" rel="noopener" href="https://github.com/Jiangmenghao/NUC8i5BEH">EFI</a>（如果你正在尝试安装 macOS Sonoma，请使用 <a target="_blank" rel="noopener" href="https://github.com/Jiangmenghao/NUC8i5BEH/tree/sonoma-only">sonoma-only</a> 分支的 EFI）<br>如果你正在尝试安装 macOS 14.5 + 的版本，请使用新版的 <a target="_blank" rel="noopener" href="https://heipg.lanzoue.com/inr482456lgf"><code>IOSkywalkFamily.kext</code> 和 <code>IO80211FamilyLegacy.kext</code>（密码：he9c）</a>，删除 <code>EFI</code> &gt; <code>OC</code> &gt; <code>Kexts</code> 下对应文件后再复制<sup><a href="#ref2">[2]</a></sup><br>Windows 镜像文件<br>EasyUEFI<br>PE（<a target="_blank" rel="noopener" href="https://www.wepe.com.cn/">微 PE</a> 或 <a target="_blank" rel="noopener" href="https://firpe.cn/page-247">FirPE</a> 都可以）<br>macOS 镜像文件<br><a target="_blank" rel="noopener" href="https://github.com/balena-io/etcher/releases">balenaEtcher</a><br><a target="_blank" rel="noopener" href="https://github.com/benbaker76/Hackintool/releases">Hackintool</a><br><a target="_blank" rel="noopener" href="https://github.com/dortania/OpenCore-Legacy-Patcher/releases">OpenCore Legacy Patcher</a>（如果要安装在 macOS 14.3 + 或者 macOS 15.0 Beta 请使用 <a target="_blank" rel="noopener" href="https://github.com/dortania/OpenCore-Legacy-Patcher/actions">Nightly 构建</a>，随意点击一个构建后在底部点击下载 <code>OpenCore-Patcher.pkg</code>）<br><a target="_blank" rel="noopener" href="https://github.com/ic005k/OCAuxiliaryTools/releases">OCAuxiliaryTools</a></p>
+<h2 id="设置-BIOS"><a href="#设置-BIOS" class="headerlink" title="设置 BIOS"></a>设置 BIOS</h2><p>Boot 类：<br>Boot Priority &gt; Legacy Boot Priority &gt; Legacy Boot: <code>关闭</code><br>Boot Configuration：</p>
+<ul>
+<li>UEFI Boot &gt; Fast Boot: <code>关闭</code></li>
+<li>UEFI Boot &gt; Boot USB Devices First: <code>开启</code></li>
+<li>UEFI Boot &gt; Boot Network Devices Last: <code>开启</code></li>
+<li>Boot Devices &gt; Network Boot: <code>Disable</code></li>
+</ul>
+<p>Boot &gt; Secure Boot &gt; Secure Boot: <code>关闭</code><br>其它类：<br>Security &gt; Security Features &gt; Inter VT for directed I/VO (VT-d): <code>关闭</code><br>Power &gt; Secondary Power Settings &gt; Wake on LAN from S4/S5: <code>Stay Off</code><br>使用白苹果拆机网卡必做：<br>Devices &gt; Onboard Device:</p>
+<ul>
+<li>WLAN: <code>关闭</code></li>
+<li>Bluetooth: <code>关闭</code></li>
+<li>SD Card: <code>Read/Write</code></li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="在线安装-macOS"><a href="#在线安装-macOS" class="headerlink" title="在线安装 macOS"></a>在线安装 macOS</h3><h4 id="创建恢复镜像"><a href="#创建恢复镜像" class="headerlink" title="创建恢复镜像"></a>创建恢复镜像</h4><p>打开 OpenCorePkg 压缩包，并解压，然后在 <code>\Utilities\macrecovery</code> 下按住 Shift 不放并单击右键，选择<code>在此处打开 PowerShell 窗口</code>（安装终端的 Windows 可以直接右键选择<code>在终端中打开</code>）<br>随后，使用以下任一命令下载 MacRecovery 镜像</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">Mojave</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download</span><br><span class="line"></span><br><span class="line">Catalina</span><br><span class="line">python macrecovery.py -b Mac-CFF7D910A743CAAF -m 00000000000PHCD00 download</span><br><span class="line">python macrecovery.py -b Mac-00BE6ED71E35EB86 -m <span class="number">00000000000000000</span> download</span><br><span class="line"></span><br><span class="line">Big Sur</span><br><span class="line">python macrecovery.py -b Mac-2BD1B31983FE1663 -m <span class="number">00000000000000000</span> download</span><br><span class="line"></span><br><span class="line">Monterey</span><br><span class="line">python macrecovery.py -b Mac-E43C1C25D4880AD6 -m <span class="number">00000000000000000</span> download</span><br><span class="line"></span><br><span class="line">Ventura</span><br><span class="line">python macrecovery.py -b Mac-B4831CEBD52A0C4C -m <span class="number">00000000000000000</span> download</span><br><span class="line"></span><br><span class="line">Diagnostics</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m <span class="number">00000000000000000</span> -diag download</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000JG3600 -diag download</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 &lt;real MLB&gt; -diag</span><br><span class="line"></span><br><span class="line">Default version</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000JG3600 download</span><br><span class="line">(oldest)</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m &lt;real MLB&gt; -os default download</span><br><span class="line">(newer)</span><br><span class="line"></span><br><span class="line">Latest version</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m <span class="number">00000000000000000</span> -os latest download</span><br><span class="line">python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m &lt;real MLB&gt; -os latest download</span><br><span class="line"></span><br><span class="line">更多下载可参考 GitHub：https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt</span><br></pre></td></tr></table></figure>
+
+<p>下载好的镜像在 <code>com.apple.recovery.boot</code> 文件夹下，名为 <code>BaseSystem.dmg</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/BaseSystem.png" alt="BaseSystem.dmg"></p>
+<p>准备一个容量大于 4 GB 的 U 盘，并格式化为 FAT32（如果你的总容量大于 32 GB，可以使用别的工具格式化为 FAT32）<br>亦或者是将某个分区分出 4 GB 后再将其格式化为 FAT32，其它不变<br>然后，将 <code>com.apple.recovery.boot</code> 文件夹与 <code>EFI</code> 文件夹复制到 U 盘根目录，结构目录如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">com.apple.recovery.boot</span><br><span class="line">├── BaseSystem.chunklist</span><br><span class="line">├── BaseSystem.dmg</span><br><span class="line">EFI</span><br><span class="line">├── BOOT</span><br><span class="line">├── OC</span><br><span class="line">├── readme.txt</span><br></pre></td></tr></table></figure>
+
+<p>完成后，将 U 盘插入到 NUC8i5BEH，并开始安装 macOS</p>
+<h3 id="离线安装-macOS"><a href="#离线安装-macOS" class="headerlink" title="离线安装 macOS"></a>离线安装 macOS</h3><p>打开 <code>balenaEtcher</code>，并分别选择你的 DMG 与 U 盘，然后点击 <code>Flash!</code> 之后开始写入到 U 盘</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/balenaEtcher.png" alt="balenaEtcher"></p>
+<h2 id="安装-macOS"><a href="#安装-macOS" class="headerlink" title="安装 macOS"></a>安装 macOS</h2><p>将 U 盘插入到 NUC8i5BEH，按下电源键并立即持续点按 <kbd>F10</kbd>，进入 BIOS 启动菜单，选择 UEFI 开头的 U 盘，按下回车并立即按下 <kbd>ESC</kbd>，出现 OpenCore 引导菜单后，按<kbd>空格</kbd>，出现隐藏引导项 <code>Install macOS</code> 或者黄色 macOS 的偏好设置图标，选中它并回车进入（也可能叫其它名称，比如使用在线安装且是未命名的 U 盘会显示为 <code>NO NAME (DMG)</code>，使用离线安装的会显示为 <code>Install macOS xxx</code>）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/OpenCoreBoot.png" alt="OpenCoreBoot"></p>
+<p>进入 Recovery 模式后，出现 Apple Logo 进度条页面，进入 Recovery 界面</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/loading.png" alt="加载中"></p>
+<h3 id="抹掉磁盘"><a href="#抹掉磁盘" class="headerlink" title="抹掉磁盘"></a>抹掉磁盘</h3><p>选择<code>磁盘工具</code>，并点击继续</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/disk-utility.png" alt="磁盘工具"></p>
+<p>在侧栏选择你要安装的磁盘，然后从<code>磁盘工具</code>顶部点击<code>抹掉</code>，名称随意，格式选择 <code>APFS</code>（如果有分区类型请选择 <code>GUID</code>），最后点击<code>抹掉</code>即可</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/erase.png" alt="抹掉磁盘"></p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><p>退出<code>磁盘工具</code>，选择<code>安装 macOS</code>，并点击继续</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/install-macOS.png" alt="开始安装"></p>
+<p>一直下一步，直到选择磁盘这一步，选择好你要安装的分区，然后点击<code>继续</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/select-disk.png" alt="选择磁盘"></p>
+<p>等待约半个小时，macOS 安装器会自动安装 macOS 并重启，随后再等待半个小时</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>该步骤没什么特别之处，继续即可<br><strong>请注意：再次过程中不要登录到 iCloud 或 Apple Account/Apple ID 等有关 Apple 的任何服务</strong></p>
+<h2 id="完善"><a href="#完善" class="headerlink" title="完善"></a>完善</h2><h3 id="迁移-EFI"><a href="#迁移-EFI" class="headerlink" title="迁移 EFI"></a>迁移 EFI</h3><p>安装并打开 <code>Hackintool</code>（<a href="/zh-CN/tutorial/macOS/macOSswit/" title="如果提示“无法打开&quot;xxx&quot;，因为无法验证开发者”，请查看解决方案">如果提示“无法打开&quot;xxx&quot;，因为无法验证开发者”，请查看解决方案</a>）<br>随后，点击<code>磁盘</code>，然后点击你安装 macOS 磁盘后面的倒三角，输入密码后即可挂载 EFI 分区</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/mount-EFI.png" alt="挂载 EFI"></p>
+<p>从<code>访达</code>中访问挂载的 EFI 分区（可能名为 <code>Untitled</code>），并将根目录下的 EFI 文件夹<strong>删除</strong>（如果有需要可以备份）<br>随后，将自己的 EFI 文件夹拷贝进去</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/EFI.png" alt="EFI"></p>
+<h3 id="洗白-注入三码"><a href="#洗白-注入三码" class="headerlink" title="洗白/注入三码"></a>洗白/注入三码</h3><p>安装 <code>OCAuxiliaryTools</code>（<a href="/zh-CN/tutorial/macOS/macOSswit/" title="如果提示“无法打开&quot;xxx&quot;，因为无法验证开发者”，请查看解决方案">如果提示“无法打开&quot;xxx&quot;，因为无法验证开发者”，请查看解决方案</a>），你还可以使用别的编辑器<br>点开 <code>EFI</code> &gt; <code>OC</code> &gt; <code>config.plist</code>（如果安装了 OCAuxiliaryTools 会默认使用该软件打开）<br>如果安装 macOS 与 Windows 双系统或许需要将 <code>config.plist</code> 改名 <code>config.plist.bak</code>，然后将 <code>config-双系统.plist</code> 改名 <code>config.plist</code>（或许吧，没有试过，如果原来的 <code>config.plist</code> 能用就别动）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/config.plist.png" alt="config.plist"></p>
+<p>点开 <code>Pl</code> &gt; <code>Generic 通用</code>，同时在 <code>Hackintool</code> 也点开 <code>系统</code> &gt; <code>系列号生成器</code> &gt; <code>刷新</code>（确保设备型号为 <code>Macmini8,1</code>，按下刷新按钮选择你觉得满意的序列号）<br>然后在<a target="_blank" rel="noopener" href="https://checkcoverage.apple.com/">查看设备的保障信息 - Apple 支持</a>中输入<code>序列号</code>并验证，如果查询不到则代表可用<br>最后按照如下对应的顺序填入三码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">序列号 &gt;&gt;&gt; SystemSerialNumber</span><br><span class="line">主板序列号 &gt;&gt;&gt; MLB</span><br><span class="line">SmUUID &gt;&gt;&gt; SystemUUID</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/UUID.png" alt="注入三码"></p>
+<details>
+
+<summary>关于注入三码</summary>
+
+<p>有一种传奇的说法是，如果你的 Apple Account 登录过的 Apple 设备过少，则 Apple Account 容易被拉黑<br>这就是为什么有人序列号乱填都能用而有的人精心挑选的三码还是被拉黑</p>
+</details>
+
+<p>注入三码，保存并重启后，即可使用 Apple 服务（如果你不急可以所有操作后再作登录）</p>
+<h3 id="修复睡眠"><a href="#修复睡眠" class="headerlink" title="修复睡眠"></a>修复睡眠</h3><p>在 <code>Hackintool</code> 点击 <code>电源</code>，接着点击下方的<code>修复深度睡眠预留空间</code>，完成后圈出的部分会从红色变为绿色<br>如果发现变回红色了，重新点击<code>修复深度睡眠预留空间</code>即可</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/repair-sleep.png" alt="修复睡眠"></p>
+<h3 id="修补无线网卡"><a href="#修补无线网卡" class="headerlink" title="修补无线网卡"></a>修补无线网卡</h3><p><strong>完成以上所有操作后，请保存 <code>config.plist</code>，并重启 macOS</strong></p>
+<p><strong>修补前请注意 BIOS 设置是否为：<code>Devices</code> &gt; <code>Onboard Device</code> &gt; <code>SD Card</code>: <code>Read/Write</code>，如果不是请修改为这样的，否则会把 SD 卡通道禁用了</strong><br>安装并打开 <code>OpenCore Legacy Patcher</code>（<a href="/zh-CN/tutorial/macOS/macOSswit/" title="如果提示“无法打开&quot;xxx&quot;，因为无法验证开发者”，请查看解决方案">如果提示“无法打开&quot;xxx&quot;，因为无法验证开发者”，请查看解决方案</a>）<br>点击 <code>Post-Install Root Patch</code>，等待查找可用的修补</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/OCLP.png" alt="Post-Install Root Patch"></p>
+<p>找到可用的修补之后，点击 <code>Start Root Patch</code>（如果没有亮起可能需要检查 **BIOS 设置是否为：<code>Devices</code> &gt; <code>Onboard Device</code> &gt; <code>SD Card</code>: <code>Read/Write</code>**，或者未插紧，或网卡损坏）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/patch-wireless.png" alt="修补 Wi-Fi"></p>
+<p>完成后点击 <code>Reboot</code> 来重启</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/OCLP-reboot.png" alt="重启"></p>
+<p>重启后即可看到 Wi-Fi 正常使用<br>按住 <kbd>Option (⌥)</kbd>，相当于 Windows 键盘的 <kbd>Alt</kbd>（左），再点击顶部菜单栏的 <code>Wi-Fi</code> 即可看到详细信息（<code>国家/地区</code>因为使用了 <code>-brcmfxbeta brcmfx-country=#a</code>（macOS 14.0 +） 或 <code>brcmfx-country=#a</code>（macOS 13.0 -） 参数导致无法显示，为正常现象）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/install-macOS-and-Windows-on-NUC8/Wi-Fi.png" alt="Wi-Fi"></p>
+<h2 id="安装-Windows"><a href="#安装-Windows" class="headerlink" title="安装 Windows"></a>安装 Windows</h2><p>施工中.jpg</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a name = "ref1" target="_blank" rel="noopener" href="https://www.cnblogs.com/yunzimo/p/17766264.html">NUC 双系统安装详细教程 - 云子墨 - 博客园</a></li>
+<li><a name = "ref2" target="_blank" rel="noopener" href="https://heipg.cn/tutorial/patch-brcm-wireless-card-macos-sonoma.html">修复 macOS Sonoma 更新后博通无线网卡无法使用的临时解决方法 - 黑苹果星球</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Blog/AFDIAN.png" alt="GuCATs AFDIAN">
+        <span>AFDIAN</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>GuCATs
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://goo-aw233.github.io/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/" title="在 NUC8i5BEH 安装黑苹果与 Windows">https://goo-aw233.github.io/zh-CN/tutorial/macOS/install-macOS-and-Windows-on-NUC8/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/macOS/" rel="tag"># macOS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh-CN/tutorial/VM/VMware/macOSVMModelEmulation/" rel="prev" title="macOS 虚拟机机型模拟">
+                  <i class="fa fa-chevron-left"></i> macOS 虚拟机机型模拟
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh-CN/tutorial/Windows/disable-Device-Credential-Guard/" rel="next" title="为你的电脑关闭 Device/Credential Guard">
+                  为你的电脑关闭 Device/Credential Guard <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>简体中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/tutorial/macOS/install-macOS-and-Windows-on-NUC8/" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/tutorial/macOS/install-macOS-and-Windows-on-NUC8/" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+
+<div class="copyright">
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa-solid fa-tower-cell"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GuCATs</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">53k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:58</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时间...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("11/15/2021 00:00:00");
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" d "; 
+        document.getElementById("times").innerHTML = hnum + " h " + mnum + " min " + snum + " s"; 
+    } 
+setInterval("createtime()",250);
+</script>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+
+  <a href="https://github.com/Goo-aw233" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#fff',
+  buttonColorLight: '#100f2c',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
