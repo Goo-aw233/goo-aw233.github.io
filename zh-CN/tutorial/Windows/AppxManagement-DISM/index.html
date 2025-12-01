@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Goo-aw233/WebSiteResources/main/Pics/AppxManagement-DISM/AppxManagement-DISM4.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Goo-aw233/WebSiteResources/main/Pics/AppxManagement-DISM/AppxManagement-DISM5.png">
 <meta property="article:published_time" content="2023-08-25T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-26T11:25:07.579Z">
+<meta property="article:modified_time" content="2025-12-01T07:43:05.401Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -298,7 +298,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-10-26 19:25:07" itemprop="dateModified" datetime="2025-10-26T19:25:07+08:00">2025-10-26</time>
+      <time title="修改时间：2025-12-01 15:43:05" itemprop="dateModified" datetime="2025-12-01T15:43:05+08:00">2025-12-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -352,6 +352,9 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果你的应用程序包名、或者文件路径中含有空格，请将空格改为连接符（-）或下划线（_）<br>Windows PE 4.0、Windows Server 2012 服务器核心安装选项或任何低于 Windows 8 和 Windows Server 2012 的 Windows 版本的 Windows 系统都不支持<br>如果仅有 <code>/Image:&lt;系统盘盘符&gt;:</code> 或 <code>/Online</code> 参数，则代表另一个参数不可用</p>
+<p>DISM 支持使用长路径（UNC 路径）表示，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:\\?\C:\ /?</span><br></pre></td></tr></table></figure>
+
 <a href="/zh-CN/tutorial/Windows/AppxManagement-PowerShell/" title="使用 PowerShell 管理 APPX 与 MSIX 包">使用 PowerShell 管理 APPX 与 MSIX 包</a>
 
 <details>
@@ -365,21 +368,25 @@
 <p>如果你是为挂载的映像添加，请将<code>&lt;系统盘盘符&gt;:</code>替换为挂载路径，如 <code>C:\Temp\Mount</code>（Windows 等文件夹的上层目录）</p>
 <p><code>/Image:</code> 参数仅允许在 PE 下使用，或对挂载的镜像使用；<code>/Online</code> 参数仅允许对当前正在运行的系统（联机映像）使用</p>
 <h2 id="Get-Help"><a href="#Get-Help" class="headerlink" title="/Get-Help /?"></a>/Get-Help /?</h2><p>获取帮助<br>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:&lt;系统盘盘符&gt;: /Add-ProvisionedAppxPackage /?</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:&lt;系统盘盘符&gt;: /?</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Get-ProvisionedAppxPackages /?</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:&lt;系统盘盘符&gt;: /Get-Help</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /?</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Get-Help</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://raw.githubusercontent.com/Goo-aw233/WebSiteResources/main/Pics/AppxManagement-DISM/AppxManagement-DISM1.png" alt="/Get-Help /?"></p>
 <h2 id="Get-ProvisionedAppxPackages"><a href="#Get-ProvisionedAppxPackages" class="headerlink" title="/Get-ProvisionedAppxPackages"></a>/Get-ProvisionedAppxPackages</h2><p>获取映像中为每个用户安装的应用程序包的相关信息<br>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:&lt;系统盘盘符&gt;: /Get-ProvisionedAppxPackages</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:&lt;系统盘盘符&gt;: /Get-ProvisionedAppxPackages</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Get-ProvisionedAppxPackages</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Get-ProvisionedAppxPackages</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://raw.githubusercontent.com/Goo-aw233/WebSiteResources/main/Pics/AppxManagement-DISM/AppxManagement-DISM2.png" alt="/Get-ProvisionedAppxPackages"></p>
 <h2 id="Add-ProvisionedAppxPackage"><a href="#Add-ProvisionedAppxPackage" class="headerlink" title="/Add-ProvisionedAppxPackage"></a>/Add-ProvisionedAppxPackage</h2><p>将一个或多个应用程序包添加到映像<br>若应用到未进入 OOBE 的系统或挂载的映像，每个现有的或新的用户配置文件都将注册该应用；如果将应用添加到联机映像，则在当前用户下次登录之前，将不会为此用户注册应用</p>
 <p><font size=4 color=yellow>若你使用的是 <code>/Online</code> 参数，且进入系统后不联网，则需要使用 <code>/LicensePath</code> 参数来指定许可证，否则可能会无法打开应用程序；如果为 UUP 集成的，可以在 UUP 的 UUPs\Apps 文件夹下找到 License.xml（可能不通用于不同软件间）</font></p>
 <p>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Add-ProvisionedAppxPackage &#123;/FolderPath:&lt;已解包的应用程序包路径&gt; [/SkipLicense] | /PackagePath:&lt;应用程序包路径&gt; [/DependencyPackagePath:&lt;应用程序包运行时路径&gt;] [/LicensePath:&lt;许可证路径&gt; | /SkipLicense]&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Add-ProvisionedAppxPackage &#123;/FolderPath:&lt;已解包的应用程序包路径&gt; [/SkipLicense] | /PackagePath:&lt;应用程序包路径&gt; [/DependencyPackagePath:&lt;应用程序包运行时路径&gt;] [/LicensePath:&lt;许可证路径&gt; | /SkipLicense]&#125;</span><br></pre></td></tr></table></figure>
 
 <details>
 
@@ -397,10 +404,10 @@
 </details>
 
 <p>假如，我的系统盘盘符为 C，应用程序包放在 <code>D:\Appx</code> 下，应用程序包名为 <code>Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe.Appx</code>，没有许可证文件，则我的命令如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:C: /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe.Appx /SkipLicense</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:C: /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe.Appx /SkipLicense</span><br></pre></td></tr></table></figure>
 
 <p>抑或是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe.Appx /SkipLicense</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe.Appx /SkipLicense</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://raw.githubusercontent.com/Goo-aw233/WebSiteResources/main/Pics/AppxManagement-DISM/AppxManagement-DISM3.png" alt="/Add-ProvisionedAppxPackage"></p>
 <details>
@@ -408,23 +415,23 @@
 <summary>其它示例</summary>
 
 <p>完整示例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Add-ProvisionedAppxPackage /FolderPath:D:\Appx\UnpackedAppx /CustomDataPath:D:\Appx\CustomData\CustomData.xml /LicensePath:D:\Appx\License\License.xml /Region:&quot;All&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Add-ProvisionedAppxPackage /FolderPath:D:\Appx\UnpackedAppx /CustomDataPath:D:\Appx\CustomData\CustomData.xml /LicensePath:D:\Appx\License\License.xml /Region:&quot;All&quot;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-1.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-2.appx /SkipLicense /Region:&quot;US;GB&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-1.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-2.appx /SkipLicense /Region:&quot;US;GB&quot;</span><br></pre></td></tr></table></figure>
 
 <p>/FolderPath: </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:C: /Add-ProvisionedAppxPackage /FolderPath:D:\Appx\UnpackedAppx /CustomDataPath:D:\Appx\CustomData\CustomData.xml /LicensePath:D:\Appx\License\License.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:C: /Add-ProvisionedAppxPackage /FolderPath:D:\Appx\UnpackedAppx /CustomDataPath:D:\Appx\CustomData\CustomData.xml /LicensePath:D:\Appx\License\License.xml</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Add-ProvisionedAppxPackage /FolderPath:D:\Appx\UnpackedAppx /SkipLicense</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Add-ProvisionedAppxPackage /FolderPath:D:\Appx\UnpackedAppx /SkipLicense</span><br></pre></td></tr></table></figure>
 
 <p>/PackagePath: </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:C: /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-1.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-2.appx /LicensePath:D:\Appx\License\License.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:C: /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-1.appx /DependencyPackagePath:D:\Appx\Runtime\Framework-2.appx /LicensePath:D:\Appx\License\License.xml</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:C: /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /SkipLicense</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:C: /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /SkipLicense</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /Region:&quot;All&quot; /SkipLicense</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /Region:&quot;All&quot; /SkipLicense</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /LicensePath:D:\Appx\License\License.xml /Region:&quot;US;GB&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Add-ProvisionedAppxPackage /PackagePath:D:\Appx\Appx.appx /LicensePath:D:\Appx\License\License.xml /Region:&quot;US;GB&quot;</span><br></pre></td></tr></table></figure>
 
 </details>
 
@@ -432,10 +439,10 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Remove-ProvisionedAppxPackage /PackageName:&lt;应用程序包全名称&gt;</span><br></pre></td></tr></table></figure>
 
 <p>若我的应用程序包全名称为 <code>Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbewe</code>，则命令如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Image:C: /Remove-ProvisionedAppxPackage /PackageName:Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Image:C: /Remove-ProvisionedAppxPackage /PackageName:Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe</span><br></pre></td></tr></table></figure>
 
 <p>抑或是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism /Online /Remove-ProvisionedAppxPackage /PackageName:Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Remove-ProvisionedAppxPackage /PackageName:Microsoft.UI.Xaml.2.7_7.2208.15002.0_x64__8wekyb3d8bbwe</span><br></pre></td></tr></table></figure>
 
 <p><img data-src="https://raw.githubusercontent.com/Goo-aw233/WebSiteResources/main/Pics/AppxManagement-DISM/AppxManagement-DISM4.png" alt="/Remove-ProvisionedAppxPackage"></p>
 <blockquote>
