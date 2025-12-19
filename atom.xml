@@ -69,9 +69,9 @@
     <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Modifying_Windows_Region_Settings_via_Registry/"/>
     <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Modifying_Windows_Region_Settings_via_Registry/</id>
     <published>2025-10-20T14:06:09.000Z</published>
-    <updated>2025-10-26T11:25:07.578Z</updated>
+    <updated>2025-12-08T15:30:43.093Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="设备设置区域"><a href="#设备设置区域" class="headerlink" title="设备设置区域"></a>设备设置区域</h2><p>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 打开 Windows 搜索，搜索 <code>cmd.exe</code> 或 <code>wt.exe</code> 并选择“以管理员身份运行”</p><ol><li><p>禁用 UCPD 服务，完成后重启 Windows</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sc.exe config UCPD start= disabled</span><br><span class="line">schtasks.exe /Change /TN &quot;\Microsoft\Windows\AppxDeploymentClient\UCPD velocity&quot; /Disable</span><br></pre></td></tr></table></figure></li><li><p>修改区域<br> 地区代码参考：<a href="https://learn.microsoft.com/windows/win32/intl/table-of-geographical-locations/?wt.mc_id=studentamb_474966">地理位置表 - Win32 apps | Microsoft Learn</a><br> 修改 <code>&lt;地理位置标识符（十进制）&gt;</code> 部分，例如德国是 <code>94</code></p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg.exe add &quot;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\DeviceRegion&quot; /v DeviceRegion /t REG_DWORD /d &lt;地理位置标识符（十进制）&gt; /f</span><br></pre></td></tr></table></figure></li><li><p>启用 UCPD 服务，完成后重启 Windows</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sc.exe config UCPD start= system</span><br><span class="line">schtasks.exe /Change /TN &quot;\Microsoft\Windows\AppxDeploymentClient\UCPD velocity&quot; /Enable</span><br></pre></td></tr></table></figure></li></ol><h2 id="国家或地区"><a href="#国家或地区" class="headerlink" title="国家或地区"></a>国家或地区</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 打开“运行”，输入 <code>regedit.exe</code> 并按下 <kbd>Enter</kbd> 以打开注册表编辑器</p><p>定位到路径 <code>HKEY_CURRENT_USER\Control Panel\International\Geo</code></p><blockquote><p><code>NAME</code> 对应的的是 <a href="https://www.iban.com/country-codes">ISO 3166-1</a> 的 <code>Alpha-2 Code</code>，例如，德国是 <code>DE</code><br><code>Nation</code>对应的是 <a href="https://learn.microsoft.com/windows/win32/intl/table-of-geographical-locations/?wt.mc_id=studentamb_474966">地理位置表 - Win32 apps | Microsoft Learn</a>，例如，德国是 <code>94</code></p></blockquote><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Modifying_Windows_Region_Settings_via_Registry/Geo_Registry_Key.png" alt="Geo 注册表键值"></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><a href="https://linux.do/t/topic/884669">Windows 设备设置区域 DeviceRegion（安装时的地区）修改教程 - 开发调优 - LINUX DO</a><br><a href="https://zh.101-help.com/381b54fa7c-ru-he-zai-windows-10zhong-geng-gai-country-or-region">如何在 Windows 10 中更改国家或地区</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="设备设置区域"><a href="#设备设置区域" class="headerlink" title="设备设置区域"></a>设备设置区域</h2><p>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 打开 Windows 搜索，搜索 <code>cmd.exe</code> 或 <code>wt.exe</code> 并选择“以管理员身份运行”</p><ol><li><p>禁用 UCPD 服务，完成后重启 Windows</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sc.exe config UCPD start= disabled</span><br><span class="line">schtasks.exe /Change /TN &quot;\Microsoft\Windows\AppxDeploymentClient\UCPD velocity&quot; /Disable</span><br></pre></td></tr></table></figure></li><li><p>修改区域<br> 地区代码参考：<a href="https://learn.microsoft.com/windows/win32/intl/table-of-geographical-locations/?wt.mc_id=studentamb_474966">地理位置表 - Win32 apps | Microsoft Learn</a><br> <del>修改 <code>&lt;地理位置标识符（十进制）&gt;</code> 部分，例如德国是 <code>94</code></del><br> 修改 <code>&lt;地理位置标识符（十六进制）&gt;</code> 部分，例如德国是 <code>0x5e</code>，对应的就是 <code>0000005e</code></p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg.exe add &quot;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Control Panel\DeviceRegion&quot; /v DeviceRegion /t REG_DWORD /d &lt;地理位置标识符（十六进制）&gt; /f</span><br></pre></td></tr></table></figure></li><li><p>启用 UCPD 服务，完成后重启 Windows</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sc.exe config UCPD start= system</span><br><span class="line">schtasks.exe /Change /TN &quot;\Microsoft\Windows\AppxDeploymentClient\UCPD velocity&quot; /Enable</span><br></pre></td></tr></table></figure></li></ol><h2 id="国家或地区"><a href="#国家或地区" class="headerlink" title="国家或地区"></a>国家或地区</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 打开“运行”，输入 <code>regedit.exe</code> 并按下 <kbd>Enter</kbd> 以打开注册表编辑器</p><p>定位到路径 <code>HKEY_CURRENT_USER\Control Panel\International\Geo</code></p><blockquote><p><code>NAME</code> 对应的的是 <a href="https://www.iban.com/country-codes">ISO 3166-1</a> 的 <code>Alpha-2 Code</code>，例如，德国是 <code>DE</code><br><code>Nation</code>对应的是 <a href="https://learn.microsoft.com/windows/win32/intl/table-of-geographical-locations/?wt.mc_id=studentamb_474966">地理位置表 - Win32 apps | Microsoft Learn</a>，例如，德国是 <code>94</code></p></blockquote><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Modifying_Windows_Region_Settings_via_Registry/Geo_Registry_Key.png" alt="Geo 注册表键值"></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><a href="https://linux.do/t/topic/884669">Windows 设备设置区域 DeviceRegion（安装时的地区）修改教程 - 开发调优 - LINUX DO</a><br><a href="https://zh.101-help.com/381b54fa7c-ru-he-zai-windows-10zhong-geng-gai-country-or-region">如何在 Windows 10 中更改国家或地区</a></p>]]></content>
     
     
     <summary type="html">通过注册表修改 Windows 区域设定</summary>
@@ -164,9 +164,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1236,9 +1236,9 @@
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1503,9 +1503,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1532,9 +1532,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1727,9 +1727,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1827,9 +1827,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
