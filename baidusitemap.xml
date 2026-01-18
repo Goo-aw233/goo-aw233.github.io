@@ -53,11 +53,11 @@
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
@@ -165,6 +165,10 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Downgrade_Windows/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -185,11 +189,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -213,10 +217,6 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/customuup/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -225,7 +225,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -233,11 +233,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/macOSVMModelEmulation/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/macOSVMModelEmulation/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
