@@ -6,7 +6,7 @@
   <link href="https://goo-aw233.github.io/atom.xml" rel="self"/>
   
   <link href="https://goo-aw233.github.io/"/>
-  <updated>2025-10-26T11:25:07.578Z</updated>
+  <updated>2026-01-18T04:46:18.801Z</updated>
   <id>https://goo-aw233.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为 Steam 安装浏览器扩展</title>
+    <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Install_Extensions_on_Steam/"/>
+    <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Install_Extensions_on_Steam/</id>
+    <published>2026-01-08T04:08:43.000Z</published>
+    <updated>2026-01-18T04:46:18.801Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于 Steam 直接使用的是 Chromium，它可以同绝大部分普通浏览器一样，安装 Chromium 类的浏览器扩展</p><h2 id="打开扩展页"><a href="#打开扩展页" class="headerlink" title="打开扩展页"></a>打开扩展页</h2><p>随便找一个文件，直接拖拽到 Steam 里即可打开一个新的内置的浏览器标签页<br>打开后，点击标签页的 <code>+</code>，在地址栏部分输入 <code>chrome://extensions</code> 并回车就可以打开扩展页</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Install_Extensions_on_Steam/Open_Extensions_Page.png" alt="扩展页"></p><p>当然还有别的办法，可以在游戏启动后按下 <kbd>SHIFT</kbd> + <kbd>TAB</kbd> 打开“Steam 叠加界面”，通过该页面的浏览器页面来打开扩展页</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Install_Extensions_on_Steam/Open_Extensions_Page_1.png" alt="扩展页"></p><h2 id="安装扩展"><a href="#安装扩展" class="headerlink" title="安装扩展"></a>安装扩展</h2><p>可以直接通过 Chrome 应用商店、其他浏览器扩展应用商店，抑或是直接拖拽安装 <code>.crx</code> 来安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Install_Extensions_on_Steam/Download_Extensions_on_Chrome_Web_Store.png" alt="Chrome 应用商店"></p><p>通过 Chrome 应用商店安装时，会选择让你选择 <code>.crx</code> 保存路径，选择保存到桌面即可，<strong>这不会将任何文件直接下载到桌面，而是直接安装</strong>，安装完后会在 Chromium 里打开一个页面提示你已安装完成，跟随步骤完成部署后即可关闭 Chromium</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Install_Extensions_on_Steam/Extensions_Page.png" alt="扩展部署"></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>安装完成后，可以直接在 Steam 里使用即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Install_Extensions_on_Steam/Extensions_Installed.png" alt="安装完成"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Install_Extensions_on_Steam/Site_on_Steam.png" alt="扩展使用"></p>]]></content>
+    
+    
+    <summary type="html">在 Steam 安装浏览器扩展</summary>
+    
+    
+    
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows - macOS - Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows-macOS-Linux/"/>
+    
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
+    
+    <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 manage-bde 管理 BitLocker</title>
@@ -1503,9 +1530,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   
@@ -1727,9 +1754,9 @@
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     
   </entry>
   

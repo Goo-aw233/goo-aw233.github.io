@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Install_Extensions_on_Steam/</loc>
+    <lastmod>2026-01-18</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Modifying_Windows_Region_Settings_via_Registry/</loc>
     <lastmod>2025-12-19</lastmod>
   </url>
@@ -17,11 +21,11 @@
     <lastmod>2025-11-03</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
@@ -145,19 +149,11 @@
     <lastmod>2024-08-31</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/OTAExtractionBoot/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/DOS/MS-DOS3.x/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/OTAExtractionBoot/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -169,11 +165,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/NT6upd/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Remove_installation_restrictions/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Remove_installation_restrictions/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/NT6upd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -181,11 +177,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -201,10 +197,6 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/customuup/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -217,15 +209,23 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -237,11 +237,15 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
