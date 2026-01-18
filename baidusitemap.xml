@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Upgrade_Windows_PowerShell_Version/</loc>
+    <lastmod>2026-01-18</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Install_Extensions_on_Steam/</loc>
     <lastmod>2026-01-18</lastmod>
   </url>
@@ -21,11 +25,11 @@
     <lastmod>2025-11-03</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
@@ -41,10 +45,6 @@
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win7instPS/</loc>
-    <lastmod>2025-10-26</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/unattended_files/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
@@ -53,11 +53,11 @@
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
@@ -161,6 +161,10 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Downgrade_Windows/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -197,15 +201,19 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/convert-system-edition-to-LTS/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -214,14 +222,6 @@
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/edge-visual/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -237,11 +237,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
