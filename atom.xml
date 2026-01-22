@@ -363,9 +363,9 @@
     
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
     <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    
+    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     
@@ -713,9 +713,9 @@
     <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Remove_installation_restrictions/"/>
     <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Remove_installation_restrictions/</id>
     <published>2023-01-12T11:54:10.000Z</published>
-    <updated>2026-01-22T06:52:02.906Z</updated>
+    <updated>2026-01-22T07:12:44.519Z</updated>
     
-    <content type="html"><![CDATA[<p>类似于 Apple Music 这样，把安装的版本限制在 Windows 11 22621.0 以上</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions1.png" alt="要求版本"></p><p>而在低于 Windows 11 22621.0 的系统则会无法安装该软件</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions2.png" alt="报错"></p><h2 id="下载包"><a href="#下载包" class="headerlink" title="下载包"></a>下载包</h2><p>首先在 Microsoft Store 里获取软件的链接<br>“分享链接” &gt; “复制链接”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions3.png" alt="获取链接"></p><p>随后在 <a href="https://store.rg-adguard.net/">https://store.rg-adguard.net</a> 中粘贴链接并下载你需要的软件包，<font color=yellow>以及下面所提供的，与你系统相匹配的运行库（一般选带有 x64 的即可）</font></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions4.png" alt="获取包"></p><h2 id="修改包"><a href="#修改包" class="headerlink" title="修改包"></a>修改包</h2><p>使用 <a href="https://7-zip.org/">7-Zip</a> 等解压缩软件打开软件包，并将其<font color=red>全部解压到空白文件夹内（因为不再将其打包成应用程序包，故不能再移动文件夹）</font></p><hr><p>正常来说，下载好的 AppxBundle 或 MSIXBundle 内还会有几个 <code>.Appx</code> 或 <code>.MSIX</code> 安装包<br>正常情况下需要再次解压最大的安装包到空白文件夹<br>注意需要辨别里面的包是 <code>ARM</code>、<code>ARM64</code>、<code>x64</code> 还是 <code>x86</code>，一般只需要 <code>x64</code></p><hr><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions5.png" alt="解压"></p><p>使用记事本或其它文本编辑工具打开文件夹内的 <code>AppxManifest.xml</code><br>按下 <kbd>Ctrl</kbd> + <kbd>F</kbd> 打开“搜索”，并输入 <code>TargetDeviceFamily</code>，将所有结果里带引号 <code>&quot;</code> 里的版本号更改为你的系统版本号并保存</p><blockquote>只需要更改 Name="Windows.Desktop" 那一行里 10.0 之后的数字<br>查看系统版本号如下：<br>按下 Windows 徽标键 + R，打开“运行”，输入“winver”（不包括引号）并回车<br>在第二行的括号内，“OS 内部版本”之后的那一串字符则为你的系统版本号<br>如果你嫌事多可以直接改成 10.0.19041.0，前提是你的系统版本 ≥ Windows 10 2004</br></blockquote><p><strong>再将目录里 <code>AppxMetadata</code> 文件夹、<code>[Content_Types].xml</code>、<code>AppxBlockMap.xml</code> 和 <code>AppxSignature.p7x</code> 给删除</strong></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions6.png" alt="查找内容并更改"></p><p>在<a href="ms-settings:developers">设置</a>中打开“开发人员模式”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions7.png" alt="开发者模式"></p><p>按下 <kbd>Windows 徽标键</kbd> + <kbd>Q</kbd>，输入“PowerShell”，右键选择“以管理员身份运行”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions8.png" alt="打开 PowerShell"></p><p>在 PowerShell 中输入以下命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="string">&quot;&lt;AppxManifest.xml 所在路径&gt;&quot;</span></span><br><span class="line"><span class="comment"># 比如我的路径在 C:\Program Files\AM 则命令为</span></span><br><span class="line"><span class="built_in">cd</span> <span class="string">&quot;C:\Program Files\AM&quot;</span></span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions9.png" alt="复制路径"></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-AppxPackage</span> <span class="literal">-Register</span> .\AppxManifest.xml</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions10.png" alt="输入命令"></p><p>如果没有缺少相对应的软件运行库，则只需几秒钟即可完成安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions11.png" alt="安装完成"></p><p>一般来说 Windows 10 2004 以上都可以正常运行</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions12.png" alt="运行 Apple Music"></p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>附 Windows 10 及以上正式版内核版本号：</p><blockquote>Windows 10 1507 >>> 10240<br>Windows 10 1511 >>> 10586<br>Windows 10 1607 >>> 14393<br>Windows 10 1703 >>> 15063<br>Windows 10 1709 >>> 16299<br>Windows 10 1803 >>> 17134<br>Windows 10 1809 / Windows 10 LTSC 2019 / Windows 10 神州网信政府版 2019 >>> 17763<br>Windows 10 1903 >>> 18362<br>Windows 10 1909 >>> 18363<br>Windows 10 2004 >>> 19041<br>Windows 10 20H2 >>> 19042<br>Windows 10 21H1 >>> 19043<br>Windows 10 21H2 / Windows 10 LTSC 2021 / Windows 10 神州网信政府版 2021 >>> 19044<br>Windows 10 22H2 >>> 19045<br><br>Windows 11 21H2 >>> 22000<br>Windows 11 22H2 >>> 22621<br>Windows 11 23H2 >>> 22631<br>Windows 11 24H2 / Windows 11 LTSC 2024 >>> 26100<br>Windows 11 25H2 >>> 26220<br>Windows 11 26H1 >>> 28000</br></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>类似于 Apple Music 这样，把安装的版本限制在 Windows 11 22621.0 以上</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions1.png" alt="要求版本"></p><p>而在低于 Windows 11 22621.0 的系统则会无法安装该软件</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions2.png" alt="报错"></p><h2 id="下载包"><a href="#下载包" class="headerlink" title="下载包"></a>下载包</h2><p>首先在 Microsoft Store 里获取软件的链接<br>“分享链接” &gt; “复制链接”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions3.png" alt="获取链接"></p><p>随后在 <a href="https://store.rg-adguard.net/">https://store.rg-adguard.net</a> 中粘贴链接并下载你需要的软件包，<font color=yellow>以及下面所提供的，与你系统相匹配的运行库（一般选带有 x64 的即可）</font></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions4.png" alt="获取包"></p><h2 id="修改包"><a href="#修改包" class="headerlink" title="修改包"></a>修改包</h2><p>关于 TargetDeviceFamily，请参阅 <a href="https://learn.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily">TargetDeviceFamily (Windows 10) - Windows UWP application | Microsoft Learn</a></p><p>使用 <a href="https://7-zip.org/">7-Zip</a> 等解压缩软件打开软件包，并将其<font color=red>全部解压到空白文件夹内（因为不再将其打包成应用程序包，故不能再移动文件夹）</font></p><hr><p>正常来说，下载好的 AppxBundle 或 MSIXBundle 内还会有几个 <code>.Appx</code> 或 <code>.MSIX</code> 安装包<br>正常情况下需要再次解压最大的安装包到空白文件夹<br>注意需要辨别里面的包是 <code>ARM</code>、<code>ARM64</code>、<code>x64</code> 还是 <code>x86</code>，一般只需要 <code>x64</code></p><hr><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions5.png" alt="解压"></p><p>使用记事本或其它文本编辑工具打开文件夹内的 <code>AppxManifest.xml</code><br>按下 <kbd>Ctrl</kbd> + <kbd>F</kbd> 打开“搜索”，并输入 <code>TargetDeviceFamily</code>，将所有结果里带引号 <code>&quot;</code> 里的版本号更改为你的系统版本号并保存</p><p>只需要更改 <code>TargetDeviceFamily</code> 那一行里，<code>MinVersion=&quot;10.0.</code> 和 <code>MaxVersionTested=&quot;10.0.</code> 之后的数字<br>如 <code>MinVersion=&quot;10.0.28000.0&quot;</code> 和 <code>MaxVersionTested=&quot;10.0.28000.0&quot;</code> 修改为 <code>MinVersion=&quot;10.0.19041.0&quot;</code> 和 <code>MaxVersionTested=&quot;10.0.19041.0&quot;</code></p><p>对于部分 <code>AppxManifest.xml</code>，可能有多个 <code>TargetDeviceFamily</code>，如 <code>TargetDeviceFamily Name=&quot;Windows.Universal&quot;</code> 和 <code>TargetDeviceFamily Name=&quot;Windows.Desktop&quot;</code> 并存，这种情况下最好两个都修改</p><blockquote>查看系统版本号如下：<br>按下 Windows 徽标键 + R，打开“运行”，输入“winver”（不包括引号）并回车<br>在第二行的括号内，“OS 内部版本”之后的那一串字符则为你的系统版本号<br>如，显示为 22621.1，则修改为 MinVersion="10.0.22621.0"（不需要修改最后一个版本号 .1 而是只修改 22621）<br>如果实在是不懂怎么干，直接修改成 MinVersion="10.0.0.0" 和 MaxVersionTested="10.0.0.0"</br></blockquote><p><strong>再将目录里 <code>AppxMetadata</code> 文件夹、<code>[Content_Types].xml</code>、<code>AppxBlockMap.xml</code> 和 <code>AppxSignature.p7x</code> 给删除</strong></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions6.png" alt="查找内容并更改"></p><p>在<a href="ms-settings:developers">设置</a>中打开“开发人员模式”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions7.png" alt="开发者模式"></p><p>按下 <kbd>Windows 徽标键</kbd> + <kbd>Q</kbd>，输入“PowerShell”，右键选择“以管理员身份运行”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions8.png" alt="打开 PowerShell"></p><p>在 PowerShell 中输入以下命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="string">&quot;&lt;AppxManifest.xml 所在路径&gt;&quot;</span></span><br><span class="line"><span class="comment"># 比如我的路径在 C:\Program Files\AM 则命令为</span></span><br><span class="line"><span class="built_in">cd</span> <span class="string">&quot;C:\Program Files\AM&quot;</span></span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions9.png" alt="复制路径"></p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-AppxPackage</span> <span class="literal">-Register</span> .\AppxManifest.xml</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions10.png" alt="输入命令"></p><p>如果没有缺少相对应的软件运行库，则只需几秒钟即可完成安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions11.png" alt="安装完成"></p><p>一般来说 Windows 10 2004 以上都可以正常运行</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/Remove_installation_restrictions/Remove_installation_restrictions12.png" alt="运行 Apple Music"></p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>附 Windows 10 及以上正式版内核版本号：</p><blockquote>Windows 10 1507 >>> 10240<br>Windows 10 1511 >>> 10586<br>Windows 10 1607 >>> 14393<br>Windows 10 1703 >>> 15063<br>Windows 10 1709 >>> 16299<br>Windows 10 1803 >>> 17134<br>Windows 10 1809 / Windows 10 LTSC 2019 / Windows 10 神州网信政府版 2019 >>> 17763<br>Windows 10 1903 >>> 18362<br>Windows 10 1909 >>> 18363<br>Windows 10 2004 >>> 19041<br>Windows 10 20H2 >>> 19042<br>Windows 10 21H1 >>> 19043<br>Windows 10 21H2 / Windows 10 LTSC 2021 / Windows 10 神州网信政府版 2021 >>> 19044<br>Windows 10 22H2 >>> 19045<br><br>Windows 11 21H2 >>> 22000<br>Windows 11 22H2 >>> 22621<br>Windows 11 23H2 >>> 22631<br>Windows 11 24H2 / Windows 11 LTSC 2024 >>> 26100<br>Windows 11 25H2 >>> 26220<br>Windows 11 26H1 >>> 28000</br></blockquote>]]></content>
     
     
     <summary type="html">通过修改 AppxManifest.xml 来移除 Appx 类与 MSIX 类应用程序包对 Windows 版本的安装限制</summary>
@@ -1581,9 +1581,9 @@
     
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
     <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    
+    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     
@@ -1612,9 +1612,9 @@
     
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
     <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    
+    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     <category term="VirtualBox" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VirtualBox/"/>
     
@@ -1691,9 +1691,9 @@
     
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
     <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    
+    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     
@@ -1884,23 +1884,6 @@
   </entry>
   
   <entry>
-    <title>TEST</title>
-    <link href="https://goo-aw233.github.io/en/test/"/>
-    <id>https://goo-aw233.github.io/en/test/</id>
-    <published>1969-12-31T16:30:00.000Z</published>
-    <updated>2024-03-09T05:30:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>The quick brown fox jumps over the lazy dog</p><p>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</p><p>the quick brown fox jumps over the lazy dog</p><p>tHe QuIcK bRoWn FoX jUmPs OvEr ThE lAzY dOg</p><p>ThE qUiCk BrOwN fOx JuMpS oVeR tHe LaZy DoG</p><p>[Țħě qùîḉκ бгσẃп fôx jц₥ρš øνěґ țђê ľᾂẕγ δσᶃ !!! !!! ]</p><p>[ȚĦÉ ɊŪÎÇК ฿ŘŌШЙ FÔX JǗMÞȘ ǾVЄЯ ŢĦЁ £ĀȤΨ ĎÕǤ !!! !!! ]</p><p>[ťђé ʠũïćƙ Ъґőωñ ƒøж jύмφś óνëŗ τнĕ ļǟzŷ ₫òᶃ !!! !!! ]</p>]]></content>
-    
-    
-    <summary type="html">TEST</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Windows 实用工具</title>
     <link href="https://goo-aw233.github.io/zh-CN/others/tools/"/>
     <id>https://goo-aw233.github.io/zh-CN/others/tools/</id>
@@ -1911,6 +1894,23 @@
     
     
     <summary type="html">Windows 中提升工作效率或使用体检的日用软件</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TEST</title>
+    <link href="https://goo-aw233.github.io/en/test/"/>
+    <id>https://goo-aw233.github.io/en/test/</id>
+    <published>1969-12-31T16:30:00.000Z</published>
+    <updated>2024-03-09T05:30:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>The quick brown fox jumps over the lazy dog</p><p>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</p><p>the quick brown fox jumps over the lazy dog</p><p>tHe QuIcK bRoWn FoX jUmPs OvEr ThE lAzY dOg</p><p>ThE qUiCk BrOwN fOx JuMpS oVeR tHe LaZy DoG</p><p>[Țħě qùîḉκ бгσẃп fôx jц₥ρš øνěґ țђê ľᾂẕγ δσᶃ !!! !!! ]</p><p>[ȚĦÉ ɊŪÎÇК ฿ŘŌШЙ FÔX JǗMÞȘ ǾVЄЯ ŢĦЁ £ĀȤΨ ĎÕǤ !!! !!! ]</p><p>[ťђé ʠũïćƙ Ъґőωñ ƒøж jύмφś óνëŗ τнĕ ļǟzŷ ₫òᶃ !!! !!! ]</p>]]></content>
+    
+    
+    <summary type="html">TEST</summary>
     
     
     
