@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Clean_Up_the_WinSxS_Folder/</loc>
+    <lastmod>2026-02-14</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Remove_installation_restrictions/</loc>
     <lastmod>2026-01-22</lastmod>
   </url>
@@ -61,19 +65,19 @@
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
-    <lastmod>2025-10-26</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DISM_instOS_UEFI/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Enable_SMBv3_Client_Require_Encryption/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/</loc>
+    <lastmod>2025-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
@@ -165,15 +169,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Downgrade_Windows/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MicaForEveryone/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -181,15 +177,19 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/MicaForEveryone/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1-old/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win3.1/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -201,11 +201,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockfeatureupd/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/customuup/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -213,7 +213,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/customuup/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/blockWin11upd/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -229,7 +229,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/PEinstallOS/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -237,7 +237,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/PEinstallOS/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -245,7 +249,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/jailbreak/ipaunpack/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>

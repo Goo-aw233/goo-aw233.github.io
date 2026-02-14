@@ -6,7 +6,7 @@
   <link href="https://goo-aw233.github.io/atom.xml" rel="self"/>
   
   <link href="https://goo-aw233.github.io/"/>
-  <updated>2026-01-18T13:30:59.836Z</updated>
+  <updated>2026-02-14T06:23:45.328Z</updated>
   <id>https://goo-aw233.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 DISM 清理 WinSxS 文件夹</title>
+    <link href="https://goo-aw233.github.io/zh-CN/tutorial/Windows/Clean_Up_the_WinSxS_Folder/"/>
+    <id>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Clean_Up_the_WinSxS_Folder/</id>
+    <published>2026-02-14T05:27:56.000Z</published>
+    <updated>2026-02-14T06:23:45.328Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 更新后，都会将旧组件存放到 WinSxS 文件夹，<del>尽管 Windows 会自动定期清理，</del>但是在空间告罄时可以手动清理以释放更多的系统盘空间<br><q>WinSxS 文件夹位于 Windows 文件夹中，例如 <code>C: \Windows\WinSxS</code>。 它是 Windows 组件存储文件的位置。 Windows 组件存储用于支持自定义和更新 Windows 所需的函数。</q><br><font size=5 color=red>删除 WinSxS 文件夹中的文件或删除整个 WinSxS 文件夹可能会严重损坏系统，导致你的计算机可能无法启动，并且无法进行更新。</font></p><h2 id="确定-WinSxS-文件夹的实际大小"><a href="#确定-WinSxS-文件夹的实际大小" class="headerlink" title="确定 WinSxS 文件夹的实际大小"></a>确定 WinSxS 文件夹的实际大小</h2><p>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”<br>随后输入以下命令并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore</span><br></pre></td></tr></table></figure><p>执行之后示例的内容如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32&gt;Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore</span><br><span class="line"></span><br><span class="line">部署映像服务和管理工具</span><br><span class="line">版本: 10.0.xxxxx.x</span><br><span class="line"></span><br><span class="line">映像版本: 10.0.xxxx.x</span><br><span class="line"></span><br><span class="line">[==========================100.0%==========================]</span><br><span class="line"></span><br><span class="line">组件存储(WinSxS)信息:</span><br><span class="line"></span><br><span class="line">Windows 资源管理器报告的组件存储大小 : 15.45 GB</span><br><span class="line"></span><br><span class="line">组件存储的实际大小 : 14.77 GB</span><br><span class="line"></span><br><span class="line">    已与 Windows 共享 : 7.95 GB</span><br><span class="line">    备份和已禁用的功能 : 6.82 GB</span><br><span class="line">    缓存和临时数据 :  0 bytes</span><br><span class="line"></span><br><span class="line">上次清理的日期 : 2025-11-11 22:18:28</span><br><span class="line"></span><br><span class="line">可回收的程序包数 : 1</span><br><span class="line">推荐使用组件存储清理 : 是</span><br><span class="line"></span><br><span class="line">操作已成功完成。</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Clean_Up_the_WinSxS_Folder/Before_StartComponentCleanup.png" alt="清理前的 WinSxS"></p><p>以下是输出中提供的信息：</p><table><thead><tr><th>标题</th><th>说明</th></tr></thead><tbody><tr><td>Windows 资源管理器报告的组件存储大小</td><td>Windows 资源管理器计算的 WinSxS 文件夹的大小值。 此值不会考虑 WinSxS 文件夹中使用的硬链接。</td></tr><tr><td>组件存储的实际大小</td><td>此值考虑 WinSxS 文件夹中的硬链接。 它不会排除通过硬链接与 Windows 共享的文件。</td></tr><tr><td>与 Windows 共享</td><td>此值提供使用硬链接的文件的大小，这些文件使用硬链接以便同时显示在组件存储和其他位置（为便于正常操作 Windows）中。 这包含在实际大小中，但不应视为组件存储开销的一部分。</td></tr><tr><td>备份和禁用的功能</td><td>这是为响应更新组件中的故障或提供启用更多功能的选项而保留的组件的大小。 它还包括组件存储元数据和并行组件的大小。这包含在实际大小中，是组件存储开销的一部分。</td></tr><tr><td>缓存和临时数据</td><td>这是组件存储在内部用于加快组件服务操作速度的文件的大小。 这包含在实际大小中，是组件存储开销的一部分。</td></tr><tr><td>上次清理日期</td><td>这是最近完成组件存储清理的日期。</td></tr><tr><td>可回收包数</td><td>这是组件清理可以删除的系统中被取代包的数量。</td></tr><tr><td>建议的组件存储清理</td><td>这是组件存储清理建议。 如果执行清理过程可以减少组件存储开销的大小，则建议进行清理。</td></tr></tbody></table><p>在此示例中，WinSxS 文件夹看上去为 15.45 GB，但实际开销（备份和禁用功能的大小与缓存和临时数据的大小之和）为 6.82 GB。</p><h2 id="清理-WinSxS-文件夹"><a href="#清理-WinSxS-文件夹" class="headerlink" title="清理 WinSxS 文件夹"></a>清理 WinSxS 文件夹</h2><p>如果“推荐使用组件存储清理”为“是”，或者你自己想清理的话，可以执行以下命令进行清理。清理是安全的，但是速度稍微缓慢，不会损坏系统</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Cleanup-Image /StartComponentCleanup</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Clean_Up_the_WinSxS_Folder/StartComponentCleanup.png" alt="清理 WinSxS"></p><p>清理完成后再次使用 <code>Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore</code> 命令可以查看清理后的占用</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/webAssets@main/Pics/Clean_Up_the_WinSxS_Folder/After_StartComponentCleanup.png" alt="清理前后 WinSxS"></p><p>清理之后的示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32&gt;Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore</span><br><span class="line"></span><br><span class="line">部署映像服务和管理工具</span><br><span class="line">版本: 10.0.xxxxx.x</span><br><span class="line"></span><br><span class="line">映像版本: 10.0.xxxx.x</span><br><span class="line"></span><br><span class="line">[==========================100.0%==========================]</span><br><span class="line"></span><br><span class="line">组件存储(WinSxS)信息:</span><br><span class="line"></span><br><span class="line">Windows 资源管理器报告的组件存储大小 : 11.87 GB</span><br><span class="line"></span><br><span class="line">组件存储的实际大小 : 11.52 GB</span><br><span class="line"></span><br><span class="line">    已与 Windows 共享 : 7.95 GB</span><br><span class="line">    备份和已禁用的功能 : 3.57 GB</span><br><span class="line">    缓存和临时数据 :  0 bytes</span><br><span class="line"></span><br><span class="line">上次清理的日期 : 2026-02-14 13:26:18</span><br><span class="line"></span><br><span class="line">可回收的程序包数 : 0</span><br><span class="line">推荐使用组件存储清理 : 否</span><br><span class="line"></span><br><span class="line">操作已成功完成。</span><br></pre></td></tr></table></figure><p>即可看到，WinSxS 文件夹从 15.45 GB 减少到了 11.52 GB，实际开销（备份和禁用功能的大小与缓存和临时数据的大小之和）从 6.82 GB 减少到了 3.57 GB。</p><h2 id="定时任务清理-WinSxS-文件夹"><a href="#定时任务清理-WinSxS-文件夹" class="headerlink" title="定时任务清理 WinSxS 文件夹"></a>定时任务清理 WinSxS 文件夹</h2><p><q>StartComponentCleanup 任务会在系统未使用时自动清理组件。 自动运行时，该任务将在更新的组件安装之后等待至少 30 天，然后再卸载该组件的先前版本。如果选择运行此任务，则该任务将有 1 小时的超时，并且可能无法完全清除所有文件。</q></p><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 打开“运行”，输入 <code>taskschd.msc</code> 并按下 <kbd>Enter</kbd> 以回车来打开“任务计划程序”<br>找到如下路径：任务计划程序库 &gt; Microsoft &gt; Windows &gt; Servicing &gt; StartComponentCleanup<br>然后，点击旁边的“运行”即可开始清理</p><p>此外，以下命令也可以直接调用这个定时任务</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks.exe /Run /TN &quot;\Microsoft\Windows\Servicing\StartComponentCleanup&quot;</span><br></pre></td></tr></table></figure><h2 id="重设基准版本地清理-WinSxS-文件夹"><a href="#重设基准版本地清理-WinSxS-文件夹" class="headerlink" title="重设基准版本地清理 WinSxS 文件夹"></a>重设基准版本地清理 WinSxS 文件夹</h2><p><font size=4 color=red>使用 <code>/ResetBase</code> 参数会极大地消耗时间，并清理所有的旧组件，并导致不能卸载任何在此之前安装的更新</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Cleanup-Image /StartComponentCleanup /ResetBase</span><br></pre></td></tr></table></figure><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/manage-the-component-store/?wt.mc_id=studentamb_474966">管理组件存储 | Microsoft Learn</a><br><a href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/clean-up-the-winsxs-folder/?wt.mc_id=studentamb_474966">清理 WinSxS 文件夹 | Microsoft Learn</a><br><a href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/determine-the-actual-size-of-the-winsxs-folder/?wt.mc_id=studentamb_474966">确定 WinSxS 文件夹的实际大小 | Microsoft Learn</a></p>]]></content>
+    
+    
+    <summary type="html">使用 DISM 安全地清理 WinSxS 文件夹</summary>
+    
+    
+    
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    
+    
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>为 Steam 安装浏览器扩展</title>
@@ -35,9 +58,9 @@
     <category term="Windows - macOS - Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows-macOS-Linux/"/>
     
     
-    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
     
     <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
     
@@ -191,9 +214,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -336,14 +359,14 @@
     
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
+    <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     
-    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
     
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
     
   </entry>
   
@@ -1263,9 +1286,9 @@
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1559,9 +1582,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
@@ -1854,9 +1877,9 @@
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/VMware/Workstation/"/>
     
     
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
-    
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     
   </entry>
   
