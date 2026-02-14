@@ -51,7 +51,7 @@
 <meta property="article:published_time" content="2023-02-18T16:10:11.000Z">
 <meta property="article:modified_time" content="2024-08-22T17:28:16.000Z">
 <meta property="article:author" content="GuCATs">
-<meta property="article:tag" content="gucats,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233">
+<meta property="article:tag" content="gucats,GuCATs,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233,goobocats,GeeBoCATs">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://res.cloudinary.com/marcomontalbano/image/upload/v1656898276/video_to_markdown/images/youtube--zNWVT08Hju0-c05b58ac6eb4c4700831b2b3070cd403.jpg">
 
@@ -87,6 +87,12 @@
             }
     }
 </script>
+
+<% if (page.keywords){ %>
+<meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+<% } else if (config.keywords){ %>
+<meta name="keywords" content="<%= config.keywords %>">
+<%} %>
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">

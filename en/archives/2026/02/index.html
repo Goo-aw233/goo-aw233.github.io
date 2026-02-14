@@ -31,7 +31,7 @@
 <meta property="og:description" content="海納百川，有容乃大">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="GuCATs">
-<meta property="article:tag" content="gucats,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233">
+<meta property="article:tag" content="gucats,GuCATs,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233,goobocats,GeeBoCATs">
 <meta name="twitter:card" content="summary">
 
 
@@ -66,6 +66,12 @@
             }
     }
 </script>
+
+<% if (page.keywords){ %>
+<meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+<% } else if (config.keywords){ %>
+<meta name="keywords" content="<%= config.keywords %>">
+<%} %>
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">

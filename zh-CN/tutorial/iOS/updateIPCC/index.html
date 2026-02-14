@@ -43,7 +43,7 @@
 <meta property="article:published_time" content="2024-03-02T03:27:40.000Z">
 <meta property="article:modified_time" content="2025-01-01T02:54:02.000Z">
 <meta property="article:author" content="GuCATs">
-<meta property="article:tag" content="gucats,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233">
+<meta property="article:tag" content="gucats,GuCATs,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233,goobocats,GeeBoCATs">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/WebSiteResources@main/Pics/updateIPCC/updateIPCC1.png">
 
@@ -79,6 +79,12 @@
             }
     }
 </script>
+
+<% if (page.keywords){ %>
+<meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+<% } else if (config.keywords){ %>
+<meta name="keywords" content="<%= config.keywords %>">
+<%} %>
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">

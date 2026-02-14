@@ -33,7 +33,7 @@
 <meta property="article:published_time" content="1969-12-31T16:30:00.000Z">
 <meta property="article:modified_time" content="2024-03-09T05:30:51.000Z">
 <meta property="article:author" content="GuCATs">
-<meta property="article:tag" content="gucats,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233">
+<meta property="article:tag" content="gucats,GuCATs,goo-aw233,goo_aw233,GodDog322,GodDog233,anti,rare,rita,rita2,godtnt233,GodTNT233,goobocats,GeeBoCATs">
 <meta name="twitter:card" content="summary">
 
 
@@ -68,6 +68,12 @@
             }
     }
 </script>
+
+<% if (page.keywords){ %>
+<meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+<% } else if (config.keywords){ %>
+<meta name="keywords" content="<%= config.keywords %>">
+<%} %>
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
