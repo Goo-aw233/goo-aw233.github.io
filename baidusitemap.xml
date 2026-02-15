@@ -73,11 +73,11 @@
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Managing_BitLocker_via_manage-bde/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Manage_Microsoft_Defender_AntiVirus_via_PowerShell/</loc>
     <lastmod>2025-10-26</lastmod>
   </url>
   <url>
@@ -113,11 +113,11 @@
     <lastmod>2025-10-15</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DIY_WePE_features/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/DIY_WePE_features/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/Pixel5FlashAndRoot/</loc>
     <lastmod>2025-02-03</lastmod>
   </url>
   <url>
@@ -165,15 +165,19 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/macOS/macOSswit/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Downgrade_Windows/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Hexo/update/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -197,11 +201,11 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win8.xkeybypass/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/anterceptedappx/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/anterceptedappx/</loc>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win8.xkeybypass/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
@@ -213,6 +217,10 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
+    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/edge-visual/</loc>
+    <lastmod>2024-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/convert-system-edition-to-LTS/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
@@ -221,15 +229,7 @@
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/edge-visual/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
     <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/makesetup/</loc>
-    <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://goo-aw233.github.io/zh-CN/tutorial/iOS/Unlock_full_Apple_features/</loc>
     <lastmod>2024-08-22</lastmod>
   </url>
   <url>
