@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/NT6upd/</loc>
+        <lastmod>2026-03-02T13:01:33.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Clean_Up_the_WinSxS_Folder/</loc>
         <lastmod>2026-02-25T16:47:25.291Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -89,7 +97,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
         <lastmod>2025-10-26T11:25:07.579Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -97,7 +105,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Add_Full_Language_Support_to_Windows/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/AADmstsc/</loc>
         <lastmod>2025-10-26T11:25:07.579Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -321,7 +329,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/OTAExtractionBoot/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/DOS/MS-DOS3.x/</loc>
         <lastmod>2024-08-22T17:28:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -329,7 +337,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/DOS/MS-DOS3.x/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Android/OTAExtractionBoot/</loc>
         <lastmod>2024-08-22T17:28:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -377,7 +385,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/NT6upd/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
         <lastmod>2024-08-22T17:28:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -386,14 +394,6 @@
 
     <url>
         <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/WSA3in1-old/</loc>
-        <lastmod>2024-08-22T17:28:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/Windows/Win11setupbypass/</loc>
         <lastmod>2024-08-22T17:28:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -489,7 +489,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
         <lastmod>2024-08-22T17:28:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -497,7 +497,7 @@
     </url>
 
     <url>
-        <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmusetpm/</loc>
+        <loc>https://goo-aw233.github.io/zh-CN/tutorial/VM/VMware/vmtool/</loc>
         <lastmod>2024-08-22T17:28:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

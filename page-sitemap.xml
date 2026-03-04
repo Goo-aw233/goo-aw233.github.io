@@ -10,8 +10,17 @@
     
     
     <url>
+        <loc>https://goo-aw233.github.io/about/</loc>
+        <lastmod>2026-03-03T14:07:22.554Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://goo-aw233.github.io/404.html</loc>
-        <lastmod>2026-01-18T09:10:24.449Z</lastmod>
+        <lastmod>2026-02-26T07:26:02.428Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -30,15 +39,6 @@
     <url>
         <loc>https://goo-aw233.github.io/link/</loc>
         <lastmod>2025-10-24T05:53:10.759Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://goo-aw233.github.io/about/</loc>
-        <lastmod>2025-10-23T14:45:58.216Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
