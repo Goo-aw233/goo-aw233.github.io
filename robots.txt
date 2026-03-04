@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://goo-aw233.github.io/sitemap.xml
+Sitemap: https://goo-aw233.github.io/sitemap.xml,https://goo-aw233.github.io/baidusitemap.xml
