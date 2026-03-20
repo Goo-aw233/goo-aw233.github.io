@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png" color="#222">
+  <meta name="google-site-verification" content="b1jg-ZW0xRTOyo9xjdP9dhkmPRXMiG8fxtHKU1eXGSI">
+  <meta name="msvalidate.01" content="0F4E55A98D34BC9B4ABBE33CB4988150">
+  <meta name="yandex-verification" content="681b2baea28a6c0a">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"goo-aw233.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文详细介绍如何在 QEMU 虚拟机中安装 Windows on ARM，包括所需工具、环境配置、镜像下载、UEFI 固件设置及 VirtIO 驱动安装等步骤，帮助用户成功运行 WoA 系统。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 QEMU 安装 Windows on ARM">
+<meta property="og:url" content="https://goo-aw233.github.io/posts/57859c3e.html">
+<meta property="og:site_name" content="GuCATs&#39;摸鱼站">
+<meta property="og:description" content="本文详细介绍如何在 QEMU 虚拟机中安装 Windows on ARM，包括所需工具、环境配置、镜像下载、UEFI 固件设置及 VirtIO 驱动安装等步骤，帮助用户成功运行 WoA 系统。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/QEMU-Installation-Path.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/SystemPropertiesAdvanced.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Environment_Variables.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Create-Hard-Disk-File.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Files-in-Folder.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Start-Boot-Option.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Device-Manager-in-Firmware.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/OVMF-Platform-Configuration-in-Firmware.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Change-Preferred-Resolution-for-Next-Boot-in-Firmware.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Windows-Setup.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Synchronous-Exception.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Load-Hard-Disk-Driver.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Browse-Drivers.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Select-Disk-Driver-Folder.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Install-Hard-Disk-Driver.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Start-to-Install-Windows.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/First-Reboot.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-OOBE.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Preparing-Desktop.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Desktop.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Install-NetKVM.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Windows.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Taskmgr.png">
+<meta property="article:published_time" content="2022-07-10T13:33:43.000Z">
+<meta property="article:modified_time" content="2026-03-20T05:59:57.514Z">
+<meta property="article:author" content="GuCATs">
+<meta property="article:tag" content="QEMU">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/QEMU-Installation-Path.png">
+
+
+<link rel="canonical" href="https://goo-aw233.github.io/posts/57859c3e.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/posts/57859c3e.html","path":"posts/57859c3e.html","title":"在 QEMU 安装 Windows on ARM"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>在 QEMU 安装 Windows on ARM | GuCATs'摸鱼站</title>
+  
+
+
+
+
+  <script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tv0aelb214");
+</script>
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="GuCATs'摸鱼站" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="GuCATs'摸鱼站" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GuCATs'摸鱼站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海納百川，有容乃大</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="nav-number">1.1.</span> <span class="nav-text">更新日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.2.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">推荐使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-ARM-%E9%95%9C%E5%83%8F"><span class="nav-number">1.2.2.</span> <span class="nav-text">Windows ARM 镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#QEMU"><span class="nav-number">1.2.3.</span> <span class="nav-text">QEMU</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UEFI-%E5%9B%BA%E4%BB%B6"><span class="nav-number">1.2.4.</span> <span class="nav-text">UEFI 固件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VirtIO-%E9%A9%B1%E5%8A%A8%E5%85%89%E7%9B%98"><span class="nav-number">1.2.5.</span> <span class="nav-text">VirtIO 驱动光盘</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-QEMU-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">配置 QEMU 环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A1%AC%E7%9B%98%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">创建硬盘文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">编写启动脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-number">5.</span> <span class="nav-text">修改分辨率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">6.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F"><span class="nav-number">6.1.</span> <span class="nav-text">Windows 安装程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E7%B3%BB%E7%BB%9F"><span class="nav-number">6.2.</span> <span class="nav-text">部署系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%A5%E6%97%A0%E6%B3%95%E8%B7%B3%E8%BF%87%E8%B4%A6%E6%88%B7%E7%99%BB%E5%BD%95%E6%88%96%E5%8F%AA%E8%83%BD%E7%99%BB%E5%BD%95%E5%88%B0%E5%B7%A5%E4%BD%9C%E8%B4%A6%E6%88%B7"><span class="nav-number">6.2.1.</span> <span class="nav-text">若无法跳过账户登录或只能登录到工作账户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8"><span class="nav-number">6.3.</span> <span class="nav-text">安装网卡驱动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-number">7.</span> <span class="nav-text">使用体验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">8.</span> <span class="nav-text">后记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GuCATs"
+      src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">GuCATs</p>
+  <div class="site-description" itemprop="description">海納百川，有容乃大</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Goo-aw233" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Goo-aw233" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS (Atom) → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS (Atom)</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/rss2.xml" title="RSS (RSS2) → &#x2F;rss2.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS (RSS2)</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener external nofollow noreferrer" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+<div class="links-of-blogroll-title">
+  <i class="fa fa-globe"></i> 访客地图
+</div>
+<div style="margin-top: 5px; font-size: 14px;">若无法加载“访客地图”，请关闭广告拦截器</div>
+<div style="margin-top: 10px;">
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ"></script>
+</div>
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/posts/57859c3e.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="在 QEMU 安装 Windows on ARM | GuCATs'摸鱼站">
+      <meta itemprop="description" content="本文详细介绍如何在 QEMU 虚拟机中安装 Windows on ARM，包括所需工具、环境配置、镜像下载、UEFI 固件设置及 VirtIO 驱动安装等步骤，帮助用户成功运行 WoA 系统。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在 QEMU 安装 Windows on ARM
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-10 21:33:43" itemprop="dateCreated datePublished" datetime="2022-07-10T21:33:43+08:00">2022-07-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-20 13:59:57" itemprop="dateModified" datetime="2026-03-20T13:59:57+08:00">2026-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">虚拟机</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/QEMU/" itemprop="url" rel="index"><span itemprop="name">QEMU</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">本文详细介绍如何在 QEMU 虚拟机中安装 Windows on ARM，包括所需工具、环境配置、镜像下载、UEFI 固件设置及 VirtIO 驱动安装等步骤，帮助用户成功运行 WoA 系统。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p>
+<ul>
+<li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li>
+<li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li>
+</ul>
+</div>
+
+<p><code>&lt;&gt;</code> 里的内容是需要自行修改的内容，修改时需要将 <code>&lt;...&gt;</code> 以内的东西修改掉<br>如 <code>/Index:&lt;序号&gt;</code>，修改为 <code>/Index:1</code></p>
+<p>转载于：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.crrashh.com/archives/194">在 QEMU 安装 Windows on ARM - 云萧的咕咕屋</a></li>
+</ul>
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><ul>
+<li><p>2023&#x2F;1&#x2F;2 更新<br>建议在构建镜像的时候用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://uup.rg-adguard/">https://uup.rg-adguard</a> 的镜像，可以移除安装检查，可以有效避免 TPM 等硬件问题<br>或者自己手动修改镜像，抑或是本地安装完成后再挂载到 QEMU</p>
+</li>
+<li><p>2024&#x2F;5&#x2F;5 更新</p>
+<blockquote>
+<p>下面的操作中，你可以将 <code>Dism++</code> 文件夹放到 <code>virtio-win.iso</code> 内，在安装完磁盘驱动的时候（或提前注入后），按 <kbd>Shift</kbd> + <kbd>F10</kbd> 呼出 CMD，然后打开 <code>Dism++ARM64.exe</code><br>随后使用 <code>DiskPart</code> 与 <code>Dism++</code> 分别创建分区与安装系统，安装完后使用 <code>Dism++</code> 的“驱动管理”，选择 <code>virtio-win.iso</code> 的根目录即可自动安装驱动<br>不知道如何使用 <code>DiskPart</code> 可以参阅 章节中 <code>#操作磁盘</code> 的部分</p>
+</blockquote>
+</li>
+<li><p>2024&#x2F;7&#x2F;28 更新</p>
+<blockquote>
+<p>在 QEMU 2024 以后的版本中（目前截止到 <code>qemu-w64-setup-20240720.exe</code>）均有 <code>ramfb</code> 显示不正常问题，但 2023 最后一版的 QEMU 还能正常显示，下载链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20231224.exe">https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20231224.exe</a></p>
+</blockquote>
+</li>
+<li><p>2025&#x2F;2&#x2F;2 更新</p>
+<blockquote>
+<p>重写了该文章<br>文章已从旧文章（<a href="https://goo-aw233.github.io/zh-CN/tutorial/VM/QEMU/WindowsARMonQEMU">https://goo-aw233.github.io/zh-CN/tutorial/VM/QEMU/WindowsARMonQEMU</a>）迁移至此</p>
+</blockquote>
+</li>
+<li><p>2025&#x2F;11&#x2F;03 更新</p>
+<blockquote>
+<p>提供 edk2-git 固件构建的 <code>kraxel</code> 在 Jenkins AutoBuilder 上已停止于 2022 年 7 月 19 日，<code>https://www.kraxel.org/repos/jenkins/edk2</code> 已不可访问，详见：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.kraxel.org/blog/2022/07/edk2-firmware-packaging">https://www.kraxel.org/blog/2022/07/edk2-firmware-packaging</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><div class="note primary"><ul>
+<li>下文中，“存放文件夹”均指 <code>E:\VMs\WoA11</code>，后文不再阐述</li>
+<li>“存放文件夹”创建时最好不带有非 ANSI 字符与空格（如中文）</li>
+</ul>
+</div>
+
+<h4 id="推荐使用"><a href="#推荐使用" class="headerlink" title="推荐使用"></a>推荐使用</h4><p>推荐使用我提供的工具，但是不包含系统镜像，大部分工具已不可下载，我还可以提供现有的备份以供使用<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgB96Szl1YYaTYOQC19zlfkoAc98_9R-Qxb4H-nS8-9bnB4?e=vLMidk">OneDrive</a></p>
+<h4 id="Windows-ARM-镜像"><a href="#Windows-ARM-镜像" class="headerlink" title="Windows ARM 镜像"></a>Windows ARM 镜像</h4><ul>
+<li><a href="/posts/60fbf8fb.html" title="使用 UUP 构建 Windows 镜像">使用 UUP 构建 Windows ARM 镜像</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://worproject.com/guides/getting-windows-images">Getting Windows images | Windows on R</a><br>将下载好的 Windows ARM 镜像文件，放入到“存放文件夹”</li>
+</ul>
+<h4 id="QEMU"><a href="#QEMU" class="headerlink" title="QEMU"></a>QEMU</h4><ul>
+<li><del><a target="_blank" rel="noopener external nofollow noreferrer" href="https://qemu.weilnetz.de/">QEMU 最新版</a></del></li>
+<li>推荐使用 2023 年 12 月 24 日发版的 QEMU，以避免 <code>ramfb</code> 不可用的问题：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20231224.exe">https://qemu.weilnetz.de/w64/2023/qemu-w64-setup-20231224.exe</a></li>
+</ul>
+<p>安装 QEMU 时需要记住安装路径，安装完成后需要<a href="#%E9%85%8D%E7%BD%AE-QEMU-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">添加到 <code>PATH</code> 环境变量</a></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/QEMU-Installation-Path.png" alt="QEMU 安装路径"></p>
+<!--
+#### UEFI 固件
+
+[edk2-aarch64 - Fedora Packages](https://packages.fedoraproject.org/pkgs/edk2/edk2-aarch64)
+在包页面下，`Releases Overview` 部分，找到 `Release` 部分里列出最新的版本，并找到对应的 `Stable` 下方的下载链接并点开
+
+![资产预览](https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/edk2-aarch64-Releases-Overview.png)
+
+点击 `View Build` 查看构建版本
+
+![包信息](https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/edk2-aarch64_Package_Info.png)
+
+在 `RPMs` 部分找到 `noarch`，找到带有 `edk2-aarch64` 这个关键词的 `.rpm` 包，最后点击 `download` 开始下载
+
+![下载包](https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Download-edk2-aarch64-Package.png)
+
+下载完成后打开压缩包，定位到路径：`edk2-aarch64-###.noarch.cpio\.\usr\share\edk2\aarch64`，将里面的 `QEMU_EFI-pflash.raw` 和 `vars-template-pflash.raw` 解压出来到“存放文件夹”
+-->
+
+<h4 id="UEFI-固件"><a href="#UEFI-固件" class="headerlink" title="UEFI 固件"></a>UEFI 固件</h4><p>Fedora 与 QEMU 提供的 edk2 固件无法正常使用，故使用 <code>kraxel</code> 的 edk2-git 固件构建（存档）<br><a target="_blank" rel="noopener external nofollow noreferrer" href="http://releases.linaro.org/components/kernel/uefi-linaro/16.02/release/qemu64">Linaro Releases</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgB96Szl1YYaTYOQC19zlfkoAc98_9R-Qxb4H-nS8-9bnB4?e=vLMidk">OneDrive</a><br>下载完成后打开压缩包，定位到路径：<code>edk2.git-aarch64-0-20220719.209.gf0064ac3af.EOL.no.nore.updates.noarch.rpm\edk2.git-aarch64-0-20220719.209.gf0064ac3af.EOL.no.nore.updates.noarch.cpio\.\usr\share\edk2.git\aarch64</code>，将里面的 <code>QEMU_EFI.fd</code> 和 <code>vars-template-pflash.raw</code> 解压出来到“存放文件夹”</p>
+<h4 id="VirtIO-驱动光盘"><a href="#VirtIO-驱动光盘" class="headerlink" title="VirtIO 驱动光盘"></a>VirtIO 驱动光盘</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso">最新版下载链接</a><br>将下载好的文件，放入到“存放文件夹”</p>
+<h2 id="配置-QEMU-环境变量"><a href="#配置-QEMU-环境变量" class="headerlink" title="配置 QEMU 环境变量"></a>配置 QEMU 环境变量</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>SystemPropertiesAdvanced.exe</code> 并按下 <kbd>Enter</kbd> 以回车<br>在弹出的“高级系统设置”程序里，点击“环境变量”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/SystemPropertiesAdvanced.png" alt="高级系统设置"></p>
+<p>在“系统变量”里找到名为 <code>Path</code> 的项并双击，点击旁边的“新建”，最后在矩形框中输入 QEMU 的安装目录</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Environment_Variables.png" alt="环境变量"></p>
+<p>最后，全部点击“确定”即可</p>
+<h2 id="创建硬盘文件"><a href="#创建硬盘文件" class="headerlink" title="创建硬盘文件"></a>创建硬盘文件</h2><p>输入如下命令来创建硬盘文件</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-img.exe create -f &lt;硬盘格式&gt; &quot;&lt;存放路径\文件名.硬盘格式&gt;&quot; &lt;容量大小&gt;&lt;单位&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如我存放在“存放文件夹”，文件名为 <code>OS</code>，硬盘格式为 <code>qcow2</code>，容量大小为 <code>80 GB</code><br>那么我的命令如下（需要区分大小写，而且路径和文件名<strong>最好</strong>不要有空格，用下划线 <code>_</code> 来代替）：</p>
+<div class="note primary"><ul>
+<li>硬盘格式可选的后缀为：<code>raw</code>、<code>host_device</code>、<code>qcow</code>、<code>cow</code>、<code>vdi</code>、<code>vmdk</code>、<code>vpc</code>、<code>cloop</code>、<code>img</code></li>
+<li>硬盘容量可选的单位为：<code>K</code>、<code>M</code>、<code>G</code>、<code>T</code>、<code>P</code>、<code>E</code></li>
+</ul>
+</div>
+
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qemu-img.exe create -f qcow2 &quot;E:\VMs\WoA11\OS.qcow2&quot; <span class="number">80</span>G</span><br></pre></td></tr></table></figure>
+
+<p>若没有别的错误则创建成功</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Create-Hard-Disk-File.png" alt="创建硬盘文件"></p>
+<details>
+
+<summary>创建 VHD(X) 而不是使用以上硬盘格式</summary>
+
+<p>使用 VHDX 或 VHD 的好处是可以直接挂载到文件资源管理器，简单地操作里面的文件，性能更好，<strong>也可以挂载后直接使用 Dism++ 应用系统，安装完成后再启动到虚拟机</strong><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows-server/storage/disk-management/manage-virtual-hard-disks/?wt.mc_id=studentamb_474966">管理虚拟硬盘 (VHD) | Microsoft Learn</a></p>
+</details>
+
+<p><font color=red><strong>由于硬盘文件较脆弱，切勿强制关机，否则会造成硬盘文件损坏，特别是 <code>VHD(X)</code> 文件</strong></font></p>
+<h2 id="编写启动脚本"><a href="#编写启动脚本" class="headerlink" title="编写启动脚本"></a>编写启动脚本</h2><p>在“存放文件夹”下，创建一个文本文档，并将其重命名为 <code>Start.cmd</code></p>
+<p>至此，“存放文件夹”下的文件都有：</p>
+<blockquote>
+<p>E:\VMs\WoA11<br>├─OS.qcow2<br>├─QEMU_EFI.fd<br>├─Start.cmd<br>├─vars-template-pflash.raw<br>├─virtio-win-0.1.285.iso<br>└─zh-cn_windows_11_consumer_editions_version_26h1_arm64_dvd_900d64ce.iso</p>
+</blockquote>
+<details>
+
+<summary>文件解释</summary>
+
+<ul>
+<li><code>OS.qcow2</code>：硬盘文件</li>
+<li><code>QEMU_EFI.fd</code>：UEFI 固件代码镜像（作为 “只读” pflash 设备挂载，用于虚拟机启动</li>
+<li><code>Start.cmd</code>：快捷启动脚本</li>
+<li><code>vars-template-pflash.raw</code>：UEFI 变量存储镜像（模板／可写 pflash 设备，用于保持启动项、固件变量持久化）</li>
+<li><code>virtio-win-0.1.285.iso</code>：VirtIO 驱动镜像</li>
+<li><code>zh-cn_windows_11_consumer_editions_version_26h1_arm64_dvd_900d64ce.iso</code>：系统镜像</li>
+</ul>
+</details>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Files-in-Folder.png" alt="“存放文件夹”下的文件"></p>
+<p>编辑 <code>Start.cmd</code>，并输入如下内容</p>
+<div class="note default"><p>你可以在最顶端插入 <code>chcp 65001</code>，这样 CMD 内提示的中文报错就不会乱码，<strong>但是会导致 QEMU 变成英文</strong></p>
+</div>
+
+<!--
+```CMD
+qemu-system-aarch64.exe ^
+  -M virt,virtualization=true ^
+  -cpu cortex-<CPU 型号> ^
+  -smp <CPU 核心数> ^
+  -m <运行内存大小> ^
+  -drive if=pflash,format=raw,file="<存放文件夹\QQEMU_EFI-pflash.raw>",readonly=on ^
+  -drive if=pflash,format=raw,file="<存放文件夹\vars-template-pflash.raw>",readonly=off ^
+  -device ramfb ^
+  -device qemu-xhci ^
+  -device usb-kbd ^
+  -device usb-tablet ^
+  -nic user,model=virtio ^
+  -drive file="<存放文件夹\硬盘文件名.qcow2>",if=virtio ^
+  -drive file="<存放文件夹\系统镜像文件名.iso>",media=cdrom,if=none,id=cdrom0 ^
+  -device usb-storage,drive=cdrom0 ^
+  -drive file="<存放文件夹\virtio-win 名称.iso>",media=cdrom,if=none,id=cdrom1 ^
+  -device usb-storage,drive=cdrom1 ^
+```
+-->
+
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-aarch64.exe ^</span><br><span class="line">-M virt,gic-version=<span class="number">3</span> ^</span><br><span class="line">-cpu &lt;CPU 型号&gt; ^</span><br><span class="line">-smp &lt;逻辑总数&gt;,sockets=&lt;插槽数&gt;,cores=&lt;核心数&gt;,threads=&lt;线程数&gt; ^</span><br><span class="line">-m &lt;运行内存&gt; ^</span><br><span class="line">-accel tcg,thread=multi ^</span><br><span class="line">-device qemu-xhci ^</span><br><span class="line">-device usb-kbd ^</span><br><span class="line">-device usb-tablet ^</span><br><span class="line">-drive file=&quot;&lt;存放文件夹\硬盘文件名.qcow2&gt;&quot;,<span class="keyword">if</span>=virtio ^</span><br><span class="line">-nic user,model=virtio ^</span><br><span class="line">-drive file=&quot;&lt;存放文件夹\系统镜像文件名.iso&gt;&quot;,media=cdrom,<span class="keyword">if</span>=none,id=cdrom0 ^</span><br><span class="line">-device usb-storage,drive=cdrom0 ^</span><br><span class="line">-drive file=&quot;&lt;存放文件夹\virtio-win 名称.iso&gt;&quot;,media=cdrom,<span class="keyword">if</span>=none,id=cdrom1 ^</span><br><span class="line">-device usb-storage,drive=cdrom1 ^</span><br><span class="line">-bios &quot;&lt;存放文件夹\QQEMU_EFI.fd&gt;&quot; ^</span><br><span class="line">-device ramfb ^</span><br><span class="line">-drive file=&quot;&lt;存放文件夹\vars-template-pflash.raw&gt;&quot;,<span class="keyword">if</span>=pflash,index=<span class="number">1</span>,<span class="built_in">format</span>=raw</span><br></pre></td></tr></table></figure>
+
+<details>
+
+<summary>重要提示，必看内容</summary>
+
+<ol>
+<li><strong>特别注意：自 Windows 11 24H2 采用 Rust 重写 Windows 内核文件后，所模拟的 SoC 需要为 ARMv8.1 及以上（即支持新的原子操作指令），否则将无法启动；不支持新的原子操作指令的 SoC 最高可启动的 Windows 版本为：Windows 11 Build 25163</strong><blockquote>
+<p>Windows 11 build 25163 is the last one than can boot on the Raspberry Pi 4 and older.<br>Recent insider builds no longer work as they make extensive use of the new atomic instructions introduced in ARMv8.1.<sup><a href="#ref3">[3]</a></sup></p>
+</blockquote>
+</li>
+</ol>
+<!--
+2.  为什么不使用 `QEMU_EFI.fd`，我在网站上找到是这么说的
+  > The traditional approach for UEFI Variable storage in qemu guests is to work as close as possible to physical hardware. That means providing pflash as storage and leaving the management of variables and flash to the guest.
+-->
+
+</details>
+
+<details>
+
+<summary>关于硬件的选择</summary>
+
+<ol>
+<li>QEMU 查询可用的硬件命令<ul>
+<li>查询支持模拟的主板：<code>qemu-system-aarch64.exe -M help</code></li>
+<li>查询支持模拟的 CPU：<code>qemu-system-aarch64.exe -cpu help</code></li>
+</ul>
+</li>
+<li>对于 Windows ARM64，可用的 CPU 型号：<ul>
+<li><code>Cortex</code> 系列：<code>cortex-a76</code>、<code>cortex-a72</code>，<code>cortex-a57</code> 和 <code>cortex-a53</code>（最成熟、测试最充分的模型）</li>
+<li><code>max</code>（向虚拟机暴露 QEMU 当前版本支持的所有 AArch64 指令集特性），使用 <code>max</code> 时推荐添加 <code>,pauth=off</code> 以禁用指针验证，在纯软件模拟 (TCG) 下，这会导致 CPU 为了验证每一个跳转指令而产生海量的计算开销，经常导致内核初始化超时而卡死</li>
+<li><code>Neoverse</code> 系列：<code>neoverse-n1</code> 和 <code>neoverse-v1</code>（专为服务器设计的架构）</li>
+</ul>
+</li>
+<li>若要开启嵌套虚拟化，请将 <code>-M virt</code> 修改为 <code>-M virt,virtualization=true</code>（不推荐开启，避免增加性能消耗）</li>
+<li><code>gic-version=3</code> 开启 ITS 能显著提高 I&#x2F;O 稳定性</li>
+<li><code>-smp</code> 表示任务管理器可以显示多少个框框，<code>sockets</code> 表示有多少 CPU 插槽（推荐只设置为 <code>1</code> 以只设置 1 个 CPU 数，以避免 SKU 检查与性能损失），<code>cores</code> 表示 CPU 核心数量，<code>threads</code> 表示支持的线程数（推荐只设置为 <code>1</code> 以关闭超线程，减少性能损耗）<ul>
+<li>计算公式为：总核心数 (smp) &#x3D; sockets * cores * threads</li>
+</ul>
+</li>
+<li><code>-accel tcg,thread=multi</code> 为 QEMU 2.9 及之后的版本提供多核翻译支持</li>
+<li>若想要免驱的网卡，请使用 <code>-netdev user,id=net0 ^</code> 与 <code>-device e1000e,netdev=net0 ^</code>，而不是 <code>-nic user,model=virtio ^</code></li>
+</ol>
+</details>
+
+<p>比如我的 CPU 型号为 <code>max</code><br>CPU 逻辑总数为 <code>4</code>，插槽数为 <code>1</code>，核心数为 <code>4</code>，线程数为 <code>1</code>，运行内存大小为 <code>6144 MB</code><br>那么我的命令如下：（需要区分大小写，而且路径和文件名<strong>最好</strong>不要有空格，用下划线 <code>_</code> 来代替）</p>
+<!--
+```CMD
+qemu-system-aarch64.exe ^
+  -M virt,virtualization=true ^
+  -cpu cortex-a76 ^
+  -smp 4 ^
+  -m 6144 ^
+  -drive if=pflash,format=raw,file="E:\VMs\WoA11\QEMU_EFI-pflash.raw",readonly=on ^
+  -drive if=pflash,format=raw,file="E:\VMs\WoA11\vars-template-pflash.raw",readonly=off ^
+  -device ramfb ^
+  -device qemu-xhci ^
+  -device usb-kbd ^
+  -device usb-tablet ^
+  -nic user,model=virtio ^
+  -drive file="E:\VMs\WoA11\OS.qcow2",if=virtio ^
+  -drive file="E:\VMs\WoA11\zh-cn_windows_11_consumer_editions_version_26h1_arm64_dvd_900d64ce.iso",media=cdrom,if=none,id=cdrom0 ^
+  -device usb-storage,drive=cdrom0 ^
+  -drive file="E:\VMs\WoA11\virtio-win-0.1.285.iso",media=cdrom,if=none,id=cdrom1 ^
+  -device usb-storage,drive=cdrom1 ^
+```
+-->
+
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">qemu-system-aarch64.exe ^</span><br><span class="line">-M virt,gic-version=<span class="number">3</span> ^</span><br><span class="line">-cpu max,pauth=off ^</span><br><span class="line">-smp <span class="number">4</span>,sockets=<span class="number">1</span>,cores=<span class="number">4</span>,threads=<span class="number">1</span> ^</span><br><span class="line">-m <span class="number">4096</span> ^</span><br><span class="line">-accel tcg,thread=multi ^</span><br><span class="line">-device qemu-xhci ^</span><br><span class="line">-device usb-kbd ^</span><br><span class="line">-device usb-tablet ^</span><br><span class="line">-drive file=&quot;E:\VMs\WoA11\OS.qcow2&quot;,<span class="keyword">if</span>=virtio ^</span><br><span class="line">-nic user,model=virtio ^</span><br><span class="line">-drive file=&quot;E:\VMs\WoA11\zh-cn_windows_11_consumer_editions_version_26h1_arm64_dvd_900d64ce.iso&quot;,media=cdrom,<span class="keyword">if</span>=none,id=cdrom0 ^</span><br><span class="line">-device usb-storage,drive=cdrom0 ^</span><br><span class="line">-drive file=&quot;E:\VMs\WoA11\virtio-win-<span class="number">0</span>.<span class="number">1</span>.<span class="number">285</span>.iso&quot;,media=cdrom,<span class="keyword">if</span>=none,id=cdrom1 ^</span><br><span class="line">-device usb-storage,drive=cdrom1 ^</span><br><span class="line">-bios &quot;E:\VMs\WoA11\QEMU_EFI.fd&quot; ^</span><br><span class="line">-device ramfb ^</span><br><span class="line">-drive file=&quot;E:\VMs\WoA11\vars-template-pflash.raw&quot;,<span class="keyword">if</span>=pflash,index=<span class="number">1</span>,<span class="built_in">format</span>=raw</span><br></pre></td></tr></table></figure>
+
+<p>保存后，双击 <code>Start.cmd</code> 以启动虚拟机</p>
+<div class="note success"><p>若正在使用大小核的 CPU，推荐将 <code>qemu-system-aarch64.exe</code> 的“处理器相关性”设置为全大核</p>
+</div>
+
+<h2 id="修改分辨率"><a href="#修改分辨率" class="headerlink" title="修改分辨率"></a>修改分辨率</h2><p>在启动阶段，按下 <kbd>ESC</kbd> 以进入 UEFI 固件设置</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Start-Boot-Option.png" alt="启动选项"></p>
+<p>进入固件设置后，选择 <code>Device Manager</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Device-Manager-in-Firmware.png" alt="Device Manager"></p>
+<p>选择 <code>OVMF Platform Configuration</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/OVMF-Platform-Configuration-in-Firmware.png" alt="OVMF Platform Configuration"></p>
+<p><code>Change Preferred Resolution for Next Boot</code> 中，将分辨率修改为 <code>1024x768</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Change-Preferred-Resolution-for-Next-Boot-in-Firmware.png" alt="Change Preferred Resolution for Next Boot"></p>
+<p>完成后，按下 <kbd>F10</kbd> 以保存设置，按下 <kbd>Y</kbd> 确认保存，随后按下两次 <kbd>ESC</kbd> 以退出固件设置，选择到最下方的 <code>Reset</code> 以重启虚拟机</p>
+<h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><div class="note success"><p>推荐开启“视图” &gt; “鼠标经过时捕获”<br>若开启了“捕获输入”，请按 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> 以脱离虚拟机</p>
+</div>
+
+<p>结果漫长的等待后就可以进入系统了</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Windows-Setup.png" alt="Windows 安装程序"></p>
+<div class="note primary"><p>如果遇到 <code>Synchronous Exception at ...</code> 的问题，请替换 <code>QEMU_EFI.fd</code> 与 <code>vars-template-pflash.raw</code> 文件，并重新配置 BIOS；或者是重新尝试使用其他任意键以继续<br><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Synchronous-Exception.png" alt="Synchronous Exception"></p>
+</div>
+
+<h3 id="Windows-安装程序"><a href="#Windows-安装程序" class="headerlink" title="Windows 安装程序"></a>Windows 安装程序</h3><p>等待几分钟，虚拟机会自动进入到 Windows 安装程序</p>
+<p>在选择磁盘的时候，点击“加载驱动程序”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Load-Hard-Disk-Driver.png" alt="加载驱动程序"></p>
+<p>点击“浏览”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Browse-Drivers.png" alt="浏览驱动"></p>
+<p>选择 VirtIO-Win 光驱，找到名为 <code>viostor</code> 的文件夹，选择里面 <code>w11</code> 文件夹下的 <code>ARM64</code> 文件夹（如果安装的是 Windows 10 则选择 <code>w10</code>，以此类推）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Select-Disk-Driver-Folder.png" alt="驱动路径"></p>
+<p>选择驱动程序，点击“安装”，这样就可以正常加载磁盘了</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Install-Hard-Disk-Driver.png" alt="安装驱动"></p>
+<p>随后，即可开始安装 Windows</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Start-to-Install-Windows.png" alt="安装 Windows"></p>
+<h3 id="部署系统"><a href="#部署系统" class="headerlink" title="部署系统"></a>部署系统</h3><p>系统会经历两次重启，我在 NVMe 上用了约一个小时才从 Windows 安装程序进入到 OOBE</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/First-Reboot.png" alt="第一次重启"></p>
+<div class="note primary"><p>若在“准备就绪”阶段等待时间过久，或提示安装错误等问题，可用以下方式强制进入 OOBE：<br>按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD，输入以下命令并按下 <kbd>Enter</kbd> 以回车</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">oobe\msoobe.exe</span><br></pre></td></tr></table></figure>
+</div>
+
+<p>“请稍等…”阶段等待几分钟，当微软输入法工具栏出现之后，再等待几分钟即可进入到 OOBE</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-OOBE.png" alt="OOBE"></p>
+<p>由于我们暂时没有安装网卡驱动，所以需要跳过联网，详情请参阅：<a href="/posts/4da89e7b.html" title="跳过Windows 激活联网要求">跳过Windows 激活联网要求</a></p>
+<div class="note primary"><p>若期间 OOBE 仍要求联网，可以按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 打开 CMD，输入 <code>explorer</code> 并回车，并按照<a href="#%E5%AE%89%E8%A3%85%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8">安装网卡驱动</a>的方式安装网卡驱动后继续</p>
+</div>
+
+<hr>
+<h4 id="若无法跳过账户登录或只能登录到工作账户"><a href="#若无法跳过账户登录或只能登录到工作账户" class="headerlink" title="若无法跳过账户登录或只能登录到工作账户"></a>若无法跳过账户登录或只能登录到工作账户</h4><p>若发现只能登录到工作账户，请按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F3</kbd> 以跳过 OOBE<br>在“计算机管理”里启用 Administrator 或新建其他管理员账户，随后以管理员身份运行 CMD 并输入命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">xcopy</span> &quot;<span class="variable">%SystemRoot%</span>\System32\oobe\audit.exe&quot; &quot;<span class="variable">%Public%</span>\Desktop\Backup&quot; /X</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">xcopy</span> &quot;<span class="variable">%SystemRoot%</span>\System32\svchost.exe&quot; &quot;<span class="variable">%SystemRoot%</span>\System32\oobe\audit.exe&quot; /X</span><br></pre></td></tr></table></figure>
+
+<p>完成后重启虚拟机即可</p>
+<hr>
+<p>完成 OOBE 后，就会开始准备桌面与用户配置<br>至此，系统就安装完成了</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Preparing-Desktop.png" alt="正在准备桌面"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Desktop.png" alt="桌面"></p>
+<h3 id="安装网卡驱动"><a href="#安装网卡驱动" class="headerlink" title="安装网卡驱动"></a>安装网卡驱动</h3><p>右键“开始”菜单，选择“终端(管理员)”、“Windows PowerShell(管理员)”或“命令提示符(管理员)”<br>输入以下命令以开启“测试模式”，并重启</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit /<span class="built_in">set</span> testsigning on</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关于加载已进行测试签名的驱动程序，请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows-hardware/drivers/install/the-testsigning-boot-configuration-option/?wt.mc_id=studentamb_474966">允许加载已进行测试签名的驱动程序 - Windows drivers | Microsoft Learn</a></p>
+</blockquote>
+<p>重启之后，在文件资源管理器里打开 VirtIO-Win 光驱，定位到 <code>\NetKVM\w11\ARM64</code>（如果是 Windows 10 就选择 <code>w10</code> 文件夹，以此类推）<br>右键类型为“安装信息”的 <code>netkvm</code> 文件，选择“安装”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Install-NetKVM.png" alt="安装 NetKVM"></p>
+<h2 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h2><p>无比慢，特别慢，非常慢，巨慢，受到一些限制，x64 的还不能很好地转译到 ARM64</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Windows.png" alt="在系统中"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Taskmgr.png" alt="任务管理器"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol>
+<li>性能与显示<br>因为没有显卡驱动以及其他的驱动，在 QEMU 模拟 Windows ARM 性能会大打折扣，整个过程会非常漫长，建议将文件存放在 SSD 内<br>如果你会添加驱动的话，可以修改 <code>install.wim</code> 或 <code>install.esd</code> 和 <code>boot.wim</code>，向内添加了 VirtIO 驱动之后再添加如下参数到 <code>Start.cmd</code> 以支持 <code>virtio-gpu</code> 输出</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-device virtio-gpu-pci,virgl=on ^</span><br><span class="line">-display gtk,gl=on ^</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>光驱管理<br>如果你后面不需要光驱了可以把如下内容删除</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-drive file=&quot;&lt;存放文件夹\系统镜像文件名.iso&gt;&quot;,media=cdrom,<span class="keyword">if</span>=none,id=cdrom ^</span><br><span class="line">-device usb-storage,drive=cdrom ^</span><br><span class="line">-drive file=&quot;&lt;存放文件夹\virtio-win 名称.iso&gt;&quot;,media=cdrom,<span class="keyword">if</span>=none,id=cdrom1 ^</span><br><span class="line">-device usb-storage,drive=cdrom1 ^</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>驱动管理<br>文章内仅模拟了所需的硬件及网卡，其他的硬件需要自行查询<br>镜像内其他驱动的大致意思如下：<sup><a href="#ref4">[4]</a></sup></p>
+<ul>
+<li>NetKVM: Virtio 网络驱动</li>
+<li>viostor: Virtio 块驱动</li>
+<li>vioscsi: Virtio SCSI 驱动</li>
+<li>viorng: Virtio RNG 驱动</li>
+<li>vioser: Virtio 串口驱动</li>
+<li>Balloon: Virtio 内存气球驱动</li>
+<li>qxl: 用于 Windows 7 及之前版本的 QXL 显卡驱动（virtio-win-0.1.103-1 和之后版本会创建）</li>
+<li>qxldod: 用于 Windows 8 及之后版本的 QXL 显卡驱动（virtio-win-0.1.103-2 和之后版本会创建）</li>
+<li>pvpanic: QEMU pvpanic 设备驱动（virtio-win-0.1.103-2 和之后版本会创建）</li>
+<li>guest-agent: QEMU Guest Agent 32bit 和 64bit 安装包</li>
+<li>qemupciserial: QEMU PCI 串口设备驱动</li>
+<li>vfd: 用于 Windows XP 下的 VFD 软驱镜像</li>
+</ul>
+</li>
+<li><p>优化<br>尝试 BetaWiki 给出的解决方案以关闭打印机、磁盘整理与休眠</p>
+</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sc.exe stop &quot;Spooler&quot;</span><br><span class="line">sc.exe config &quot;Spooler&quot; <span class="built_in">start</span>= disabled</span><br><span class="line">sc.exe stop &quot;WSearch&quot;</span><br><span class="line">sc.exe config &quot;WSearch&quot; <span class="built_in">start</span>= disabled</span><br><span class="line">schtasks.exe /Delete /TN &quot;\Microsoft\Windows\Defrag\ScheduledDefrag&quot; /F</span><br><span class="line">powercfg.exe -h off</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>传输文件<br>在物理机内添加共享文件夹，权限改成 <code>Everyone</code> 并允许读取写入（如果你怕会被其他人截取则在映射网络驱动器时需要输入物理机的系统账户以登录到共享文件夹），然后在虚拟机内映射网络驱动器即可</p>
+</li>
+<li><p>PE 或 Setup 加载驱动<br>在 PE 或 Setup 下，可以使用 <code>drvload</code> 命令来加载驱动</p>
+</li>
+</ol>
+<blockquote>
+<p>更多关于 Devload 的命令，请参阅 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/drvload-command-line-options/?wt.mc_id=studentamb_474966">Drvload 命令行选项 | Microsoft Learn</a></p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drvload &quot;<span class="built_in">path</span>\to\fileName.inf&quot;</span><br></pre></td></tr></table></figure>
+
+<p>示例如下（可使用 <code>tree</code> 或 <code>dir</code> 命令来列出文件夹内容）</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drvload &quot;E:\viostor\w11\ARM64\viostor.inf&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+  <li id="ref1"><a href="https://wiki.betaworld.cn/%E5%A6%82%E4%BD%95%E5%9C%A8QEMU%E4%B8%AD%E5%AE%89%E8%A3%85Windows_Client_ARM64" target="_blank" rel="noopener external nofollow noreferrer">BetaWorld Wiki（由此改编）</a></li>
+  <li id="ref2"><a href="https://wiki.betaworld.cn/%E6%96%87%E4%BB%B6:Win11_on_QEMU_ARM64_Linux.png" target="_blank" rel="noopener external nofollow noreferrer">封面：BetaWorld Wiki</a></li>
+  <li id="ref3"><a href="https://worproject.com/faq" target="_blank" rel="noopener external nofollow noreferrer">FAQ | Windows on R</a></li>
+  <li id="ref4"><a href="https://blog.51cto.com/dangzhiqiang/1833615" target="_blank" rel="noopener external nofollow noreferrer">Windows virtio 驱动_51CTO博客_virtio驱动</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/WeChat_Rewards_Code.png" alt="GuCATs 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/AFDIAN.png" alt="GuCATs AFDIAN">
+        <span>AFDIAN</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>GuCATs
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://goo-aw233.github.io/posts/57859c3e.html" title="在 QEMU 安装 Windows on ARM">https://goo-aw233.github.io/posts/57859c3e.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (Atom)</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (RSS2)</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/QEMU/" rel="tag"># QEMU</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/2d8182ed.html" rel="prev" title="修复损坏的 Windows 组件">
+                  <i class="fa fa-angle-left"></i> 修复损坏的 Windows 组件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/3d1dabad.html" rel="next" title="获取微软商店应用的安装包">
+                  获取微软商店应用的安装包 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa-solid fa-tower-cell"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">GuCATs</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">104k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<div class="run-time">
+  <i class="far fa-clock"></i>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+</div>
+
+<script>
+  var now = new Date();
+  function createtime() {
+    var grt = new Date("11/15/2021 00:00:00"); 
+    now.setTime(now.getTime() + 250);
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    var dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+    var hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    var mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * mnum * 60) - (60 * hnum * 60);
+    var seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    var snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+    document.getElementById("timeDate").innerHTML = "本站已运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval(createtime, 250);
+</script>
+
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Goo-aw233" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>

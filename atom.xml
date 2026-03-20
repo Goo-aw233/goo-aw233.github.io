@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>GuCATs</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</icon>
+  <id>https://goo-aw233.github.io/</id>
+  <link href="https://goo-aw233.github.io/" rel="alternate"/>
+  <link href="https://goo-aw233.github.io/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, GuCATs</rights>
+  <subtitle>海納百川，有容乃大</subtitle>
+  <title>GuCATs'摸鱼站</title>
+  <updated>2026-03-20T07:16:32.476Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/fc28aee6.html</id>
+    <link href="https://goo-aw233.github.io/posts/fc28aee6.html"/>
+    <published>2026-03-18T14:37:55.000Z</published>
+    <summary>本文详细介绍如何在不同版本的 Windows 系统中显示文件扩展名，包括通过注册表修改、命令行操作以及图形界面设置的方法，适用于 Windows 11、10、7 和 XP，帮助用户快速启用文件扩展名显示功能。</summary>
+    <title>显示文件扩展名</title>
+    <updated>2026-03-20T07:16:32.476Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/837d5d4c.html</id>
+    <link href="https://goo-aw233.github.io/posts/837d5d4c.html"/>
+    <published>2026-03-18T14:20:10.000Z</published>
+    <summary>本文详细介绍如何在 Windows 系统中获取文件路径，包括通过文件属性、右键菜单以及快捷键操作的方法，适用于 Windows 11、10 和其他版本，帮助用户快速复制文件路径到剪贴板。</summary>
+    <title>获取文件路径</title>
+    <updated>2026-03-20T07:16:50.349Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/e3b15ad1.html</id>
+    <link href="https://goo-aw233.github.io/posts/e3b15ad1.html"/>
+    <published>2026-03-06T03:10:03.000Z</published>
+    <summary>提供多种方法检查 Windows 系统和 CPU 的架构，包括通过设置、控制面板、PowerShell、CMD 等工具查看详细信息。</summary>
+    <title>检查 CPU 与 Windows 的架构</title>
+    <updated>2026-03-08T13:03:43.227Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="DISM" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
+    <id>https://goo-aw233.github.io/posts/87461802.html</id>
+    <link href="https://goo-aw233.github.io/posts/87461802.html"/>
+    <published>2026-02-14T05:27:56.000Z</published>
+    <summary>使用 DISM 工具安全地清理 WinSxS 文件夹以释放系统盘空间的详细教程，包括分析大小、清理组件和设置定时任务。</summary>
+    <title>使用 DISM 清理 WinSxS 文件夹</title>
+    <updated>2026-03-20T06:03:30.860Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
+    <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
+    <id>https://goo-aw233.github.io/posts/20ffdbc4.html</id>
+    <link href="https://goo-aw233.github.io/posts/20ffdbc4.html"/>
+    <published>2026-01-08T04:08:43.000Z</published>
+    <summary>在 Steam 中安装浏览器扩展的详细教程，包括打开扩展页、安装扩展和强制卸载扩展的方法。</summary>
+    <title>为 Steam 安装浏览器扩展</title>
+    <updated>2026-03-03T13:39:49.599Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/ecf11bf4.html</id>
+    <link href="https://goo-aw233.github.io/posts/ecf11bf4.html"/>
+    <published>2025-10-24T12:02:48.000Z</published>
+    <summary>使用 manage-bde.exe 管理 BitLocker 和设备加密，涵盖查看状态、启用/禁用加密、修改密码等操作。</summary>
+    <title>使用 manage-bde 管理 BitLocker</title>
+    <updated>2026-03-20T06:03:24.205Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/tags/PowerShell/"/>
+    <id>https://goo-aw233.github.io/posts/1bb5bc04.html</id>
+    <link href="https://goo-aw233.github.io/posts/1bb5bc04.html"/>
+    <published>2025-10-24T07:59:55.000Z</published>
+    <summary>使用 PowerShell 管理 Microsoft Defender 防病毒，替代 Windows 安全中心在 Server Core 环境中的功能，涵盖常用命令及参数说明。</summary>
+    <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
+    <updated>2026-03-08T13:43:55.418Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/168b633e.html</id>
+    <link href="https://goo-aw233.github.io/posts/168b633e.html"/>
+    <published>2025-10-20T14:06:09.000Z</published>
+    <summary>通过注册表修改 Windows 区域设定，涵盖设备设置区域和国家或地区的具体操作方法。</summary>
+    <title>通过注册表修改 Windows 区域设定</title>
+    <updated>2026-03-20T06:03:13.137Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/c95bd458.html</id>
+    <link href="https://goo-aw233.github.io/posts/c95bd458.html"/>
+    <published>2025-10-16T15:30:02.000Z</published>
+    <summary>通过修改注册表项或使用控制面板的方法，在 Windows 未激活的情况下切换主题，并提供详细操作步骤。</summary>
+    <title>Windows 未激活时切换主题</title>
+    <updated>2026-03-05T08:51:25.107Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
+    <id>https://goo-aw233.github.io/posts/8407e146.html</id>
+    <link href="https://goo-aw233.github.io/posts/8407e146.html"/>
+    <published>2025-10-16T12:36:52.000Z</published>
+    <summary>安装 WSL 1 而不是 WSL 2，避免使用 Hyper-V，支持与 VMware Workstation 和 VirtualBox 共存，提供详细的安装与配置步骤。</summary>
+    <title>安装 WSL 1</title>
+    <updated>2026-03-16T14:15:26.432Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
+    <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <id>https://goo-aw233.github.io/posts/41eafc84.html</id>
+    <link href="https://goo-aw233.github.io/posts/41eafc84.html"/>
+    <published>2025-10-16T09:57:11.000Z</published>
+    <summary>通过修改 DLL 文件并附加到 VMware Workstation Pro 并使其生效，支持中文语言环境</summary>
+    <title>VMware Workstation 挂载语言</title>
+    <updated>2026-03-16T13:28:03.491Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/tags/PowerShell/"/>
+    <id>https://goo-aw233.github.io/posts/3e658596.html</id>
+    <link href="https://goo-aw233.github.io/posts/3e658596.html"/>
+    <published>2025-10-15T06:40:26.000Z</published>
+    <summary>在 Windows 中为 (Windows) PowerShell 配置 oh-my-posh 的详细教程，包括安装、环境变量设置、主题和字体美化。</summary>
+    <title>在 Windows 中为 PowerShell 配置 oh-my-posh</title>
+    <updated>2026-03-10T12:54:35.386Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/tags/PowerShell/"/>
+    <id>https://goo-aw233.github.io/posts/dd918a8f.html</id>
+    <link href="https://goo-aw233.github.io/posts/dd918a8f.html"/>
+    <published>2025-10-06T02:44:31.000Z</published>
+    <summary>通过禁用非红外摄像头解决 Windows Hello Face 在暗光下无法正常使用的问题，并提供快速启用/禁用摄像头的脚本方法。</summary>
+    <title>在暗光下正常使用 Windows Hello Face</title>
+    <updated>2026-03-03T13:39:57.119Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/tags/PowerShell/"/>
+    <id>https://goo-aw233.github.io/posts/29b4a04d.html</id>
+    <link href="https://goo-aw233.github.io/posts/29b4a04d.html"/>
+    <published>2025-07-24T06:09:42.000Z</published>
+    <summary>开启 SMBv3 端到端加密以保护共享内容不被明文传输的详细教程，适用于 Windows 10/11 和 Windows Server。</summary>
+    <title>开启 SMBv3 端到端加密</title>
+    <updated>2026-03-20T06:03:03.155Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="DISM" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
+    <id>https://goo-aw233.github.io/posts/a0c55de3.html</id>
+    <link href="https://goo-aw233.github.io/posts/a0c55de3.html"/>
+    <published>2025-05-17T05:23:01.000Z</published>
+    <summary>为 Windows 添加完整的语言包，支持通过 DISM、Dism++ 和 lpksetup 等多种方式安装语言文件。</summary>
+    <title>为 Windows 添加完整的语言包</title>
+    <updated>2026-03-20T06:02:51.124Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://goo-aw233.github.io/tags/PowerShell/"/>
+    <id>https://goo-aw233.github.io/posts/4668d7cf.html</id>
+    <link href="https://goo-aw233.github.io/posts/4668d7cf.html"/>
+    <published>2024-08-31T02:29:16.000Z</published>
+    <summary>使用 Device Guard and Credential Guard Hardware Readiness Tool 关闭默认启用的 Device/Credential Guard 和 VBS 的详细教程。</summary>
+    <title>为你的电脑关闭 Device/Credential Guard</title>
+    <updated>2026-03-03T13:36:59.518Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
+    <id>https://goo-aw233.github.io/posts/babf6529.html</id>
+    <link href="https://goo-aw233.github.io/posts/babf6529.html"/>
+    <published>2024-08-21T13:45:16.000Z</published>
+    <summary>在 Intel NUC8i5BEH 上安装黑苹果的详细教程，包括硬件配置、BIOS 设置、macOS 安装及优化</summary>
+    <title>在 NUC8i5BEH 安装黑苹果</title>
+    <updated>2026-03-12T14:17:58.530Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
+    <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
+    <id>https://goo-aw233.github.io/posts/da029b2a.html</id>
+    <link href="https://goo-aw233.github.io/posts/da029b2a.html"/>
+    <published>2024-04-20T01:16:23.000Z</published>
+    <summary>使用 Hackintool 等工具模拟白苹果机型，以实现正常使用 macOS 虚拟机，支持多种配置工具</summary>
+    <title>macOS 虚拟机机型模拟</title>
+    <updated>2026-03-16T13:27:12.432Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="iOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/iOS/"/>
+    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
+    <id>https://goo-aw233.github.io/posts/338aca3d.html</id>
+    <link href="https://goo-aw233.github.io/posts/338aca3d.html"/>
+    <published>2024-03-02T03:27:40.000Z</published>
+    <summary>在不更新 iOS 的情况下更新 IPCC（运营商）文件</summary>
+    <title>更新 IPCC 文件</title>
+    <updated>2026-03-16T14:22:39.477Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Android" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Android/"/>
+    <category term="Android" scheme="https://goo-aw233.github.io/tags/Android/"/>
+    <id>https://goo-aw233.github.io/posts/f7e53ae.html</id>
+    <link href="https://goo-aw233.github.io/posts/f7e53ae.html"/>
+    <published>2023-10-21T06:00:06.000Z</published>
+    <summary>从 Android OTA 包中提取 boot.img 文件，提供详细的工具准备和操作步骤，适用于 Pixel 等设备。</summary>
+    <title>从 OTA 包提取 boot.img</title>
+    <updated>2026-03-10T12:54:35.390Z</updated>
+  </entry>
+</feed>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png" color="#222">
+  <meta name="google-site-verification" content="b1jg-ZW0xRTOyo9xjdP9dhkmPRXMiG8fxtHKU1eXGSI">
+  <meta name="msvalidate.01" content="0F4E55A98D34BC9B4ABBE33CB4988150">
+  <meta name="yandex-verification" content="681b2baea28a6c0a">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"goo-aw233.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="安装 Windows 3.1 的详细教程，包括虚拟机设置、MS-DOS 6.22 的安装、光驱的驱动安装和系统配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟机安装 Windows 3.1">
+<meta property="og:url" content="https://goo-aw233.github.io/posts/c2a9ce1.html">
+<meta property="og:site_name" content="GuCATs&#39;摸鱼站">
+<meta property="og:description" content="安装 Windows 3.1 的详细教程，包括虚拟机设置、MS-DOS 6.22 的安装、光驱的驱动安装和系统配置">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Extract_EXE.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Create-ISO.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Select-OS-to-Install.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Store-Disk-File-as-a-Single-File.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Connect-to-Windows31-iso.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Windows-Installation-Wizard.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Choose-Installation-Method.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Enter-Username.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Do-Not-Install-Printer.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Set-Up-Program.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Skip-Tutorial.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Installation-Complete.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Final-Result.png">
+<meta property="article:published_time" content="2022-05-15T12:55:32.000Z">
+<meta property="article:modified_time" content="2026-03-16T14:17:12.090Z">
+<meta property="article:author" content="GuCATs">
+<meta property="article:tag" content="MS-DOS">
+<meta property="article:tag" content="VMware Workstation">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Extract_EXE.png">
+
+
+<link rel="canonical" href="https://goo-aw233.github.io/posts/c2a9ce1.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/posts/c2a9ce1.html","path":"posts/c2a9ce1.html","title":"虚拟机安装 Windows 3.1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>虚拟机安装 Windows 3.1 | GuCATs'摸鱼站</title>
+  
+
+
+
+
+  <script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tv0aelb214");
+</script>
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="GuCATs'摸鱼站" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="GuCATs'摸鱼站" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GuCATs'摸鱼站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海納百川，有容乃大</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F"><span class="nav-number">2.</span> <span class="nav-text">创建镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">3.</span> <span class="nav-text">创建虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%85%89%E9%A9%B1%E9%A9%B1%E5%8A%A8"><span class="nav-number">4.</span> <span class="nav-text">安装光驱驱动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E9%A9%B1%E5%8A%A8"><span class="nav-number">4.1.</span> <span class="nav-text">复制驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91-CONFIG-SYS"><span class="nav-number">4.2.</span> <span class="nav-text">编辑 CONFIG.SYS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91-AUTOEXEC-BAT"><span class="nav-number">4.3.</span> <span class="nav-text">编辑 AUTOEXEC.BAT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.</span> <span class="nav-text">安装系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">6.</span> <span class="nav-text">启动系统</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GuCATs"
+      src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">GuCATs</p>
+  <div class="site-description" itemprop="description">海納百川，有容乃大</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Goo-aw233" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Goo-aw233" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS (Atom) → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS (Atom)</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/rss2.xml" title="RSS (RSS2) → &#x2F;rss2.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS (RSS2)</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener external nofollow noreferrer" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+<div class="links-of-blogroll-title">
+  <i class="fa fa-globe"></i> 访客地图
+</div>
+<div style="margin-top: 5px; font-size: 14px;">若无法加载“访客地图”，请关闭广告拦截器</div>
+<div style="margin-top: 10px;">
+  <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=jc5kvq6EGIy1d-tHPoHYueeyUOCDV5w-GgmtdSx3dfQ"></script>
+</div>
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/posts/c2a9ce1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="虚拟机安装 Windows 3.1 | GuCATs'摸鱼站">
+      <meta itemprop="description" content="安装 Windows 3.1 的详细教程，包括虚拟机设置、MS-DOS 6.22 的安装、光驱的驱动安装和系统配置">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          虚拟机安装 Windows 3.1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-15 20:55:32" itemprop="dateCreated datePublished" datetime="2022-05-15T20:55:32+08:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-16 22:17:12" itemprop="dateModified" datetime="2026-03-16T22:17:12+08:00">2026-03-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/MS-DOS/" itemprop="url" rel="index"><span itemprop="name">MS-DOS</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">安装 Windows 3.1 的详细教程，包括虚拟机设置、MS-DOS 6.22 的安装、光驱的驱动安装和系统配置</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此文章 VMware Workstation Pro 下进行，操作可能会有出入<br>使用 MS-DOS 7.10 可能会导致兼容性问题，可以正常进入 Windows 3.1 安装程序并完成安装，但是引导至 Windows 3.1 时就会引发问题：<q>发生错误，导致虚拟 CPU 进入关闭状态。</q><span style="background-color: black; color: black;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">但是用 MS-DOS 7.10 安装完 Windows 3.1 才会有“重新启动 Windows”的选项，虽然不影响（恼</span></p>
+<p><strong>关于路线选择：</strong></p>
+<ol>
+<li>若不使用推荐部分提供的文件，请自行安装 MS-DOS 6.22（详见：<a href="/posts/130ab0eb.html" title="虚拟机安装 MS-DOS 6.22">虚拟机安装 MS-DOS 6.22</a>），后文不再单独介绍 MS-DOS 6.22 的安装</li>
+<li>自行安装 MS-DOS 6.22 时，推荐将硬盘设为 VMware Workstation 的推荐值 <code>8 GB</code>，并在安装完成后从“编辑虚拟机设置” &gt; “选项” &gt; “客户机操作系统”中，将目标操作系统从“其他” &gt; “MS-DOS” 更改为 “Microsoft Windows” &gt; “Windows 3.1”（对应<a href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA">创建虚拟机</a>部分）</li>
+</ol>
+<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol>
+<li>Windows 3.1 (Simplified Chinese)：（使用电驴下载 ED2K 协议的链接）<br>  <code>ed2k://|file|SC_Windows31.exe|8472384|84037137FFF3932707F286EC852F2ABC|/</code></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://winworldpc.com/download/40c2bd6b-6618-c39a-11c3-a4e284a2c3a5">Microsoft DOS 7.1 (CD)</a></li>
+<li>OAKCDROM.SYS</li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgC2tNflkjj2SpQ_UpTlg9eQAT3BHM5bi-6boqMlG0OXmow?e=9mv9U1">UltraISO</a>（已同步至<a href="/resources/">资源列表</a>）</li>
+</ol>
+<div class="note success"><p>推荐使用：</p>
+<ul>
+<li><code>SC_Windows31.exe</code></li>
+<li><code>Windows3.1.iso</code></li>
+<li><code>OAKCDROM.IMG</code>（OAKCDROM 驱动，提取自 Windows 98 SE）</li>
+<li>打包并安装完 MS-DOS 6.22 的虚拟机（配置：1 处理器数 1 核心数，16 MB 内存，8 GB 硬盘，移除 CD-ROM 驱动器，添加软盘驱动器）</li>
+<li>已安装好的再分发版本（兼容性为 <code>Workstation 11.x</code>，<code>.ovf</code> 格式）<br>统一下载链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgDmexMIk0MpR5QpPnHjpAL4AUtY4SoiU8q0f7YSVu-Jl8A?e=HJWOvo">OneDrive</a>（已同步至<a href="/resources/">资源列表</a>）</li>
+</ul>
+</div>
+
+<h2 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h2><p>运行 <code>SC_Windows31.exe</code>，选择一个解压路径（<code>Browse</code>），随后点击 <code>Extract</code> 以解压文件</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Extract_EXE.png" alt="提取文件"></p>
+<p>打开 UltraISO，找到 <code>windows.31</code> 文件夹下的 <code>SIMPCHIN</code> 文件夹，将里面所有文件拖入到 UltraISO 右侧窗格的文件列表里，并右键镜像名称 &gt; “重命名”以改名镜像，完成后按下 <kbd>Ctrl</kbd> + <kbd>S</kbd> 以保存修改好的镜像文件（默认保存到 UltraISO 同目录下）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Create-ISO.png" alt="创建镜像文件"></p>
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><div class="note primary"><p>除以下给出的推荐设置外，其他的请按照默认配置进行选择</p>
+</div>
+
+<p>“客户机操作系统”中选择“Microsoft Windows”，“版本”中选择“Windows 3.1”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Select-OS-to-Install.png" alt="选择安装的操作系统"></p>
+<p>创建磁盘文件时，选择“将虚拟磁盘存储为单个文件”</p>
+<div class="note success"><p>将虚拟磁盘文件存储为单个文件可以提高一部分磁盘性能</p>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Store-Disk-File-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件"></p>
+<p>完成后，点击“编辑虚拟机设置”，在 CD&#x2F;DVD 设备中选择连接到 <code>Windows3.1.iso</code> 文件，并取消勾选“启动时连接(O)”，以免启动到不可引导的 Windows 3.1 镜像</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Connect-to-Windows31-iso.png" alt="连接到 Windows3.1.iso 文件"></p>
+<p>完成后点击“确定”以保存虚拟机设置，随后启动虚拟机</p>
+<h2 id="安装光驱驱动"><a href="#安装光驱驱动" class="headerlink" title="安装光驱驱动"></a>安装光驱驱动</h2><h3 id="复制驱动"><a href="#复制驱动" class="headerlink" title="复制驱动"></a>复制驱动</h3><p>进入到 MS-DOS 6.22 后，插入 <code>OAKCDROM.IMG</code>，输入命令将其复制到 MS-DOS 6.22 目录</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">COPY</span> A:\OAKCDROM.SYS C:\DOS</span><br></pre></td></tr></table></figure>
+
+<h3 id="编辑-CONFIG-SYS"><a href="#编辑-CONFIG-SYS" class="headerlink" title="编辑 CONFIG.SYS"></a>编辑 CONFIG.SYS</h3><p>复制完成后编辑 <code>CONFIG.SYS</code></p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EDIT C:\CONFIG.SYS</span><br></pre></td></tr></table></figure>
+
+<p>在文件末尾添加这一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=C:\DOS\OAKCDROM.SYS /D:MSCD001</span><br></pre></td></tr></table></figure>
+
+<p>完成后，按下 <kbd>Alt</kbd> 以选择顶部菜单栏，随后选择 <code>File</code> &gt; <code>Save</code> 来保存文件，最后再次 <code>File</code> &gt; <code>Exit</code> 即可退出编辑</p>
+<h3 id="编辑-AUTOEXEC-BAT"><a href="#编辑-AUTOEXEC-BAT" class="headerlink" title="编辑 AUTOEXEC.BAT"></a>编辑 AUTOEXEC.BAT</h3><p>编辑 <code>AUTOEXEC.BAT</code></p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EDIT C:\AUTOEXEC.BAT</span><br></pre></td></tr></table></figure>
+
+<p>在文件末尾添加这一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\DOS\MSCDEX.EXE /D:MSCD001</span><br></pre></td></tr></table></figure>
+
+<p>完成后，按下 <kbd>Alt</kbd> 以选择顶部菜单栏，随后选择 <code>File</code> &gt; <code>Save</code> 来保存文件，最后再次 <code>File</code> &gt; <code>Exit</code> 即可退出编辑</p>
+<h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><p>安装完驱动后推出 <code>OAKCDROM.IMG</code>，随后重启一次 MS-DOS 6.22，进入系统后插入 <code>Windows3.1.iso</code></p>
+<p>输入命令以启动光盘下的 Windows 3.1 安装程序</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">D:</span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">SETUP</span></span></span><br></pre></td></tr></table></figure>
+
+<p>进入安装程序后，按下 <kbd>Enter</kbd> 以回车来继续</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Windows-Installation-Wizard.png" alt="Windows 安装向导"></p>
+<p>选择安装方式，按下 <kbd>Enter</kbd> 用默认的即可</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Choose-Installation-Method.png" alt="选择安装方式"></p>
+<p>输入用户名以继续</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Enter-Username.png" alt="输入用户名"></p>
+<p>选择“无连接的打印机”来跳过打印机安装以继续</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Do-Not-Install-Printer.png" alt="不安装打印机"></p>
+<p>选择默认的 <code>MS-DOS Editor</code> 以继续</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Set-Up-Program.png" alt="设置应用程序"></p>
+<p>点击“跳过教程”（如果你想浏览教程可以选择“运行教程”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Skip-Tutorial.png" alt="跳过教程"></p>
+<p>最后，安装完成，选择“重新引导”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Installation-Complete.png" alt="安装程序结束"></p>
+<h2 id="启动系统"><a href="#启动系统" class="headerlink" title="启动系统"></a>启动系统</h2><p>编辑 <code>C:\AUTOEXEC.BAT</code> 使每次都启动到 Windows 3.1 而不是 MS-DOS 6.22</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EDIT C:\AUTOEXEC.BAT</span><br></pre></td></tr></table></figure>
+
+<p>在文件末尾添加这两行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CD C:\WINDOWS</span><br><span class="line">WIN</span><br></pre></td></tr></table></figure>
+
+<p>最后，启动到 Windows 3.1 即可，就安装完成了</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CD</span> C:\WINDOWS</span><br><span class="line">WIN</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Windows-3.1-on-VM/Final-Result.png" alt="最终结果"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/WeChat_Rewards_Code.png" alt="GuCATs 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/AFDIAN.png" alt="GuCATs AFDIAN">
+        <span>AFDIAN</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>GuCATs
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://goo-aw233.github.io/posts/c2a9ce1.html" title="虚拟机安装 Windows 3.1">https://goo-aw233.github.io/posts/c2a9ce1.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (Atom)</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (RSS2)</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/MS-DOS/" rel="tag"># MS-DOS</a>
+              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/e57531df.html" rel="prev" title="跳过 Windows 安装程序密钥要求">
+                  <i class="fa fa-angle-left"></i> 跳过 Windows 安装程序密钥要求
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/bee9811e.html" rel="next" title="为 Windows Vista&#x2F;7 安装 Service Pack">
+                  为 Windows Vista/7 安装 Service Pack <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa-solid fa-tower-cell"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">GuCATs</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">104k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:35</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<div class="run-time">
+  <i class="far fa-clock"></i>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+</div>
+
+<script>
+  var now = new Date();
+  function createtime() {
+    var grt = new Date("11/15/2021 00:00:00"); 
+    now.setTime(now.getTime() + 250);
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    var dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+    var hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    var mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * mnum * 60) - (60 * hnum * 60);
+    var seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    var snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+    document.getElementById("timeDate").innerHTML = "本站已运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval(createtime, 250);
+</script>
+
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Goo-aw233" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
