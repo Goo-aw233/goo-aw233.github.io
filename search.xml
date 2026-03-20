@@ -564,11 +564,11 @@
       
         <tags>
             
+            <tag> iOS </tag>
+            
             <tag> 软件 </tag>
             
             <tag> Windows </tag>
-            
-            <tag> iOS </tag>
             
         </tags>
       
@@ -1396,9 +1396,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
@@ -1718,11 +1718,11 @@
       
         <tags>
             
+            <tag> iOS </tag>
+            
             <tag> 软件 </tag>
             
             <tag> Windows </tag>
-            
-            <tag> iOS </tag>
             
         </tags>
       
@@ -1821,9 +1821,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1852,44 +1852,11 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>在 iOS 6/5 使用 QQ 和微信</title>
-      <link href="/posts/cd1cfaf0.html"/>
-      <url>/posts/cd1cfaf0.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-          <category> iOS </category>
-          
-          <category> 越狱 </category>
-          
-      </categories>
-      
-      
-        <tags>
             
             <tag> 软件 </tag>
             
             <tag> Windows </tag>
-            
-            <tag> iOS </tag>
             
         </tags>
       

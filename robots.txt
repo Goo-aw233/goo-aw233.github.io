@@ -1,11 +1,14 @@
 User-agent: *
 
 Allow: /
+Allow: /about/
 Allow: /archives/
 Allow: /categories/
-Allow: /tags/
-Allow: /page/
 Allow: /expired-articles/
+Allow: /help/
+Allow: /page/
+Allow: /resources/
+Allow: /tags/
 
 Disallow: /css/
 Disallow: /js/
@@ -13,9 +16,6 @@ Disallow: /fonts/
 Disallow: /lib/
 Disallow: /vendors/
 Disallow: /go/
-Disallow: /help/
-Disallow: /about/
-Disallow: /resources/
 
 Sitemap: https://goo-aw233.github.io/sitemap.xml
 Sitemap: https://goo-aw233.github.io/baidusitemap.xml
