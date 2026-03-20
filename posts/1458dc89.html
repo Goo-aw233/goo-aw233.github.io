@@ -31,12 +31,30 @@
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
 <meta property="og:description" content="在 VMware Workstation Pro 中使用 PE 安装 Windows">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/WePE-Generate-Bootable-ISO.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/WePE-Generate-ISO-Immediately.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/FirPE-Generate-ISO.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Select-OS-to-Install.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Select-Guest-OS.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Firmware-Type.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/CPU-Configuration.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Memory-of-This-VM.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Network-Type.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/IO-Controller-Type.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Virtual-Disk-Type.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Specify-Disk-Capacity.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Connect-to-PE-ISO.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Connect-to-OS-ISO.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Quick-Partition.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Release-Image.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Boot-Repair.png">
 <meta property="article:published_time" content="2021-11-20T14:41:54.000Z">
-<meta property="article:modified_time" content="2026-03-18T13:41:28.249Z">
+<meta property="article:modified_time" content="2026-03-20T16:10:56.043Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="VMware Workstation">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/WePE-Generate-Bootable-ISO.png">
 
 
 <link rel="canonical" href="https://goo-aw233.github.io/posts/1458dc89.html">
@@ -164,7 +182,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -177,6 +195,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96-PE-ISO"><span class="nav-number">2.</span> <span class="nav-text">获取 PE ISO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE-PE"><span class="nav-number">2.1.</span> <span class="nav-text">微 PE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FirPE"><span class="nav-number">2.2.</span> <span class="nav-text">FirPE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">3.</span> <span class="nav-text">创建虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5-ISO"><span class="nav-number">4.</span> <span class="nav-text">插入 ISO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-PE"><span class="nav-number">5.</span> <span class="nav-text">进入 PE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F"><span class="nav-number">6.</span> <span class="nav-text">插入系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA"><span class="nav-number">7.</span> <span class="nav-text">分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">8.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WIM-ESD"><span class="nav-number">8.1.</span> <span class="nav-text">WIM&#x2F;ESD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GHO"><span class="nav-number">8.2.</span> <span class="nav-text">GHO</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -292,7 +311,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-18 21:41:28" itemprop="dateModified" datetime="2026-03-18T21:41:28+08:00">2026-03-18</time>
+      <time title="修改时间：2026-03-21 00:10:56" itemprop="dateModified" datetime="2026-03-21T00:10:56+08:00">2026-03-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -334,14 +353,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -352,7 +371,143 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p>PE 类推荐如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.wepe.com.cn/">微 PE</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://firpe.cn/page-247">FirPE</a></li>
+</ul>
+<p>Windows 下载：</p>
+<ul>
+<li><a href="aka.ms/DownloadWindows10">Windows 10</a></li>
+<li><a href="aka.ms/DownloadWindows11">Windows 11</a></li>
+<li><a href="/posts/60fbf8fb.html" title="使用 UUP 构建 Windows 镜像">使用 UUP 构建 Windows 镜像</a></li>
+</ul>
+<h2 id="获取-PE-ISO"><a href="#获取-PE-ISO" class="headerlink" title="获取 PE ISO"></a>获取 PE ISO</h2><h3 id="微-PE"><a href="#微-PE" class="headerlink" title="微 PE"></a>微 PE</h3><p>打开微 PE 的安装程序，点击右下角的光盘图标</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/WePE-Generate-Bootable-ISO.png" alt="生成可启动的 ISO"></p>
+<p>推荐勾选“包含 DOS 工具箱”，其他选项无误后可以点击“立即生成 ISO”以导出 ISO</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/WePE-Generate-ISO-Immediately.png" alt="立即生成 ISO"></p>
+<h3 id="FirPE"><a href="#FirPE" class="headerlink" title="FirPE"></a>FirPE</h3><p>打开微 PE 的安装程序，点击右下角的“生成 ISO”即可</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/FirPE-Generate-ISO.png" alt="生成 ISO"></p>
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><div class="note info"><p>文中未提到的可以保持默认，此处以“自定义”为例，选择“典型”的会缺少部分选项</p>
+</div>
+<div class="note success"><p>推荐将虚拟机单独存放到一个文件夹内，再在里面分别创建文件夹来存放各个虚拟机<br>例如，在 D 盘创建 <code>VMs</code> 以总的存放所有虚拟机，在 <code>VMs</code> 文件夹内分别创建 <code>Windows 11 x64</code> 与 <code>Windows 10 x64</code> 来存放 Windows 11 64 位与 Windows 10 64 位的虚拟机</p>
+</div>
+
+<hr>
+<p>“安装客户机操作系统”部分，选择“稍后安装操作系统”</p>
+<div class="note default"><p>如果在此处选择了 Windows 的 ISO 或光驱，VMware Workstation 会使用内置的无人值守文件来安装系统。若要获得更多自定义权，请使用“稍后安装操作系统”</p>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Select-OS-to-Install.png" alt="安装客户机操作系统"></p>
+<hr>
+<p>“选择客户机操作系统”部分，选择合适的系统</p>
+<div class="note primary"><ul>
+<li>对于 Windows：标明有 <code>x64</code> 字样的是 64 位，未标明的为 32 位或 16 位，<strong>切勿使用 32 位或 16 位的配置文件去安装 64 位的操作系统</strong></li>
+<li>对于 Windows Server：<ul>
+<li>Windows Server 2012 及以上版本：均为 64 位，Windows Server 2012 起不再提供 32 位</li>
+<li>Windows Server 2012 以前：标明有 <code>x64</code> 字样的是 64 位，未标明的为 32 位或 16 位，<strong>切勿使用 32 位或 16 位的配置文件去安装 64 位的操作系统</strong></li>
+</ul>
+</li>
+<li>对于 Linux：标明有“64 位”字样的是 64 位，未标明的为 32 位，<strong>切勿使用 32 位的配置文件去安装 64 位的操作系统</strong></li>
+</ul>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Select-Guest-OS.png" alt="选择客户机操作系统"></p>
+<hr>
+<p>“固件类型”部分，选择合适的固件类型</p>
+<div class="note primary"><ul>
+<li>BIOS：适用于<strong>所有操作系统</strong>，包括 Windows 11（但是不推荐），不包括 macOS</li>
+<li>UEFI：适用于较新的操作系统，Windows Vista 及以上版本支持（不需要补丁支持），推荐 Windows 8 及以上版本使用<ul>
+<li>安全启动：适用于较新的操作系统，Windows 7（需要补丁支持）及以上版本支持，推荐 Windows 8 及以上版本使用。开启后会强制开启“虚拟化 Intel VT-x&#x2F;EPT 或 AMD-V&#x2F;RVI”与“虚拟化 IOMMU（IO 内存管理单元）”，在开启 Hyper-V 及其服务的 Windows 上不受支持（推荐阅读：<a href="/posts/4668d7cf.html" title="为你的电脑关闭 Device&#x2F;Credential Guard">为你的电脑关闭 Device&#x2F;Credential Guard</a>）</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Firmware-Type.png" alt="固件类型"></p>
+<hr>
+<p>“处理器”配置部分，根据宿主机的硬件配置选择</p>
+<div class="note danger"><ul>
+<li><strong>“处理器数量”仅可设置为 <code>1</code>，除非你知道你在做什么，Windows 的 SKU 会对处理器数量做检查并限制</strong></li>
+<li>“每个处理器的内核数量”根据你处理器所提供的核心数决定，而不是线程数，<strong>最大不超过宿主机核心数的一半</strong>，如宿主机处理器提供提供 <code>6</code> 核，则虚拟机最大核心数应为 <code>3</code> 核以保证稳定运行</li>
+</ul>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/CPU-Configuration.png" alt="处理器配置"></p>
+<hr>
+<p>“此虚拟机的内存”配置部分，根据宿主机的硬件配置选择</p>
+<div class="note danger"><ul>
+<li><strong>内存最大上限不超过“最大推荐内存”，否则会引起虚拟机不稳定，甚至内存交换</strong></li>
+<li>Windows 对不同版本与 SKU 之间做了限制，请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows/win32/memory/memory-limits-for-windows-releases/?wt.mc_id=studentamb_474966">Windows 和 Windows Server 版本的内存限制 - Win32 apps | Microsoft Learn</a></li>
+<li>内存大小在不超过“最大推荐内存大小”的上线范围内，在“推荐内存”的基础上乘以两倍。内存进制换算如下：<code>1024 MB = 1 GB</code></li>
+</ul>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Memory-of-This-VM.png" alt="此虚拟机的内存"></p>
+<hr>
+<p>“网络类型”配置部分，根据网络环境选择</p>
+<div class="note success"><p>无特殊需求，或按设备数计量的网络（如校园网），请选择“使用网络地址转换(NAT)”<br>若要允许外部设备访问到虚拟机，请选择“使用桥接网络”</p>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Network-Type.png" alt="网络类型"></p>
+<hr>
+<p>“选择 I&#x2F;O 控制器类型”配置部分，推荐默认选择</p>
+<div class="note danger"><p>选择了错误的 I&#x2F;O 控制器类型会导致系统无法识别磁盘</p>
+</div>
+<div class="note success"><p>对于 Windows：Windows 8.1 及以上版本支持“准虚拟化 SCSI”（不需要补丁支持），推荐优先使用此项以提高虚拟机磁盘性能</p>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/IO-Controller-Type.png" alt="选择 I&#x2F;O 控制器类型"></p>
+<hr>
+<p>“虚拟磁盘类型”配置部分，推荐默认选择</p>
+<div class="note danger"><p>选择了错误的虚拟磁盘类型会导致系统无法识别磁盘</p>
+</div>
+<div class="note success"><p>对于 Windows：Windows 8.1 及以上版本支持 <code>NVMe</code>（不需要补丁支持，Windows 7 与 Windows 8 需要有补丁支持），推荐优先使用此项以提高虚拟机磁盘性能</p>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Virtual-Disk-Type.png" alt="虚拟磁盘类型"></p>
+<hr>
+<p>“指定磁盘容量”配置部分，推荐选择“将虚拟机磁盘存储为单个文件”以提高虚拟机磁盘性能</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Specify-Disk-Capacity.png" alt="指定磁盘容量"></p>
+<h2 id="插入-ISO"><a href="#插入-ISO" class="headerlink" title="插入 ISO"></a>插入 ISO</h2><p>点击“编辑虚拟机设置” &gt; “CD&#x2F;DVD” &gt; “使用 ISO 镜像文件” &gt; “浏览”，并选择到之前创建好的 PE 的 ISO 文件，以连接 PE<br>安装完系统前，推荐开启“启动时连接”以确保每次开机都能连接到镜像文件</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Connect-to-PE-ISO.png" alt="插入 PE ISO"></p>
+<h2 id="进入-PE"><a href="#进入-PE" class="headerlink" title="进入 PE"></a>进入 PE</h2><p>Boot Manager 界面选择带有 <code>CDROM Drive</code> 字样的选项，按下 <kbd>Enter</kbd> 以启动到该启动项目</p>
+<div class="note primary"><p>若发现无法引导进入 PE，请先关闭安全启动支持，在“编辑虚拟机设置” &gt; “选项” &gt; “高级” &gt; “启用安全引导”<br>若问题依旧，请重新生成 PE ISO</p>
+</div>
+
+<h2 id="插入系统镜像"><a href="#插入系统镜像" class="headerlink" title="插入系统镜像"></a>插入系统镜像</h2><p>进入到 PE <strong>并完全加载后</strong>，可以插入系统镜像<br>点击顶部菜单栏“虚拟机” &gt; “设置”，在“虚拟机设置”窗口中点击 “CD&#x2F;DVD”，在“使用 ISO 镜像文件”部分点击“浏览”以选择系统镜像</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Connect-to-OS-ISO.png" alt="插入系统镜像"></p>
+<h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><p>打开桌面上的 DiskGenius（或从“开始”菜单搜索）<br>点击顶部菜单栏的“快速分区”</p>
+<ul>
+<li>如果你的引导方式（固件类型）为 <code>BIOS</code>，请在“分区表类型”选择 <code>MBR</code>，并勾选“重建主引导记录(MBR)”</li>
+<li>如果你的引导方式（固件类型）为 <code>UEFI</code>，请在“分区表类型”选择 <code>GUID(GPT)</code>，并勾选“创建 ESP 分区”，大小设为 <code>100 MB</code>，和勾选“创建 MSR 分区”<br>“分区数目”部分推荐选择 <code>1</code> 个分区</li>
+</ul>
+<p>完成后点击“确认”即可开始创建分区</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Quick-Partition.png" alt="快速分区"></p>
+<h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><h3 id="WIM-ESD"><a href="#WIM-ESD" class="headerlink" title="WIM&#x2F;ESD"></a>WIM&#x2F;ESD</h3><div class="note default"><p>关于 <code>SWM</code> 文件，需要合并成 <code>WIM</code> 文件后才可被安装，请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14/?wt.mc_id=studentamb_474966#export-image">&#x2F;Export-Image - DISM 映像管理命令行选项 | Microsoft Learn</a></p>
+</div>
+<div class="note info"><p>从 Microsoft 官网、UUP 下载的镜像均为 <code>WIM</code> 或 <code>ESD</code></p>
+</div>
+
+<p>打开桌面上的 Dism++（或从“开始”菜单搜索）<br>点击顶部菜单栏的“恢复功能” &gt; “系统还原”</p>
+<p>点击第一个“浏览”，打开光驱下的 <code>sources</code> 文件夹，选择 <code>install.wim</code> 或 <code>install.esd</code><br>点击第二个“浏览”，选择到要安装的目标分区<br>“目标映像”部分选择合适的 Windows SKU 版本，推荐选择 <code>Pro</code>（专业版）<br>勾选底部的“添加引导”，最后点击“确定”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Release-Image.png" alt="释放映像"></p>
+<p>点击“确定”即可</p>
+<div class="note primary"><p><strong>选择提示：</strong></p>
+<ul>
+<li>如果你的引导方式（固件类型）为 <code>BIOS</code>，请确保所选的引导分区为系统盘</li>
+<li>如果你的引导方式（固件类型）为 <code>UEFI</code>，请确保所选的引导分区为 EFI（需确保与系统盘在同一硬盘下）</li>
+</ul>
+</div>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-OS-on-VMWP-using-PE/Boot-Repair.png" alt="引导修复"></p>
+<p>安装完成后重启虚拟机即可</p>
+<h3 id="GHO"><a href="#GHO" class="headerlink" title="GHO"></a>GHO</h3><div class="note info"><p>从国内第三方网站下载的镜像<strong>绝大多数为 Ghost（GHO）</strong></p>
+</div>
+
+<p>打开桌面上的 CGI（或从“开始”菜单搜索）<br>CGI 会默认选择系统盘，若没有选择合适的分区就自己更改<br>点击“3. 请选择镜像文件”部分的 <code>...</code>，以选择你的 <code>.gho</code> 文件（直接展开组合框可能会有合适的 <code>.gho</code> 文件）<br>选择完成后点击“执行”即可进行下一步</p>
+<p>最后会有确认弹窗，确保勾选了“修复引导”，引导方式选择“自动”（如果有）<br>最后点击“确定”即可开始安装系统<br>安装完成后重启虚拟机即可</p>
+
     </div>
 
     
@@ -470,14 +625,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">104k</span>
+    <span title="站点总字数">107k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:35</span>
+    <span title="站点阅读时长">1:37</span>
   </span>
 </div>
 <div class="busuanzi-count">
