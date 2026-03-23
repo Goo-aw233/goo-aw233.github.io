@@ -105,9 +105,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -283,9 +283,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -320,9 +320,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -442,9 +442,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -550,7 +550,7 @@
       <link href="/posts/338aca3d.html"/>
       <url>/posts/338aca3d.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文以 iPhone 6s iOS 9 的固件为例，操作适用于所有版本的 iOS 与 iPadOS</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol><li>从爱思助手或 <a href="https://ipsw.me/">IPSW Downloads</a> 下载对应设备的系统固件</li></ol><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Download-iOS-Firmware.png" alt="固件下载"></p><ol start="2"><li><a href="https://github.com/blacktop/ipsw/releases">IPSW 解密工具</a></li></ol><ul><li>下载 <code>ipsw_..._windows_x86_64.zip</code> 或 <code>ipsw_...5_windows_arm64.zip</code> 的即可</li></ul><h2 id="提取文件"><a href="#提取文件" class="headerlink" title="提取文件"></a>提取文件</h2><p>使用 <a href="https://7-zip.org/">7-Zip</a> 或其他压缩软件打开下载好的 <code>.ipsw</code> 固件，并按照大小排序，然后打开最大的 <code>DMG</code> 文件</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Find-Largest-DMG-File.png" alt="提取 DMG"></p><p>然后打开以下目录：<code>\System\Library\Carrier Bundles\iPhone</code><br>在此目录下寻找你需要的 IPCC 文件夹</p><blockquote><p>中国电信：<br>ChinaTelecom_hk.bundle  - 中国电信 香港<br>ChinaTelecom_USIM_cn.bundle - 中国电信 大陆<br>ChinaTelecom_USIM_mo.bundle - 中国电信 澳门</p><p>中国移动：<br>CMCC_CMI.bundle - 中国移动国际<br>CMCC_cn.bundle - 中国移动 大陆<br>CMCC_hk.bundle - 中国移动 香港<br>CMCC_HKBN_hk.bundle - 香港宽频</p><p>中国联通：<br>Unicom_hk.bundle - 中国联通 香港<br>Unicom_cn.bundle - 中国联通 大陆</p><p>中国广电：<br>CBN_cn.bundle - 中国广电 大陆</p></blockquote><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Find-Matching-Telecom-Operators.png" alt="提取 IPCC"></p><p>找到之后将其解压到某个空白文件夹内</p><h2 id="制作-IPCC"><a href="#制作-IPCC" class="headerlink" title="制作 IPCC"></a>制作 IPCC</h2><p>在解压好的文件夹内新建一个名叫 <code>Payload</code> 的文件夹，并将需要的 <code>.bundle</code> 文件夹放进去</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Create-Payload-Folder.png" alt="Payload"></p><details><summary>你也可以把全部带有 <code>.bundle</code> 的文件夹放进去</summary><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Create-Payload-Folder-1.png" alt="Payload"></p></details><p>然后返回上一层目录，将 Payload 文件夹制作成格式为 <code>zip</code> 的压缩包</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Compress-Payload-Folder.png" alt="压缩 Payload 文件夹制成 ZIP"></p><p>接着，将 <code>.zip</code> 的后缀名改为 <code>.ipcc</code>，并确保此文件内的目录是先 <code> Payload</code> 再到 <code>.bundle</code> 文件夹</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Rename-ZIP-File.png" alt="重命名"></p><h2 id="更新-IPCC"><a href="#更新-IPCC" class="headerlink" title="更新 IPCC"></a>更新 IPCC</h2><p>在爱思助手的“常用工具”里打开“更新 IPCC 文件”，然后点击“选择本地 IPCC”（左右都一样的效果）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Select-From-Local-IPCC-File.png" alt="选择本地 IPCC"></p><p>选择刚刚制作好的 <code>Payload.ipcc</code> 文件</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Select-IPCC-File.png" alt="选择 IPCC 文件"></p><p>最后再点击“立即更新”即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Update-Now.png" alt="立即更新"></p><p>点击“检查更新”，然后就能看到“当前 IPCC 版本”那行左右两边的版本都更新了</p><p>最后，重复<a href="#%E5%88%B6%E4%BD%9C-IPCC">制作 IPCC</a> 的步骤，将剩下的 <code>.bundle</code> 文件夹制成 <code>Payload.ipcc</code> 文件再更新即可</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文以 iPhone 6s iOS 9 的固件为例，操作适用于所有版本的 iOS 与 iPadOS</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol><li>从爱思助手或 <a href="https://ipsw.me/">IPSW Downloads</a> 下载对应设备的系统固件</li></ol><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Download-iOS-Firmware.png" alt="固件下载"></p><ol start="2"><li><a href="https://github.com/blacktop/ipsw/releases">IPSW 解密工具</a></li></ol><ul><li>下载 <code>ipsw_..._windows_x86_64.zip</code> 或 <code>ipsw_...5_windows_arm64.zip</code> 的即可</li></ul><h2 id="提取文件"><a href="#提取文件" class="headerlink" title="提取文件"></a>提取文件</h2><p>使用 <a href="https://7-zip.org/">7-Zip</a> 或其他压缩软件打开下载好的 <code>.ipsw</code> 固件，并按照大小排序，然后打开最大的 <code>DMG</code> 文件<br>若发现文件是 <code>.ipsw.aea</code>，请参阅：<a href="#%E8%A7%A3%E5%AF%86%E5%9B%BA%E4%BB%B6">解密固件</a></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Find-Largest-DMG-File.png" alt="提取 DMG"></p><p>然后打开以下目录：<code>\System\Library\Carrier Bundles\iPhone</code><br>在此目录下寻找你需要的 IPCC 文件夹</p><blockquote><p>中国电信：<br>ChinaTelecom_hk.bundle  - 中国电信 香港<br>ChinaTelecom_USIM_cn.bundle - 中国电信 大陆<br>ChinaTelecom_USIM_mo.bundle - 中国电信 澳门</p><p>中国移动：<br>CMCC_CMI.bundle - 中国移动国际<br>CMCC_cn.bundle - 中国移动 大陆<br>CMCC_hk.bundle - 中国移动 香港<br>CMCC_HKBN_hk.bundle - 香港宽频</p><p>中国联通：<br>Unicom_hk.bundle - 中国联通 香港<br>Unicom_cn.bundle - 中国联通 大陆</p><p>中国广电：<br>CBN_cn.bundle - 中国广电 大陆</p></blockquote><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Find-Matching-Telecom-Operators.png" alt="提取 IPCC"></p><p>找到之后将其解压到某个空白文件夹内</p><h2 id="解密固件"><a href="#解密固件" class="headerlink" title="解密固件"></a>解密固件</h2><div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p><ul><li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li><li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li></ul></div><div class="note success"><p>推荐阅读：<a href="/posts/837d5d4c.html" title="获取文件路径">获取文件路径</a></p></div><p>将下载好的解密工具解压到空白文件夹，输入命令以解密固件</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &quot;&lt;工具文件夹&gt;&quot;</span><br><span class="line">ipsw fw aea &lt;文件名&gt;</span><br></pre></td></tr></table></figure><p>例如，工具文件夹为 <code>C:\Tools</code>，DMG 文件名为 <code>0114-45141-919.dmg.aea</code>，则我的命令为</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &quot;C:\Tools&quot;</span><br><span class="line">ipsw.exe fw aea <span class="number">0114</span>-<span class="number">45141</span>-<span class="number">919</span>.dmg.aea</span><br></pre></td></tr></table></figure><p>等待执行完成，会在同目录下生成一个同样大小的 DMG 文件</p><h2 id="制作-IPCC"><a href="#制作-IPCC" class="headerlink" title="制作 IPCC"></a>制作 IPCC</h2><p>在解压好的文件夹内新建一个名叫 <code>Payload</code> 的文件夹，并将需要的 <code>.bundle</code> 文件夹放进去</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Create-Payload-Folder.png" alt="Payload"></p><details><summary>你也可以把全部带有 <code>.bundle</code> 的文件夹放进去</summary><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Create-Payload-Folder-1.png" alt="Payload"></p></details><p>然后返回上一层目录，将 Payload 文件夹制作成格式为 <code>zip</code> 的压缩包</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Compress-Payload-Folder.png" alt="压缩 Payload 文件夹制成 ZIP"></p><p>接着，将 <code>.zip</code> 的后缀名改为 <code>.ipcc</code>，并确保此文件内的目录是先 <code> Payload</code> 再到 <code>.bundle</code> 文件夹</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Rename-ZIP-File.png" alt="重命名"></p><h2 id="更新-IPCC"><a href="#更新-IPCC" class="headerlink" title="更新 IPCC"></a>更新 IPCC</h2><p>在爱思助手的“常用工具”里打开“更新 IPCC 文件”，然后点击“选择本地 IPCC”（左右都一样的效果）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Select-From-Local-IPCC-File.png" alt="选择本地 IPCC"></p><p>选择刚刚制作好的 <code>Payload.ipcc</code> 文件</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Select-IPCC-File.png" alt="选择 IPCC 文件"></p><p>最后再点击“立即更新”即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Update-IPCC/Update-Now.png" alt="立即更新"></p><p>点击“检查更新”，然后就能看到“当前 IPCC 版本”那行左右两边的版本都更新了</p><p>最后，重复<a href="#%E5%88%B6%E4%BD%9C-IPCC">制作 IPCC</a> 的步骤，将剩下的 <code>.bundle</code> 文件夹制成 <code>Payload.ipcc</code> 文件再更新即可</p>]]></content>
       
       
       <categories>
@@ -564,11 +564,11 @@
       
         <tags>
             
-            <tag> iOS </tag>
+            <tag> Windows </tag>
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
+            <tag> iOS </tag>
             
         </tags>
       
@@ -653,9 +653,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -740,9 +740,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -854,9 +854,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -885,9 +885,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -916,9 +916,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -972,9 +972,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1088,9 +1088,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1173,9 +1173,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1237,9 +1237,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1266,9 +1266,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1396,20 +1396,20 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> MS-DOS </tag>
             
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1548,9 +1548,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1577,9 +1577,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1660,9 +1660,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1689,9 +1689,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1718,11 +1718,11 @@
       
         <tags>
             
-            <tag> iOS </tag>
+            <tag> Windows </tag>
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
+            <tag> iOS </tag>
             
         </tags>
       
@@ -1821,9 +1821,9 @@
       
         <tags>
             
-            <tag> iOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> iOS </tag>
             
         </tags>
       
@@ -1852,11 +1852,11 @@
       
         <tags>
             
-            <tag> iOS </tag>
+            <tag> Windows </tag>
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
+            <tag> iOS </tag>
             
         </tags>
       
@@ -1939,9 +1939,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1970,9 +1970,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       

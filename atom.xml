@@ -61,8 +61,8 @@
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <id>https://goo-aw233.github.io/posts/87461802.html</id>
     <link href="https://goo-aw233.github.io/posts/87461802.html"/>
     <published>2026-02-14T05:27:56.000Z</published>
@@ -153,8 +153,8 @@
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
     <id>https://goo-aw233.github.io/posts/8407e146.html</id>
     <link href="https://goo-aw233.github.io/posts/8407e146.html"/>
@@ -172,8 +172,8 @@
     <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <id>https://goo-aw233.github.io/posts/41eafc84.html</id>
     <link href="https://goo-aw233.github.io/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
@@ -235,8 +235,8 @@
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <id>https://goo-aw233.github.io/posts/a0c55de3.html</id>
     <link href="https://goo-aw233.github.io/posts/a0c55de3.html"/>
     <published>2025-05-17T05:23:01.000Z</published>
@@ -298,15 +298,15 @@
     </author>
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="iOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/iOS/"/>
-    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
-    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
     <id>https://goo-aw233.github.io/posts/338aca3d.html</id>
     <link href="https://goo-aw233.github.io/posts/338aca3d.html"/>
     <published>2024-03-02T03:27:40.000Z</published>
     <summary>在不更新 iOS 的情况下更新 IPCC（运营商）文件</summary>
     <title>更新 IPCC 文件</title>
-    <updated>2026-03-23T14:39:22.360Z</updated>
+    <updated>2026-03-23T15:03:49.155Z</updated>
   </entry>
   <entry>
     <author>
