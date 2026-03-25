@@ -172,14 +172,14 @@
     <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
     <id>https://goo-aw233.github.io/posts/41eafc84.html</id>
     <link href="https://goo-aw233.github.io/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
     <summary>通过修改 DLL 文件并附加到 VMware Workstation Pro 并使其生效，支持中文语言环境</summary>
     <title>VMware Workstation 挂载语言</title>
-    <updated>2026-03-16T13:28:03.491Z</updated>
+    <updated>2026-03-24T15:31:05.126Z</updated>
   </entry>
   <entry>
     <author>
@@ -195,7 +195,7 @@
     <published>2025-10-15T06:40:26.000Z</published>
     <summary>在 Windows 中为 (Windows) PowerShell 配置 oh-my-posh 的详细教程，包括安装、环境变量设置、主题和字体美化。</summary>
     <title>在 Windows 中为 PowerShell 配置 oh-my-posh</title>
-    <updated>2026-03-10T12:54:35.386Z</updated>
+    <updated>2026-03-24T15:31:05.122Z</updated>
   </entry>
   <entry>
     <author>
@@ -304,9 +304,9 @@
     <id>https://goo-aw233.github.io/posts/338aca3d.html</id>
     <link href="https://goo-aw233.github.io/posts/338aca3d.html"/>
     <published>2024-03-02T03:27:40.000Z</published>
-    <summary>在不更新 iOS 的情况下更新 IPCC（运营商）文件</summary>
+    <summary>本文介绍了如何在不更新 iOS 系统的环境下，提取固件并手动更新设备的 IPCC（运营商）文件，附带固件提取、解密及制作 IPCC 文件的完整教程。</summary>
     <title>更新 IPCC 文件</title>
-    <updated>2026-03-23T15:03:49.155Z</updated>
+    <updated>2026-03-24T15:21:28.415Z</updated>
   </entry>
   <entry>
     <author>
@@ -320,6 +320,6 @@
     <published>2023-10-21T06:00:06.000Z</published>
     <summary>从 Android OTA 包中提取 boot.img 文件，提供详细的工具准备和操作步骤，适用于 Pixel 等设备。</summary>
     <title>从 OTA 包提取 boot.img</title>
-    <updated>2026-03-10T12:54:35.390Z</updated>
+    <updated>2026-03-24T15:31:05.122Z</updated>
   </entry>
 </feed>
