@@ -24,44 +24,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"goo-aw233.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="在 VMware Workstation 中安装 MS-DOS 3.30 的详细教程，涵盖虚拟机创建、分区格式化、文件复制及配置文件创建的完整流程，适合需要运行早期 Windows 系统或复古软件的场景，提供优化磁盘性能和解决 IDE 配置问题的实用技巧。">
+    <meta name="description" content="通过虚拟地址生成器注册美区 Apple 账户，详细讲解了填写虚拟信息、验证账户以及充值礼品卡的完整流程，适用于需要访问美国 App Store 或使用美区服务的场景。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="虚拟机安装 MS-DOS 3.30">
-<meta property="og:url" content="https://goo-aw233.github.io/posts/d3c110b4.html">
+<meta property="og:title" content="注册美区 Apple 账户">
+<meta property="og:url" content="https://goo-aw233.github.io/posts/68ecd02d.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="在 VMware Workstation 中安装 MS-DOS 3.30 的详细教程，涵盖虚拟机创建、分区格式化、文件复制及配置文件创建的完整流程，适合需要运行早期 Windows 系统或复古软件的场景，提供优化磁盘性能和解决 IDE 配置问题的实用技巧。">
+<meta property="og:description" content="通过虚拟地址生成器注册美区 Apple 账户，详细讲解了填写虚拟信息、验证账户以及充值礼品卡的完整流程，适用于需要访问美国 App Store 或使用美区服务的场景。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Select-OS-to-Install.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Store-Disk-File-as-a-Single-File.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-MS-DOS-6.22-on-VM/Incorrect-IDE-Device-Configuration.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-MS-DOS-6.22-on-VM/Change-IDE-Device-Configuration.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Connect-to-DISK01-IMG.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Enter-New-Date.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Create-DOS-Partition.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Create-Primary-DOS-Partition.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Mark-as-Active-Partition.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Restart-to-Complete-Active-Partition-Marking.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Format-C-Partition.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Copy-DOS-Files.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Switch-to-DISK02-File.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/AUTOEXEC.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/CONFIG.png">
-<meta property="article:published_time" content="2022-08-09T04:22:03.000Z">
-<meta property="article:modified_time" content="2026-03-26T15:59:53.336Z">
+<meta property="og:image" content="https://cdsassets.apple.com/live/7WUAS350/images/apple-account/account-apple-com-create-your-apple-account-magnifier.png">
+<meta property="article:published_time" content="2021-11-21T07:43:35.000Z">
+<meta property="article:modified_time" content="2026-03-27T13:03:04.539Z">
 <meta property="article:author" content="GuCATs">
-<meta property="article:tag" content="MS-DOS">
-<meta property="article:tag" content="VMware Workstation">
+<meta property="article:tag" content="GuCATs, Goo-aw233, GeeBoCATs, GodDog322, Antipa, Starcourt, Rita, Rare, GodTNT233, 技术, 博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Select-OS-to-Install.png">
+<meta name="twitter:image" content="https://cdsassets.apple.com/live/7WUAS350/images/apple-account/account-apple-com-create-your-apple-account-magnifier.png">
 
 
-<link rel="canonical" href="https://goo-aw233.github.io/posts/d3c110b4.html">
+<link rel="canonical" href="https://goo-aw233.github.io/posts/68ecd02d.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/posts/d3c110b4.html","path":"posts/d3c110b4.html","title":"虚拟机安装 MS-DOS 3.30"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/posts/68ecd02d.html","path":"posts/68ecd02d.html","title":"注册美区 Apple 账户"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>虚拟机安装 MS-DOS 3.30 | GuCATs'摸鱼站</title>
+<title>注册美区 Apple 账户 | GuCATs'摸鱼站</title>
   
 
 
@@ -193,7 +178,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.</span> <span class="nav-text">创建虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E5%8C%BA"><span class="nav-number">3.1.</span> <span class="nav-text">创建分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">复制文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">创建配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AUTOEXEC-BAT"><span class="nav-number">3.3.1.</span> <span class="nav-text">AUTOEXEC.BAT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CONFIG-SYS"><span class="nav-number">3.3.2.</span> <span class="nav-text">CONFIG.SYS</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">使用系统</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B4%A6%E6%88%B7"><span class="nav-number">2.</span> <span class="nav-text">创建账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E8%B4%A6%E6%88%B7"><span class="nav-number">3.</span> <span class="nav-text">验证账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%85%E5%80%BC"><span class="nav-number">4.</span> <span class="nav-text">充值</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -273,7 +258,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/posts/d3c110b4.html">
+    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/posts/68ecd02d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
@@ -286,12 +271,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="虚拟机安装 MS-DOS 3.30 | GuCATs'摸鱼站">
-      <meta itemprop="description" content="在 VMware Workstation 中安装 MS-DOS 3.30 的详细教程，涵盖虚拟机创建、分区格式化、文件复制及配置文件创建的完整流程，适合需要运行早期 Windows 系统或复古软件的场景，提供优化磁盘性能和解决 IDE 配置问题的实用技巧。">
+      <meta itemprop="name" content="注册美区 Apple 账户 | GuCATs'摸鱼站">
+      <meta itemprop="description" content="通过虚拟地址生成器注册美区 Apple 账户，详细讲解了填写虚拟信息、验证账户以及充值礼品卡的完整流程，适用于需要访问美国 App Store 或使用美区服务的场景。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          虚拟机安装 MS-DOS 3.30
+          注册美区 Apple 账户
         </h1>
 
         <div class="post-meta-container">
@@ -302,14 +287,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-08-09 12:22:03" itemprop="dateCreated datePublished" datetime="2022-08-09T12:22:03+08:00">2022-08-09</time>
+      <time title="创建时间：2021-11-21 15:43:35" itemprop="dateCreated datePublished" datetime="2021-11-21T15:43:35+08:00">2021-11-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-26 23:59:53" itemprop="dateModified" datetime="2026-03-26T23:59:53+08:00">2026-03-26</time>
+      <time title="修改时间：2026-03-27 21:03:04" itemprop="dateModified" datetime="2026-03-27T21:03:04+08:00">2026-03-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -321,7 +306,7 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/MS-DOS/" itemprop="url" rel="index"><span itemprop="name">MS-DOS</span></a>
+          <a href="/categories/%E6%95%99%E7%A8%8B/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
         </span>
     </span>
 
@@ -339,7 +324,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>626</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -350,85 +335,40 @@
     </span>
 </div>
 
-            <div class="post-description">在 VMware Workstation 中安装 MS-DOS 3.30 的详细教程，涵盖虚拟机创建、分区格式化、文件复制及配置文件创建的完整流程，适合需要运行早期 Windows 系统或复古软件的场景，提供优化磁盘性能和解决 IDE 配置问题的实用技巧。</div>
+            <div class="post-description">通过虚拟地址生成器注册美区 Apple 账户，详细讲解了填写虚拟信息、验证账户以及充值礼品卡的完整流程，适用于需要访问美国 App Store 或使用美区服务的场景。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>较为早期的 Windows（如 Windows 1.x、2.x）安装与启动需要 MS-DOS 2.x-3.x，或 IBM PC-DOS 为依托以启动 Windows<br>此文章 VMware Workstation Pro 下进行，操作可能会有出入</p>
-<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://winworldpc.com/download/c2a9c3a8-c692-c3bb-3950-11c3a5c290ef">Microsoft MS-DOS 3.30 (5.25-360k)</a></li>
-</ol>
-<div class="note default"><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgAyYbMHpHkmQqUGSSIQmL-RAZuVTbxKQgkl7p9G2-tw6rU?e=VpS2pn">已安装好的再分发版本（兼容性为 <code>Workstation 11.x</code>，<code>.ovf</code> 格式）</a><br>配置：1 处理器数 1 核心数，16 MB 内存，2 GB 硬盘，移除 CD-ROM 驱动器，添加软盘驱动器</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>注册外区 Apple 账户，若没有对应国家&#x2F;地区的 IP，则需要添加相对应的付款方式才能进行注册。但是可以通过填充虚拟身份地址，创建对应国家&#x2F;地区的 Apple 账户</p>
+<h2 id="创建账户"><a href="#创建账户" class="headerlink" title="创建账户"></a>创建账户</h2><p>从网页打开地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://account.apple.com/zh-cn">管理你的 Apple 账户</a><br>选择如下图的位置的选项（图示为英文）</p>
+<p><img data-src="https://cdsassets.apple.com/live/7WUAS350/images/apple-account/account-apple-com-create-your-apple-account-magnifier.png" alt="创建你的 Apple 账户"></p>
+<p>填写相对应的信息</p>
+<ul>
+<li>年龄 ≥ 13 岁，建议 18 岁以上（<font color=red>出生日期要保存好</font>）</li>
+<li>国家美国</li>
+<li>电话号码选择 +86，或任意电话号码（不确定是否能用 VoIP）</li>
+</ul>
+<h2 id="验证账户"><a href="#验证账户" class="headerlink" title="验证账户"></a>验证账户</h2><p>在任意 Apple 设备中，从 App Store 登录 Apple 账户，并验证账户<br>验证时确保国家&#x2F;地区是“美国”</p>
+<p>使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.fakeaddressgenerator.com/">Fake Address Generator</a> 或<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.meiguodizhi.com/">美国地址生成器</a>来生成虚拟信息</p>
+<div class="note success"><p>推荐使用美国免税州的地址，如阿拉斯加州（Alaska）、特拉华州（Delaware）、蒙大拿州（Montana）、新罕布什尔州（New Hampshire）和俄勒冈州（Oregon）</p>
 </div>
 
-<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><div class="note primary"><p>除以下给出的推荐设置外，其他的请按照默认配置进行选择</p>
-</div>
+<details>
 
-<p>“客户机操作系统”中选择“其他”，“版本”中选择“MS-DOS”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Select-OS-to-Install.png" alt="选择安装的操作系统"></p>
-<p>创建磁盘文件时，选择“将虚拟磁盘存储为单个文件”</p>
-<div class="note success"><p>将虚拟磁盘文件存储为单个文件可以提高一部分磁盘性能</p>
-</div>
+<summary>以下是我个人填写的虚拟信息</summary>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Store-Disk-File-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件"></p>
-<p>完成后，点击“编辑虚拟机设置”，添加一个软盘设备，并选择连接到 <code>DISK01.IMG</code> 文件</p>
-<div class="note success"><p>MS-DOS 3.30 默认不附带 CD-ROM 的驱动，若用不到 CD&#x2F;DVD，可以选择将 CD&#x2F;DVD 设备移除以节省内存占用</p>
-</div>
+<p>信用卡&#x2F;借记卡:<br>号码:4539185730103786<br>有效期:07&#x2F;2025<br>安全码:524</p>
+<hr>
+<p>名:Michael<br>姓:Numbers</p>
+<hr>
+<p>街道:4641 Kidd Avenue<br>城市:Minto<br>州:阿拉斯加州<br>邮政编码:99758<br>电话:907 7988126</p>
+</details>
 
-<div class="note warning"><p>若移除 CD&#x2F;DVD 之后提示“IDE 设备（磁盘&#x2F;CD-ROM）配置不正确”，请将磁盘的“虚拟设备节点”更改为 <code>IDE 0:0</code></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-MS-DOS-6.22-on-VM/Incorrect-IDE-Device-Configuration.png" alt="不正确的 IDE 设备配置"></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-MS-DOS-6.22-on-VM/Change-IDE-Device-Configuration.png" alt="更改 IDE 设备配置"></p>
-</div>
-
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Connect-to-DISK01-IMG.png" alt="连接到 DISK01.IMG 文件"></p>
-<p>保存设置，并启动虚拟机</p>
-<h2 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h2><h3 id="创建分区"><a href="#创建分区" class="headerlink" title="创建分区"></a>创建分区</h3><p>启动时，MS-DOS 会要求你输入新的日期与时间，若日期无误，按下两次 <kbd>Enter</kbd> 以回车来跳过日期与时间设置</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Enter-New-Date.png" alt="输入日期与时间"></p>
-<p>先输入 <code>fdisk</code> 以打开命令行磁盘分区工具，随后保持默认的选项 <code>1</code>，按下两次 <kbd>Enter</kbd> 以回车，来创建 DOS 分区</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Create-DOS-Partition.png" alt="创建 DOS 分区"></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Create-Primary-DOS-Partition.png" alt="创建 DOS 主分区"></p>
-<p>保持默认的选项 <code>Y</code>，按下 <kbd>Enter</kbd> 以回车，来将分区标记为活动分区，并使用最大空间（若大于 32 MB 也只会创建 32 MB 的空间）</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Mark-as-Active-Partition.png" alt="标记为活动分区"></p>
-<p>完成后，按下任意键来重启系统以继续，<font color=yellow>但是不要断开连接软盘</font></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Restart-to-Complete-Active-Partition-Marking.png" alt="重启以完成活动分区标记"></p>
-<p>重启完成后依旧会要求你输入新的日期与时间，若日期无误，按下两次 <kbd>Enter</kbd> 以回车来跳过日期与时间设置<br>随后，输入命令并按下 <kbd>Enter</kbd> 以回车，来格式化分区<br><code>/s</code> 参数可以将 DOS 系统文件复制到分区根目录，使下次启动时启动到该分区（若未添加 <code>/s</code> 参数，则需要在格式化完成后再执行命令 <code>sys C:</code>）</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">format</span> C: /s</span><br></pre></td></tr></table></figure>
-
-<p>完成后输入 <code>Y</code> 并按下 <kbd>Enter</kbd> 以回车来确认更改</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Format-C-Partition.png" alt="格式化分区 C"></p>
-<h3 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h3><p>使用命令创建一个 <code>DOS</code> 文件夹在 C 盘根目录，随后，将软盘下所有文件复制到 DOS 文件夹里</p>
-<div class="note warning"><p>在 FAT16 文件系统（MS-DOS 3.30 使用的版本）中，硬盘的根目录能存放的文件数量是有上限的（通常只有 512 个条目），所以推荐将系统放到 DOS 文件夹下</p>
-</div>
-
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">MD</span> C:\DOS</span><br><span class="line"><span class="built_in">COPY</span> A:\*.* C:\DOS</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Copy-DOS-Files.png" alt="复制 DISK01 的文件"></p>
-<p>复制完成后，将 <code>DISK01.IMG</code> 换成 <code>DISK02.IMG</code>，并再次执行命令以复制文件</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/Switch-to-DISK02-File.png" alt="切换到 DISK02"></p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">COPY</span> A:\*.* C:\DOS</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h3><h4 id="AUTOEXEC-BAT"><a href="#AUTOEXEC-BAT" class="headerlink" title="AUTOEXEC.BAT"></a>AUTOEXEC.BAT</h4><p>使用命令创建 <code>AUTOEXEC.BAT</code></p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">COPY</span> <span class="built_in">CON</span> C:\AUTOEXEC.BAT</span><br></pre></td></tr></table></figure>
-
-<p>回车后，<strong>依次输入命令，每输入一行就回车一次</strong></p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">ECHO</span> OFF</span><br><span class="line"><span class="built_in">PATH</span> C:\DOS;C:\</span><br><span class="line">PROMPT $P$G</span><br><span class="line"><span class="built_in">SET</span> TEMP=C:\DOS</span><br><span class="line"><span class="built_in">VER</span></span><br></pre></td></tr></table></figure>
-
-<p>完成后，按下 <kbd>F6</kbd>，这时会在末尾出现 <code>^Z</code>，随后按下 <kbd>Enter</kbd> 以回车来保存文件</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/AUTOEXEC.png" alt="创建 AUTOEXEC.BAT"></p>
-<h4 id="CONFIG-SYS"><a href="#CONFIG-SYS" class="headerlink" title="CONFIG.SYS"></a>CONFIG.SYS</h4><p>使用命令创建 <code>CONFIG.SYS</code></p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">COPY</span> <span class="built_in">CON</span> C:\CONFIG.SYS</span><br></pre></td></tr></table></figure>
-
-<p>回车后，<strong>依次输入命令，每输入一行就回车一次</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BREAK=ON</span><br><span class="line">FILES=30</span><br><span class="line">BUFFERS=20</span><br><span class="line">SHELL=C:\COMMAND.COM /P /E:256</span><br><span class="line">DEVICE=C:\DOS\ANSI.SYS</span><br></pre></td></tr></table></figure>
-
-<p>完成后，按下 <kbd>F6</kbd>，这时会在末尾出现 <code>^Z</code>，随后按下 <kbd>Enter</kbd> 以回车来保存文件</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-MS-DOS-3.30-on-VM/CONFIG.png" alt="创建 CONFIG.SYS"></p>
-<h2 id="使用系统"><a href="#使用系统" class="headerlink" title="使用系统"></a>使用系统</h2><p>至此，完成所有操作后，<font color=yellow>断开连接软盘</font>，即可重启系统并使用 MS-DOS 3.30 了<br><strong>MS-DOS 3.30 原生不支持通过指令操控电源，若要关机或重启，请直接从顶部工具栏执行关机或重置</strong></p>
-<pre><code>
-</code></pre>
+<p>完成后再次登录 Apple 账户就可以成功使用了</p>
+<h2 id="充值"><a href="#充值" class="headerlink" title="充值"></a>充值</h2><p>可以从各大电商平台购买 App Store &amp; iTunes US 或 Apple Gift Card US 的礼品卡&#x2F;购物卡，并通过 App Store 兑换充值</p>
 
     </div>
 
@@ -464,7 +404,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://goo-aw233.github.io/posts/d3c110b4.html" title="虚拟机安装 MS-DOS 3.30">https://goo-aw233.github.io/posts/d3c110b4.html</a>
+      <a href="https://goo-aw233.github.io/posts/68ecd02d.html" title="注册美区 Apple 账户">https://goo-aw233.github.io/posts/68ecd02d.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -499,22 +439,18 @@
   </div>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/MS-DOS/" rel="tag"># MS-DOS</a>
-              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/4d7db012.html" rel="prev" title="跳过 Windows 激活联网要求">
-                  <i class="fa fa-angle-left"></i> 跳过 Windows 激活联网要求
+                <a href="/posts/1458dc89.html" rel="prev" title="VMware 虚拟机使用 PE 安装系统">
+                  <i class="fa fa-angle-left"></i> VMware 虚拟机使用 PE 安装系统
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/ee04a00b.html" rel="next" title="创建个简单的安装程序">
-                  创建个简单的安装程序 <i class="fa fa-angle-right"></i>
+                <a href="/posts/be91420b.html" rel="next" title="安装 AFC2 和 AppSync">
+                  安装 AFC2 和 AppSync <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

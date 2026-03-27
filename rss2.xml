@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Fri, 20 Mar 2026 07:16:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 11:58:53 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -17,7 +17,7 @@
     <item>
       <title>显示文件扩展名</title>
       <link>https://goo-aw233.github.io/posts/fc28aee6.html</link>
-      <description>本文详细介绍如何在不同版本的 Windows 系统中显示文件扩展名，包括通过注册表修改、命令行操作以及图形界面设置的方法，适用于 Windows 11、10、7 和 XP，帮助用户快速启用文件扩展名显示功能。</description>
+      <description>通过多种方法启用文件扩展名显示，包括修改注册表、使用命令行以及在不同版本的 Windows 文件资源管理器中调整设置。适用于 Windows XP 至 Windows 11 的详细操作步骤，涵盖图形界面和命令行方式，提供了便捷的解决方案。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -27,7 +27,7 @@
     <item>
       <title>获取文件路径</title>
       <link>https://goo-aw233.github.io/posts/837d5d4c.html</link>
-      <description>本文详细介绍如何在 Windows 系统中获取文件路径，包括通过文件属性、右键菜单以及快捷键操作的方法，适用于 Windows 11、10 和其他版本，帮助用户快速复制文件路径到剪贴板。</description>
+      <description>在 Windows 系统中获取文件路径的多种方法，包括通过属性窗口手动拼接路径，以及在 Windows 10 和 Windows 11 中使用快捷选项快速复制文件路径的操作步骤，适用于不同版本的系统环境。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -37,7 +37,7 @@
     <item>
       <title>检查 CPU 与 Windows 的架构</title>
       <link>https://goo-aw233.github.io/posts/e3b15ad1.html</link>
-      <description>提供多种方法检查 Windows 系统和 CPU 的架构，包括通过设置、控制面板、PowerShell、CMD 等工具查看详细信息。</description>
+      <description>提供多种方法检查 CPU 和 Windows 系统架构的详细步骤，包括通过 Windows 设置、控制面板、系统信息、 PowerShell 和 CMD 等工具查看架构信息，并对常见架构类型进行解释，适用于不同场景的需求。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -47,19 +47,19 @@
     <item>
       <title>使用 DISM 清理 WinSxS 文件夹</title>
       <link>https://goo-aw233.github.io/posts/87461802.html</link>
-      <description>使用 DISM 工具安全地清理 WinSxS 文件夹以释放系统盘空间的详细教程，包括分析大小、清理组件和设置定时任务。</description>
+      <description>通过 DISM 工具清理 Windows 系统中的 WinSxS 文件夹，详细介绍了分析组件存储大小、执行清理命令、设置定时任务以及重设基准版本的操作方法，帮助释放系统盘空间并优化存储管理。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://goo-aw233.github.io/tags/DISM/">DISM</category>
       <category domain="https://goo-aw233.github.io/tags/Windows/">Windows</category>
+      <category domain="https://goo-aw233.github.io/tags/DISM/">DISM</category>
       <pubDate>Sat, 14 Feb 2026 05:27:56 GMT</pubDate>
     </item>
     <item>
       <title>为 Steam 安装浏览器扩展</title>
       <link>https://goo-aw233.github.io/posts/20ffdbc4.html</link>
-      <description>在 Steam 中安装浏览器扩展的详细教程，包括打开扩展页、安装扩展和强制卸载扩展的方法。</description>
+      <description>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -73,7 +73,7 @@
     <item>
       <title>使用 manage-bde 管理 BitLocker</title>
       <link>https://goo-aw233.github.io/posts/ecf11bf4.html</link>
-      <description>使用 manage-bde.exe 管理 BitLocker 和设备加密，涵盖查看状态、启用/禁用加密、修改密码等操作。</description>
+      <description>本文介绍了如何使用 manage-bde 命令管理 BitLocker 功能，包括查看状态、启用加密、禁用加密、暂停加密、恢复加密、修改密码和升级加密版本的详细操作步骤。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -83,7 +83,7 @@
     <item>
       <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
       <link>https://goo-aw233.github.io/posts/1bb5bc04.html</link>
-      <description>使用 PowerShell 管理 Microsoft Defender 防病毒，替代 Windows 安全中心在 Server Core 环境中的功能，涵盖常用命令及参数说明。</description>
+      <description>使用 PowerShell 管理 Microsoft Defender 防病毒的详细教程，涵盖添加和移除排除项、获取防病毒状态、启动扫描、更新定义等操作。适用于 Windows Server Core 和其他无图形界面的环境。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -95,7 +95,7 @@
     <item>
       <title>通过注册表修改 Windows 区域设定</title>
       <link>https://goo-aw233.github.io/posts/168b633e.html</link>
-      <description>通过注册表修改 Windows 区域设定，涵盖设备设置区域和国家或地区的具体操作方法。</description>
+      <description>通过修改注册表快速切换 Windows 区域设置，支持调整设备设置区域和国家或地区的详细操作。提供了禁用和启用 UCPD 服务的命令，以及修改地理位置标识符和 ISO 3166-1 Alpha-2 Code 的方法，适用于需要自定义区域配置的场景。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -105,7 +105,7 @@
     <item>
       <title>Windows 未激活时切换主题</title>
       <link>https://goo-aw233.github.io/posts/c95bd458.html</link>
-      <description>通过修改注册表项或使用控制面板的方法，在 Windows 未激活的情况下切换主题，并提供详细操作步骤。</description>
+      <description>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -115,20 +115,20 @@
     <item>
       <title>安装 WSL 1</title>
       <link>https://goo-aw233.github.io/posts/8407e146.html</link>
-      <description>安装 WSL 1 而不是 WSL 2，避免使用 Hyper-V，支持与 VMware Workstation 和 VirtualBox 共存，提供详细的安装与配置步骤。</description>
+      <description>本文介绍了如何在 Windows 系统中安装 WSL 1，包括启用适用于 Linux 的 Windows 子系统功能、下载并安装 WSL 本体、设置默认版本以及安装 WSL 发行版的详细步骤。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
-      <category domain="https://goo-aw233.github.io/tags/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <category domain="https://goo-aw233.github.io/tags/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/tags/Linux/">Linux</category>
       <pubDate>Thu, 16 Oct 2025 12:36:52 GMT</pubDate>
     </item>
     <item>
       <title>VMware Workstation 挂载语言</title>
       <link>https://goo-aw233.github.io/posts/41eafc84.html</link>
-      <description>通过修改 DLL 文件并附加到 VMware Workstation Pro 并使其生效，支持中文语言环境</description>
+      <description>VMware Workstation Pro 通过外挂本地化文件的方式，支持简体中文等额外语言的挂载。文章详细介绍了如何下载并放置语言文件、修改快捷方式目标路径，以及通过 preferences.ini 文件实现语言切换的方法。同时，还提供了使用 Resource Hacker 修改语言文件的扩展教程。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -142,7 +142,7 @@
     <item>
       <title>在 Windows 中为 PowerShell 配置 oh-my-posh</title>
       <link>https://goo-aw233.github.io/posts/3e658596.html</link>
-      <description>在 Windows 中为 (Windows) PowerShell 配置 oh-my-posh 的详细教程，包括安装、环境变量设置、主题和字体美化。</description>
+      <description>本文详细介绍了如何在 Windows 中为 (Windows) PowerShell 配置 oh-my-posh，包括安装必要工具、设置环境变量、初始化配置文件以及美化终端的完整步骤。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -154,7 +154,7 @@
     <item>
       <title>在暗光下正常使用 Windows Hello Face</title>
       <link>https://goo-aw233.github.io/posts/dd918a8f.html</link>
-      <description>通过禁用非红外摄像头解决 Windows Hello Face 在暗光下无法正常使用的问题，并提供快速启用/禁用摄像头的脚本方法。</description>
+      <description>解决 Windows Hello Face 在暗光条件下无法正常使用的实用方法，通过禁用非红外摄像头来优化面部识别功能，并提供了使用 PowerShell 快速启用或禁用摄像头的脚本，适合需要提升识别准确性的场景。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -165,7 +165,7 @@
     <item>
       <title>开启 SMBv3 端到端加密</title>
       <link>https://goo-aw233.github.io/posts/29b4a04d.html</link>
-      <description>开启 SMBv3 端到端加密以保护共享内容不被明文传输的详细教程，适用于 Windows 10/11 和 Windows Server。</description>
+      <description>讲解如何在 Windows 系统中开启 SMBv3 的端到端加密功能，提升文件共享的安全性，涵盖了使用 PowerShell 命令配置加密的具体步骤，并说明了适用的系统版本和性能影响。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -177,19 +177,19 @@
     <item>
       <title>为 Windows 添加完整的语言包</title>
       <link>https://goo-aw233.github.io/posts/a0c55de3.html</link>
-      <description>为 Windows 添加完整的语言包，支持通过 DISM、Dism++ 和 lpksetup 等多种方式安装语言文件。</description>
+      <description>通过 DISM、Dism++ 和 lpksetup.exe 等多种方法为 Windows 添加完整的语言包，详细讲解了下载语言文件、安装语言包的操作步骤，适用于需要多语言支持的场景，支持 .cab 和 .esd 格式。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://goo-aw233.github.io/tags/DISM/">DISM</category>
       <category domain="https://goo-aw233.github.io/tags/Windows/">Windows</category>
+      <category domain="https://goo-aw233.github.io/tags/DISM/">DISM</category>
       <pubDate>Sat, 17 May 2025 05:23:01 GMT</pubDate>
     </item>
     <item>
       <title>为你的电脑关闭 Device/Credential Guard</title>
       <link>https://goo-aw233.github.io/posts/4668d7cf.html</link>
-      <description>使用 Device Guard and Credential Guard Hardware Readiness Tool 关闭默认启用的 Device/Credential Guard 和 VBS 的详细教程。</description>
+      <description>介绍如何关闭 Windows 11 中默认启用的 Device Guard 和 Credential Guard 功能，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -201,7 +201,7 @@
     <item>
       <title>在 NUC8i5BEH 安装黑苹果</title>
       <link>https://goo-aw233.github.io/posts/babf6529.html</link>
-      <description>在 Intel NUC8i5BEH 上安装黑苹果的详细教程，包括硬件配置、BIOS 设置、macOS 安装及优化</description>
+      <description>在 Intel NUC8i5BEH 上安装黑苹果的完整教程，涵盖硬件配置、BIOS 设置、在线与离线安装 macOS 的详细步骤，提供 EFI 文件配置、三码注入、无线网卡修补等优化方法，适合需要在 NUC 上运行 macOS 的黑苹果爱好者。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
@@ -211,7 +211,7 @@
     <item>
       <title>macOS 虚拟机机型模拟</title>
       <link>https://goo-aw233.github.io/posts/da029b2a.html</link>
-      <description>使用 Hackintool 等工具模拟白苹果机型，以实现正常使用 macOS 虚拟机，支持多种配置工具</description>
+      <description>在 VMware Workstation 中模拟 macOS 机型的详细教程，涵盖 Hackintool、OpenCore Configurator 和 Clover Configurator 的使用方法，提供机型配置、序列号生成及校验的完整流程，适合需要在虚拟机中运行 macOS 的场景，帮助优化虚拟机兼容性与性能。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
@@ -225,19 +225,19 @@
     <item>
       <title>更新 IPCC 文件</title>
       <link>https://goo-aw233.github.io/posts/338aca3d.html</link>
-      <description>本文介绍了如何在不更新 iOS 系统的环境下，提取固件并手动更新设备的 IPCC（运营商）文件，附带固件提取、解密及制作 IPCC 文件的完整教程。</description>
+      <description>更新 IPCC 文件的完整教程，涵盖从提取固件到制作 IPCC 文件的详细步骤，适用于所有版本的 iOS 与 iPadOS，提供解密固件、提取运营商配置文件、制作 Payload 文件夹以及通过爱思助手更新 IPCC 的方法，帮助优化网络配置与运营商设置。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/iOS/">iOS</category>
-      <category domain="https://goo-aw233.github.io/tags/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <category domain="https://goo-aw233.github.io/tags/Windows/">Windows</category>
       <category domain="https://goo-aw233.github.io/tags/iOS/">iOS</category>
       <pubDate>Sat, 02 Mar 2024 03:27:40 GMT</pubDate>
     </item>
     <item>
       <title>从 OTA 包提取 boot.img</title>
       <link>https://goo-aw233.github.io/posts/f7e53ae.html</link>
-      <description>从 Android OTA 包中提取 boot.img 文件，提供详细的工具准备和操作步骤，适用于 Pixel 等设备。</description>
+      <description>从 Android OTA 包中提取 boot.img 文件，详细讲解了工具准备、操作步骤以及注意事项，适用于 Pixel 等设备。通过 payload-dumper-go 工具快速解压 payload.bin 文件，获取所需的 boot.img，满足 Magisk 修补需求。</description>
       <author>GuCATs</author>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Android/">Android</category>
