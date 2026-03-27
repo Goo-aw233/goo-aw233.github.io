@@ -105,9 +105,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -283,9 +283,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -442,9 +442,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -564,9 +564,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -653,9 +653,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -740,9 +740,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -854,9 +854,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -885,9 +885,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -916,9 +916,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -972,9 +972,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1088,9 +1088,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1173,9 +1173,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1237,9 +1237,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1266,9 +1266,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1548,9 +1548,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1577,9 +1577,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1660,9 +1660,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1689,9 +1689,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1718,9 +1718,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -1805,7 +1805,7 @@
       <link href="/posts/7e9537c8.html"/>
       <url>/posts/7e9537c8.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本教程分为 <a href="#iOS-6-%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F">iOS 6 及以下版本</a>和 <a href="#iOS-7-%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F">iOS 7 及以上版本</a>两个部分，仅支持 32 位的 iOS 设备，且都需要越狱</p><h3 id="64-位设备有哪些"><a href="#64-位设备有哪些" class="headerlink" title="64 位设备有哪些"></a>64 位设备有哪些</h3><p>iPhone 5s、iPad 5、iPad mini 3、iPad Air 1、iPad Pro、iPod Touch 6 及以上的设备均为 64 位设备</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><h4 id="iOS-6-及以下版本"><a href="#iOS-6-及以下版本" class="headerlink" title="iOS 6 及以下版本"></a>iOS 6 及以下版本</h4><p>以 iPhone 4s，iOS 6.1.3 为例，除 Cydia 外均为插件</p><ol><li>Cydia<ul><li>需要添加软件源：<code>coolbooter.com</code></li></ul></li><li>CoolBooterCLI</li><li>MobileTerminal（自带的 BigBoss 源中有，请不要使用别的 Terminal）</li><li>CoolBooter Untetherer（可选，结尾会提到用处）</li></ol><h4 id="iOS-7-及以上版本"><a href="#iOS-7-及以上版本" class="headerlink" title="iOS 7 及以上版本"></a>iOS 7 及以上版本</h4><p>以 iPhone 5，iOS8.4.1 为例，除 Cydia 外均为插件</p><ol><li>Cydia<ul><li>需要添加软件源：<code>coolbooter.com</code></li></ul></li><li>CoolBooterCLI</li><li>CoolBooter Untetherer（可选，结尾会提到用处）</li></ol><h2 id="iOS-6-装双系统"><a href="#iOS-6-装双系统" class="headerlink" title="iOS 6 装双系统"></a>iOS 6 装双系统</h2><h3 id="下载系统"><a href="#下载系统" class="headerlink" title="下载系统"></a>下载系统</h3><p>打开设备上的 <code>MobileTerminal</code><br>输入 <code>su</code> 并回车，随后输入密码（默认为 <code>alpine</code>，但输入过程不会显示任何字符）</p><hr><div class="note default"><p><strong>此处为手动导入固件，若想让 CoolBooter 在线下载固件，请跳过该部分</strong><br>固件下载：<a href="https://ipsw.me/">Download iOS Firmware for iPhone, iPad, iPod Touch, Apple Watch, Apple TV, HomePod, Vision Pro and Mac &#x2F; IPSW Downloads</a></p></div><div class="note success"><p>推荐阅读：<a href="/posts/be91420b.html" title="安装 AFC2 和 AppSync">安装 AFC2 和 AppSync</a></p></div><p>将设备连接电脑，在爱思助手的“文件管理”中找到以下路径（如果没有可以手动创建）：<code>/var/cbooter</code>，把你的固件导入到上面的路径即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Firmware-Store-Directory.png" alt="固件存放路径"></p><hr><p>在 <code>MobileTerminal</code> 中输入以下命令：</p><div class="note primary"><p>若使用 CoolBooter 的在线下载，下载 iOS 9.3 时，安装的是 <code>iOS 9.3 (13E237)</code> 的版本</p></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coolbootercli &lt;版本号&gt; --datasize &lt;要分配的磁盘大小&gt;GB</span><br></pre></td></tr></table></figure><p>若我要给第二个系统安装 iOS 9.0.2，分配 12 GB 的空间，则命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coolbootercli 9.0.2 --datasize 12GB</span><br></pre></td></tr></table></figure><p>若本地没有对应的固件则会开始下载固件，若已有固件则开始校验、解压固件然后安装系统</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Downloading-Firmware-in-CoolBooterCLI.png" alt="下载固件"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Extracting-Firmware-in-CoolBooterCLI.png" alt="解压固件"></p><p>出现“存储容量几乎已满”，点击“完成”即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Storage-is-Almost-Full-1.png" alt="存储容量几乎已满"></p><p>再稍等一会，设备将自动重启</p><h3 id="安装双系统"><a href="#安装双系统" class="headerlink" title="安装双系统"></a>安装双系统</h3><p>打开设备上的 <code>MobileTerminal</code><br>输入 <code>su</code> 并回车，随后输入密码（默认为 <code>alpine</code>，但输入过程不会显示任何字符）</p><p>输入以下命令以开始引导至第二系统：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coolbootercli -b</span><br></pre></td></tr></table></figure><p>出现这个页面后立马锁屏（<font size=4 color=yellow>如果你没有及时锁屏，系统则会黑屏，这时候只需要长按电源键和 Home 键几秒后松开 Home 键即可</font>）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Lock-Your-Device-in-CoolBooterCLI.png" alt="按键锁屏"></p><p>待设备自动重启后就会开始跑代码，再次重启后再重复以上步骤<br>第二次跑代码后就会进入系统安装界面</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Apple-Logo.png" alt="Apple Logo"></p><p>等待一会，即可进入激活部署界面了</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/iOS-9-Activate-Deployment.png" alt="开机激活"></p><p>完成激活后，即可进入系统，CoolBooter 一般会自动为 iOS 越狱</p><div class="note success"><p>推荐阅读：<a href="/posts/be91420b.html" title="安装 AFC2 和 AppSync">安装 AFC2 和 AppSync</a></p></div><h3 id="进入双系统"><a href="#进入双系统" class="headerlink" title="进入双系统"></a>进入双系统</h3><p>每次重启或关机后再开机后会回到主系统（不包括注销&#x2F;重启 SpringBoard）</p><p>打开设备上的 <code>MobileTerminal</code><br>输入 <code>su</code> 并回车，随后输入密码（默认为 <code>alpine</code>，但输入过程不会显示任何字符）</p><p>输入以下命令以开始引导至第二系统：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coolbootercli -b</span><br></pre></td></tr></table></figure><p>出现这个页面后立马锁屏（<font size=4 color=yellow>如果你没有及时锁屏，系统则会黑屏，这时候只需要长按电源键和 Home 键几秒后松开 Home 键即可</font>）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Lock-Your-Device-in-CoolBooterCLI.png" alt="按键锁屏"></p><h3 id="卸载双系统"><a href="#卸载双系统" class="headerlink" title="卸载双系统"></a>卸载双系统</h3><p>打开设备上的 <code>MobileTerminal</code><br>输入 <code>su</code> 并回车，随后输入密码（默认为 <code>alpine</code>，但输入过程不会显示任何字符）</p><p>输入以下命令以卸载：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coolbootercli -u</span><br></pre></td></tr></table></figure><p>几秒钟过后第二系统即可成功卸载</p><h2 id="iOS-7-装双系统"><a href="#iOS-7-装双系统" class="headerlink" title="iOS 7 装双系统"></a>iOS 7 装双系统</h2><div class="note info"><p><strong>此处或许也可以提前在电脑下载好固件后，放入指定文件夹：</strong><br>将设备连接电脑，在爱思助手的“文件管理”中找到以下路径（如果没有可以手动创建）：<code>/var/cbooter</code>，把你的固件导入到上面的路径即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Firmware-Store-Directory.png" alt="固件存放路径"></p></div><div class="note success"><p>推荐阅读：<a href="/posts/be91420b.html" title="安装 AFC2 和 AppSync">安装 AFC2 和 AppSync</a></p></div><h3 id="下载系统-1"><a href="#下载系统-1" class="headerlink" title="下载系统"></a>下载系统</h3><p>打开桌面上的 CoolBooter 应用，并点击 <code>Install</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Install.png" alt="Install"></p><p>选择你需要的第二系统版本</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Select-Second-OS-Version.png" alt="选择第二系统版本"></p><p>选择完成后点击右下角的 <code>Storage</code>，并在此页面选择完第二系统的容量</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Select-Second-OS-Capacity.png" alt="选择第二系统容量"></p><p>完成后点击右下角的 <code>Select</code>，再点击左下角的 <code>I&#39;m ready!</code> 即可开始下载系统</p><h3 id="拓展功能"><a href="#拓展功能" class="headerlink" title="拓展功能"></a>拓展功能</h3><div class="note info"><p>早期一点的 CoolBooter 会提供越狱功能，你可以选择 <code>Yes</code> 来给第二系统越狱，现在的版本会直接越狱好</p></div><div class="note success"><p>推荐阅读：<a href="/posts/be91420b.html" title="安装 AFC2 和 AppSync">安装 AFC2 和 AppSync</a></p></div><p>点击 <code>I&#39;m ready!</code> 后会询问是否使用 CoolBooter 提供的启动 Logo，如果你不想更改原生的启动 Logo，点击 <code>No</code> 即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Custom-Boot-Logo.png" alt="自定义开机 Logo"></p><p>如果你不想看启动时跑代码就选择 <code>No</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Verbose-Boot.png" alt="取消跑码页"></p><h3 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h3><p>耐心等待一会，软件即可开始下载第二系统</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Downloading-Firmware-in-CoolBooter.png" alt="下载固件"></p><p>下载完成后开始解压并写入文件到硬盘</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Extracting-Firmware-in-CoolBooterCLI.png" alt="解压固件"></p><p>完成后会出现“存储容量几乎已满”的提示，点击“完成”即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Storage-is-Almost-Full-2.png" alt="存储容量几乎已满"></p><p>点击 <code>Rebot</code>，系统就会自动重启</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Reboot-in-CoolBooter.png" alt="重启系统"></p><p>重启完成后再次打开 CoolBooter，点击 <code>Boot</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Boot-in-CoolBooter.png" alt="启动第二系统"></p><p>出现 <code>Lock Your Device</code> 时按下电源按键，等待系统自动重启</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Lock-Your-Device-in-CoolBooter.png" alt="按键锁屏"></p><p>重启后设备会显示 “Finishing Installation”，耐心等待一下就好</p><p>设备再度重启后打开 CoolBooter，点击 <code>Boot</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Boot-in-CoolBooter.png" alt="启动第二系统"></p><p>出现 <code>Lock Your Device</code> 时按下电源按键，等待系统自动重启</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/Lock-Your-Device-in-CoolBooter.png" alt="按键锁屏"></p><p>等待一下即可进入到系统部署界面，第二系统安装完成</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Dual-iOS/iOS-6-Activate-Deployment.png" alt="开机激活"></p>]]></content>
       
       
       <categories>
@@ -1854,9 +1854,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -1873,7 +1873,7 @@
       <link href="/posts/be91420b.html"/>
       <url>/posts/be91420b.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>安装越狱的应用程序时，需要使用 <code>AppSync</code> 插件，以允许运行<br>在越狱设备上访问 iOS 的目录时，需要 <code>Apple File Conduit &quot;2&quot;</code> 插件（又名 <code>AFC2</code>）以允许访问</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p>Cydia</p><h3 id="第三方非作者源"><a href="#第三方非作者源" class="headerlink" title="第三方非作者源"></a>第三方非作者源</h3><p>雷锋源：apt.abcydia.com<br>贴吧源：apt.cydiaba.cn<br>AAA 知网少年：apt.dddjb.cn<br>Ai-小苹果：repo.cydiabc.top<br>A 壹筒天下：yttxcs.com</p><h2 id="安装-AppSync"><a href="#安装-AppSync" class="headerlink" title="安装 AppSync"></a>安装 AppSync</h2><p>在 Cydia 中添加软件源，并搜索 <code>AppSync</code>，点开以安装即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/AppSync.png" alt="AppSync"></p><p>安装完后点击“重启 SpringBoard”即可完成安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/Reboot-SpringBoard.png" alt="重启 SpringBoard"></p><h2 id="安装-Apple-File-Conduit-“2”"><a href="#安装-Apple-File-Conduit-“2”" class="headerlink" title="安装 Apple File Conduit “2”"></a>安装 Apple File Conduit “2”</h2><p>在 Cydia 中直接搜索 <code>Apple File</code> 就会有相关结果出现，点开以安装即可（Cydia 默认源中包含了此插件）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/AFC2.png" alt="Apple File Conduit &quot;2&quot;"></p><p>安装完后点击“重启 SpringBoard”即可完成安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/Reboot-SpringBoard.png" alt="重启 SpringBoard"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>安装越狱的应用程序时，需要使用 <code>AppSync</code> 插件，以允许运行<br>在越狱设备上访问 iOS 的目录时，需要 <code>Apple File Conduit &quot;2&quot;</code> 插件（又名 <code>AFC2</code>）以允许访问</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol><li>Cydia</li></ol><h3 id="第三方非作者源"><a href="#第三方非作者源" class="headerlink" title="第三方非作者源"></a>第三方非作者源</h3><p>雷锋源：<code>apt.abcydia.com</code><br>贴吧源：<code>apt.cydiaba.cn</code><br>AAA 知网少年：<code>apt.dddjb.cn</code><br>Ai-小苹果：<code>repo.cydiabc.top</code><br>A 壹筒天下：<code>yttxcs.com</code></p><h2 id="安装-AppSync"><a href="#安装-AppSync" class="headerlink" title="安装 AppSync"></a>安装 AppSync</h2><p>在 Cydia 中添加软件源，并搜索 <code>AppSync</code>，点开以安装即可</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/AppSync.png" alt="AppSync"></p><p>安装完后点击“重启 SpringBoard”即可完成安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/Reboot-SpringBoard.png" alt="重启 SpringBoard"></p><h2 id="安装-Apple-File-Conduit-“2”"><a href="#安装-Apple-File-Conduit-“2”" class="headerlink" title="安装 Apple File Conduit “2”"></a>安装 Apple File Conduit “2”</h2><p>在 Cydia 中直接搜索 <code>Apple File</code> 就会有相关结果出现，点开以安装即可（Cydia 默认源中包含了此插件）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/AFC2.png" alt="Apple File Conduit &quot;2&quot;"></p><p>安装完后点击“重启 SpringBoard”即可完成安装</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-AFC2-and-AppSync/Reboot-SpringBoard.png" alt="重启 SpringBoard"></p>]]></content>
       
       
       <categories>
