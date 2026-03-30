@@ -61,8 +61,8 @@
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
     <id>https://goo-aw233.github.io/posts/87461802.html</id>
     <link href="https://goo-aw233.github.io/posts/87461802.html"/>
     <published>2026-02-14T05:27:56.000Z</published>
@@ -153,8 +153,8 @@
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
     <id>https://goo-aw233.github.io/posts/8407e146.html</id>
     <link href="https://goo-aw233.github.io/posts/8407e146.html"/>
@@ -172,8 +172,8 @@
     <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <id>https://goo-aw233.github.io/posts/41eafc84.html</id>
     <link href="https://goo-aw233.github.io/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
@@ -235,8 +235,8 @@
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
     <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
+    <category term="DISM" scheme="https://goo-aw233.github.io/tags/DISM/"/>
     <id>https://goo-aw233.github.io/posts/a0c55de3.html</id>
     <link href="https://goo-aw233.github.io/posts/a0c55de3.html"/>
     <published>2025-05-17T05:23:01.000Z</published>
@@ -256,9 +256,9 @@
     <id>https://goo-aw233.github.io/posts/4668d7cf.html</id>
     <link href="https://goo-aw233.github.io/posts/4668d7cf.html"/>
     <published>2024-08-31T02:29:16.000Z</published>
-    <summary>介绍如何关闭 Windows 11 中默认启用的 Device Guard 和 Credential Guard 功能，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</summary>
+    <summary>介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</summary>
     <title>为你的电脑关闭 Device/Credential Guard</title>
-    <updated>2026-03-30T13:41:21.351Z</updated>
+    <updated>2026-03-30T13:48:43.271Z</updated>
   </entry>
   <entry>
     <author>
@@ -283,8 +283,8 @@
     <category term="虚拟机" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://goo-aw233.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
     <category term="VMware Workstation" scheme="https://goo-aw233.github.io/tags/VMware-Workstation/"/>
+    <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
     <id>https://goo-aw233.github.io/posts/da029b2a.html</id>
     <link href="https://goo-aw233.github.io/posts/da029b2a.html"/>
     <published>2024-04-20T01:16:23.000Z</published>
@@ -298,9 +298,9 @@
     </author>
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="iOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/iOS/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="软件" scheme="https://goo-aw233.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="iOS" scheme="https://goo-aw233.github.io/tags/iOS/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <id>https://goo-aw233.github.io/posts/338aca3d.html</id>
     <link href="https://goo-aw233.github.io/posts/338aca3d.html"/>
     <published>2024-03-02T03:27:40.000Z</published>
