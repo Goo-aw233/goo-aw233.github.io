@@ -75,11 +75,11 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="macOS" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://goo-aw233.github.io/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="macOS" scheme="https://goo-aw233.github.io/tags/macOS/"/>
+    <category term="Windows" scheme="https://goo-aw233.github.io/tags/Windows/"/>
     <category term="Linux" scheme="https://goo-aw233.github.io/tags/Linux/"/>
     <id>https://goo-aw233.github.io/posts/20ffdbc4.html</id>
     <link href="https://goo-aw233.github.io/posts/20ffdbc4.html"/>
@@ -258,7 +258,7 @@
     <published>2024-08-31T02:29:16.000Z</published>
     <summary>介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</summary>
     <title>为你的电脑关闭 Device/Credential Guard</title>
-    <updated>2026-03-30T13:48:43.271Z</updated>
+    <updated>2026-03-31T08:25:51.518Z</updated>
   </entry>
   <entry>
     <author>
