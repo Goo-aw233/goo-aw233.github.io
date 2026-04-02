@@ -22,12 +22,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"goo-aw233.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="从 Android OTA 包中提取 boot.img 文件，详细讲解了工具准备、操作步骤以及注意事项，适用于 Pixel 等设备。通过 payload-dumper-go 工具快速解压 payload.bin 文件，获取所需的 boot.img，满足 Magisk 修补需求。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从 OTA 包提取 boot.img">
-<meta property="og:url" content="https://goo-aw233.github.io/posts/f7e53ae.html">
+<meta property="og:url" content="https://gucats.com/posts/f7e53ae.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
 <meta property="og:description" content="从 Android OTA 包中提取 boot.img 文件，详细讲解了工具准备、操作步骤以及注意事项，适用于 Pixel 等设备。通过 payload-dumper-go 工具快速解压 payload.bin 文件，获取所需的 boot.img，满足 Magisk 修补需求。">
 <meta property="og:locale" content="zh_CN">
@@ -43,10 +43,10 @@
 <meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Extract-boot-File-from-OTA-Package/Firmware-Update-Date-Comparison.png">
 
 
-<link rel="canonical" href="https://goo-aw233.github.io/posts/f7e53ae.html">
+<link rel="canonical" href="https://gucats.com/posts/f7e53ae.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://goo-aw233.github.io/posts/f7e53ae.html","path":"posts/f7e53ae.html","title":"从 OTA 包提取 boot.img"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://gucats.com/posts/f7e53ae.html","path":"posts/f7e53ae.html","title":"从 OTA 包提取 boot.img"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>从 OTA 包提取 boot.img | GuCATs'摸鱼站</title>
@@ -261,7 +261,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://goo-aw233.github.io/posts/f7e53ae.html">
+    <link itemprop="mainEntityOfPage" href="https://gucats.com/posts/f7e53ae.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
@@ -398,7 +398,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://goo-aw233.github.io/posts/f7e53ae.html" title="从 OTA 包提取 boot.img">https://goo-aw233.github.io/posts/f7e53ae.html</a>
+      <a href="https://gucats.com/posts/f7e53ae.html" title="从 OTA 包提取 boot.img">https://gucats.com/posts/f7e53ae.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

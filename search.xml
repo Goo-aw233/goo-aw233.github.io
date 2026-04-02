@@ -105,9 +105,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -127,9 +127,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> macOS </category>
+          
+          <category> Windows </category>
           
           <category> Linux </category>
           
@@ -138,9 +138,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> Linux </tag>
             
@@ -283,9 +283,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
             <tag> Linux </tag>
             
@@ -320,9 +320,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -442,9 +442,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -535,9 +535,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -564,11 +564,11 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
             
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -653,9 +653,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -740,9 +740,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -854,9 +854,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -885,9 +885,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -916,9 +916,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -972,9 +972,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1088,9 +1088,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1173,9 +1173,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1237,9 +1237,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -1266,9 +1266,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1396,20 +1396,20 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> MS-DOS </tag>
             
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1548,9 +1548,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1577,9 +1577,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1660,9 +1660,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1689,9 +1689,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1718,11 +1718,11 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
             
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1755,9 +1755,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -1790,9 +1790,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -1821,9 +1821,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
@@ -1854,11 +1854,11 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> 软件 </tag>
             
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
@@ -1945,9 +1945,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1976,9 +1976,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
