@@ -1441,7 +1441,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ac9d5b;
+    background: #9ffa3e;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3142,23 +3142,34 @@ header.header {
     padding: 10px 12px;
   }
 }
+html {
+  background: url("https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Background.jpg") no-repeat center center fixed !important;
+  background-size: cover !important;
+}
 body::before {
   content: "";
-  display: block;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   z-index: -1;
-  background: url("https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Background.jpg");
-  background-repeat: no-repeat;
+  background: inherit;
   background-attachment: scroll;
-  background-size: cover;
-  background-position: center;
 }
-body {
-  background: transparent;
+body,
+.main,
+.main-inner,
+.content-wrap,
+.post-block,
+.sidebar,
+.header-inner {
+  background: transparent !important;
+}
+.post-block {
+  background: rgba(255,255,255,0.8) !important;
+  padding: 20px;
+  border-radius: 10px;
 }
 .header-inner,
 .site-brand-container,
