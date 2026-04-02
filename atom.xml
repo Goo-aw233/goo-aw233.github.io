@@ -75,11 +75,11 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="macOS" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="macOS" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     <category term="Linux" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="macOS" scheme="https://gucats.com/tags/macOS/"/>
     <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
+    <category term="macOS" scheme="https://gucats.com/tags/macOS/"/>
     <category term="Linux" scheme="https://gucats.com/tags/Linux/"/>
     <id>https://gucats.com/posts/20ffdbc4.html</id>
     <link href="https://gucats.com/posts/20ffdbc4.html"/>
