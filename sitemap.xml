@@ -686,6 +686,13 @@
 
   
   <url>
+    <loc>https://gucats.com/tags/Android/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://gucats.com/tags/MS-DOS/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -700,7 +707,14 @@
   </url>
   
   <url>
-    <loc>https://gucats.com/tags/DISM/</loc>
+    <loc>https://gucats.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gucats.com/tags/iOS/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -714,7 +728,21 @@
   </url>
   
   <url>
-    <loc>https://gucats.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://gucats.com/tags/%E8%B6%8A%E7%8B%B1/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gucats.com/tags/macOS/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gucats.com/tags/DISM/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -735,35 +763,7 @@
   </url>
   
   <url>
-    <loc>https://gucats.com/tags/macOS/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://gucats.com/tags/Linux/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gucats.com/tags/Android/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gucats.com/tags/iOS/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gucats.com/tags/%E8%B6%8A%E7%8B%B1/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -793,7 +793,35 @@
   </url>
   
   <url>
+    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/Android/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -814,28 +842,7 @@
   </url>
   
   <url>
-    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/Android/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -849,7 +856,7 @@
   </url>
   
   <url>
-    <loc>https://gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
+    <loc>https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/QEMU/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -857,13 +864,6 @@
   
   <url>
     <loc>https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/QEMU/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
