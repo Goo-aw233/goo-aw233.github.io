@@ -17,5 +17,5 @@ Disallow: /lib/
 Disallow: /vendors/
 Disallow: /go/
 
-Sitemap: https://goo-aw233.github.io/sitemap.xml
-Sitemap: https://goo-aw233.github.io/baidusitemap.xml
+Sitemap: https://blog.gucats.com/sitemap.xml
+Sitemap: https://blog.gucats.com/baidusitemap.xml

@@ -105,9 +105,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -127,9 +127,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> macOS </category>
+          
+          <category> Windows </category>
           
           <category> Linux </category>
           
@@ -138,9 +138,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> Linux </tag>
             
@@ -283,9 +283,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -442,9 +442,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -564,9 +564,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -653,9 +653,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -740,9 +740,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -854,9 +854,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -885,9 +885,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -916,9 +916,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -972,9 +972,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1088,9 +1088,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1173,9 +1173,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1237,9 +1237,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1266,9 +1266,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1331,9 +1331,9 @@
     
     
     <entry>
-      <title>为 Windows Vista/7 安装 Service Pack</title>
-      <link href="/posts/bee9811e.html"/>
-      <url>/posts/bee9811e.html</url>
+      <title>修复 Windows 7 无法获取更新</title>
+      <link href="/posts/bb8161a8.html"/>
+      <url>/posts/bb8161a8.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1358,9 +1358,9 @@
     
     
     <entry>
-      <title>修复 Windows 7 无法获取更新</title>
-      <link href="/posts/bb8161a8.html"/>
-      <url>/posts/bb8161a8.html</url>
+      <title>为 Windows Vista/7 安装 Service Pack</title>
+      <link href="/posts/bee9811e.html"/>
+      <url>/posts/bee9811e.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1396,9 +1396,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
@@ -1548,9 +1548,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1577,9 +1577,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1660,9 +1660,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1689,9 +1689,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1718,9 +1718,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -1854,9 +1854,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             

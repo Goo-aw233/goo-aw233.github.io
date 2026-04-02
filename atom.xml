@@ -5,9 +5,9 @@
   </author>
   <generator uri="https://hexo.io/">Hexo</generator>
   <icon>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</icon>
-  <id>https://gucats.com/</id>
-  <link href="https://gucats.com/" rel="alternate"/>
-  <link href="https://gucats.com/atom.xml" rel="self"/>
+  <id>https://blog.gucats.com/</id>
+  <link href="https://blog.gucats.com/" rel="alternate"/>
+  <link href="https://blog.gucats.com/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
@@ -16,11 +16,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/fc28aee6.html</id>
-    <link href="https://gucats.com/posts/fc28aee6.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/fc28aee6.html</id>
+    <link href="https://blog.gucats.com/posts/fc28aee6.html"/>
     <published>2026-03-18T14:37:55.000Z</published>
     <summary>通过多种方法启用文件扩展名显示，包括修改注册表、使用命令行以及在不同版本的 Windows 文件资源管理器中调整设置。适用于 Windows XP 至 Windows 11 的详细操作步骤，涵盖图形界面和命令行方式，提供了便捷的解决方案。</summary>
     <title>显示文件扩展名</title>
@@ -30,11 +30,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/837d5d4c.html</id>
-    <link href="https://gucats.com/posts/837d5d4c.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/837d5d4c.html</id>
+    <link href="https://blog.gucats.com/posts/837d5d4c.html"/>
     <published>2026-03-18T14:20:10.000Z</published>
     <summary>在 Windows 系统中获取文件路径的多种方法，包括通过属性窗口手动拼接路径，以及在 Windows 10 和 Windows 11 中使用快捷选项快速复制文件路径的操作步骤，适用于不同版本的系统环境。</summary>
     <title>获取文件路径</title>
@@ -44,11 +44,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/e3b15ad1.html</id>
-    <link href="https://gucats.com/posts/e3b15ad1.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/e3b15ad1.html</id>
+    <link href="https://blog.gucats.com/posts/e3b15ad1.html"/>
     <published>2026-03-06T03:10:03.000Z</published>
     <summary>提供多种方法检查 CPU 和 Windows 系统架构的详细步骤，包括通过 Windows 设置、控制面板、系统信息、 PowerShell 和 CMD 等工具查看架构信息，并对常见架构类型进行解释，适用于不同场景的需求。</summary>
     <title>检查 CPU 与 Windows 的架构</title>
@@ -58,13 +58,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="DISM" scheme="https://gucats.com/tags/DISM/"/>
-    <id>https://gucats.com/posts/87461802.html</id>
-    <link href="https://gucats.com/posts/87461802.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/87461802.html</id>
+    <link href="https://blog.gucats.com/posts/87461802.html"/>
     <published>2026-02-14T05:27:56.000Z</published>
     <summary>通过 DISM 工具清理 Windows 系统中的 WinSxS 文件夹，详细介绍了分析组件存储大小、执行清理命令、设置定时任务以及重设基准版本的操作方法，帮助释放系统盘空间并优化存储管理。</summary>
     <title>使用 DISM 清理 WinSxS 文件夹</title>
@@ -74,15 +74,15 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="macOS" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
-    <category term="Linux" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="macOS" scheme="https://gucats.com/tags/macOS/"/>
-    <category term="Linux" scheme="https://gucats.com/tags/Linux/"/>
-    <id>https://gucats.com/posts/20ffdbc4.html</id>
-    <link href="https://gucats.com/posts/20ffdbc4.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
+    <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
+    <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>
     <published>2026-01-08T04:08:43.000Z</published>
     <summary>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</summary>
     <title>为 Steam 安装浏览器扩展</title>
@@ -92,11 +92,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/ecf11bf4.html</id>
-    <link href="https://gucats.com/posts/ecf11bf4.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/ecf11bf4.html</id>
+    <link href="https://blog.gucats.com/posts/ecf11bf4.html"/>
     <published>2025-10-24T12:02:48.000Z</published>
     <summary>本文介绍了如何使用 manage-bde 命令管理 BitLocker 功能，包括查看状态、启用加密、禁用加密、暂停加密、恢复加密、修改密码和升级加密版本的详细操作步骤。</summary>
     <title>使用 manage-bde 管理 BitLocker</title>
@@ -106,13 +106,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/tags/PowerShell/"/>
-    <id>https://gucats.com/posts/1bb5bc04.html</id>
-    <link href="https://gucats.com/posts/1bb5bc04.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
+    <id>https://blog.gucats.com/posts/1bb5bc04.html</id>
+    <link href="https://blog.gucats.com/posts/1bb5bc04.html"/>
     <published>2025-10-24T07:59:55.000Z</published>
     <summary>使用 PowerShell 管理 Microsoft Defender 防病毒的详细教程，涵盖添加和移除排除项、获取防病毒状态、启动扫描、更新定义等操作。适用于 Windows Server Core 和其他无图形界面的环境。</summary>
     <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
@@ -122,11 +122,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/168b633e.html</id>
-    <link href="https://gucats.com/posts/168b633e.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/168b633e.html</id>
+    <link href="https://blog.gucats.com/posts/168b633e.html"/>
     <published>2025-10-20T14:06:09.000Z</published>
     <summary>通过修改注册表快速切换 Windows 区域设置，支持调整设备设置区域和国家或地区的详细操作。提供了禁用和启用 UCPD 服务的命令，以及修改地理位置标识符和 ISO 3166-1 Alpha-2 Code 的方法，适用于需要自定义区域配置的场景。</summary>
     <title>通过注册表修改 Windows 区域设定</title>
@@ -136,11 +136,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/c95bd458.html</id>
-    <link href="https://gucats.com/posts/c95bd458.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/c95bd458.html</id>
+    <link href="https://blog.gucats.com/posts/c95bd458.html"/>
     <published>2025-10-16T15:30:02.000Z</published>
     <summary>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</summary>
     <title>Windows 未激活时切换主题</title>
@@ -150,14 +150,14 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Linux" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="软件" scheme="https://gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="Linux" scheme="https://gucats.com/tags/Linux/"/>
-    <id>https://gucats.com/posts/8407e146.html</id>
-    <link href="https://gucats.com/posts/8407e146.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
+    <id>https://blog.gucats.com/posts/8407e146.html</id>
+    <link href="https://blog.gucats.com/posts/8407e146.html"/>
     <published>2025-10-16T12:36:52.000Z</published>
     <summary>本文介绍了如何在 Windows 系统中安装 WSL 1，包括启用适用于 Linux 的 Windows 子系统功能、下载并安装 WSL 本体、设置默认版本以及安装 WSL 发行版的详细步骤。</summary>
     <title>安装 WSL 1</title>
@@ -167,15 +167,15 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="虚拟机" scheme="https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    <category term="VMware" scheme="https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
-    <category term="Workstation" scheme="https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://gucats.com/tags/VMware-Workstation/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <id>https://gucats.com/posts/41eafc84.html</id>
-    <link href="https://gucats.com/posts/41eafc84.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
+    <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
+    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/41eafc84.html</id>
+    <link href="https://blog.gucats.com/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
     <summary>VMware Workstation Pro 通过外挂本地化文件的方式，支持简体中文等额外语言的挂载。文章详细介绍了如何下载并放置语言文件、修改快捷方式目标路径，以及通过 preferences.ini 文件实现语言切换的方法。同时，还提供了使用 Resource Hacker 修改语言文件的扩展教程。</summary>
     <title>VMware Workstation 挂载语言</title>
@@ -185,13 +185,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/tags/PowerShell/"/>
-    <id>https://gucats.com/posts/3e658596.html</id>
-    <link href="https://gucats.com/posts/3e658596.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
+    <id>https://blog.gucats.com/posts/3e658596.html</id>
+    <link href="https://blog.gucats.com/posts/3e658596.html"/>
     <published>2025-10-15T06:40:26.000Z</published>
     <summary>本文详细介绍了如何在 Windows 中为 (Windows) PowerShell 配置 oh-my-posh，包括安装必要工具、设置环境变量、初始化配置文件以及美化终端的完整步骤。</summary>
     <title>在 Windows 中为 PowerShell 配置 oh-my-posh</title>
@@ -201,12 +201,12 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/tags/PowerShell/"/>
-    <id>https://gucats.com/posts/dd918a8f.html</id>
-    <link href="https://gucats.com/posts/dd918a8f.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
+    <id>https://blog.gucats.com/posts/dd918a8f.html</id>
+    <link href="https://blog.gucats.com/posts/dd918a8f.html"/>
     <published>2025-10-06T02:44:31.000Z</published>
     <summary>解决 Windows Hello Face 在暗光条件下无法正常使用的实用方法，通过禁用非红外摄像头来优化面部识别功能，并提供了使用 PowerShell 快速启用或禁用摄像头的脚本，适合需要提升识别准确性的场景。</summary>
     <title>在暗光下正常使用 Windows Hello Face</title>
@@ -216,13 +216,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/tags/PowerShell/"/>
-    <id>https://gucats.com/posts/29b4a04d.html</id>
-    <link href="https://gucats.com/posts/29b4a04d.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
+    <id>https://blog.gucats.com/posts/29b4a04d.html</id>
+    <link href="https://blog.gucats.com/posts/29b4a04d.html"/>
     <published>2025-07-24T06:09:42.000Z</published>
     <summary>讲解如何在 Windows 系统中开启 SMBv3 的端到端加密功能，提升文件共享的安全性，涵盖了使用 PowerShell 命令配置加密的具体步骤，并说明了适用的系统版本和性能影响。</summary>
     <title>开启 SMBv3 端到端加密</title>
@@ -232,13 +232,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="DISM" scheme="https://gucats.com/tags/DISM/"/>
-    <id>https://gucats.com/posts/a0c55de3.html</id>
-    <link href="https://gucats.com/posts/a0c55de3.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/a0c55de3.html</id>
+    <link href="https://blog.gucats.com/posts/a0c55de3.html"/>
     <published>2025-05-17T05:23:01.000Z</published>
     <summary>通过 DISM、Dism++ 和 lpksetup.exe 等多种方法为 Windows 添加完整的语言包，详细讲解了下载语言文件、安装语言包的操作步骤，适用于需要多语言支持的场景，支持 .cab 和 .esd 格式。</summary>
     <title>为 Windows 添加完整的语言包</title>
@@ -248,13 +248,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://gucats.com/tags/PowerShell/"/>
-    <id>https://gucats.com/posts/4668d7cf.html</id>
-    <link href="https://gucats.com/posts/4668d7cf.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
+    <id>https://blog.gucats.com/posts/4668d7cf.html</id>
+    <link href="https://blog.gucats.com/posts/4668d7cf.html"/>
     <published>2024-08-31T02:29:16.000Z</published>
     <summary>介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</summary>
     <title>为你的电脑关闭 Device/Credential Guard</title>
@@ -264,11 +264,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="macOS" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
-    <category term="macOS" scheme="https://gucats.com/tags/macOS/"/>
-    <id>https://gucats.com/posts/babf6529.html</id>
-    <link href="https://gucats.com/posts/babf6529.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <id>https://blog.gucats.com/posts/babf6529.html</id>
+    <link href="https://blog.gucats.com/posts/babf6529.html"/>
     <published>2024-08-21T13:45:16.000Z</published>
     <summary>在 Intel NUC8i5BEH 上安装黑苹果的完整教程，涵盖硬件配置、BIOS 设置、在线与离线安装 macOS 的详细步骤，提供 EFI 文件配置、三码注入、无线网卡修补等优化方法，适合需要在 NUC 上运行 macOS 的黑苹果爱好者。</summary>
     <title>在 NUC8i5BEH 安装黑苹果</title>
@@ -278,15 +278,15 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="macOS" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
-    <category term="虚拟机" scheme="https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    <category term="VMware" scheme="https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
-    <category term="Workstation" scheme="https://gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://gucats.com/tags/VMware-Workstation/"/>
-    <category term="macOS" scheme="https://gucats.com/tags/macOS/"/>
-    <id>https://gucats.com/posts/da029b2a.html</id>
-    <link href="https://gucats.com/posts/da029b2a.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
+    <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
+    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <id>https://blog.gucats.com/posts/da029b2a.html</id>
+    <link href="https://blog.gucats.com/posts/da029b2a.html"/>
     <published>2024-04-20T01:16:23.000Z</published>
     <summary>在 VMware Workstation 中模拟 macOS 机型的详细教程，涵盖 Hackintool、OpenCore Configurator 和 Clover Configurator 的使用方法，提供机型配置、序列号生成及校验的完整流程，适合需要在虚拟机中运行 macOS 的场景，帮助优化虚拟机兼容性与性能。</summary>
     <title>macOS 虚拟机机型模拟</title>
@@ -296,13 +296,13 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="iOS" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/"/>
-    <category term="软件" scheme="https://gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <category term="Windows" scheme="https://gucats.com/tags/Windows/"/>
-    <category term="iOS" scheme="https://gucats.com/tags/iOS/"/>
-    <id>https://gucats.com/posts/338aca3d.html</id>
-    <link href="https://gucats.com/posts/338aca3d.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="iOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="iOS" scheme="https://blog.gucats.com/tags/iOS/"/>
+    <id>https://blog.gucats.com/posts/338aca3d.html</id>
+    <link href="https://blog.gucats.com/posts/338aca3d.html"/>
     <published>2024-03-02T03:27:40.000Z</published>
     <summary>更新 IPCC 文件的完整教程，涵盖从提取固件到制作 IPCC 文件的详细步骤，适用于所有版本的 iOS 与 iPadOS，提供解密固件、提取运营商配置文件、制作 Payload 文件夹以及通过爱思助手更新 IPCC 的方法，帮助优化网络配置与运营商设置。</summary>
     <title>更新 IPCC 文件</title>
@@ -312,11 +312,11 @@
     <author>
       <name>GuCATs</name>
     </author>
-    <category term="教程" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Android" scheme="https://gucats.com/categories/%E6%95%99%E7%A8%8B/Android/"/>
-    <category term="Android" scheme="https://gucats.com/tags/Android/"/>
-    <id>https://gucats.com/posts/f7e53ae.html</id>
-    <link href="https://gucats.com/posts/f7e53ae.html"/>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Android" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Android/"/>
+    <category term="Android" scheme="https://blog.gucats.com/tags/Android/"/>
+    <id>https://blog.gucats.com/posts/f7e53ae.html</id>
+    <link href="https://blog.gucats.com/posts/f7e53ae.html"/>
     <published>2023-10-21T06:00:06.000Z</published>
     <summary>从 Android OTA 包中提取 boot.img 文件，详细讲解了工具准备、操作步骤以及注意事项，适用于 Pixel 等设备。通过 payload-dumper-go 工具快速解压 payload.bin 文件，获取所需的 boot.img，满足 Magisk 修补需求。</summary>
     <title>从 OTA 包提取 boot.img</title>
