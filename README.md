@@ -6,7 +6,9 @@
 
 ## Blog
 
-URL: <https://goo-aw233.github.io>
+URL: <https://blog.gucats.com>
+
+Original URL: <https://goo-aw233.github.io>
 
 ## Assets Repo 1
 
