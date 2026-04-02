@@ -1441,7 +1441,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff7;
+    background: #ac9d5b;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3142,12 +3142,23 @@ header.header {
     padding: 10px 12px;
   }
 }
-body {
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background: url("https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Background.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-position: center;
+}
+body {
+  background: transparent;
 }
 .header-inner,
 .site-brand-container,
