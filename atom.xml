@@ -61,8 +61,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <id>https://blog.gucats.com/posts/87461802.html</id>
     <link href="https://blog.gucats.com/posts/87461802.html"/>
     <published>2026-02-14T05:27:56.000Z</published>
@@ -153,8 +153,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/8407e146.html</id>
     <link href="https://blog.gucats.com/posts/8407e146.html"/>
@@ -172,8 +172,8 @@
     <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
     <id>https://blog.gucats.com/posts/41eafc84.html</id>
     <link href="https://blog.gucats.com/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
@@ -235,8 +235,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <id>https://blog.gucats.com/posts/a0c55de3.html</id>
     <link href="https://blog.gucats.com/posts/a0c55de3.html"/>
     <published>2025-05-17T05:23:01.000Z</published>
@@ -298,9 +298,9 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="iOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="iOS" scheme="https://blog.gucats.com/tags/iOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <id>https://blog.gucats.com/posts/338aca3d.html</id>
     <link href="https://blog.gucats.com/posts/338aca3d.html"/>
     <published>2024-03-02T03:27:40.000Z</published>
