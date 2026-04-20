@@ -1441,7 +1441,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #a3f162;
+    background: #de283e;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3222,6 +3222,12 @@ body::before {
   .menu-item-active a {
     background: rgba(0,0,0,0.05) !important;
   }
+  .site-brand-container,
+  .site-brand-container a,
+  .site-brand-container .site-title,
+  .site-brand-container .site-subtitle {
+    color: #555 !important;
+  }
 }
 @media (prefers-color-scheme: dark) {
   .header-inner,
@@ -3261,4 +3267,10 @@ body::before {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
   }
+}
+.pagination .page-number.current {
+  background: #0078d4 !important;
+  color: #fff !important;
+  border-color: #0078d4 !important;
+  border-radius: 4px !important;
 }
