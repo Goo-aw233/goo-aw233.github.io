@@ -75,11 +75,11 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
     <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>
@@ -153,8 +153,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/8407e146.html</id>
     <link href="https://blog.gucats.com/posts/8407e146.html"/>
@@ -298,9 +298,9 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="iOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/"/>
-    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="iOS" scheme="https://blog.gucats.com/tags/iOS/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <id>https://blog.gucats.com/posts/338aca3d.html</id>
     <link href="https://blog.gucats.com/posts/338aca3d.html"/>
     <published>2024-03-02T03:27:40.000Z</published>
