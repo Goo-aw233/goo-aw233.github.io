@@ -21,12 +21,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="前言对于传统的 Win32 应用，他们的安装程序一般是 .MSI，或是 .EXE 里套 .MSI 安装程序，这便于 Windows 管理所有的应用程序。但是，若在安装缓存丢失或卸载不正确的情况下，会导致新的&#x2F;旧的安装程序无法继续进行 准备工具 MicrosoftProgram_Install_and_Uninstall.meta.diagcab  使用疑难解答程序包直接打开下载好的 Mi">
+    <meta name="description" content="使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="卸载失效的安装程序">
 <meta property="og:url" content="https://blog.gucats.com/posts/bf075fa8.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="前言对于传统的 Win32 应用，他们的安装程序一般是 .MSI，或是 .EXE 里套 .MSI 安装程序，这便于 Windows 管理所有的应用程序。但是，若在安装缓存丢失或卸载不正确的情况下，会导致新的&#x2F;旧的安装程序无法继续进行 准备工具 MicrosoftProgram_Install_and_Uninstall.meta.diagcab  使用疑难解答程序包直接打开下载好的 Mi">
+<meta property="og:description" content="使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Install-or-Uninstall.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Uninstall-and-Clean.png">
@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/GUID-in-ProgramData.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/VMware-InstallerCache.png">
 <meta property="article:published_time" content="2026-04-28T12:09:42.000Z">
-<meta property="article:modified_time" content="2026-04-29T09:03:49.068Z">
+<meta property="article:modified_time" content="2026-04-29T09:10:37.241Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -304,7 +304,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="卸载失效的安装程序 | GuCATs'摸鱼站">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -326,7 +326,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-29 17:03:49" itemprop="dateModified" datetime="2026-04-29T17:03:49+08:00">2026-04-29</time>
+      <time title="修改时间：2026-04-29 17:10:37" itemprop="dateModified" datetime="2026-04-29T17:10:37+08:00">2026-04-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,6 +367,7 @@
     </span>
 </div>
 
+            <div class="post-description">使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。</div>
         </div>
       </header>
 

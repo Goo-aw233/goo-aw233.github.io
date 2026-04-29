@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-04-29T09:03:49.068Z</updated>
+  <updated>2026-04-29T09:10:37.241Z</updated>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -22,11 +22,9 @@
     <id>https://blog.gucats.com/posts/bf075fa8.html</id>
     <link href="https://blog.gucats.com/posts/bf075fa8.html"/>
     <published>2026-04-28T12:09:42.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于传统的 Win32 应用，他们的安装程序一般是 <code>.MSI</code>，或是 <code>.EXE</code> 里套]]>
-    </summary>
+    <summary>使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。</summary>
     <title>卸载失效的安装程序</title>
-    <updated>2026-04-29T09:03:49.068Z</updated>
+    <updated>2026-04-29T09:10:37.241Z</updated>
   </entry>
   <entry>
     <author>
@@ -34,8 +32,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -109,11 +107,11 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
     <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>

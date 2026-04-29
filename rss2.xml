@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 09:03:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 09:10:37 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -17,9 +17,7 @@
     <item>
       <title>卸载失效的安装程序</title>
       <link>https://blog.gucats.com/posts/bf075fa8.html</link>
-      <description>
-        <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于传统的 Win32 应用，他们的安装程序一般是 <code>.MSI</code>，或是 <code>.EXE</code> 里套]]>
-      </description>
+      <description>使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -33,8 +31,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -88,11 +86,11 @@
       <description>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
       <pubDate>Thu, 08 Jan 2026 04:08:43 GMT</pubDate>
     </item>
