@@ -4,6 +4,68 @@
   
     
     <entry>
+      <title>卸载失效的安装程序</title>
+      <link href="/posts/bf075fa8.html"/>
+      <url>/posts/bf075fa8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于传统的 Win32 应用，他们的安装程序一般是 <code>.MSI</code>，或是 <code>.EXE</code> 里套 <code>.MSI</code> 安装程序，这便于 Windows 管理所有的应用程序。但是，若在安装缓存丢失或卸载不正确的情况下，会导致新的&#x2F;旧的安装程序无法继续进行</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol><li><a href="https://download.microsoft.com/download/7/E/9/7E9188C0-2511-4B01-8B4E-0A641EC2F600/MicrosoftProgram_Install_and_Uninstall.meta.diagcab">MicrosoftProgram_Install_and_Uninstall.meta.diagcab</a></li></ol><h2 id="使用疑难解答程序包"><a href="#使用疑难解答程序包" class="headerlink" title="使用疑难解答程序包"></a>使用疑难解答程序包</h2><p>直接打开下载好的 <code>MicrosoftProgram_Install_and_Uninstall.meta.diagcab</code>，并根据需要选择“安装”或“卸载”（不明可以选择“卸载”）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Install-or-Uninstall.png" alt="“安装”或“卸载”"></p><p>在列表中，找到要卸载的项目，点击“下一步”<br>最后，选择“是，尝试卸载”，即可启动安装程序，并清理大部分相关项目</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Uninstall-and-Clean.png" alt="卸载并清理"></p><p>卸载完成后，重启 Windows 即可</p><div class="note primary"><p>若在列表中没有找到对应的项目，请参阅：《<a href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID">注册表查找 GUID</a>》或《<a href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID">安装程序缓存目录查找 GUID</a>》，选择“未列出”，并将安装程序的 GUID 填入</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Enter-Product-ID.png" alt="输入产品代码"></p></div><h3 id="注册表查找-GUID"><a href="#注册表查找-GUID" class="headerlink" title="注册表查找 GUID"></a>注册表查找 GUID</h3><p>卸载程序的注册表路径如下</p><p>所有用户的 64 位应用程序（包括 32 位系统的 32 位应用程序）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</span><br></pre></td></tr></table></figure><p>64 位系统上所有用户的 64 位应用程序：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall</span><br></pre></td></tr></table></figure><p>当前登录用户安装的程序：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</span><br></pre></td></tr></table></figure><p><strong>Windows Installer（最全，但是不带花括号 <code>&#123;&#125;</code>）</strong>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products</span><br></pre></td></tr></table></figure><p>在注册表条目中，逐一寻找目标安装程序的 GUID（项名称即为 GUID，不包括花括号外的内容）<br>例如，<code>Microsoft Visual C++ 2022 X64 Additional Runtime - 14.50.35719</code> 的项名称为 <code>&#123;AECD4ED0-8A3B-41E9-92D1-6BEE0374CCAF&#125;</code>，则 GUID 则为 <code>&#123;AECD4ED0-8A3B-41E9-92D1-6BEE0374CCAF&#125;</code><br>（<code>InstallSource</code>、<code>ModifyPath</code> 和 <code>UninstallString</code> 里花括号的内容也是 GUID）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/GUID-in-regedit.png" alt="注册表编辑器下的 GUID"></p><h3 id="安装程序缓存目录查找-GUID"><a href="#安装程序缓存目录查找-GUID" class="headerlink" title="安装程序缓存目录查找 GUID"></a>安装程序缓存目录查找 GUID</h3><p>安装程序缓存目录：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%ProgramData%\Package Cache</span><br></pre></td></tr></table></figure><p>（一般为 <code>C:\ProgramData\Package Cache</code>）</p><div class="note default"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%SystemRoot%\Installer</span><br></pre></td></tr></table></figure><p>（一般为 <code>C:\Windows\Installer</code>）下也有缓存，但是一般为精简过的安装缓存</p></div><p>在文件夹列表中，逐一寻找目标安装程序的 GUID（文件夹名称即为 GUID，不包括花括号外的内容）<br>例如，<code>vc_runtimeMinimum_x64.msi</code> 的文件夹名称为 <code>&#123;61B44572-8722-4DAF-8ACF-8E742D30BCC5&#125;v14.50.35719</code>，则 GUID 则为 <code>&#123;61B44572-8722-4DAF-8ACF-8E742D30BCC5&#125;</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/GUID-in-ProgramData.png" alt="ProgramData 下的 GUID"></p><div class="note info"><p>对于部分安装程序，可能会在其他路径下存放有安装缓存，如 VMware Workstation 就存放于：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%CommonProgramFiles(x86)%\VMware\InstallerCache</span><br></pre></td></tr></table></figure><p>（一般为 <code>C:\Program Files (x86)\Common Files\VMware\InstallerCache</code>）</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/VMware-InstallerCache.png" alt="VMware Workstation 安装缓存"></p></div><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://learn.microsoft.com/windows/win32/com/com-class-objects-and-clsids/?wt.mc_id=studentamb_474966">COM 类对象和 CLSID - Win32 apps | Microsoft Learn</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>管理保留的存储</title>
+      <link href="/posts/269758b0.html"/>
+      <url>/posts/269758b0.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><div class="note info"><p>保留的存储为更新包、补丁的临时文件提供专属的下载和安装空间，避免因空间不足导致的更新失败或报错，以保证 Windows 在极端情况下保证绝大部分系统数据的可用性<br>非极端情况下，不建议关闭保留的存储</p></div><p>一般情况下，Windows 11 会预留大约 7 GB 左右的保留空间，但这个数值并不固定，系统会根据设备的使用情况动态调整，在可用空间较小的设备上，可能仅会占用 2 - 3 GB 左右的空间<br>从 Windows 10 版本 2004 开始，Windows 支持使用 DISM 命令按需启用和禁用保留存储，<strong>对于 Windows IoT Enterprise LTSC，保留的存储为默认关闭的功能</strong></p><div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p><ul><li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li><li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li></ul></div><h2 id="DISM"><a href="#DISM" class="headerlink" title="DISM"></a>DISM</h2><h3 id="获取当前状态"><a href="#获取当前状态" class="headerlink" title="获取当前状态"></a>获取当前状态</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /Get-ReservedStorageState</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Manage-Reserved-Storage/Get-ReservedStorageState-DISM.png" alt="&#x2F;Get-ReservedStorageState"></p><h3 id="更改当前状态"><a href="#更改当前状态" class="headerlink" title="更改当前状态"></a>更改当前状态</h3><p>开启：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /<span class="built_in">Set</span>-ReservedStorageState /State:Enabled</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Manage-Reserved-Storage/Enable-ReservedStorageState-DISM.png" alt="&#x2F;State:Enabled"></p><p>关闭：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dism.exe /Online /<span class="built_in">Set</span>-ReservedStorageState /State:Disabled</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Manage-Reserved-Storage/Disable-ReservedStorageState-DISM.png" alt="&#x2F;State:Disabled"></p><h2 id="PowerShell"><a href="#PowerShell" class="headerlink" title="PowerShell"></a>PowerShell</h2><h3 id="获取当前状态-1"><a href="#获取当前状态-1" class="headerlink" title="获取当前状态"></a>获取当前状态</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-WindowsReservedStorageState</span></span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Manage-Reserved-Storage/Get-ReservedStorageState-PowerShell.png" alt="Get-WindowsReservedStorageState"></p><h3 id="更改当前状态-1"><a href="#更改当前状态-1" class="headerlink" title="更改当前状态"></a>更改当前状态</h3><p>开启：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-WindowsReservedStorageState</span> <span class="literal">-State</span> Enabled</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Manage-Reserved-Storage/Enable-ReservedStorageState-PowerShell.png" alt="-State Enabled"></p><p>关闭：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-WindowsReservedStorageState</span> <span class="literal">-State</span> Disabled</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Manage-Reserved-Storage/Disable-ReservedStorageState-PowerShell.png" alt="-State Disabled"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/dism-storage-reserve/?wt.mc_id=studentamb_474966">DISM 保留存储命令行选项 | Microsoft Learn</a></li><li><a href="https://support.microsoft.com/windows/5bc98443-0711-8038-4621-6a18ddc904f2">Windows 中的存储设置 - Microsoft 支持</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+          <category> PowerShell </category>
+          
+          <category> DISM </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> DISM </tag>
+            
+            <tag> PowerShell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>显示文件扩展名</title>
       <link href="/posts/fc28aee6.html"/>
       <url>/posts/fc28aee6.html</url>
@@ -566,9 +628,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1720,9 +1782,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1821,9 +1883,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
@@ -1856,9 +1918,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             

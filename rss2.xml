@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Fri, 27 Mar 2026 11:58:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 09:03:49 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,32 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>卸载失效的安装程序</title>
+      <link>https://blog.gucats.com/posts/bf075fa8.html</link>
+      <description>
+        <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于传统的 Win32 应用，他们的安装程序一般是 <code>.MSI</code>，或是 <code>.EXE</code> 里套]]>
+      </description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Tue, 28 Apr 2026 12:09:42 GMT</pubDate>
+    </item>
+    <item>
+      <title>管理保留的存储</title>
+      <link>https://blog.gucats.com/posts/269758b0.html</link>
+      <description>通过使用 DISM 和 PowerShell 命令管理 Windows 保留存储，包括获取当前状态、启用和禁用保留存储，以优化系统更新和存储空间。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
+      <pubDate>Tue, 28 Apr 2026 12:07:24 GMT</pubDate>
+    </item>
     <item>
       <title>显示文件扩展名</title>
       <link>https://blog.gucats.com/posts/fc28aee6.html</link>
@@ -221,28 +247,6 @@
       <category domain="https://blog.gucats.com/tags/VMware-Workstation/">VMware Workstation</category>
       <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
       <pubDate>Sat, 20 Apr 2024 01:16:23 GMT</pubDate>
-    </item>
-    <item>
-      <title>更新 IPCC 文件</title>
-      <link>https://blog.gucats.com/posts/338aca3d.html</link>
-      <description>更新 IPCC 文件的完整教程，涵盖从提取固件到制作 IPCC 文件的详细步骤，适用于所有版本的 iOS 与 iPadOS，提供解密固件、提取运营商配置文件、制作 Payload 文件夹以及通过爱思助手更新 IPCC 的方法，帮助优化网络配置与运营商设置。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/">iOS</category>
-      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/iOS/">iOS</category>
-      <pubDate>Sat, 02 Mar 2024 03:27:40 GMT</pubDate>
-    </item>
-    <item>
-      <title>从 OTA 包提取 boot.img</title>
-      <link>https://blog.gucats.com/posts/f7e53ae.html</link>
-      <description>从 Android OTA 包中提取 boot.img 文件，详细讲解了工具准备、操作步骤以及注意事项，适用于 Pixel 等设备。通过 payload-dumper-go 工具快速解压 payload.bin 文件，获取所需的 boot.img，满足 Magisk 修补需求。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Android/">Android</category>
-      <category domain="https://blog.gucats.com/tags/Android/">Android</category>
-      <pubDate>Sat, 21 Oct 2023 06:00:06 GMT</pubDate>
     </item>
   </channel>
 </rss>

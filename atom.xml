@@ -11,7 +11,41 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-03-27T11:58:53.699Z</updated>
+  <updated>2026-04-29T09:03:49.068Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/bf075fa8.html</id>
+    <link href="https://blog.gucats.com/posts/bf075fa8.html"/>
+    <published>2026-04-28T12:09:42.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于传统的 Win32 应用，他们的安装程序一般是 <code>.MSI</code>，或是 <code>.EXE</code> 里套]]>
+    </summary>
+    <title>卸载失效的安装程序</title>
+    <updated>2026-04-29T09:03:49.068Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
+    <id>https://blog.gucats.com/posts/269758b0.html</id>
+    <link href="https://blog.gucats.com/posts/269758b0.html"/>
+    <published>2026-04-28T12:07:24.000Z</published>
+    <summary>通过使用 DISM 和 PowerShell 命令管理 Windows 保留存储，包括获取当前状态、启用和禁用保留存储，以优化系统更新和存储空间。</summary>
+    <title>管理保留的存储</title>
+    <updated>2026-04-28T15:15:02.514Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -195,7 +229,7 @@
     <published>2025-10-15T06:40:26.000Z</published>
     <summary>本文详细介绍了如何在 Windows 中为 (Windows) PowerShell 配置 oh-my-posh，包括安装必要工具、设置环境变量、初始化配置文件以及美化终端的完整步骤。</summary>
     <title>在 Windows 中为 PowerShell 配置 oh-my-posh</title>
-    <updated>2026-03-27T12:10:47.204Z</updated>
+    <updated>2026-04-28T15:18:44.457Z</updated>
   </entry>
   <entry>
     <author>
@@ -291,35 +325,5 @@
     <summary>在 VMware Workstation 中模拟 macOS 机型的详细教程，涵盖 Hackintool、OpenCore Configurator 和 Clover Configurator 的使用方法，提供机型配置、序列号生成及校验的完整流程，适合需要在虚拟机中运行 macOS 的场景，帮助优化虚拟机兼容性与性能。</summary>
     <title>macOS 虚拟机机型模拟</title>
     <updated>2026-03-26T16:02:25.977Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="iOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/"/>
-    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="iOS" scheme="https://blog.gucats.com/tags/iOS/"/>
-    <id>https://blog.gucats.com/posts/338aca3d.html</id>
-    <link href="https://blog.gucats.com/posts/338aca3d.html"/>
-    <published>2024-03-02T03:27:40.000Z</published>
-    <summary>更新 IPCC 文件的完整教程，涵盖从提取固件到制作 IPCC 文件的详细步骤，适用于所有版本的 iOS 与 iPadOS，提供解密固件、提取运营商配置文件、制作 Payload 文件夹以及通过爱思助手更新 IPCC 的方法，帮助优化网络配置与运营商设置。</summary>
-    <title>更新 IPCC 文件</title>
-    <updated>2026-03-26T15:57:38.623Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Android" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Android/"/>
-    <category term="Android" scheme="https://blog.gucats.com/tags/Android/"/>
-    <id>https://blog.gucats.com/posts/f7e53ae.html</id>
-    <link href="https://blog.gucats.com/posts/f7e53ae.html"/>
-    <published>2023-10-21T06:00:06.000Z</published>
-    <summary>从 Android OTA 包中提取 boot.img 文件，详细讲解了工具准备、操作步骤以及注意事项，适用于 Pixel 等设备。通过 payload-dumper-go 工具快速解压 payload.bin 文件，获取所需的 boot.img，满足 Magisk 修补需求。</summary>
-    <title>从 OTA 包提取 boot.img</title>
-    <updated>2026-03-26T15:53:52.023Z</updated>
   </entry>
 </feed>
