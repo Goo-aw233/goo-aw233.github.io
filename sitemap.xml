@@ -753,6 +753,13 @@
   </url>
   
   <url>
+    <loc>https://blog.gucats.com/tags/macOS/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.gucats.com/tags/DISM/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -768,13 +775,6 @@
   
   <url>
     <loc>https://blog.gucats.com/tags/PowerShell/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/macOS/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -832,20 +832,6 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -853,7 +839,21 @@
   </url>
   
   <url>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

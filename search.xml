@@ -44,9 +44,9 @@
           
           <category> Windows </category>
           
-          <category> PowerShell </category>
-          
           <category> DISM </category>
+          
+          <category> PowerShell </category>
           
       </categories>
       
