@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 09:10:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 09:16:17 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -17,7 +17,7 @@
     <item>
       <title>卸载失效的安装程序</title>
       <link>https://blog.gucats.com/posts/bf075fa8.html</link>
-      <description>使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。</description>
+      <description>查找 GUID，通过使用 MicrosoftProgram_Install_and_Uninstall.meta.diagcab 疑难解答工具，卸载 Windows 上失效的安装程序，清理注册表和缓存目录。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -31,8 +31,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -129,7 +129,7 @@
     <item>
       <title>Windows 未激活时切换主题</title>
       <link>https://blog.gucats.com/posts/c95bd458.html</link>
-      <description>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</description>
+      <description>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色/浅色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>

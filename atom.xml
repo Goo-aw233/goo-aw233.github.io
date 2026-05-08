@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-04-29T09:10:37.241Z</updated>
+  <updated>2026-04-29T09:16:17.387Z</updated>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -22,9 +22,9 @@
     <id>https://blog.gucats.com/posts/bf075fa8.html</id>
     <link href="https://blog.gucats.com/posts/bf075fa8.html"/>
     <published>2026-04-28T12:09:42.000Z</published>
-    <summary>使用 Microsoft 疑难解答工具，卸载 Windows 上失效的安装程序，查找 GUID、清理注册表和缓存目录。</summary>
+    <summary>查找 GUID，通过使用 MicrosoftProgram_Install_and_Uninstall.meta.diagcab 疑难解答工具，卸载 Windows 上失效的安装程序，清理注册表和缓存目录。</summary>
     <title>卸载失效的安装程序</title>
-    <updated>2026-04-29T09:10:37.241Z</updated>
+    <updated>2026-04-29T09:16:17.387Z</updated>
   </entry>
   <entry>
     <author>
@@ -32,8 +32,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -174,9 +174,9 @@
     <id>https://blog.gucats.com/posts/c95bd458.html</id>
     <link href="https://blog.gucats.com/posts/c95bd458.html"/>
     <published>2025-10-16T15:30:02.000Z</published>
-    <summary>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</summary>
+    <summary>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色/浅色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</summary>
     <title>Windows 未激活时切换主题</title>
-    <updated>2026-03-27T11:55:03.899Z</updated>
+    <updated>2026-04-30T07:21:22.859Z</updated>
   </entry>
   <entry>
     <author>
@@ -211,7 +211,7 @@
     <published>2025-10-16T09:57:11.000Z</published>
     <summary>VMware Workstation Pro 通过外挂本地化文件的方式，支持简体中文等额外语言的挂载。文章详细介绍了如何下载并放置语言文件、修改快捷方式目标路径，以及通过 preferences.ini 文件实现语言切换的方法。同时，还提供了使用 Resource Hacker 修改语言文件的扩展教程。</summary>
     <title>VMware Workstation 挂载语言</title>
-    <updated>2026-03-26T16:04:59.312Z</updated>
+    <updated>2026-04-30T07:25:07.867Z</updated>
   </entry>
   <entry>
     <author>
