@@ -4,6 +4,72 @@
   
     
     <entry>
+      <title>在 Debian 安装 Fcitx 5 中文输入法</title>
+      <link href="/posts/c260c4c.html"/>
+      <url>/posts/c260c4c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装组件"><a href="#安装组件" class="headerlink" title="安装组件"></a>安装组件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update -y</span><br><span class="line"><span class="built_in">sudo</span> apt install --install-recommends fcitx5 fcitx5-chinese-addons -y</span><br></pre></td></tr></table></figure><div class="note info"><p>使用 <code>--install-recommends</code> 参数来安装推荐的软件包，这适合大部分用户。 但如果想尽量安装少的软件包，也可以试试（以 KDE 为例，额外安装了 <code>kde-config-fcitx5</code>）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install --no-install-recommends fcitx5 fcitx5-chinese-addons fcitx5-frontend-gtk3 fcitx5-frontend-qt5 fcitx5-module-xorg kde-config-fcitx5 im-config -y</span><br></pre></td></tr></table></figure></div><div class="note primary"><p>对于 GNOME 用户，默认安装的 <code>IBus</code>，为了获得更好的面板支持，则必须安装 <code>gnome-shell-extension-kimpanel</code>（网页版：<a href="https://extensions.gnome.org/extension/261/kimpanel%EF%BC%89">https://extensions.gnome.org/extension/261/kimpanel）</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install gnome-shell-extension-kimpanel -y</span><br></pre></td></tr></table></figure></div><p><strong>安装完成后，重启一遍 Debian 以生效</strong></p><h2 id="配置输入法"><a href="#配置输入法" class="headerlink" title="配置输入法"></a>配置输入法</h2><p>打开“im-config”（输入法配置，一般会随附安装），将输入法选择 <code>fcitx5</code> 后点击“确定”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Chines-Input-Method-in-Debian/im-config.png" alt="输入法配置"></p><p>打开“Fcitx 5 配置”，在“可用输入法”里找到<code>拼音</code>或 <code>Pinyin</code>（就叫这俩）的选项，选中后按 <code>&lt;</code> 添加到“当前输入法”的列表</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Chines-Input-Method-in-Debian/Fcitx-Config.png" alt="Fcitx 配置"></p><p>你还可以安装 <code>gnome-tweaks</code>（优化），将 Fcitx 5 添加到“开机启动程序”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Chines-Input-Method-in-Debian/gnome-tweaks.png" alt="开机启动程序"></p><p><strong>配置完成后，重启一遍 Debian 以生效</strong></p><h2 id="安装-Rime"><a href="#安装-Rime" class="headerlink" title="安装 Rime"></a>安装 Rime</h2><p><strong>非必需步骤</strong></p><p>如果需要 Rime 输入法引擎，可以安装 <code>fcitx5-rime</code> 及其输入方案（如“白霜拼音”）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install fcitx5-rime -y</span><br></pre></td></tr></table></figure><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://wiki.debian.org/zh_CN/I18n/Fcitx5">zh_CN&#x2F;I18n&#x2F;Fcitx5 - Debian Wiki</a></li><li><a href="https://forum.ubuntu.com.cn/viewtopic.php?t=494584">求助贴，请问 Ubuntu2404 总是提示 fcitx5 要我装什么 GNOME 插件 - Ubuntu 中文论坛</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Linux </category>
+          
+          <category> Debian </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Debian </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在 Debian 安装 zsh 与 oh-my-zsh</title>
+      <link href="/posts/90c316e1.html"/>
+      <url>/posts/90c316e1.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装基本工具"><a href="#安装基本工具" class="headerlink" title="安装基本工具"></a>安装基本工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update -y</span><br><span class="line"><span class="built_in">sudo</span> apt install zsh git curl -y</span><br></pre></td></tr></table></figure><h2 id="设置默认终端"><a href="#设置默认终端" class="headerlink" title="设置默认终端"></a>设置默认终端</h2><p><strong>不要在 su 和 sudo 下执行此命令，会导致设置不生效</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure><p>GUI 下，推荐再在配置文件里手动修改默认终端<br>终端 &gt; 右上角的汉堡菜单 &gt; 配置文件首选项 &gt; 配置文件（一般叫“未命名”） &gt; 命令 &gt; 运行自定义命令而不是 Shell<br>勾选“运行自定义命令而不是 Shell”，并在下面的路径中添加路径 <code>/usr/bin/zsh</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-oh-my-zsh-in-Debian/Default-Terminal.png" alt="默认终端"></p><h2 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h2><p>有三种方法可以安装：<br>Curl：</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure><p>Wget：</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget -O- https://install.ohmyz.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure><p>Fetch：</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(fetch -o - https://install.ohmyz.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure><h2 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h2><p>在 <code>.zshrc</code> 中修改主题文件</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.zshrc</span><br></pre></td></tr></table></figure><p>找到 <code>ZSH_THEME=&quot;robbyrussell&quot;</code> 这一行，并将 <code>robbyrussell</code> 修改为你想要的主题<br>各个主题效果，详见：<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">Themes · ohmyzsh&#x2F;ohmyzsh Wiki</a></p><h2 id="配置字体"><a href="#配置字体" class="headerlink" title="配置字体"></a>配置字体</h2><p>推荐安装 <code>fonts-powerline</code> 字体</p><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install fonts-powerline</span><br></pre></td></tr></table></figure><p>以及一些 <a href="https://www.nerdfonts.com/font-downloads">Nerds Font</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Linux </category>
+          
+          <category> Debian </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> Debian </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>卸载失效的安装程序</title>
       <link href="/posts/bf075fa8.html"/>
       <url>/posts/bf075fa8.html</url>
@@ -44,18 +110,18 @@
           
           <category> Windows </category>
           
-          <category> PowerShell </category>
-          
           <category> DISM </category>
+          
+          <category> PowerShell </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
             <tag> PowerShell </tag>
             
@@ -167,9 +233,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -189,9 +255,9 @@
           
           <category> 教程 </category>
           
-          <category> macOS </category>
-          
           <category> Windows </category>
+          
+          <category> macOS </category>
           
           <category> Linux </category>
           
@@ -200,9 +266,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> macOS </tag>
             
             <tag> Linux </tag>
             
@@ -345,9 +411,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -504,9 +570,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -626,9 +692,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -715,9 +781,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -802,9 +868,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -916,9 +982,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -947,9 +1013,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -978,9 +1044,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1034,9 +1100,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1150,9 +1216,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1235,9 +1301,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1299,9 +1365,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1328,9 +1394,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1610,9 +1676,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1639,9 +1705,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1722,9 +1788,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1751,9 +1817,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1780,9 +1846,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -1916,9 +1982,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             

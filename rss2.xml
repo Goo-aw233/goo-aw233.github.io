@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 09:16:17 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 15:45:46 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,32 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>在 Debian 安装 Fcitx 5 中文输入法</title>
+      <link>https://blog.gucats.com/posts/c260c4c.html</link>
+      <description>在 Debian 13 系统下安装与配置 Fcitx 5 中文输入法，包括组件安装、输入法配置、Rime 支持及常见桌面环境的注意事项。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/Debian/">Debian</category>
+      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/tags/Debian/">Debian</category>
+      <pubDate>Mon, 11 May 2026 08:33:53 GMT</pubDate>
+    </item>
+    <item>
+      <title>在 Debian 安装 zsh 与 oh-my-zsh</title>
+      <link>https://blog.gucats.com/posts/90c316e1.html</link>
+      <description>在 Debian 系统上安装 zsh 及 oh-my-zsh，并设置默认终端、切换主题、配置字体。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/Debian/">Debian</category>
+      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/tags/Debian/">Debian</category>
+      <pubDate>Mon, 11 May 2026 08:31:26 GMT</pubDate>
+    </item>
     <item>
       <title>卸载失效的安装程序</title>
       <link>https://blog.gucats.com/posts/bf075fa8.html</link>
@@ -31,10 +57,10 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
       <pubDate>Tue, 28 Apr 2026 12:07:24 GMT</pubDate>
     </item>
@@ -76,8 +102,8 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Sat, 14 Feb 2026 05:27:56 GMT</pubDate>
     </item>
     <item>
@@ -86,11 +112,11 @@
       <description>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
-      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
       <pubDate>Thu, 08 Jan 2026 04:08:43 GMT</pubDate>
     </item>
@@ -144,8 +170,8 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
-      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
       <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
       <pubDate>Thu, 16 Oct 2025 12:36:52 GMT</pubDate>
     </item>
@@ -206,8 +232,8 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Sat, 17 May 2025 05:23:01 GMT</pubDate>
     </item>
     <item>
@@ -221,30 +247,6 @@
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
       <pubDate>Sat, 31 Aug 2024 02:29:16 GMT</pubDate>
-    </item>
-    <item>
-      <title>在 NUC8i5BEH 安装黑苹果</title>
-      <link>https://blog.gucats.com/posts/babf6529.html</link>
-      <description>在 Intel NUC8i5BEH 上安装黑苹果的完整教程，涵盖硬件配置、BIOS 设置、在线与离线安装 macOS 的详细步骤，提供 EFI 文件配置、三码注入、无线网卡修补等优化方法，适合需要在 NUC 上运行 macOS 的黑苹果爱好者。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
-      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
-      <pubDate>Wed, 21 Aug 2024 13:45:16 GMT</pubDate>
-    </item>
-    <item>
-      <title>macOS 虚拟机机型模拟</title>
-      <link>https://blog.gucats.com/posts/da029b2a.html</link>
-      <description>在 VMware Workstation 中模拟 macOS 机型的详细教程，涵盖 Hackintool、OpenCore Configurator 和 Clover Configurator 的使用方法，提供机型配置、序列号生成及校验的完整流程，适合需要在虚拟机中运行 macOS 的场景，帮助优化虚拟机兼容性与性能。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
-      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</category>
-      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/">VMware</category>
-      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/">Workstation</category>
-      <category domain="https://blog.gucats.com/tags/VMware-Workstation/">VMware Workstation</category>
-      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
-      <pubDate>Sat, 20 Apr 2024 01:16:23 GMT</pubDate>
     </item>
   </channel>
 </rss>

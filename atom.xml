@@ -11,7 +11,41 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-04-29T09:16:17.387Z</updated>
+  <updated>2026-05-14T15:45:46.608Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="Debian" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/Debian/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
+    <category term="Debian" scheme="https://blog.gucats.com/tags/Debian/"/>
+    <id>https://blog.gucats.com/posts/c260c4c.html</id>
+    <link href="https://blog.gucats.com/posts/c260c4c.html"/>
+    <published>2026-05-11T08:33:53.000Z</published>
+    <summary>在 Debian 13 系统下安装与配置 Fcitx 5 中文输入法，包括组件安装、输入法配置、Rime 支持及常见桌面环境的注意事项。</summary>
+    <title>在 Debian 安装 Fcitx 5 中文输入法</title>
+    <updated>2026-05-14T15:45:46.608Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="Debian" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/Debian/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
+    <category term="Debian" scheme="https://blog.gucats.com/tags/Debian/"/>
+    <id>https://blog.gucats.com/posts/90c316e1.html</id>
+    <link href="https://blog.gucats.com/posts/90c316e1.html"/>
+    <published>2026-05-11T08:31:26.000Z</published>
+    <summary>在 Debian 系统上安装 zsh 及 oh-my-zsh，并设置默认终端、切换主题、配置字体。</summary>
+    <title>在 Debian 安装 zsh 与 oh-my-zsh</title>
+    <updated>2026-05-14T15:43:28.665Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -32,10 +66,10 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
     <id>https://blog.gucats.com/posts/269758b0.html</id>
     <link href="https://blog.gucats.com/posts/269758b0.html"/>
@@ -93,8 +127,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <id>https://blog.gucats.com/posts/87461802.html</id>
     <link href="https://blog.gucats.com/posts/87461802.html"/>
     <published>2026-02-14T05:27:56.000Z</published>
@@ -107,11 +141,11 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
     <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>
@@ -185,8 +219,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/8407e146.html</id>
     <link href="https://blog.gucats.com/posts/8407e146.html"/>
@@ -267,8 +301,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <id>https://blog.gucats.com/posts/a0c55de3.html</id>
     <link href="https://blog.gucats.com/posts/a0c55de3.html"/>
     <published>2025-05-17T05:23:01.000Z</published>
@@ -291,37 +325,5 @@
     <summary>介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</summary>
     <title>为你的电脑关闭 Device/Credential Guard</title>
     <updated>2026-03-31T08:42:07.506Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
-    <id>https://blog.gucats.com/posts/babf6529.html</id>
-    <link href="https://blog.gucats.com/posts/babf6529.html"/>
-    <published>2024-08-21T13:45:16.000Z</published>
-    <summary>在 Intel NUC8i5BEH 上安装黑苹果的完整教程，涵盖硬件配置、BIOS 设置、在线与离线安装 macOS 的详细步骤，提供 EFI 文件配置、三码注入、无线网卡修补等优化方法，适合需要在 NUC 上运行 macOS 的黑苹果爱好者。</summary>
-    <title>在 NUC8i5BEH 安装黑苹果</title>
-    <updated>2026-03-26T15:58:28.098Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
-    <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
-    <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
-    <id>https://blog.gucats.com/posts/da029b2a.html</id>
-    <link href="https://blog.gucats.com/posts/da029b2a.html"/>
-    <published>2024-04-20T01:16:23.000Z</published>
-    <summary>在 VMware Workstation 中模拟 macOS 机型的详细教程，涵盖 Hackintool、OpenCore Configurator 和 Clover Configurator 的使用方法，提供机型配置、序列号生成及校验的完整流程，适合需要在虚拟机中运行 macOS 的场景，帮助优化虚拟机兼容性与性能。</summary>
-    <title>macOS 虚拟机机型模拟</title>
-    <updated>2026-03-26T16:02:25.977Z</updated>
   </entry>
 </feed>
