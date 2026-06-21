@@ -11,7 +11,21 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-05-14T15:45:46.608Z</updated>
+  <updated>2026-06-21T07:29:23.543Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/5642e04d.html</id>
+    <link href="https://blog.gucats.com/posts/5642e04d.html"/>
+    <published>2026-06-21T06:28:35.000Z</published>
+    <summary>使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。</summary>
+    <title>移除幽灵文件和文件夹</title>
+    <updated>2026-06-21T07:29:23.543Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -66,8 +80,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -309,21 +323,5 @@
     <summary>通过 DISM、Dism++ 和 lpksetup.exe 等多种方法为 Windows 添加完整的语言包，详细讲解了下载语言文件、安装语言包的操作步骤，适用于需要多语言支持的场景，支持 .cab 和 .esd 格式。</summary>
     <title>为 Windows 添加完整的语言包</title>
     <updated>2026-03-27T12:41:11.763Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
-    <id>https://blog.gucats.com/posts/4668d7cf.html</id>
-    <link href="https://blog.gucats.com/posts/4668d7cf.html"/>
-    <published>2024-08-31T02:29:16.000Z</published>
-    <summary>介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</summary>
-    <title>为你的电脑关闭 Device/Credential Guard</title>
-    <updated>2026-03-31T08:42:07.506Z</updated>
   </entry>
 </feed>

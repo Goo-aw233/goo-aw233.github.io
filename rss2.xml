@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Thu, 14 May 2026 15:45:46 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 07:29:23 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,16 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>移除幽灵文件和文件夹</title>
+      <link>https://blog.gucats.com/posts/5642e04d.html</link>
+      <description>使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Sun, 21 Jun 2026 06:28:35 GMT</pubDate>
+    </item>
     <item>
       <title>在 Debian 安装 Fcitx 5 中文输入法</title>
       <link>https://blog.gucats.com/posts/c260c4c.html</link>
@@ -57,8 +67,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -235,18 +245,6 @@
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <pubDate>Sat, 17 May 2025 05:23:01 GMT</pubDate>
-    </item>
-    <item>
-      <title>为你的电脑关闭 Device/Credential Guard</title>
-      <link>https://blog.gucats.com/posts/4668d7cf.html</link>
-      <description>介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
-      <pubDate>Sat, 31 Aug 2024 02:29:16 GMT</pubDate>
     </item>
   </channel>
 </rss>

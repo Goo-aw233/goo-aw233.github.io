@@ -21,45 +21,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="通过 WSAppBak 工具备份 Windows 应用，详细讲解了提取 AppX 文件、解决权限问题、信任证书以及安装 AppX 的完整流程，适用于需要迁移或备份应用的场景，支持 LTSB 和 LTSC 系统。">
+    <meta name="description" content="使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="备份 Windows 10&#x2F;11 的 Windows 应用">
-<meta property="og:url" content="https://blog.gucats.com/posts/7e0929ac.html">
+<meta property="og:title" content="移除幽灵文件和文件夹">
+<meta property="og:url" content="https://blog.gucats.com/posts/5642e04d.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="通过 WSAppBak 工具备份 Windows 应用，详细讲解了提取 AppX 文件、解决权限问题、信任证书以及安装 AppX 的完整流程，适用于需要迁移或备份应用的场景，支持 LTSB 和 LTSC 系统。">
+<meta property="og:description" content="使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Open-File-Location.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Access-to-the-Folder-is-Not-Allowed.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Security-Tab.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Change-Folder-Owner.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Confirm-Changing-the-Folder-Owner.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Path-to-Installed-Windows-App.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Path-to-Installed-Windows-App.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Copy-Address.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Choose-Export-Path.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Create-Certificate-Password.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/App-Package-Created-Successfully.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Install-Certificate.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Choose-Certificate-Installation-For.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Choose-Certificate-Installation-Location.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Install-App-via-AppInstaller.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Install-App-via-WSAppPkgIns.png">
-<meta property="article:published_time" content="2022-04-04T05:58:45.000Z">
-<meta property="article:modified_time" content="2026-03-27T12:41:38.649Z">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/File-8.3-Filename.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Folder-8.3-Filename.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Removed-Folder.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Removed-File.png">
+<meta property="article:published_time" content="2026-06-21T06:28:35.000Z">
+<meta property="article:modified_time" content="2026-06-21T07:29:23.543Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
-<meta property="article:tag" content="软件">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Open-File-Location.png">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/File-8.3-Filename.png">
 
 
-<link rel="canonical" href="https://blog.gucats.com/posts/7e0929ac.html">
+<link rel="canonical" href="https://blog.gucats.com/posts/5642e04d.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.gucats.com/posts/7e0929ac.html","path":"posts/7e0929ac.html","title":"备份 Windows 10/11 的 Windows 应用"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.gucats.com/posts/5642e04d.html","path":"posts/5642e04d.html","title":"移除幽灵文件和文件夹"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>备份 Windows 10/11 的 Windows 应用 | GuCATs'摸鱼站</title>
+<title>移除幽灵文件和文件夹 | GuCATs'摸鱼站</title>
   
 
 
@@ -212,7 +199,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%90%E5%8F%96-AppX"><span class="nav-number">2.</span> <span class="nav-text">提取 AppX</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%9D%83%E9%99%90%E4%B8%8D%E8%B6%B3"><span class="nav-number">2.1.</span> <span class="nav-text">如果权限不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E6%83%85%E5%86%B5"><span class="nav-number">2.2.</span> <span class="nav-text">正常情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E4%BB%BB%E8%AF%81%E4%B9%A6%E5%B9%B6%E5%AE%89%E8%A3%85-AppX"><span class="nav-number">3.</span> <span class="nav-text">信任证书并安装 AppX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80-AppX-%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">无法打开 AppX 文件</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8-8-3-%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="nav-number">2.</span> <span class="nav-text">启用 8.3 命名规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E8%A1%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">2.1.</span> <span class="nav-text">注册表方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fsutil"><span class="nav-number">2.2.</span> <span class="nav-text">fsutil</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%BB%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">3.</span> <span class="nav-text">移除文件或文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%95"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E7%9F%AD%E6%96%87%E4%BB%B6%E5%90%8D"><span class="nav-number">4.1.</span> <span class="nav-text">手动设置短文件名</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -301,7 +288,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.gucats.com/posts/7e0929ac.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.gucats.com/posts/5642e04d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
@@ -314,12 +301,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="备份 Windows 10&#x2F;11 的 Windows 应用 | GuCATs'摸鱼站">
-      <meta itemprop="description" content="通过 WSAppBak 工具备份 Windows 应用，详细讲解了提取 AppX 文件、解决权限问题、信任证书以及安装 AppX 的完整流程，适用于需要迁移或备份应用的场景，支持 LTSB 和 LTSC 系统。">
+      <meta itemprop="name" content="移除幽灵文件和文件夹 | GuCATs'摸鱼站">
+      <meta itemprop="description" content="使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          备份 Windows 10/11 的 Windows 应用
+          移除幽灵文件和文件夹
         </h1>
 
         <div class="post-meta-container">
@@ -329,15 +316,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-04-04 13:58:45" itemprop="dateCreated datePublished" datetime="2022-04-04T13:58:45+08:00">2022-04-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-27 20:41:38" itemprop="dateModified" datetime="2026-03-27T20:41:38+08:00">2026-03-27</time>
+      <time title="创建时间：2026-06-21 14:28:35 / 修改时间：15:29:23" itemprop="dateCreated datePublished" datetime="2026-06-21T14:28:35+08:00">2026-06-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,59 +348,88 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>904</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
-            <div class="post-description">通过 WSAppBak 工具备份 Windows 应用，详细讲解了提取 AppX 文件、解决权限问题、信任证书以及安装 AppX 的完整流程，适用于需要迁移或备份应用的场景，支持 LTSB 和 LTSC 系统。</div>
+            <div class="post-description">使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgChEDum7ckGRbS73bgSJypPAUUeVcsSg10_6UJ32HKwXPc?e=9aZS22">WSAppBak</a></li>
-</ol>
-<h2 id="提取-AppX"><a href="#提取-AppX" class="headerlink" title="提取 AppX"></a>提取 AppX</h2><p>先运行你要提取的软件，然后打开“任务管理器”并点开下方的“详细信息(D)”<br>展开软件，右键主程序，选择“打开文件所在的位置(O)”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Open-File-Location.png" alt="获取安装路径"></p>
-<h3 id="如果权限不足"><a href="#如果权限不足" class="headerlink" title="如果权限不足"></a>如果权限不足</h3><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Access-to-the-Folder-is-Not-Allowed.png" alt="无权访问文件夹"></p>
-<p>点击“继续”，出现拒绝访问文件夹，点击“安全选项卡”，再点击“高级(V)”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Security-Tab.png" alt="安全选项卡"></p>
-<p>点击“更改”，在“输入要选择的对象名称”里输入你的用户名，然后点击“确定”以更改</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Change-Folder-Owner.png" alt="更改文件夹所有者"></p>
-<p>然后再点击“确定”以更改文件夹所有者</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Confirm-Changing-the-Folder-Owner.png" alt="确定更改"></p>
-<p>再从“任务管理器”选择“打开文件所在位置”，出现弹窗后点击“确定”即可<br>然后就可以正常访问了</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Path-to-Installed-Windows-App.png" alt="安装路径"></p>
-<h3 id="正常情况"><a href="#正常情况" class="headerlink" title="正常情况"></a>正常情况</h3><p>在新打开的窗口中会自动选中文件夹，双击点开它（或者自动打开到路径）</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Path-to-Installed-Windows-App.png" alt="安装路径"></p>
-<p>右键单击地址栏的空白处，选择“复制地址”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Copy-Address.png" alt="复制地址"></p>
-<p>打开 <code>WSAppBak.exe</code>，单击右键将地址粘贴进去，并按下回车<br>接着再输入（粘贴）要输出的文件夹，再回车</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Choose-Export-Path.png" alt="粘贴导出路径"></p>
-<p>等待一下就开始跑代码<br>完成后会出现弹窗，让你<font color=yellow>自定义密码，但你可以直接点击 <code>OK</code> 来跳过密码</font><br>空白密码则会再询问你，点击“是(Y)”即可</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Create-Certificate-Password.png" alt="确认空密码"></p>
-<p>等待一会，出现 <code>Press any Key to exit.... :)</code> 的时候按任意键即可退出</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/App-Package-Created-Successfully.png" alt="按任意键退出"></p>
-<h2 id="信任证书并安装-AppX"><a href="#信任证书并安装-AppX" class="headerlink" title="信任证书并安装 AppX"></a>信任证书并安装 AppX</h2><p>找到打包好的文件，右键选择“属性(R)”<br>在弹出的窗口中点击“数字签名”，选中证书双击，在新窗口点击“查看证书(V)”，然后在最后弹出的窗口点击“安装证书(I)”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Install-Certificate.png" alt="安装证书"></p>
-<p>选择“本地计算机(L)”，然后点击“下一步(N)”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Choose-Certificate-Installation-For.png" alt="选择位置"></p>
-<p>出现 UAC 弹窗点击是<br>选择“将所有的证书都放入下列存储(P)”，点击“浏览(L)”，选择“受信任的根证书颁发机构”，点击“确定”，然后“下一步”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Choose-Certificate-Installation-Location.png" alt="选择存放目录"></p>
-<p>在最后的窗口点击“完成(F)”，然后就导入成功了<br>最后双击打开 <code>.AppX</code> 文件即可安装</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Install-App-via-AppInstaller.png" alt="使用 App Installer 安装 AppX"></p>
-<h2 id="无法打开-AppX-文件"><a href="#无法打开-AppX-文件" class="headerlink" title="无法打开 AppX 文件"></a>无法打开 AppX 文件</h2><p>如果你的系统是 <code>LTSB</code>、<code>LTSC</code>，或者没有安装 <code>App Installer</code> 的话，可以通过 <code>WSAppPkgIns.exe</code> 来安装<br>只需要将 <code>.AppX</code> 文件拖拽到 <code>WSAppPkgIns.exe</code> 即可开始安装（依旧需要先信任证书再安装）<br>如果缺少运行库或版本不符合的话可能会无法正常安装（命令行安装不会自动补全运行库）</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Backup-Windows-App/Install-App-via-WSAppPkgIns.png" alt="使用 WSAppPkgIns 安装 AppX"></p>
-<p>你还可以使用 <code>Add-AppxPackage</code> 命令来安装 <code>.AppX</code> 文件，请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/powershell/module/appx/add-appxpackage/?wt.mc_id=studentamb_474966">Add-AppxPackage (Appx) | Microsoft Learn</a></p>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Windows 中，有一些顽固的文件或文件夹，它们显示为 0 字节大小，但是使用 SFC、RMDIR、DEL，等命令，在 PE、RE、安全模式、强力粉碎、其他系统下也无法删除<br>此时可以使用 8.3 命名规则来移除文件或文件夹（也称为短文件名，常用于早期 DOS 与 Windows NT 之前版本的 Windows，在 FAT 文件系统中的常用方法）<br><strong>仅字符长度大于 8 字符才会有短文件名显示</strong></p>
+<div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p>
+<ul>
+<li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li>
+<li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li>
+</ul>
+</div>
+
+<h2 id="启用-8-3-命名规则"><a href="#启用-8-3-命名规则" class="headerlink" title="启用 8.3 命名规则"></a>启用 8.3 命名规则</h2><p><strong>如果已开启，请直接转到<a href="#%E7%A7%BB%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9">移除文件或文件夹</a>章节</strong><br><strong>仅对新文件生效，无论启用还是禁用，这个设置都只影响更改之后新建的文件。已存在的文件不会因此自动获得或失去短文件名</strong><br>若需要对已存在的文件或文件夹设置短文件名，请参阅附录<a href="#%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E7%9F%AD%E6%96%87%E4%BB%B6%E5%90%8D">《手动设置短文件名》</a></p>
+<h3 id="注册表方式"><a href="#注册表方式" class="headerlink" title="注册表方式"></a>注册表方式</h3><p><strong>此方式需要重启 Windows</strong></p>
+<p>为所有卷启用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">0</span> /f</span><br></pre></td></tr></table></figure>
+
+<p>为所有卷禁用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">1</span> /f</span><br></pre></td></tr></table></figure>
+
+<p>按卷单独设置（需要搭配 <code>fsutil</code>）：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">2</span> /f</span><br></pre></td></tr></table></figure>
+
+<p>仅为系统盘启用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">3</span> /f</span><br></pre></td></tr></table></figure>
+
+<h3 id="fsutil"><a href="#fsutil" class="headerlink" title="fsutil"></a>fsutil</h3><p>查询状态</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil <span class="number">8</span>dot3name query</span><br></pre></td></tr></table></figure>
+
+<p>为所有卷启用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil behavior <span class="built_in">set</span> disable8dot3 <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>为所有卷禁用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil behavior <span class="built_in">set</span> disable8dot3 <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>为 C 盘启用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil.exe <span class="number">8</span>dot3name <span class="built_in">set</span> C: <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>为 C 盘禁用：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil.exe <span class="number">8</span>dot3name <span class="built_in">set</span> C: <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="移除文件或文件夹"><a href="#移除文件或文件夹" class="headerlink" title="移除文件或文件夹"></a>移除文件或文件夹</h2><p>首先，使用 <code>cd</code> 命令切换到该文件夹的上层目录（文件则为文件所在目录）<br>例如，我的文件夹为 <code>D:\Temp\1\ATestFolderName</code>，里面有 <code>ATestTXTFileName.TXT</code></p>
+<p>对于文件夹：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d &quot;D:\Temp\<span class="number">1</span>&quot;</span><br></pre></td></tr></table></figure>
+
+<p>对于文件：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d &quot;D:\Temp\<span class="number">1</span>\ATestFolderName&quot;</span><br></pre></td></tr></table></figure>
+
+<p>随后，使用 <code>dir /x</code> 命令查看文件和文件夹的短文件名</p>
+<p>文件</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/File-8.3-Filename.png" alt="文件的短文件名"></p>
+<p>文件夹</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Folder-8.3-Filename.png" alt="文件夹的短文件名"></p>
+<p>可以看到，<code>D:\Temp\1\ATestFolderName</code> 文件夹短文件名为 <code>ATESTF~1</code>，<code>ATestTXTFileName.TXT</code> 短文件名为 <code>ATESTT~1</code></p>
+<p>最后，使用 <code>rmdir</code>（文件夹）或 <code>del</code>（文件）以移除</p>
+<p>对于文件夹，使用 <code>/s</code> 递归删除，<code>/q</code> 静默删除:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rmdir</span> /s /q ATESTF~<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Removed-Folder.png" alt="移除的文件夹"></p>
+<p>对于文件，使用 <code>/f</code> 强制删除，<code>/q</code> 静默删除:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> /f /q ATESTT~<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Removed-File.png" alt="移除的文件"></p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="手动设置短文件名"><a href="#手动设置短文件名" class="headerlink" title="手动设置短文件名"></a>手动设置短文件名</h3><p><strong>名称唯一性：你指定的短文件名在同一个文件夹内必须是唯一的，不能与其他文件或文件夹的短文件名冲突</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil file setshortname &quot;&lt;文件或文件夹完整路径&gt;&quot; &lt;短文件名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil file setshortname &quot;D:\Temp\ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot; A2Z</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -455,7 +465,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://blog.gucats.com/posts/7e0929ac.html" title="备份 Windows 10&#x2F;11 的 Windows 应用">https://blog.gucats.com/posts/7e0929ac.html</a>
+      <a href="https://blog.gucats.com/posts/5642e04d.html" title="移除幽灵文件和文件夹">https://blog.gucats.com/posts/5642e04d.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -491,7 +501,6 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
               <a href="/tags/Windows/" rel="tag"># Windows</a>
           </div>
 
@@ -499,14 +508,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/63c97083.html" rel="prev" title="抓包获取旧版本 IPA">
-                  <i class="fa fa-angle-left"></i> 抓包获取旧版本 IPA
+                <a href="/posts/c260c4c.html" rel="prev" title="在 Debian 安装 Fcitx 5 中文输入法">
+                  <i class="fa fa-angle-left"></i> 在 Debian 安装 Fcitx 5 中文输入法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/b22c3cb4.html" rel="next" title="自定义集合多版本的系统镜像">
-                  自定义集合多版本的系统镜像 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

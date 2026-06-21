@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>移除幽灵文件和文件夹</title>
+      <link href="/posts/5642e04d.html"/>
+      <url>/posts/5642e04d.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Windows 中，有一些顽固的文件或文件夹，它们显示为 0 字节大小，但是使用 SFC、RMDIR、DEL，等命令，在 PE、RE、安全模式、强力粉碎、其他系统下也无法删除<br>此时可以使用 8.3 命名规则来移除文件或文件夹（也称为短文件名，常用于早期 DOS 与 Windows NT 之前版本的 Windows，在 FAT 文件系统中的常用方法）<br><strong>仅字符长度大于 8 字符才会有短文件名显示</strong></p><div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p><ul><li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li><li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li></ul></div><h2 id="启用-8-3-命名规则"><a href="#启用-8-3-命名规则" class="headerlink" title="启用 8.3 命名规则"></a>启用 8.3 命名规则</h2><p><strong>如果已开启，请直接转到<a href="#%E7%A7%BB%E9%99%A4%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9">移除文件或文件夹</a>章节</strong><br><strong>仅对新文件生效，无论启用还是禁用，这个设置都只影响更改之后新建的文件。已存在的文件不会因此自动获得或失去短文件名</strong><br>若需要对已存在的文件或文件夹设置短文件名，请参阅附录<a href="#%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E7%9F%AD%E6%96%87%E4%BB%B6%E5%90%8D">《手动设置短文件名》</a></p><h3 id="注册表方式"><a href="#注册表方式" class="headerlink" title="注册表方式"></a>注册表方式</h3><p><strong>此方式需要重启 Windows</strong></p><p>为所有卷启用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">0</span> /f</span><br></pre></td></tr></table></figure><p>为所有卷禁用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">1</span> /f</span><br></pre></td></tr></table></figure><p>按卷单独设置（需要搭配 <code>fsutil</code>）：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">2</span> /f</span><br></pre></td></tr></table></figure><p>仅为系统盘启用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rege.exe add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem&quot; /v NtfsDisable8dot3NameCreation /t REG_DWORD /d <span class="number">3</span> /f</span><br></pre></td></tr></table></figure><h3 id="fsutil"><a href="#fsutil" class="headerlink" title="fsutil"></a>fsutil</h3><p>查询状态</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil <span class="number">8</span>dot3name query</span><br></pre></td></tr></table></figure><p>为所有卷启用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil behavior <span class="built_in">set</span> disable8dot3 <span class="number">0</span></span><br></pre></td></tr></table></figure><p>为所有卷禁用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil behavior <span class="built_in">set</span> disable8dot3 <span class="number">1</span></span><br></pre></td></tr></table></figure><p>为 C 盘启用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil.exe <span class="number">8</span>dot3name <span class="built_in">set</span> C: <span class="number">0</span></span><br></pre></td></tr></table></figure><p>为 C 盘禁用：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil.exe <span class="number">8</span>dot3name <span class="built_in">set</span> C: <span class="number">1</span></span><br></pre></td></tr></table></figure><h2 id="移除文件或文件夹"><a href="#移除文件或文件夹" class="headerlink" title="移除文件或文件夹"></a>移除文件或文件夹</h2><p>首先，使用 <code>cd</code> 命令切换到该文件夹的上层目录（文件则为文件所在目录）<br>例如，我的文件夹为 <code>D:\Temp\1\ATestFolderName</code>，里面有 <code>ATestTXTFileName.TXT</code></p><p>对于文件夹：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d &quot;D:\Temp\<span class="number">1</span>&quot;</span><br></pre></td></tr></table></figure><p>对于文件：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d &quot;D:\Temp\<span class="number">1</span>\ATestFolderName&quot;</span><br></pre></td></tr></table></figure><p>随后，使用 <code>dir /x</code> 命令查看文件和文件夹的短文件名</p><p>文件</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/File-8.3-Filename.png" alt="文件的短文件名"></p><p>文件夹</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Folder-8.3-Filename.png" alt="文件夹的短文件名"></p><p>可以看到，<code>D:\Temp\1\ATestFolderName</code> 文件夹短文件名为 <code>ATESTF~1</code>，<code>ATestTXTFileName.TXT</code> 短文件名为 <code>ATESTT~1</code></p><p>最后，使用 <code>rmdir</code>（文件夹）或 <code>del</code>（文件）以移除</p><p>对于文件夹，使用 <code>/s</code> 递归删除，<code>/q</code> 静默删除:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rmdir</span> /s /q ATESTF~<span class="number">1</span></span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Removed-Folder.png" alt="移除的文件夹"></p><p>对于文件，使用 <code>/f</code> 强制删除，<code>/q</code> 静默删除:</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span> /f /q ATESTT~<span class="number">1</span></span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Remove-Ghost-Files-and-Folders/Removed-File.png" alt="移除的文件"></p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="手动设置短文件名"><a href="#手动设置短文件名" class="headerlink" title="手动设置短文件名"></a>手动设置短文件名</h3><p><strong>名称唯一性：你指定的短文件名在同一个文件夹内必须是唯一的，不能与其他文件或文件夹的短文件名冲突</strong></p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil file setshortname &quot;&lt;文件或文件夹完整路径&gt;&quot; &lt;短文件名&gt;</span><br></pre></td></tr></table></figure><p>例如</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil file setshortname &quot;D:\Temp\ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot; A2Z</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在 Debian 安装 Fcitx 5 中文输入法</title>
       <link href="/posts/c260c4c.html"/>
       <url>/posts/c260c4c.html</url>
@@ -110,9 +137,9 @@
           
           <category> Windows </category>
           
-          <category> PowerShell </category>
-          
           <category> DISM </category>
+          
+          <category> PowerShell </category>
           
       </categories>
       
