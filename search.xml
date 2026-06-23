@@ -137,9 +137,9 @@
           
           <category> Windows </category>
           
-          <category> PowerShell </category>
-          
           <category> DISM </category>
+          
+          <category> PowerShell </category>
           
       </categories>
       
@@ -282,9 +282,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> macOS </category>
+          
+          <category> Windows </category>
           
           <category> Linux </category>
           
@@ -721,9 +721,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1875,9 +1875,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1976,9 +1976,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
@@ -2011,9 +2011,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
