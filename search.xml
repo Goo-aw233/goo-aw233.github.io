@@ -137,9 +137,9 @@
           
           <category> Windows </category>
           
-          <category> DISM </category>
-          
           <category> PowerShell </category>
+          
+          <category> DISM </category>
           
       </categories>
       
@@ -282,9 +282,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> macOS </category>
+          
+          <category> Windows </category>
           
           <category> Linux </category>
           
@@ -293,9 +293,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> Linux </tag>
             
