@@ -21,19 +21,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="利用 CDR,ISO 或 DMG 文件在 VMware Workstation 中安装 Mac OS (X)&#x2F;macOS">
+    <meta name="description" content="利用 CDR、ISO 或 DMG 文件，在 VMware Workstation 中安装 Mac OS (X)&#x2F;macOS 虚拟机。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VMware 虚拟机安装 macOS">
 <meta property="og:url" content="https://blog.gucats.com/posts/ae0e9cb1.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="利用 CDR,ISO 或 DMG 文件在 VMware Workstation 中安装 Mac OS (X)&#x2F;macOS">
+<meta property="og:description" content="利用 CDR、ISO 或 DMG 文件，在 VMware Workstation 中安装 Mac OS (X)&#x2F;macOS 虚拟机。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker-Success.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Unlocker.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Select-File-Types.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Store-Virtual-Disk-as-a-Single-File.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-New.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-New.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-Old.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-Old.png">
 <meta property="article:published_time" content="2022-02-28T15:10:12.000Z">
-<meta property="article:modified_time" content="2026-03-18T13:41:52.814Z">
+<meta property="article:modified_time" content="2026-07-08T11:15:42.502Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="VMware Workstation">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png">
 
 
 <link rel="canonical" href="https://blog.gucats.com/posts/ae0e9cb1.html">
@@ -198,7 +209,7 @@ var _hmt = _hmt || [];
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -211,6 +222,7 @@ var _hmt = _hmt || [];
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%94%81"><span class="nav-number">2.</span> <span class="nav-text">解锁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Unlocker"><span class="nav-number">2.1.</span> <span class="nav-text">Auto-Unlocker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unlocker"><span class="nav-number">2.2.</span> <span class="nav-text">Unlocker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">3.</span> <span class="nav-text">创建虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%95"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E5%9E%8B%E6%A8%A1%E6%8B%9F"><span class="nav-number">4.1.</span> <span class="nav-text">机型模拟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A3%81%E7%9B%98"><span class="nav-number">4.2.</span> <span class="nav-text">磁盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#USB"><span class="nav-number">4.3.</span> <span class="nav-text">USB</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -313,7 +325,7 @@ var _hmt = _hmt || [];
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="VMware 虚拟机安装 macOS | GuCATs'摸鱼站">
-      <meta itemprop="description" content="利用 CDR,ISO 或 DMG 文件在 VMware Workstation 中安装 Mac OS (X)&#x2F;macOS">
+      <meta itemprop="description" content="利用 CDR、ISO 或 DMG 文件，在 VMware Workstation 中安装 Mac OS (X)&#x2F;macOS 虚拟机。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -335,7 +347,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-18 21:41:52" itemprop="dateModified" datetime="2026-03-18T21:41:52+08:00">2026-03-18</time>
+      <time title="修改时间：2026-07-08 19:15:42" itemprop="dateModified" datetime="2026-07-08T19:15:42+08:00">2026-07-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -377,25 +389,75 @@ var _hmt = _hmt || [];
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>3.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
-            <div class="post-description">利用 CDR,ISO 或 DMG 文件在 VMware Workstation 中安装 Mac OS (X)/macOS</div>
+            <div class="post-description">利用 CDR、ISO 或 DMG 文件，在 VMware Workstation 中安装 Mac OS (X)/macOS 虚拟机。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol>
+<li>VMware Workstation Pro 在内的任意非 macOS 平台虚拟机，无法提供相对应的 macOS 显卡驱动，所以在虚拟机内运行 macOS 会有很明显的卡顿</li>
+<li>Intel 的处理器对 macOS 支持非常好，故绝大部分 Intel 处理器都可以正常安装 macOS 虚拟机。对于 AMD 处理器，macOS 从未正式支持过该处理器，仅有少部分 AMD 锐龙处理器支持在虚拟机安装 macOS，<strong>而“推土机”架构的 AMD 处理器则一直不支持在虚拟机中安装 macOS</strong></li>
+</ol>
+<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true">VMware Workstation Pro</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/paolo-projects/auto-unlocker/releases/latest">Auto-Unlocker</a><br>较老版本的 VMware Workstation Pro，可能无法使用较新的 Auto-Unlocker，可以尝试使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/DrDonk/unlocker/releases/latest">Unlocker</a>，该工具同样兼容新版 VMware Workstation Pro<br>macOS 镜像文件（<code>.ISO</code>、<code>.CDR</code>、<code>.DMG</code> 都可以使用，<code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a>）</p>
+<h2 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h2><h3 id="Auto-Unlocker"><a href="#Auto-Unlocker" class="headerlink" title="Auto-Unlocker"></a>Auto-Unlocker</h3><p>将 <code>Auto-Unlocker.zip</code> 解压到空白文件夹，并运行根目录下的 <code>Unlock.exe</code><br>回到桌面，右键 <code>VMware Workstation Pro</code> 的快捷方式，并选择“打开文件所在的位置”，这就是 VMware Workstation Pro 的安装路径</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png" alt="打开文件所在的位置"></p>
+<p>26H1 默认安装路径：<code>C:\Program Files\VMware\VMware Workstation</code><br>25H2u1 及以前版本默认安装路径（64 位）：<code>C:\Program Files (x86)\VMware\VMware Workstation</code></p>
+<p>在打开的 <code>Auto-Unlocker</code> 窗口中，选择 <code>VMware Install Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径<br>随后，再选择 <code>VMware x64 Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径下的 <code>x64</code> 文件夹<br>完成后，确保 <code>Download Tools</code> 被勾选，最后点击 <code>Patch</code> 以开始解锁 <code>Apple macOS</code> 选项并下载 <code>darwin.iso</code> 和 <code>darwinPre15.iso</code> 这两个 VMware Tools</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker.png" alt="Auto-Unlocker"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker-Success.png" alt="修补完成"></p>
+<h3 id="Unlocker"><a href="#Unlocker" class="headerlink" title="Unlocker"></a>Unlocker</h3><p>将压缩包解压到空白文件夹，进入到 <code>windows</code> 文件夹<br>按住 <kbd>SHIFT</kbd>，并按下右键，选择“在此处打开 PowerShell 窗口”（Windows 11 或安装终端的 Windows 可以直接右键选择“在终端中打开”）<br>输入命令以解锁 macOS</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./unlock.exe install</span><br></pre></td></tr></table></figure>
+
+<p>等待一下即可完成解锁，然后按任意键即可退出</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Unlocker.png" alt="Unlocker"></p>
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><hr>
+<p><code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a></p>
+<hr>
+<p>选择镜像文件时，若镜像格式为 <code>.CDR</code>，可以更改文件类型为“所有文件”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Select-File-Types.png" alt="选择文件类型"></p>
+<p>出现“无法检测此光盘映像中的操作系统”无需理会，点击下一步即可，选择好正确的 macOS 版本<br>创建磁盘的时候选择“将虚拟磁盘存储为单个文件”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Store-Virtual-Disk-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件"></p>
+<p>完成后点击“编辑虚拟机设置”，在“网络适配器”中将网络连接改为“桥接模式”（可能需要在“虚拟网络编辑器”，更改桥接对象为当前正在使用的网卡）<br>对于按设备数连接的网络（如校园网），需要将网络连接模式设为“仅主机模式”</p>
+<p>完成后开启虚拟机即可开始安装 macOS</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="机型模拟"><a href="#机型模拟" class="headerlink" title="机型模拟"></a>机型模拟</h3><p>安装 macOS Big Sur 或更高版本安装时，可能会出现更新错误之类的报错，请将以下代码添加到 <code>.vmx</code> 文件的最末端（仅适用于 Intel 处理器）<br>添加前应关闭 VMware Workstation，<strong>并将 <code>.vmx</code> 文件内所有包含 <code>board-id.reflectHost = &quot;TRUE&quot;</code>、<code>hw.model.reflectHost = &quot;TRUE&quot;</code>、<code>serialNumber.reflectHost = &quot;TRUE&quot;</code> 之类的文本删掉，否则会出错</strong><br>若要获取一个新的机型型号而不是使用示例，请参阅：<a href="/posts/da029b2a.html" title="macOS 虚拟机机型模拟">macOS 虚拟机机型模拟</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">board-id.reflectHost = &quot;FALSE&quot;</span><br><span class="line">board-id = &quot;Mac-C02151108J9JG36FB&quot;</span><br><span class="line">hw.model.reflectHost = &quot;FALSE&quot;</span><br><span class="line">hw.model = &quot;iMacPro1,1&quot;</span><br><span class="line">serialNumber.reflectHost = &quot;FALSE&quot;</span><br><span class="line">serialNumber = &quot;C02GV0H7HX87&quot;</span><br><span class="line">smbios.reflectHost = &quot;FALSE&quot;</span><br><span class="line">uuid.action = &quot;keep&quot;</span><br><span class="line">smc.version = &quot;0&quot;</span><br></pre></td></tr></table></figure>
+
+<p>若你的处理器为锐龙架构的 AMD 处理器，尝试以下配置<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/weixin_43436925/article/details/122437355">出处（有待考究）</a> | 末尾两个代码是自己另外添加的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">smc.version = &quot;0&quot;</span><br><span class="line">cpuid.0.eax = &quot;0000:0000:0000:0000:0000:0000:0000:1011&quot;</span><br><span class="line">cpuid.0.ebx = &quot;0111:0101:0110:1110:0110:0101:0100:0111&quot;</span><br><span class="line">cpuid.0.ecx = &quot;0110:1100:0110:0101:0111:0100:0110:1110&quot;</span><br><span class="line">cpuid.0.edx = &quot;0100:1001:0110:0101:0110:1110:0110:1001&quot;</span><br><span class="line">cpuid.1.eax = &quot;0000:0000:0000:0001:0000:0110:0111:0001&quot;</span><br><span class="line">cpuid.1.ebx = &quot;0000:0010:0000:0001:0000:1000:0000:0000&quot;</span><br><span class="line">cpuid.1.ecx = &quot;1000:0010:1001:1000:0010:0010:0000:0011&quot;</span><br><span class="line">cpuid.1.edx = &quot;0000:0111:1000:1011:1111:1011:1111:1111&quot;</span><br><span class="line">smbios.reflectHost = &quot;TRUE&quot;</span><br><span class="line">hw.model = &quot;MacBookPro14,3&quot;</span><br><span class="line">board-id = &quot;Mac-551B86E5744E2388&quot;</span><br><span class="line">keyboard.vusb.enable = &quot;TRUE&quot;</span><br><span class="line">mouse.vusb.enable = &quot;TRUE&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h3><p>macOS 安装与 Windows 不同，需要手动格式化磁盘</p>
+<p>macOS 10.13 及更新版本可在主界面直接选择磁盘工具</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-New.png" alt="macOS 磁盘工具"></p>
+<p>文件系统选择“APFS”，分区表选择 GUID</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-New.png" alt="macOS “抹掉”选项"></p>
+<p>macOS 12 及更早的版本）则需要在上方的实用工具打开</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-Old.png" alt="“实用工具”的“磁盘工具”"></p>
+<p>若文件系统不支持 APFS，则选择“Mac OS 扩展 (日志式)”，分区表选择 GUID</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-Old.png" alt="OS X “抹掉”选项"></p>
+<details>
+
+<summary>关于选项</summary>
+
+<p>格式：<br>详情请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://support.apple.com/guide/disk-utility/dsku19ed921c">Mac 上“磁盘工具”中可用的文件系统格式 - 官方 Apple 支持 (中国)</a></p>
+<p>方案：<br>详情请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://support.apple.com/guide/disk-utility/dsku1c614201">Mac 上的“磁盘工具”中可用的分区方案 - 官方 Apple 支持 (中国)</a></p>
+<p>GUID 分区图：即 GPT，为所有基于 Intel 和 Apple 芯片的 Mac 电脑选取此选项。部分基于 Microsoft Windows 的较新电脑还可以使用此方案<br>主引导记录：即 MBR，为兼容所有基于 Microsoft Windows 的电脑选取此选项<br>Apple 分区图：即 APM，为兼容基于 PowerPC 的早期 Mac 电脑选取此选项</p>
+</details>
+
+<h3 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h3><p>部分情况（例如 Recovery 下），使用 USB3.0&#x2F;USB3.1&#x2F;USB3.2 可能会导致 USB 设备（如键盘鼠标）无法使用<br>此时只需要点击“编辑虚拟机设置”，在“USB 控制器”部分将“USB 兼容性”的版本，从 <code>USB 3.0/USB 3.1/USB 3.2</code> 改成 <code>USB 2.0</code> 即可</p>
+
     </div>
 
     
@@ -466,8 +528,8 @@ var _hmt = _hmt || [];
 </div>
 
           <div class="post-tags">
-              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
               <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
           </div>
 
         
@@ -513,14 +575,14 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">121k</span>
+    <span title="站点总字数">127k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:50</span>
+    <span title="站点阅读时长">1:56</span>
   </span>
 </div>
 <div class="busuanzi-count">

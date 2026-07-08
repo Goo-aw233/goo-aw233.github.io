@@ -21,19 +21,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="在 VMware Workstation Pro 下用 DMG 镜像和其他工具引导进系统安装界面">
+    <meta name="description" content="在 VMware Workstation Pro，使用 DMG 镜像和其他工具，使 macOS 引导进系统安装界面，并通过 DMG 镜像文件以安装 macOS 虚拟机。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VMware 虚拟机用 DMG 安装 macOS">
 <meta property="og:url" content="https://blog.gucats.com/posts/31dfa174.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="在 VMware Workstation Pro 下用 DMG 镜像和其他工具引导进系统安装界面">
+<meta property="og:description" content="在 VMware Workstation Pro，使用 DMG 镜像和其他工具，使 macOS 引导进系统安装界面，并通过 DMG 镜像文件以安装 macOS 虚拟机。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Create-VHD.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Initialize-Disk.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Initialize-Disk-as-GPT.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Ready-to-Flash.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Flashing.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Unbootable-Image.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Flash-Complete.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Detach-VHD.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Add-Disk.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Use-an-Existing-Virtual-Disk.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Browse-Virtual-Disk-File.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Conver-Virtual-Disk.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/in-VirtualBox.gif">
 <meta property="article:published_time" content="2022-02-13T14:52:13.000Z">
-<meta property="article:modified_time" content="2026-03-18T13:41:41.638Z">
+<meta property="article:modified_time" content="2026-07-08T11:15:31.127Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="VMware Workstation">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Create-VHD.png">
 
 
 <link rel="canonical" href="https://blog.gucats.com/posts/31dfa174.html">
@@ -198,7 +212,7 @@ var _hmt = _hmt || [];
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -211,6 +225,7 @@ var _hmt = _hmt || [];
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98"><span class="nav-number">2.</span> <span class="nav-text">创建虚拟硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%85%A5%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98"><span class="nav-number">3.</span> <span class="nav-text">写入虚拟硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">在虚拟机中使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">5.</span> <span class="nav-text">后记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -313,7 +328,7 @@ var _hmt = _hmt || [];
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="VMware 虚拟机用 DMG 安装 macOS | GuCATs'摸鱼站">
-      <meta itemprop="description" content="在 VMware Workstation Pro 下用 DMG 镜像和其他工具引导进系统安装界面">
+      <meta itemprop="description" content="在 VMware Workstation Pro，使用 DMG 镜像和其他工具，使 macOS 引导进系统安装界面，并通过 DMG 镜像文件以安装 macOS 虚拟机。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -335,7 +350,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-18 21:41:41" itemprop="dateModified" datetime="2026-03-18T21:41:41+08:00">2026-03-18</time>
+      <time title="修改时间：2026-07-08 19:15:31" itemprop="dateModified" datetime="2026-07-08T19:15:31+08:00">2026-07-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -377,25 +392,72 @@ var _hmt = _hmt || [];
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>3.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
-            <div class="post-description">在 VMware Workstation Pro 下用 DMG 镜像和其他工具引导进系统安装界面</div>
+            <div class="post-description">在 VMware Workstation Pro，使用 DMG 镜像和其他工具，使 macOS 引导进系统安装界面，并通过 DMG 镜像文件以安装 macOS 虚拟机。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><a href="/posts/ae0e9cb1.html" title="VMware 虚拟机安装 macOS">VMware 虚拟机安装 macOS</a>
+
+<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.python.org/downloads">Python</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/balena-io/etcher/releases/tag/v1.4.9">Etcher v1.4.9</a> （建议选带 Portable 的版本）<br><code>.DMG</code> 镜像文件</p>
+<details>
+
+<summary>使用 OpenCore 下载在线安装的 <code>.DMG</code> 镜像文件</summary>
+
+<p>macRecovery 是从 Apple 服务器下载镜像，下载速度因人而异</p>
+<p>下载 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/acidanthera/OpenCorePkg/releases/latest">OpenCore</a>，选择带有 <code>RELEASE.zip</code> 标识的文件下载<br>将压缩包解压，打开到 <code>\Utilities\macrecovery</code> 文件夹，按住 <kbd>SHIFT</kbd>，并按下右键，选择“在此处打开 PowerShell 窗口”（Windows 11 或安装终端的 Windows 可以直接右键选择“在终端中打开”）<br>输入如下命令，以开始下载安装镜像。下载好的镜像存放在 <code>macrecovery</code> 或 <code>com.apple.recovery.boot</code> 文件夹下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">OS X 10.7 (Lion):</span><br><span class="line">py macrecovery.py -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download</span><br><span class="line">py macrecovery.py -b Mac-C3EC7CD22292981F -m 00000000000F0HM00 download</span><br><span class="line"></span><br><span class="line">OS X 10.8 (Mountain Lion):</span><br><span class="line">py macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download</span><br><span class="line"></span><br><span class="line">OS X 10.9 (Mavericks):</span><br><span class="line">py macrecovery.py -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download</span><br><span class="line"></span><br><span class="line">OS X 10.10 (Yosemite):</span><br><span class="line">py macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download</span><br><span class="line"></span><br><span class="line">OS X 10.11 (El Capitan):</span><br><span class="line">py macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download</span><br><span class="line"></span><br><span class="line">macOS 10.12 (Sierra):</span><br><span class="line">py macrecovery.py -b Mac-77F17D7DA9285301 -m 00000000000J0DX00 download</span><br><span class="line"></span><br><span class="line">macOS 10.13 (High Sierra):</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000J80300 download</span><br><span class="line">py macrecovery.py -b Mac-BE088AF8C5EB4FA2 -m 00000000000J80300 download</span><br><span class="line"></span><br><span class="line">macOS 10.14 (Mojave):</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download</span><br><span class="line"></span><br><span class="line">macOS 10.15 (Catalina):</span><br><span class="line">py macrecovery.py -b Mac-CFF7D910A743CAAF -m 00000000000PHCD00 download</span><br><span class="line">py macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download</span><br><span class="line"></span><br><span class="line">macOS 11 (Big Sur):</span><br><span class="line">py macrecovery.py -b Mac-2BD1B31983FE1663 -m 00000000000000000 download</span><br><span class="line"></span><br><span class="line">macOS 12 (Monterey):</span><br><span class="line">py macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download</span><br><span class="line"></span><br><span class="line">macOS 13 (Ventura):</span><br><span class="line">py macrecovery.py -b Mac-B4831CEBD52A0C4C -m 00000000000000000 download</span><br><span class="line"></span><br><span class="line">macOS 14 (Sonoma):</span><br><span class="line">py macrecovery.py -b Mac-827FAC58A8FDFA22 -m 00000000000000000 download</span><br><span class="line"></span><br><span class="line">macOS 15 (Sequoia):</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000000000 download</span><br><span class="line"></span><br><span class="line">macOS 26 (Tahoe):</span><br><span class="line">py macrecovery.py -b Mac-CFF7D910A743CAAF -m 00000000000000000 -os latest download</span><br><span class="line"></span><br><span class="line">Diagnostics:</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000000000 -diag download</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000JG3600 -diag download</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 &lt;real MLB&gt; -diag download</span><br><span class="line"></span><br><span class="line">Default Version:</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000JG3600 download       (oldest)</span><br><span class="line">py macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m &lt;real MLB&gt; -os default download  (newer)</span><br><span class="line"></span><br><span class="line">Latest Version:</span><br><span class="line">py macrecovery.py -b Mac-CFF7D910A743CAAF -m 00000000000000000 -os latest download</span><br><span class="line">py macrecovery.py -b Mac-CFF7D910A743CAAF -m &lt;real MLB&gt; -os latest</span><br></pre></td></tr></table></figure>
+
+<p>如果是 macOS 或 Linux 则需要去掉 <code>macrecovery.py</code> 前的 <code>py</code> 并添加 <code>./</code><br>如 <code>./macrecovery.py -b xxx</code><br>更多 macOS 版本下载，请参阅：<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt">https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/macrecovery/recovery_urls.txt</a><br><strong>同目录下也有可用的 <code>recovery_urls.txt</code></strong></p>
+</details>
+
+<h2 id="创建虚拟硬盘"><a href="#创建虚拟硬盘" class="headerlink" title="创建虚拟硬盘"></a>创建虚拟硬盘</h2><p>右键“开始”菜单，选择“磁盘管理”（按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>diskmgmt.msc</code> 并回车）<br>在“磁盘管理”顶部菜单栏选择“操作” &gt; “创建 VHD”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Create-VHD.png" alt="创建 VHD"></p>
+<p>点击“浏览”，选择虚拟硬盘的存放位置，并起一个名字<br>虚拟硬盘格式可改为 <code>VHDX</code>，虚拟硬盘大小按需分配，可直接创建 <code>16 GB</code> 的大小一步到位，在线恢复镜像只需要 <code>4 GB</code> 即可</p>
+<p>创建完成后，右键新建的虚拟磁盘，选择“初始化磁盘”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Initialize-Disk.png" alt="初始化磁盘"></p>
+<p>将磁盘格式初始化为 <code>GPT</code> 即可</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Initialize-Disk-as-GPT.png" alt="初始化磁盘为 GPT"></p>
+<p><strong>保留“磁盘管理”窗口开启</strong></p>
+<h2 id="写入虚拟硬盘"><a href="#写入虚拟硬盘" class="headerlink" title="写入虚拟硬盘"></a>写入虚拟硬盘</h2><p>打开 Etcher，如果有更新弹窗选择 <code>Skip</code>，不要更新</p>
+<p>点击 <code>Select Image</code> 并选择下载好的 <code>.DMG</code> 镜像<br>默认会选择虚拟磁盘，如果不是目标磁盘，请点击 <code>Change</code> 以选择正确的目标磁盘<br>完成后，点击 <code>Flash!</code> 即可开始</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Ready-to-Flash.png" alt="准备写入"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Flashing.png" alt="正在写入"></p>
+<p>如果 Etcher 请求管理员权限，点击“是”即可<br>等待一下，写入过程还是很快的</p>
+<p>如果遇到报错，则表示该镜像不可引导，需要更换一个</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Unbootable-Image.png" alt="不可引导的映像"></p>
+<p>出现 <code>Flash Complete!</code> 即代表写入完成</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Flash-Complete.png" alt="写入完成"></p>
+<p>回到磁盘管理<br>右键新建的虚拟磁盘，选择“分离 VHD”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Detach-VHD.png" alt="分离 VHD"></p>
+<h2 id="在虚拟机中使用"><a href="#在虚拟机中使用" class="headerlink" title="在虚拟机中使用"></a>在虚拟机中使用</h2><p>在创建好的 macOS 虚拟机，点击“编辑虚拟机设置”<br>点击“添加”并选择“硬盘”，点击“下一步”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Add-Disk.png" alt="添加磁盘"></p>
+<p>磁盘类型选择 <code>SATA</code> 即可，再选择“使用现有虚拟磁盘”</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Use-an-Existing-Virtual-Disk.png" alt="使用现有虚拟磁盘"></p>
+<p>在浏览磁盘时，点击右下角的菜单栏选项，然后点击“所有文件 (<em>.</em>)”，并选择刚刚写入好的虚拟磁盘文件</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Browse-Virtual-Disk-File.png" alt="浏览虚拟磁盘"></p>
+<p>选择“保持现有格式”即可，如果无法导入或无法开机，可选择备份文件后，选择“转换”后导入</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/Conver-Virtual-Disk.png" alt="转换格式"></p>
+<p>完成后，启动虚拟机即可</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>关于是否能在 VirtualBox 使用</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-via-DMG-on-VMWP/in-VirtualBox.gif" alt="在 VirtualBox 中使用"></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://zhuanlan.zhihu.com/p/130692555">不用 U 盘在 VMware 上装 macOS 最新版 DMG - 知乎</a></li>
+</ol>
+
     </div>
 
     
@@ -466,8 +528,8 @@ var _hmt = _hmt || [];
 </div>
 
           <div class="post-tags">
-              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
               <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
           </div>
 
         
@@ -513,14 +575,14 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">121k</span>
+    <span title="站点总字数">127k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:50</span>
+    <span title="站点阅读时长">1:56</span>
   </span>
 </div>
 <div class="busuanzi-count">
