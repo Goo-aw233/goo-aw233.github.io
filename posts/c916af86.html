@@ -21,27 +21,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="为 Windows Vista 和 Windows 7 安装 Service Pack (SP1)">
+    <meta name="description" content="为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为 Windows Vista&#x2F;7 安装 Service Pack">
-<meta property="og:url" content="https://blog.gucats.com/posts/bee9811e.html">
+<meta property="og:title" content="为 Windows 安装 Service Pack">
+<meta property="og:url" content="https://blog.gucats.com/posts/c916af86.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="为 Windows Vista 和 Windows 7 安装 Service Pack (SP1)">
+<meta property="og:description" content="为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Windows-7-SP1-Installed.png">
 <meta property="article:published_time" content="2022-05-16T11:20:47.000Z">
-<meta property="article:modified_time" content="2026-03-27T12:00:33.672Z">
+<meta property="article:modified_time" content="2026-07-09T16:33:14.162Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png">
 
 
-<link rel="canonical" href="https://blog.gucats.com/posts/bee9811e.html">
+<link rel="canonical" href="https://blog.gucats.com/posts/c916af86.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.gucats.com/posts/bee9811e.html","path":"posts/bee9811e.html","title":"为 Windows Vista/7 安装 Service Pack"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.gucats.com/posts/c916af86.html","path":"posts/c916af86.html","title":"为 Windows 安装 Service Pack"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>为 Windows Vista/7 安装 Service Pack | GuCATs'摸鱼站</title>
+<title>为 Windows 安装 Service Pack | GuCATs'摸鱼站</title>
   
 
 
@@ -197,7 +200,7 @@ var _hmt = _hmt || [];
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -210,6 +213,7 @@ var _hmt = _hmt || [];
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-Client"><span class="nav-number">1.1.1.</span> <span class="nav-text">客户端 (Client)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8-Server"><span class="nav-number">1.1.2.</span> <span class="nav-text">服务器 (Server)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-SP"><span class="nav-number">2.</span> <span class="nav-text">安装 SP</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -298,7 +302,7 @@ var _hmt = _hmt || [];
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.gucats.com/posts/bee9811e.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.gucats.com/posts/c916af86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
@@ -311,12 +315,12 @@ var _hmt = _hmt || [];
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="为 Windows Vista&#x2F;7 安装 Service Pack | GuCATs'摸鱼站">
-      <meta itemprop="description" content="为 Windows Vista 和 Windows 7 安装 Service Pack (SP1)">
+      <meta itemprop="name" content="为 Windows 安装 Service Pack | GuCATs'摸鱼站">
+      <meta itemprop="description" content="为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          为 Windows Vista/7 安装 Service Pack
+          为 Windows 安装 Service Pack
         </h1>
 
         <div class="post-meta-container">
@@ -334,7 +338,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-27 20:00:33" itemprop="dateModified" datetime="2026-03-27T20:00:33+08:00">2026-03-27</time>
+      <time title="修改时间：2026-07-10 00:33:14" itemprop="dateModified" datetime="2026-07-10T00:33:14+08:00">2026-07-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -364,7 +368,7 @@ var _hmt = _hmt || [];
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>1.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -375,14 +379,148 @@ var _hmt = _hmt || [];
     </span>
 </div>
 
-            <div class="post-description">为 Windows Vista 和 Windows 7 安装 Service Pack (SP1)</div>
+            <div class="post-description">为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Service Pack 修复了许多 RTM 版本 Windows 所存在的问题，也是前面补丁的一个“检查点”，并提供的新的功能。例如，在 Windows Vista SP2 中，增加了对当时新硬件的原生支持，比如蓝光光盘刻录、蓝牙 2.1 以及 VIA 64 位 CPU；而 Windows 7 SP1 为客户端系统增加了对 <code>RemoteFX</code> 和 <code>Dynamic Memory</code> 的支持，这两项功能原本主要用于 Windows Server 2008 R2 SP1，能显著提升虚拟桌面（VDI）的图形性能和内存利用率</p>
+<p>从 Windows 8 开始，微软不再发布传统意义上的 Service Pack，改为通过累积更新（LCU） 和服务堆栈更新（SSU） 持续维护系统。Windows 10 延续了这一模式，并在此基础上每年推出 2 个功能更新，在 2021 年，微软宣布一年仅发布一个功能更新</p>
+<p>篇幅有限，仅介绍 Windows 7 的 SP1 如何安装</p>
+<h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><strong>下表中列出的 KB 编号与先决条件可能不准确，信息可能缺失或不正确</strong><br>具体更新补丁，请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/">https://www.catalog.update.microsoft.com</a></p>
+<h4 id="客户端-Client"><a href="#客户端-Client" class="headerlink" title="客户端 (Client)"></a>客户端 (Client)</h4><table>
+<thead>
+<tr>
+<th align="left">Windows 版本</th>
+<th align="left">Service Pack</th>
+<th align="left">KB 编号</th>
+<th align="left">先决条件</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Windows NT 4.0</td>
+<td align="left">SP1 ~ SP6a</td>
+<td align="left">-</td>
+<td align="left">RTM ~ SP6</td>
+<td align="left">除 RTM 外，至少需要前一个 SP 版本</td>
+</tr>
+<tr>
+<td align="left">Windows 2000</td>
+<td align="left">SP1 ~ SP4</td>
+<td align="left">-</td>
+<td align="left">RTM ~ SP3</td>
+<td align="left">除 RTM 外，至少需要前一个 SP 版本</td>
+</tr>
+<tr>
+<td align="left">Windows 2000</td>
+<td align="left">SP4 + Update Rollup 1</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB891861">KB891861</a></td>
+<td align="left">至少 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=Windows%202000%20SP4">Windows 2000 SP4</a></td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows XP</td>
+<td align="left">SP1</td>
+<td align="left">-</td>
+<td align="left">RTM</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows XP</td>
+<td align="left">SP2</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB835935">KB835935</a></td>
+<td align="left">RTM 或 SP1</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows XP</td>
+<td align="left">SP3</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936929">KB936929</a></td>
+<td align="left">SP1a 或 SP2</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows Vista</td>
+<td align="left">SP1</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936330">KB936330</a></td>
+<td align="left">RTM</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows Vista</td>
+<td align="left">SP2</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB948465">KB948465</a></td>
+<td align="left">至少 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936330">Windows Vista SP1</a></td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows 7</td>
+<td align="left">SP1</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932">KB976932</a></td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h4 id="服务器-Server"><a href="#服务器-Server" class="headerlink" title="服务器 (Server)"></a>服务器 (Server)</h4><table>
+<thead>
+<tr>
+<th align="left">Windows 版本</th>
+<th align="left">Service Pack</th>
+<th align="left">KB 编号</th>
+<th align="left">先决条件</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Windows NT 4.0 Server</td>
+<td align="left">SP1 ~ SP6a</td>
+<td align="left">-</td>
+<td align="left">RTM ~ SP6</td>
+<td align="left">除 RTM 外，至少需要前一个 SP 版本</td>
+</tr>
+<tr>
+<td align="left">Windows 2000 Server&#x2F;Windows 2000 Advanced Server</td>
+<td align="left">SP1 ~ SP4</td>
+<td align="left">-</td>
+<td align="left">RTM ~ SP3</td>
+<td align="left">除 RTM 外，至少需要前一个 SP 版本</td>
+</tr>
+<tr>
+<td align="left">Windows Server 2003</td>
+<td align="left">SP1</td>
+<td align="left">-</td>
+<td align="left">RTM</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows Server 2003</td>
+<td align="left">SP2</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB914961">KB914961</a></td>
+<td align="left">RTM 或 SP1</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">Windows Server 2008</td>
+<td align="left">SP2</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB968849">KB968849</a></td>
+<td align="left">RTM</td>
+<td align="left">无 SP1</td>
+</tr>
+<tr>
+<td align="left">Windows Server 2008 R2</td>
+<td align="left">SP1</td>
+<td align="left"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932">KB976932</a></td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h2 id="安装-SP"><a href="#安装-SP" class="headerlink" title="安装 SP"></a>安装 SP</h2><p>将文件复制到系统，按照 KB 编号先后，或文件大小的顺序来安装<br>（对于虚拟机，可以将需要的文件打包成 <code>.ISO</code> 文件，并将其插入到虚拟机，即可通过光驱安装补丁<br>例如，<code>KB976932</code> 会给出 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code> 和 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code>，按照文件大小来看，应当先安装 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code>，再安装 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png" alt="安装 Windows 7 SP1"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Windows-7-SP1-Installed.png" alt="Windows 7 SP1 已安装"></p>
+
     </div>
 
     
@@ -417,7 +555,7 @@ var _hmt = _hmt || [];
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://blog.gucats.com/posts/bee9811e.html" title="为 Windows Vista&#x2F;7 安装 Service Pack">https://blog.gucats.com/posts/bee9811e.html</a>
+      <a href="https://blog.gucats.com/posts/c916af86.html" title="为 Windows 安装 Service Pack">https://blog.gucats.com/posts/c916af86.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -460,13 +598,13 @@ var _hmt = _hmt || [];
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/bb8161a8.html" rel="prev" title="修复 Windows 7 无法获取更新">
-                  <i class="fa fa-angle-left"></i> 修复 Windows 7 无法获取更新
+                <a href="/posts/c2a9ce1.html" rel="prev" title="虚拟机安装 Windows 3.1">
+                  <i class="fa fa-angle-left"></i> 虚拟机安装 Windows 3.1
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/6b770399.html" rel="next" title="修改允许的 macOS App 来源">
-                  修改允许的 macOS App 来源 <i class="fa fa-angle-right"></i>
+                <a href="/posts/bb8161a8.html" rel="next" title="修复 Windows 7 无法获取更新">
+                  修复 Windows 7 无法获取更新 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -499,14 +637,14 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">128k</span>
+    <span title="站点总字数">129k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:56</span>
+    <span title="站点阅读时长">1:57</span>
   </span>
 </div>
 <div class="busuanzi-count">
