@@ -30,12 +30,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Install-or-Uninstall.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Uninstall-and-Clean.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Install-or-Uninstall.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Enter-Product-ID.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Uninstall-and-Clean.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/GUID-in-regedit.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/GUID-in-ProgramData.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/VMware-InstallerCache.png">
 <meta property="article:published_time" content="2026-04-28T12:09:42.000Z">
-<meta property="article:modified_time" content="2026-04-29T09:16:17.387Z">
+<meta property="article:modified_time" content="2026-07-09T13:19:32.706Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -217,7 +219,7 @@ var _hmt = _hmt || [];
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94%E7%A8%8B%E5%BA%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">使用疑难解答程序包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E8%A1%A8%E6%9F%A5%E6%89%BE-GUID"><span class="nav-number">2.1.</span> <span class="nav-text">注册表查找 GUID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID"><span class="nav-number">2.2.</span> <span class="nav-text">安装程序缓存目录查找 GUID</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8E%E5%88%97%E8%A1%A8%E7%A7%BB%E9%99%A4"><span class="nav-number">2.</span> <span class="nav-text">从列表移除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-GUID-%E7%A7%BB%E9%99%A4"><span class="nav-number">3.</span> <span class="nav-text">使用 GUID 移除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE-GUID"><span class="nav-number">4.</span> <span class="nav-text">查找 GUID</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E8%A1%A8%E6%9F%A5%E6%89%BE-GUID"><span class="nav-number">4.1.</span> <span class="nav-text">注册表查找 GUID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID"><span class="nav-number">4.2.</span> <span class="nav-text">安装程序缓存目录查找 GUID</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">5.</span> <span class="nav-text">后记</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -342,7 +344,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-04-29 17:16:17" itemprop="dateModified" datetime="2026-04-29T17:16:17+08:00">2026-04-29</time>
+      <time title="修改时间：2026-07-09 21:19:32" itemprop="dateModified" datetime="2026-07-09T21:19:32+08:00">2026-07-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -372,14 +374,14 @@ var _hmt = _hmt || [];
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -394,16 +396,19 @@ var _hmt = _hmt || [];
 <h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://download.microsoft.com/download/7/E/9/7E9188C0-2511-4B01-8B4E-0A641EC2F600/MicrosoftProgram_Install_and_Uninstall.meta.diagcab">MicrosoftProgram_Install_and_Uninstall.meta.diagcab</a></li>
 </ol>
-<h2 id="使用疑难解答程序包"><a href="#使用疑难解答程序包" class="headerlink" title="使用疑难解答程序包"></a>使用疑难解答程序包</h2><p>直接打开下载好的 <code>MicrosoftProgram_Install_and_Uninstall.meta.diagcab</code>，并根据需要选择“安装”或“卸载”（不明可以选择“卸载”）</p>
+<h2 id="从列表移除"><a href="#从列表移除" class="headerlink" title="从列表移除"></a>从列表移除</h2><p>运行 <code>MicrosoftProgram_Install_and_Uninstall.meta.diagcab</code>，并根据需要选择“安装”或“卸载”（不明可以选择“卸载”）</p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Install-or-Uninstall.png" alt="“安装”或“卸载”"></p>
 <p>在列表中，找到要卸载的项目，点击“下一步”<br>最后，选择“是，尝试卸载”，即可启动安装程序，并清理大部分相关项目</p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Uninstall-and-Clean.png" alt="卸载并清理"></p>
-<p>卸载完成后，重启 Windows 即可</p>
-<div class="note primary"><p>若在列表中没有找到对应的项目，请参阅：《<a href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID">注册表查找 GUID</a>》或《<a href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID">安装程序缓存目录查找 GUID</a>》，选择“未列出”，并将安装程序的 GUID 填入</p>
+<p><strong>如果遇到“未修复”的错误，可能是相关的依赖项未被清理，或正在运行，请尝试使用干净启动，请参阅：《<a target="_blank" rel="noopener external nofollow noreferrer" href="https://support.microsoft.com/windows/experience/startup-boot/how-to-perform-a-clean-boot-in-windows">如何在 Windows 中执行干净启动 | Microsoft Support</a>》</strong><br>卸载完成后，重启 Windows 即可</p>
+<h2 id="使用-GUID-移除"><a href="#使用-GUID-移除" class="headerlink" title="使用 GUID 移除"></a>使用 GUID 移除</h2><p>运行 <code>MicrosoftProgram_Install_and_Uninstall.meta.diagcab</code>，并根据需要选择“安装”或“卸载”（不明可以选择“卸载”）</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Install-or-Uninstall.png" alt="“安装”或“卸载”"></p>
+<p>在列表中，选择“未列出”，点击“下一步”<br>请参阅：《<a href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID">注册表查找 GUID</a>》或《<a href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E7%BC%93%E5%AD%98%E7%9B%AE%E5%BD%95%E6%9F%A5%E6%89%BE-GUID">安装程序缓存目录查找 GUID</a>》，以获取目标应用程序的 GUID，填入到下方的文本框，并点击“下一步”</p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Enter-Product-ID.png" alt="输入产品代码"></p>
-</div>
-
-<h3 id="注册表查找-GUID"><a href="#注册表查找-GUID" class="headerlink" title="注册表查找 GUID"></a>注册表查找 GUID</h3><p>卸载程序的注册表路径如下</p>
+<p>最后，选择“是，尝试卸载”，即可启动安装程序，并清理大部分相关项目</p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/Uninstall-and-Clean.png" alt="卸载并清理"></p>
+<p><strong>如果遇到“未修复”的错误，可能是相关的依赖项未被清理，或正在运行，请尝试使用干净启动，请参阅：《<a target="_blank" rel="noopener external nofollow noreferrer" href="https://support.microsoft.com/windows/experience/startup-boot/how-to-perform-a-clean-boot-in-windows">如何在 Windows 中执行干净启动 | Microsoft Support</a>》</strong><br>卸载完成后，重启 Windows 即可</p>
+<h2 id="查找-GUID"><a href="#查找-GUID" class="headerlink" title="查找 GUID"></a>查找 GUID</h2><h3 id="注册表查找-GUID"><a href="#注册表查找-GUID" class="headerlink" title="注册表查找 GUID"></a>注册表查找 GUID</h3><p>卸载程序的注册表路径如下</p>
 <p>所有用户的 64 位应用程序（包括 32 位系统的 32 位应用程序）：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</span><br></pre></td></tr></table></figure>
 
@@ -427,14 +432,15 @@ var _hmt = _hmt || [];
 <p>（一般为 <code>C:\Windows\Installer</code>）下也有缓存，但是一般为精简过的安装缓存</p>
 </div>
 
-<p>在文件夹列表中，逐一寻找目标安装程序的 GUID（文件夹名称即为 GUID，不包括花括号外的内容）<br>例如，<code>vc_runtimeMinimum_x64.msi</code> 的文件夹名称为 <code>&#123;61B44572-8722-4DAF-8ACF-8E742D30BCC5&#125;v14.50.35719</code>，则 GUID 则为 <code>&#123;61B44572-8722-4DAF-8ACF-8E742D30BCC5&#125;</code></p>
+<p>在文件夹列表中，逐一寻找目标安装程序的 GUID（<strong>文件夹名称即为 GUID，不包括花括号外的内容</strong>）<br>例如，<code>vc_runtimeMinimum_x64.msi</code> 的文件夹名称为 <code>&#123;61B44572-8722-4DAF-8ACF-8E742D30BCC5&#125;v14.50.35719</code>，则 GUID 则为 <code>&#123;61B44572-8722-4DAF-8ACF-8E742D30BCC5&#125;</code></p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/GUID-in-ProgramData.png" alt="ProgramData 下的 GUID"></p>
-<div class="note info"><p>对于部分安装程序，可能会在其他路径下存放有安装缓存，如 VMware Workstation 就存放于：</p>
+<div class="note info"><p>对于部分安装程序，可能会在其他路径下存放有安装缓存<br>如 VMware Workstation 25H2u1 及以前的版本就存放于：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%CommonProgramFiles(x86)%\VMware\InstallerCache</span><br></pre></td></tr></table></figure>
 
 <p>（一般为 <code>C:\Program Files (x86)\Common Files\VMware\InstallerCache</code>）</p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Uninstall-Invalid-Installer/VMware-InstallerCache.png" alt="VMware Workstation 安装缓存"></p>
-</div>
+<p>而 VMware Workstation 26H1 起，存放于</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%CommonProgramFiles%\VMware\InstallerCache</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol>
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows/win32/com/com-class-objects-and-clsids/?wt.mc_id=studentamb_474966">COM 类对象和 CLSID - Win32 apps | Microsoft Learn</a></li>
@@ -556,7 +562,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">128k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">

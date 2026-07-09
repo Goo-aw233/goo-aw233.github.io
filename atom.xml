@@ -72,7 +72,7 @@
     <published>2026-04-28T12:09:42.000Z</published>
     <summary>查找 GUID，通过使用 MicrosoftProgram_Install_and_Uninstall.meta.diagcab 疑难解答工具，卸载 Windows 上失效的安装程序，清理注册表和缓存目录。</summary>
     <title>卸载失效的安装程序</title>
-    <updated>2026-04-29T09:16:17.387Z</updated>
+    <updated>2026-07-09T13:19:32.706Z</updated>
   </entry>
   <entry>
     <author>
@@ -90,7 +90,7 @@
     <published>2026-04-28T12:07:24.000Z</published>
     <summary>通过使用 DISM 和 PowerShell 命令管理 Windows 保留存储，包括获取当前状态、启用和禁用保留存储，以优化系统更新和存储空间。</summary>
     <title>管理保留的存储</title>
-    <updated>2026-04-28T15:15:02.514Z</updated>
+    <updated>2026-07-09T13:22:31.476Z</updated>
   </entry>
   <entry>
     <author>
@@ -252,8 +252,8 @@
     <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <id>https://blog.gucats.com/posts/41eafc84.html</id>
     <link href="https://blog.gucats.com/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
