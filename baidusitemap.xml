@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.gucats.com/posts/bb8161a8.html</loc>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
     <loc>https://blog.gucats.com/posts/c916af86.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://blog.gucats.com/posts/4d7db012.html</loc>
@@ -283,9 +287,5 @@
   <url>
     <loc>https://blog.gucats.com/posts/3b9aa5a5.html</loc>
     <lastmod>2026-03-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.gucats.com/posts/bb8161a8.html</loc>
-    <lastmod>2026-03-03</lastmod>
   </url>
 </urlset> 

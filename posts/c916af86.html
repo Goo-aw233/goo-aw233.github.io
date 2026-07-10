@@ -21,17 +21,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack">
+    <meta name="description" content="本文介绍如何为 Windows 7、Vista、XP 等旧版系统安装 Service Pack，包括先决条件、所需 KB 编号及安装顺序，并以 Windows 7 SP1 为例展示具体操作步骤。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为 Windows 安装 Service Pack">
 <meta property="og:url" content="https://blog.gucats.com/posts/c916af86.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack">
+<meta property="og:description" content="本文介绍如何为 Windows 7、Vista、XP 等旧版系统安装 Service Pack，包括先决条件、所需 KB 编号及安装顺序，并以 Windows 7 SP1 为例展示具体操作步骤。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Windows-7-SP1-Installed.png">
 <meta property="article:published_time" content="2022-05-16T11:20:47.000Z">
-<meta property="article:modified_time" content="2026-07-09T16:33:14.162Z">
+<meta property="article:modified_time" content="2026-07-10T04:18:23.099Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -316,7 +316,7 @@ var _hmt = _hmt || [];
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="为 Windows 安装 Service Pack | GuCATs'摸鱼站">
-      <meta itemprop="description" content="为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack">
+      <meta itemprop="description" content="本文介绍如何为 Windows 7、Vista、XP 等旧版系统安装 Service Pack，包括先决条件、所需 KB 编号及安装顺序，并以 Windows 7 SP1 为例展示具体操作步骤。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -338,7 +338,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-07-10 00:33:14" itemprop="dateModified" datetime="2026-07-10T00:33:14+08:00">2026-07-10</time>
+      <time title="修改时间：2026-07-10 12:18:23" itemprop="dateModified" datetime="2026-07-10T12:18:23+08:00">2026-07-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -379,7 +379,7 @@ var _hmt = _hmt || [];
     </span>
 </div>
 
-            <div class="post-description">为 Windows（如 Windows 7、Windows Vista、Windows XP）安装 Service Pack</div>
+            <div class="post-description">本文介绍如何为 Windows 7、Vista、XP 等旧版系统安装 Service Pack，包括先决条件、所需 KB 编号及安装顺序，并以 Windows 7 SP1 为例展示具体操作步骤。</div>
         </div>
       </header>
 
@@ -517,7 +517,7 @@ var _hmt = _hmt || [];
 <td align="left">-</td>
 </tr>
 </tbody></table>
-<h2 id="安装-SP"><a href="#安装-SP" class="headerlink" title="安装 SP"></a>安装 SP</h2><p>将文件复制到系统，按照 KB 编号先后，或文件大小的顺序来安装<br>（对于虚拟机，可以将需要的文件打包成 <code>.ISO</code> 文件，并将其插入到虚拟机，即可通过光驱安装补丁<br>例如，<code>KB976932</code> 会给出 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code> 和 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code>，按照文件大小来看，应当先安装 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code>，再安装 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code></p>
+<h2 id="安装-SP"><a href="#安装-SP" class="headerlink" title="安装 SP"></a>安装 SP</h2><p>将文件复制到系统，按照 KB 编号先后，或文件大小的顺序来安装<br>（对于虚拟机，可以将需要的文件打包成 <code>.ISO</code> 文件，并将其插入到虚拟机，即可通过光驱安装补丁）<br>例如，<code>KB976932</code> 会给出 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code> 和 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code>，按照文件大小来看，应当先安装 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code>，再安装 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code></p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png" alt="安装 Windows 7 SP1"></p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Windows-7-SP1-Installed.png" alt="Windows 7 SP1 已安装"></p>
 
@@ -637,14 +637,14 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">129k</span>
+    <span title="站点总字数">130k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:57</span>
+    <span title="站点阅读时长">1:58</span>
   </span>
 </div>
 <div class="busuanzi-count">

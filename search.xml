@@ -146,9 +146,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
             <tag> PowerShell </tag>
             
@@ -260,9 +260,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -438,9 +438,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -597,9 +597,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -719,9 +719,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -808,9 +808,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -895,9 +895,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1009,9 +1009,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1040,9 +1040,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1071,9 +1071,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1127,9 +1127,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1243,9 +1243,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1328,9 +1328,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1392,9 +1392,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> DISM </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1421,9 +1421,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1490,7 +1490,7 @@
       <link href="/posts/bb8161a8.html"/>
       <url>/posts/bb8161a8.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>许多仍在使用 Windows 7 SP1（及其衍生系统如 Windows Server 2008 R2、Windows Home Server 2011）的用户，在尝试通过 Windows Update 检查更新时，会遇到错误代码 <strong>80072EFE</strong>，或一直停留在“正在检查更新…”而无法完成扫描。这主要是因为旧版 Windows 更新代理组件（即服务堆栈）已无法与当前 Microsoft 更新服务器正常通信，同时缺少后续发布的必要服务堆栈更新（Servicing Stack Updates）和兼容性汇总。</p><p>篇幅有限，本文仅针对 <strong>Windows 7 SP1（64 位）</strong> 的操作步骤进行说明，其他 NT 6.1 系列系统方法类似，只需下载对应架构的补丁文件即可。</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p>从 Microsoft Update Catalog 下载以下两个补丁，所有系统统一 KB 编号（请根据系统架构选择 <code>x64</code> 或 <code>x86</code> 版本）：</p><ul><li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3020369">KB3020369</a>  </li><li><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB3125574">KB3125574</a></li></ul><h2 id="安装补丁"><a href="#安装补丁" class="headerlink" title="安装补丁"></a>安装补丁</h2><p>安装补丁前，<strong>需要确保系统已安装 SP1</strong>，详情请参阅：《<a href="/posts/c916af86.html" title="为 Windows 安装 Service Pack">为 Windows 安装 Service Pack</a>》</p><p>将下载的 <code>.msu</code> 文件复制到系统中，按照 <strong>KB 编号先后顺序</strong>（即先 <code>KB3020369</code>，后 <code>KB3125574</code>）安装。<br>（对于虚拟机，可将补丁文件打包成 <code>.ISO</code> 镜像，挂载到虚拟机光驱中，再从光驱运行安装。）</p><p>例如，对于 64 位系统，文件名为：</p><ul><li><code>windows6.1-kb3020369-x64_5393066469758e619f21731fc31ff2d109595445.msu</code>（较小）</li><li><code>windows6.1-kb3125574-v4-x64_2dafb1d203c8964239af3048b5dd4b1264cd93b9.msu</code>（较大）</li></ul><p>必须<strong>先安装 KB3020369</strong>，再安装 KB3125574，否则会因服务堆栈不匹配而导致安装失败。安装完成后重启系统，再次打开 Windows Update 即可正常检查更新。</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Fix-Windows-7-Failure-to-Get-Updates/80072EFE.png" alt="80072EFE"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Fix-Windows-7-Failure-to-Get-Updates/Update-Acquired.png" alt="获取到 Windows 更新"></p>]]></content>
       
       
       <categories>
@@ -1517,7 +1517,7 @@
       <link href="/posts/c916af86.html"/>
       <url>/posts/c916af86.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Service Pack 修复了许多 RTM 版本 Windows 所存在的问题，也是前面补丁的一个“检查点”，并提供的新的功能。例如，在 Windows Vista SP2 中，增加了对当时新硬件的原生支持，比如蓝光光盘刻录、蓝牙 2.1 以及 VIA 64 位 CPU；而 Windows 7 SP1 为客户端系统增加了对 <code>RemoteFX</code> 和 <code>Dynamic Memory</code> 的支持，这两项功能原本主要用于 Windows Server 2008 R2 SP1，能显著提升虚拟桌面（VDI）的图形性能和内存利用率</p><p>从 Windows 8 开始，微软不再发布传统意义上的 Service Pack，改为通过累积更新（LCU） 和服务堆栈更新（SSU） 持续维护系统。Windows 10 延续了这一模式，并在此基础上每年推出 2 个功能更新，在 2021 年，微软宣布一年仅发布一个功能更新</p><p>篇幅有限，仅介绍 Windows 7 的 SP1 如何安装</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><strong>下表中列出的 KB 编号与先决条件可能不准确，信息可能缺失或不正确</strong><br>具体更新补丁，请参阅：<a href="https://www.catalog.update.microsoft.com/">https://www.catalog.update.microsoft.com</a></p><h4 id="客户端-Client"><a href="#客户端-Client" class="headerlink" title="客户端 (Client)"></a>客户端 (Client)</h4><table><thead><tr><th align="left">Windows 版本</th><th align="left">Service Pack</th><th align="left">KB 编号</th><th align="left">先决条件</th><th align="left">备注</th></tr></thead><tbody><tr><td align="left">Windows NT 4.0</td><td align="left">SP1 ~ SP6a</td><td align="left">-</td><td align="left">RTM ~ SP6</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows 2000</td><td align="left">SP1 ~ SP4</td><td align="left">-</td><td align="left">RTM ~ SP3</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows 2000</td><td align="left">SP4 + Update Rollup 1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB891861">KB891861</a></td><td align="left">至少 <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=Windows%202000%20SP4">Windows 2000 SP4</a></td><td align="left">-</td></tr><tr><td align="left">Windows XP</td><td align="left">SP1</td><td align="left">-</td><td align="left">RTM</td><td align="left">-</td></tr><tr><td align="left">Windows XP</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB835935">KB835935</a></td><td align="left">RTM 或 SP1</td><td align="left">-</td></tr><tr><td align="left">Windows XP</td><td align="left">SP3</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936929">KB936929</a></td><td align="left">SP1a 或 SP2</td><td align="left">-</td></tr><tr><td align="left">Windows Vista</td><td align="left">SP1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936330">KB936330</a></td><td align="left">RTM</td><td align="left">-</td></tr><tr><td align="left">Windows Vista</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB948465">KB948465</a></td><td align="left">至少 <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936330">Windows Vista SP1</a></td><td align="left">-</td></tr><tr><td align="left">Windows 7</td><td align="left">SP1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932">KB976932</a></td><td align="left">-</td><td align="left">-</td></tr></tbody></table><h4 id="服务器-Server"><a href="#服务器-Server" class="headerlink" title="服务器 (Server)"></a>服务器 (Server)</h4><table><thead><tr><th align="left">Windows 版本</th><th align="left">Service Pack</th><th align="left">KB 编号</th><th align="left">先决条件</th><th align="left">备注</th></tr></thead><tbody><tr><td align="left">Windows NT 4.0 Server</td><td align="left">SP1 ~ SP6a</td><td align="left">-</td><td align="left">RTM ~ SP6</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows 2000 Server&#x2F;Windows 2000 Advanced Server</td><td align="left">SP1 ~ SP4</td><td align="left">-</td><td align="left">RTM ~ SP3</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows Server 2003</td><td align="left">SP1</td><td align="left">-</td><td align="left">RTM</td><td align="left">-</td></tr><tr><td align="left">Windows Server 2003</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB914961">KB914961</a></td><td align="left">RTM 或 SP1</td><td align="left">-</td></tr><tr><td align="left">Windows Server 2008</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB968849">KB968849</a></td><td align="left">RTM</td><td align="left">无 SP1</td></tr><tr><td align="left">Windows Server 2008 R2</td><td align="left">SP1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932">KB976932</a></td><td align="left">-</td><td align="left">-</td></tr></tbody></table><h2 id="安装-SP"><a href="#安装-SP" class="headerlink" title="安装 SP"></a>安装 SP</h2><p>将文件复制到系统，按照 KB 编号先后，或文件大小的顺序来安装<br>（对于虚拟机，可以将需要的文件打包成 <code>.ISO</code> 文件，并将其插入到虚拟机，即可通过光驱安装补丁<br>例如，<code>KB976932</code> 会给出 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code> 和 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code>，按照文件大小来看，应当先安装 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code>，再安装 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png" alt="安装 Windows 7 SP1"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Windows-7-SP1-Installed.png" alt="Windows 7 SP1 已安装"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Service Pack 修复了许多 RTM 版本 Windows 所存在的问题，也是前面补丁的一个“检查点”，并提供的新的功能。例如，在 Windows Vista SP2 中，增加了对当时新硬件的原生支持，比如蓝光光盘刻录、蓝牙 2.1 以及 VIA 64 位 CPU；而 Windows 7 SP1 为客户端系统增加了对 <code>RemoteFX</code> 和 <code>Dynamic Memory</code> 的支持，这两项功能原本主要用于 Windows Server 2008 R2 SP1，能显著提升虚拟桌面（VDI）的图形性能和内存利用率</p><p>从 Windows 8 开始，微软不再发布传统意义上的 Service Pack，改为通过累积更新（LCU） 和服务堆栈更新（SSU） 持续维护系统。Windows 10 延续了这一模式，并在此基础上每年推出 2 个功能更新，在 2021 年，微软宣布一年仅发布一个功能更新</p><p>篇幅有限，仅介绍 Windows 7 的 SP1 如何安装</p><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><strong>下表中列出的 KB 编号与先决条件可能不准确，信息可能缺失或不正确</strong><br>具体更新补丁，请参阅：<a href="https://www.catalog.update.microsoft.com/">https://www.catalog.update.microsoft.com</a></p><h4 id="客户端-Client"><a href="#客户端-Client" class="headerlink" title="客户端 (Client)"></a>客户端 (Client)</h4><table><thead><tr><th align="left">Windows 版本</th><th align="left">Service Pack</th><th align="left">KB 编号</th><th align="left">先决条件</th><th align="left">备注</th></tr></thead><tbody><tr><td align="left">Windows NT 4.0</td><td align="left">SP1 ~ SP6a</td><td align="left">-</td><td align="left">RTM ~ SP6</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows 2000</td><td align="left">SP1 ~ SP4</td><td align="left">-</td><td align="left">RTM ~ SP3</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows 2000</td><td align="left">SP4 + Update Rollup 1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB891861">KB891861</a></td><td align="left">至少 <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=Windows%202000%20SP4">Windows 2000 SP4</a></td><td align="left">-</td></tr><tr><td align="left">Windows XP</td><td align="left">SP1</td><td align="left">-</td><td align="left">RTM</td><td align="left">-</td></tr><tr><td align="left">Windows XP</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB835935">KB835935</a></td><td align="left">RTM 或 SP1</td><td align="left">-</td></tr><tr><td align="left">Windows XP</td><td align="left">SP3</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936929">KB936929</a></td><td align="left">SP1a 或 SP2</td><td align="left">-</td></tr><tr><td align="left">Windows Vista</td><td align="left">SP1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936330">KB936330</a></td><td align="left">RTM</td><td align="left">-</td></tr><tr><td align="left">Windows Vista</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB948465">KB948465</a></td><td align="left">至少 <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB936330">Windows Vista SP1</a></td><td align="left">-</td></tr><tr><td align="left">Windows 7</td><td align="left">SP1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932">KB976932</a></td><td align="left">-</td><td align="left">-</td></tr></tbody></table><h4 id="服务器-Server"><a href="#服务器-Server" class="headerlink" title="服务器 (Server)"></a>服务器 (Server)</h4><table><thead><tr><th align="left">Windows 版本</th><th align="left">Service Pack</th><th align="left">KB 编号</th><th align="left">先决条件</th><th align="left">备注</th></tr></thead><tbody><tr><td align="left">Windows NT 4.0 Server</td><td align="left">SP1 ~ SP6a</td><td align="left">-</td><td align="left">RTM ~ SP6</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows 2000 Server&#x2F;Windows 2000 Advanced Server</td><td align="left">SP1 ~ SP4</td><td align="left">-</td><td align="left">RTM ~ SP3</td><td align="left">除 RTM 外，至少需要前一个 SP 版本</td></tr><tr><td align="left">Windows Server 2003</td><td align="left">SP1</td><td align="left">-</td><td align="left">RTM</td><td align="left">-</td></tr><tr><td align="left">Windows Server 2003</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB914961">KB914961</a></td><td align="left">RTM 或 SP1</td><td align="left">-</td></tr><tr><td align="left">Windows Server 2008</td><td align="left">SP2</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB968849">KB968849</a></td><td align="left">RTM</td><td align="left">无 SP1</td></tr><tr><td align="left">Windows Server 2008 R2</td><td align="left">SP1</td><td align="left"><a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932">KB976932</a></td><td align="left">-</td><td align="left">-</td></tr></tbody></table><h2 id="安装-SP"><a href="#安装-SP" class="headerlink" title="安装 SP"></a>安装 SP</h2><p>将文件复制到系统，按照 KB 编号先后，或文件大小的顺序来安装<br>（对于虚拟机，可以将需要的文件打包成 <code>.ISO</code> 文件，并将其插入到虚拟机，即可通过光驱安装补丁）<br>例如，<code>KB976932</code> 会给出 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code> 和 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code>，按照文件大小来看，应当先安装 <code>windows6.1-kb2533552-x64_0ba5ac38d4e1c9588a1e53ad390d23c1e4ecd04d.msu</code>，再安装 <code>windows6.1-kb976932-x64_74865ef2562006e51d7f9333b4a8d45b7a749dab.exe</code></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Install-Windows-7-SP1.png" alt="安装 Windows 7 SP1"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-Service-Pack/Windows-7-SP1-Installed.png" alt="Windows 7 SP1 已安装"></p>]]></content>
       
       
       <categories>
@@ -1703,9 +1703,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1732,9 +1732,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1815,9 +1815,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1844,9 +1844,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1873,9 +1873,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
@@ -2009,9 +2009,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> iOS </tag>
             
