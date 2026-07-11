@@ -137,9 +137,9 @@
           
           <category> Windows </category>
           
-          <category> PowerShell </category>
-          
           <category> DISM </category>
+          
+          <category> PowerShell </category>
           
       </categories>
       
@@ -1551,9 +1551,9 @@
           
           <category> 教程 </category>
           
-          <category> MS-DOS </category>
-          
           <category> Windows </category>
+          
+          <category> MS-DOS </category>
           
       </categories>
       
