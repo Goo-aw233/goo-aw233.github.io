@@ -80,10 +80,10 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
     <id>https://blog.gucats.com/posts/269758b0.html</id>
     <link href="https://blog.gucats.com/posts/269758b0.html"/>
@@ -141,8 +141,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <id>https://blog.gucats.com/posts/87461802.html</id>
     <link href="https://blog.gucats.com/posts/87461802.html"/>
     <published>2026-02-14T05:27:56.000Z</published>
@@ -233,8 +233,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/8407e146.html</id>
     <link href="https://blog.gucats.com/posts/8407e146.html"/>
@@ -315,8 +315,8 @@
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <id>https://blog.gucats.com/posts/a0c55de3.html</id>
     <link href="https://blog.gucats.com/posts/a0c55de3.html"/>
     <published>2025-05-17T05:23:01.000Z</published>

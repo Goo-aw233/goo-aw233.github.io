@@ -10,8 +10,26 @@
     
     
     <url>
+        <loc>https://blog.gucats.com/about/</loc>
+        <lastmod>2026-07-11T03:13:02.859Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>https://blog.gucats.com/help/</loc>
+        <lastmod>2026-07-11T03:07:10.333Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://blog.gucats.com/expired-articles/</loc>
-        <lastmod>2026-07-09T16:40:22.949Z</lastmod>
+        <lastmod>2026-07-10T04:45:52.602Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -39,24 +57,6 @@
     <url>
         <loc>https://blog.gucats.com/404.html</loc>
         <lastmod>2026-03-10T10:17:09.161Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://blog.gucats.com/help/</loc>
-        <lastmod>2026-03-03T14:08:40.848Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://blog.gucats.com/about/</loc>
-        <lastmod>2026-02-26T02:17:00.538Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
