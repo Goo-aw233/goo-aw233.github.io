@@ -11,7 +11,21 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-06-21T07:29:23.543Z</updated>
+  <updated>2026-07-19T14:14:53.299Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/2a2b79ee.html</id>
+    <link href="https://blog.gucats.com/posts/2a2b79ee.html"/>
+    <published>2026-07-19T13:34:30.000Z</published>
+    <summary>使用 BOOTICE 工具添加 VHD/VHDX 引导项，并通过 WinRE 引导到 VHD/VHDX 安装的系统。</summary>
+    <title>从 VHD(X) 引导启动 Windows</title>
+    <updated>2026-07-19T14:14:53.299Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -80,8 +94,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -155,11 +169,11 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
     <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>
@@ -307,21 +321,5 @@
     <summary>讲解如何在 Windows 系统中开启 SMBv3 的端到端加密功能，提升文件共享的安全性，涵盖了使用 PowerShell 命令配置加密的具体步骤，并说明了适用的系统版本和性能影响。</summary>
     <title>开启 SMBv3 端到端加密</title>
     <updated>2026-03-27T12:28:09.446Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
-    <id>https://blog.gucats.com/posts/a0c55de3.html</id>
-    <link href="https://blog.gucats.com/posts/a0c55de3.html"/>
-    <published>2025-05-17T05:23:01.000Z</published>
-    <summary>通过 DISM、Dism++ 和 lpksetup.exe 等多种方法为 Windows 添加完整的语言包，详细讲解了下载语言文件、安装语言包的操作步骤，适用于需要多语言支持的场景，支持 .cab 和 .esd 格式。</summary>
-    <title>为 Windows 添加完整的语言包</title>
-    <updated>2026-03-27T12:41:11.763Z</updated>
   </entry>
 </feed>

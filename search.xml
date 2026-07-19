@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>从 VHD(X) 引导启动 Windows</title>
+      <link href="/posts/2a2b79ee.html"/>
+      <url>/posts/2a2b79ee.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="添加引导项目"><a href="#添加引导项目" class="headerlink" title="添加引导项目"></a>添加引导项目</h2><p>打开 BOOTICE，切换到 “BCD 编辑” 选项卡，选择 “智能编辑模式”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Boot-OS-from-VHD/Easy-Mode.png" alt="智能编辑模式"></p><p>在打开的 “BCD 编辑” 窗口中，点击左侧系统列表底部的 “新建”，然后选择 “新建 VHD 启动项”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Boot-OS-from-VHD/New-VHD-Boot-Entry.png" alt="新建 VHD 启动项"></p><p>新建后，在右侧的 “设备文件” 栏中输入 <code>.VHD</code> 或 <code>.VHDX</code> 文件的<strong>路径（不包含盘符）</strong></p><blockquote><p><strong>注意</strong>：BOOTICE 此处配置的是相对于分区根目录的路径，<strong>不要</strong>包含盘符（如 <code>C:</code>）。例如，如果你的文件位于 <code>C:\VHDs\Windows11.VHDX</code>，这里只需填写 <code>\VHDs\Windows11.VHDX</code>。BCD 会在启动时自动遍历所有磁盘分区来查找该文件</p></blockquote><p>接下来可以修改 “菜单标题” 为你想要在启动菜单中显示的名称（如 <code>Windows 11 on VHDX</code>）</p><p><strong>检查启动文件</strong>：</p><ul><li>若你的电脑是 <strong>Legacy (BIOS)</strong> 模式，“启动文件”应为 <code>\Windows\system32\winload.exe</code></li><li>若你的电脑是 <strong>UEFI</strong> 模式，“启动文件”应为 <code>\Windows\system32\winload.efi</code></li></ul><p>如果 BOOTICE 自动生成的与你的固件类型不匹配，请手动修改此项，否则 VHD 系统将无法启动</p><h2 id="启动到-VHD"><a href="#启动到-VHD" class="headerlink" title="启动到 VHD"></a>启动到 VHD</h2><p>重启电脑，Windows Boot Manager 应该会自动显示引导菜单。如果未出现引导菜单，你可以通过 <a href="https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference?wt.mc_id=studentamb_474966#entry-points-into-winre">Windows 恢复环境 (WinRE)</a> 进入</p><p>进入 WinRE 后，选择 “使用其他操作系统”：</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Boot-OS-from-VHD/WinRE.png" alt="WinRE"></p><p>然后在启动菜单中选择你刚刚添加的 VHD 启动项，按回车即可进入 VHD 中的 Windows 系统</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Boot-OS-from-VHD/Boot-Options.png" alt="选择操作系统"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>移除幽灵文件和文件夹</title>
       <link href="/posts/5642e04d.html"/>
       <url>/posts/5642e04d.html</url>
@@ -137,9 +164,9 @@
           
           <category> Windows </category>
           
-          <category> DISM </category>
-          
           <category> PowerShell </category>
+          
+          <category> DISM </category>
           
       </categories>
       
@@ -282,9 +309,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> macOS </category>
+          
+          <category> Windows </category>
           
           <category> Linux </category>
           
@@ -293,9 +320,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> Linux </tag>
             
@@ -721,9 +748,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> iOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> iOS </tag>
             
         </tags>
       
@@ -1551,9 +1578,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
@@ -1875,9 +1902,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> iOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> iOS </tag>
             
         </tags>
       
@@ -1890,7 +1917,7 @@
       <link href="/posts/ae0e9cb1.html"/>
       <url>/posts/ae0e9cb1.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li>VMware Workstation Pro 在内的任意非 macOS 平台虚拟机，无法提供相对应的 macOS 显卡驱动，所以在虚拟机内运行 macOS 会有很明显的卡顿</li><li>Intel 的处理器对 macOS 支持非常好，故绝大部分 Intel 处理器都可以正常安装 macOS 虚拟机。对于 AMD 处理器，macOS 从未正式支持过该处理器，仅有少部分 AMD 锐龙处理器支持在虚拟机安装 macOS，<strong>而“推土机”架构的 AMD 处理器则一直不支持在虚拟机中安装 macOS</strong></li></ol><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true">VMware Workstation Pro</a><br><a href="https://github.com/paolo-projects/auto-unlocker/releases/latest">Auto-Unlocker</a><br>较老版本的 VMware Workstation Pro，可能无法使用较新的 Auto-Unlocker，可以尝试使用 <a href="https://github.com/DrDonk/unlocker/releases/latest">Unlocker</a>，该工具同样兼容新版 VMware Workstation Pro<br>macOS 镜像文件（<code>.ISO</code>、<code>.CDR</code>、<code>.DMG</code> 都可以使用，<code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a>）</p><h2 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h2><h3 id="Auto-Unlocker"><a href="#Auto-Unlocker" class="headerlink" title="Auto-Unlocker"></a>Auto-Unlocker</h3><p>将 <code>Auto-Unlocker.zip</code> 解压到空白文件夹，并运行根目录下的 <code>Unlock.exe</code><br>回到桌面，右键 <code>VMware Workstation Pro</code> 的快捷方式，并选择“打开文件所在的位置”，这就是 VMware Workstation Pro 的安装路径</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png" alt="打开文件所在的位置"></p><p>26H1 默认安装路径：<code>C:\Program Files\VMware\VMware Workstation</code><br>25H2u1 及以前版本默认安装路径（64 位）：<code>C:\Program Files (x86)\VMware\VMware Workstation</code></p><p>在打开的 <code>Auto-Unlocker</code> 窗口中，选择 <code>VMware Install Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径<br>随后，再选择 <code>VMware x64 Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径下的 <code>x64</code> 文件夹<br>完成后，确保 <code>Download Tools</code> 被勾选，最后点击 <code>Patch</code> 以开始解锁 <code>Apple macOS</code> 选项并下载 <code>darwin.iso</code> 和 <code>darwinPre15.iso</code> 这两个 VMware Tools</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker.png" alt="Auto-Unlocker"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker-Success.png" alt="修补完成"></p><h3 id="Unlocker"><a href="#Unlocker" class="headerlink" title="Unlocker"></a>Unlocker</h3><p>将压缩包解压到空白文件夹，进入到 <code>windows</code> 文件夹<br>按住 <kbd>SHIFT</kbd>，并按下右键，选择“在此处打开 PowerShell 窗口”（Windows 11 或安装终端的 Windows 可以直接右键选择“在终端中打开”）<br>输入命令以解锁 macOS</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./unlock.exe install</span><br></pre></td></tr></table></figure><p>等待一下即可完成解锁，然后按任意键即可退出</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Unlocker.png" alt="Unlocker"></p><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><hr><p><code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a></p><hr><p>选择镜像文件时，若镜像格式为 <code>.CDR</code>，可以更改文件类型为“所有文件”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Select-File-Types.png" alt="选择文件类型"></p><p>出现“无法检测此光盘映像中的操作系统”无需理会，点击下一步即可，选择好正确的 macOS 版本<br>创建磁盘的时候选择“将虚拟磁盘存储为单个文件”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Store-Virtual-Disk-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件"></p><p>完成后点击“编辑虚拟机设置”，在“网络适配器”中将网络连接改为“桥接模式”（可能需要在“虚拟网络编辑器”，更改桥接对象为当前正在使用的网卡）<br>对于按设备数连接的网络（如校园网），需要将网络连接模式设为“仅主机模式”</p><p>完成后开启虚拟机即可开始安装 macOS</p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="机型模拟"><a href="#机型模拟" class="headerlink" title="机型模拟"></a>机型模拟</h3><p>安装 macOS Big Sur 或更高版本安装时，可能会出现更新错误之类的报错，请将以下代码添加到 <code>.vmx</code> 文件的最末端（仅适用于 Intel 处理器）<br>添加前应关闭 VMware Workstation，<strong>并将 <code>.vmx</code> 文件内所有包含 <code>board-id.reflectHost = &quot;TRUE&quot;</code>、<code>hw.model.reflectHost = &quot;TRUE&quot;</code>、<code>serialNumber.reflectHost = &quot;TRUE&quot;</code> 之类的文本删掉，否则会出错</strong><br>若要获取一个新的机型型号而不是使用示例，请参阅：<a href="/posts/da029b2a.html" title="macOS 虚拟机机型模拟">macOS 虚拟机机型模拟</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">board-id.reflectHost = &quot;FALSE&quot;</span><br><span class="line">board-id = &quot;Mac-C02151108J9JG36FB&quot;</span><br><span class="line">hw.model.reflectHost = &quot;FALSE&quot;</span><br><span class="line">hw.model = &quot;iMacPro1,1&quot;</span><br><span class="line">serialNumber.reflectHost = &quot;FALSE&quot;</span><br><span class="line">serialNumber = &quot;C02GV0H7HX87&quot;</span><br><span class="line">smbios.reflectHost = &quot;FALSE&quot;</span><br><span class="line">uuid.action = &quot;keep&quot;</span><br><span class="line">smc.version = &quot;0&quot;</span><br></pre></td></tr></table></figure><p>若你的处理器为锐龙架构的 AMD 处理器，尝试以下配置<br><a href="https://blog.csdn.net/weixin_43436925/article/details/122437355">出处（有待考究）</a> | 末尾两个代码是自己另外添加的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">smc.version = &quot;0&quot;</span><br><span class="line">cpuid.0.eax = &quot;0000:0000:0000:0000:0000:0000:0000:1011&quot;</span><br><span class="line">cpuid.0.ebx = &quot;0111:0101:0110:1110:0110:0101:0100:0111&quot;</span><br><span class="line">cpuid.0.ecx = &quot;0110:1100:0110:0101:0111:0100:0110:1110&quot;</span><br><span class="line">cpuid.0.edx = &quot;0100:1001:0110:0101:0110:1110:0110:1001&quot;</span><br><span class="line">cpuid.1.eax = &quot;0000:0000:0000:0001:0000:0110:0111:0001&quot;</span><br><span class="line">cpuid.1.ebx = &quot;0000:0010:0000:0001:0000:1000:0000:0000&quot;</span><br><span class="line">cpuid.1.ecx = &quot;1000:0010:1001:1000:0010:0010:0000:0011&quot;</span><br><span class="line">cpuid.1.edx = &quot;0000:0111:1000:1011:1111:1011:1111:1111&quot;</span><br><span class="line">smbios.reflectHost = &quot;TRUE&quot;</span><br><span class="line">hw.model = &quot;MacBookPro14,3&quot;</span><br><span class="line">board-id = &quot;Mac-551B86E5744E2388&quot;</span><br><span class="line">keyboard.vusb.enable = &quot;TRUE&quot;</span><br><span class="line">mouse.vusb.enable = &quot;TRUE&quot;</span><br></pre></td></tr></table></figure><h3 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h3><p>macOS 安装与 Windows 不同，需要手动格式化磁盘</p><p>macOS 10.13 及更新版本可在主界面直接选择磁盘工具</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-New.png" alt="macOS 磁盘工具"></p><p>文件系统选择“APFS”，分区表选择 GUID</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-New.png" alt="macOS “抹掉”选项"></p><p>macOS 12 及更早的版本）则需要在上方的实用工具打开</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-Old.png" alt="“实用工具”的“磁盘工具”"></p><p>若文件系统不支持 APFS，则选择“Mac OS 扩展 (日志式)”，分区表选择 GUID</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-Old.png" alt="OS X “抹掉”选项"></p><details><summary>关于选项</summary><p>格式：<br>详情请参阅：<a href="https://support.apple.com/guide/disk-utility/dsku19ed921c">Mac 上“磁盘工具”中可用的文件系统格式 - 官方 Apple 支持 (中国)</a></p><p>方案：<br>详情请参阅：<a href="https://support.apple.com/guide/disk-utility/dsku1c614201">Mac 上的“磁盘工具”中可用的分区方案 - 官方 Apple 支持 (中国)</a></p><p>GUID 分区图：即 GPT，为所有基于 Intel 和 Apple 芯片的 Mac 电脑选取此选项。部分基于 Microsoft Windows 的较新电脑还可以使用此方案<br>主引导记录：即 MBR，为兼容所有基于 Microsoft Windows 的电脑选取此选项<br>Apple 分区图：即 APM，为兼容基于 PowerPC 的早期 Mac 电脑选取此选项</p></details><h3 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h3><p>部分情况（例如 Recovery 下），使用 USB3.0&#x2F;USB3.1&#x2F;USB3.2 可能会导致 USB 设备（如键盘鼠标）无法使用<br>此时只需要点击“编辑虚拟机设置”，在“USB 控制器”部分将“USB 兼容性”的版本，从 <code>USB 3.0/USB 3.1/USB 3.2</code> 改成 <code>USB 2.0</code> 即可</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li>VMware Workstation Pro 在内的任意非 macOS 平台虚拟机，无法提供相对应的 macOS 显卡驱动，所以在虚拟机内运行 macOS 会有很明显的卡顿</li><li>Intel 的处理器对 macOS 支持非常好，故绝大部分 Intel 处理器都可以正常安装 macOS 虚拟机。对于 AMD 处理器，macOS 从未正式支持过该处理器，仅有少部分 AMD 锐龙处理器支持在虚拟机安装 macOS，<strong>而“推土机”架构的 AMD 处理器则一直不支持在虚拟机中安装 macOS</strong></li></ol><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true">VMware Workstation Pro</a><br><a href="https://github.com/paolo-projects/auto-unlocker/releases/latest">Auto-Unlocker</a><br>较老版本的 VMware Workstation Pro，可能无法使用较新的 Auto-Unlocker，可以尝试使用 <a href="https://github.com/DrDonk/unlocker/releases/latest">Unlocker</a>，该工具同样兼容新版 VMware Workstation Pro<br>macOS 镜像文件（<code>.ISO</code>、<code>.CDR</code>、<code>.DMG</code> 都可以使用，<code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a>）</p><h2 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h2><h3 id="Auto-Unlocker"><a href="#Auto-Unlocker" class="headerlink" title="Auto-Unlocker"></a>Auto-Unlocker</h3><p>将 <code>Auto-Unlocker.zip</code> 解压到空白文件夹，并运行根目录下的 <code>Unlock.exe</code><br>回到桌面，右键 <code>VMware Workstation Pro</code> 的快捷方式，并选择“打开文件所在的位置”，这就是 VMware Workstation Pro 的安装路径</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png" alt="打开文件所在的位置"></p><p>26H1 默认安装路径：<code>C:\Program Files\VMware\VMware Workstation</code><br>25H2u1 及以前版本默认安装路径（64 位）：<code>C:\Program Files (x86)\VMware\VMware Workstation</code></p><p>在打开的 <code>Auto-Unlocker</code> 窗口中，选择 <code>VMware Install Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径<br>随后，再选择 <code>VMware x64 Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径下的 <code>x64</code> 文件夹<br>完成后，确保 <code>Download Tools</code> 被勾选，最后点击 <code>Patch</code> 以开始解锁 <code>Apple macOS</code> 选项并下载 <code>darwin.iso</code> 和 <code>darwinPre15.iso</code> 这两个 VMware Tools</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker.png" alt="Auto-Unlocker"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker-Success.png" alt="修补完成"></p><h3 id="Unlocker"><a href="#Unlocker" class="headerlink" title="Unlocker"></a>Unlocker</h3><p>将压缩包解压到空白文件夹，进入到 <code>windows</code> 文件夹<br>按住 <kbd>SHIFT</kbd>，并按下右键，选择“在此处打开 PowerShell 窗口”（Windows 11 或安装终端的 Windows 可以直接右键选择“在终端中打开”）<br>输入命令以解锁 macOS</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./unlock.exe install</span><br></pre></td></tr></table></figure><p>等待一下即可完成解锁，然后按任意键即可退出</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Unlocker.png" alt="Unlocker"></p><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><hr><p><code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a></p><hr><p>选择镜像文件时，若镜像格式为 <code>.CDR</code>，可以更改文件类型为“所有文件”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Select-File-Types.png" alt="选择文件类型"></p><p>出现“无法检测此光盘映像中的操作系统”无需理会，点击下一步即可，选择好正确的 macOS 版本<br>创建磁盘的时候选择“将虚拟磁盘存储为单个文件”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Store-Virtual-Disk-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件"></p><p>完成后点击“编辑虚拟机设置”</p><ol><li>在“处理器”设置中，将<strong>处理器个数</strong>设置为 <code>1</code>，<strong>处理器核心数</strong>随意，最大不超过物理核心数的一半为最佳；内存分配不超过物理内存的一半为最佳</li><li>在“网络适配器”中，将网络连接改为“桥接模式”（可能需要在“虚拟网络编辑器”，更改桥接对象为当前正在使用的网卡）<br>对于按设备数连接的网络（如校园网），需要将网络连接模式设为“仅主机模式”</li></ol><p>完成后开启虚拟机即可开始安装 macOS</p><h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="机型模拟"><a href="#机型模拟" class="headerlink" title="机型模拟"></a>机型模拟</h3><p>安装 macOS Big Sur 或更高版本安装时，可能会出现更新错误之类的报错，请将以下代码添加到 <code>.vmx</code> 文件的最末端（仅适用于 Intel 处理器）<br>添加前应关闭 VMware Workstation，<strong>并将 <code>.vmx</code> 文件内所有包含 <code>board-id.reflectHost = &quot;TRUE&quot;</code>、<code>hw.model.reflectHost = &quot;TRUE&quot;</code>、<code>serialNumber.reflectHost = &quot;TRUE&quot;</code> 之类的文本删掉，否则会出错</strong><br>若要获取一个新的机型型号而不是使用示例，请参阅：<a href="/posts/da029b2a.html" title="macOS 虚拟机机型模拟">macOS 虚拟机机型模拟</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">board-id.reflectHost = &quot;FALSE&quot;</span><br><span class="line">board-id = &quot;Mac-C02151108J9JG36FB&quot;</span><br><span class="line">hw.model.reflectHost = &quot;FALSE&quot;</span><br><span class="line">hw.model = &quot;iMacPro1,1&quot;</span><br><span class="line">serialNumber.reflectHost = &quot;FALSE&quot;</span><br><span class="line">serialNumber = &quot;C02GV0H7HX87&quot;</span><br><span class="line">smbios.reflectHost = &quot;FALSE&quot;</span><br><span class="line">uuid.action = &quot;keep&quot;</span><br><span class="line">smc.version = &quot;0&quot;</span><br></pre></td></tr></table></figure><p>若你的处理器为锐龙架构的 AMD 处理器，尝试以下配置<br><a href="https://blog.csdn.net/weixin_43436925/article/details/122437355">出处（有待考究）</a> | 末尾两个代码是自己另外添加的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">smc.version = &quot;0&quot;</span><br><span class="line">cpuid.0.eax = &quot;0000:0000:0000:0000:0000:0000:0000:1011&quot;</span><br><span class="line">cpuid.0.ebx = &quot;0111:0101:0110:1110:0110:0101:0100:0111&quot;</span><br><span class="line">cpuid.0.ecx = &quot;0110:1100:0110:0101:0111:0100:0110:1110&quot;</span><br><span class="line">cpuid.0.edx = &quot;0100:1001:0110:0101:0110:1110:0110:1001&quot;</span><br><span class="line">cpuid.1.eax = &quot;0000:0000:0000:0001:0000:0110:0111:0001&quot;</span><br><span class="line">cpuid.1.ebx = &quot;0000:0010:0000:0001:0000:1000:0000:0000&quot;</span><br><span class="line">cpuid.1.ecx = &quot;1000:0010:1001:1000:0010:0010:0000:0011&quot;</span><br><span class="line">cpuid.1.edx = &quot;0000:0111:1000:1011:1111:1011:1111:1111&quot;</span><br><span class="line">smbios.reflectHost = &quot;TRUE&quot;</span><br><span class="line">hw.model = &quot;MacBookPro14,3&quot;</span><br><span class="line">board-id = &quot;Mac-551B86E5744E2388&quot;</span><br><span class="line">keyboard.vusb.enable = &quot;TRUE&quot;</span><br><span class="line">mouse.vusb.enable = &quot;TRUE&quot;</span><br></pre></td></tr></table></figure><h3 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h3><p>macOS 安装与 Windows 不同，需要手动格式化磁盘</p><p>macOS 10.13 及更新版本可在主界面直接选择磁盘工具</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-New.png" alt="macOS 磁盘工具"></p><p>文件系统选择“APFS”，分区表选择 GUID</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-New.png" alt="macOS “抹掉”选项"></p><p>macOS 12 及更早的版本）则需要在上方的实用工具打开</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-Old.png" alt="“实用工具”的“磁盘工具”"></p><p>若文件系统不支持 APFS，则选择“Mac OS 扩展 (日志式)”，分区表选择 GUID</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-Old.png" alt="OS X “抹掉”选项"></p><details><summary>关于选项</summary><p>格式：<br>详情请参阅：<a href="https://support.apple.com/guide/disk-utility/dsku19ed921c">Mac 上“磁盘工具”中可用的文件系统格式 - 官方 Apple 支持 (中国)</a></p><p>方案：<br>详情请参阅：<a href="https://support.apple.com/guide/disk-utility/dsku1c614201">Mac 上的“磁盘工具”中可用的分区方案 - 官方 Apple 支持 (中国)</a></p><p>GUID 分区图：即 GPT，为所有基于 Intel 和 Apple 芯片的 Mac 电脑选取此选项。部分基于 Microsoft Windows 的较新电脑还可以使用此方案<br>主引导记录：即 MBR，为兼容所有基于 Microsoft Windows 的电脑选取此选项<br>Apple 分区图：即 APM，为兼容基于 PowerPC 的早期 Mac 电脑选取此选项</p></details><h3 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h3><p>部分情况（例如 Recovery 下），使用 USB3.0&#x2F;USB3.1&#x2F;USB3.2 可能会导致 USB 设备（如键盘鼠标）无法使用<br>此时只需要点击“编辑虚拟机设置”，在“USB 控制器”部分将“USB 兼容性”的版本，从 <code>USB 3.0/USB 3.1/USB 3.2</code> 改成 <code>USB 2.0</code> 即可</p>]]></content>
       
       
       <categories>
@@ -1976,9 +2003,9 @@
       
         <tags>
             
-            <tag> iOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> iOS </tag>
             
             <tag> 越狱 </tag>
             
@@ -2011,9 +2038,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> iOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> iOS </tag>
             
             <tag> 越狱 </tag>
             
