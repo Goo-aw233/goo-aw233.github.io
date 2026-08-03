@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-08-03T08:38:21.888Z</updated>
+  <updated>2026-08-03T08:47:27.404Z</updated>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -24,7 +24,7 @@
     <published>2026-08-03T07:20:12.000Z</published>
     <summary>针对 Windows 更新卡住、安装失败或磁盘空间不足的问题，提供手动清理 SoftwareDistribution\Download 缓存文件夹的详细步骤，涵盖停止服务、删除文件及重建数据库，适用于 Windows Vista 及以上操作系统。</summary>
     <title>清理 Windows 更新缓存</title>
-    <updated>2026-08-03T08:38:21.888Z</updated>
+    <updated>2026-08-03T08:47:27.404Z</updated>
   </entry>
   <entry>
     <author>
@@ -280,8 +280,8 @@
     <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
     <id>https://blog.gucats.com/posts/41eafc84.html</id>
     <link href="https://blog.gucats.com/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>

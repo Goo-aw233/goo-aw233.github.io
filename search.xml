@@ -8,7 +8,7 @@
       <link href="/posts/e26b53d4.html"/>
       <url>/posts/e26b53d4.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 更新过程中，系统会将下载的更新包暂存在 <code>C:\Windows\SoftwareDistribution\Download</code> 目录中。当这些缓存文件出现损坏、不完整或权限异常时，可能导致更新安装失败、进度卡住或反复提示重启。此外，长期累积的缓存也会占用一定的磁盘空间</p><p>磁盘清理可以在一定程度上清理掉 Windows 更新缓存，请优先尝试磁盘清理<br>按下 <kbd>WIN</kbd> + <kbd>R</kbd>，打开“运行”，输入 <code>cleanmgr.exe /d C</code>，按下 <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ENTER</kbd> 以开始扫描（若不按下这三键，可自行选择“清理系统文件”）</p><h2 id="暂停更新"><a href="#暂停更新" class="headerlink" title="暂停更新"></a>暂停更新</h2><div class="note info"><p>以下步骤是为了不继续安装现有的更新<br>若为 Windows Vista、Windows 7、Windows 8、Windows 8.1，可以跳过，直接<a href="#%E6%9A%82%E5%81%9C%E6%9C%8D%E5%8A%A1">暂停服务</a></p></div><p>Windows 11：Windows 设置 &gt; “Windows 更新” &gt; “暂停更新”<br>Windows 10：Windows 设置 &gt; “更新和安全” &gt; “暂停更新 7 天”</p><h2 id="暂停服务"><a href="#暂停服务" class="headerlink" title="暂停服务"></a>暂停服务</h2><div class="note success"><p>对于使用新版任务管理器的 Windows，可以在导航栏点击“服务”，搜索 <code>wuauserv</code> 或 “Windows 更新”，即可停止服务</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Clear-Windows-Update-Cache/Pause-wuauserv-Service-in-Taskmgr.png" alt="从任务管理器暂停 Windows 更新服务"></p></div><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd>，打开“运行”，输入 <code>services.msc</code> 并按下回车以打开“服务”控制台<br>向下滑动，找到名为“Windows 更新”的服务，右键，并选择“停止”以暂停 Windows 更新服务</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Clear-Windows-Update-Cache/Pause-wuauserv-Service-in-services-msc.png" alt="从“服务”控制台暂停 Windows 更新服务"></p><h2 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h2><p>打开到 <code>C:\Windows\SoftwareDistribution\Download</code> 文件夹，这里是 Windows 更新的下载缓存，<strong>可以将其全选并删除，但是不要删除 <code>Download</code> 文件夹</strong><br>如果遇到删除失败的问题，请重复<a href="#%E6%9A%82%E5%81%9C%E6%9C%8D%E5%8A%A1">暂停服务</a>的步骤以暂停 Windows 更新服务，并重新清理缓存</p><p>若将 <code>C:\Windows\SoftwareDistribution</code> 文件夹下所有的文件和文件夹删除，则会将缓存与数据库一并删除，这不会损坏 Windows，Windows 更新会自动重建数据库<br>在 Windows 更新遇到问题时，可以尝试删除 <code>C:\Windows\SoftwareDistribution</code> 文件夹下所有的文件和文件夹，<strong>但是不要删除 <code>SoftwareDistribution</code> 文件夹</strong></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://learn.microsoft.com/windows-server/administration/windows-commands/cleanmgr/?wt.mc_id=studentamb_474966">cleanmgr | Microsoft Learn</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 更新过程中，系统会将下载的更新包暂存在 <code>C:\Windows\SoftwareDistribution\Download</code> 目录中。当这些缓存文件出现损坏、不完整或权限异常时，可能导致更新安装失败、进度卡住或反复提示重启。此外，长期累积的缓存也会占用一定的磁盘空间</p><p>磁盘清理可以在一定程度上清理掉 Windows 更新缓存，请优先尝试磁盘清理<br>按下 <kbd>WIN</kbd> + <kbd>R</kbd>，打开“运行”，输入 <code>cleanmgr.exe /d C</code>，按下 <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ENTER</kbd> 以开始扫描（若不按下这三键，可自行选择“清理系统文件”）</p><h2 id="暂停更新"><a href="#暂停更新" class="headerlink" title="暂停更新"></a>暂停更新</h2><div class="note info"><p>以下步骤是为了不继续安装现有的更新<br>若为 Windows Vista、Windows 7、Windows 8、Windows 8.1，可以跳过，直接<a href="#%E6%9A%82%E5%81%9C%E6%9C%8D%E5%8A%A1">暂停服务</a></p></div><p>Windows 11：Windows 设置 &gt; “Windows 更新” &gt; “暂停更新”<br>Windows 10：Windows 设置 &gt; “更新和安全” &gt; “暂停更新 7 天”</p><h2 id="暂停服务"><a href="#暂停服务" class="headerlink" title="暂停服务"></a>暂停服务</h2><div class="note success"><p>对于使用新版任务管理器的 Windows，可以在导航栏点击“服务”，搜索 <code>wuauserv</code> 或 “Windows 更新”，即可停止服务</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Clear-Windows-Update-Cache/Pause-wuauserv-Service-in-Taskmgr.png" alt="从任务管理器暂停 Windows 更新服务"></p></div><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd>，打开“运行”，输入 <code>services.msc</code> 并按下回车以打开“服务”控制台<br>向下滑动，找到名为“Windows 更新”的服务，选择“停止”以暂停 Windows 更新服务</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Clear-Windows-Update-Cache/Pause-wuauserv-Service-in-services-msc.png" alt="从“服务”控制台暂停 Windows 更新服务"></p><h2 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h2><p>打开到 <code>C:\Windows\SoftwareDistribution\Download</code> 文件夹，这里是 Windows 更新的下载缓存，<strong>可以将其全选并删除，但是不要删除 <code>Download</code> 文件夹</strong><br>如果遇到删除失败的问题，请重复<a href="#%E6%9A%82%E5%81%9C%E6%9C%8D%E5%8A%A1">暂停服务</a>的步骤以暂停 Windows 更新服务，并重新清理缓存</p><p>若将 <code>C:\Windows\SoftwareDistribution</code> 文件夹下所有的文件和文件夹删除，则会将缓存与数据库一并删除，这不会损坏 Windows，Windows 更新会自动重建数据库<br>在 Windows 更新遇到问题时，可以尝试删除 <code>C:\Windows\SoftwareDistribution</code> 文件夹下所有的文件和文件夹，<strong>但是不要删除 <code>SoftwareDistribution</code> 文件夹</strong></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://learn.microsoft.com/windows-server/administration/windows-commands/cleanmgr/?wt.mc_id=studentamb_474966">cleanmgr | Microsoft Learn</a></li></ol>]]></content>
       
       
       <categories>
@@ -529,9 +529,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -744,9 +744,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -1614,11 +1614,11 @@
       
         <tags>
             
+            <tag> Windows </tag>
+            
             <tag> MS-DOS </tag>
             
             <tag> VMware Workstation </tag>
-            
-            <tag> Windows </tag>
             
         </tags>
       
@@ -1964,9 +1964,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -1999,9 +1999,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -2154,9 +2154,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -2185,9 +2185,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
