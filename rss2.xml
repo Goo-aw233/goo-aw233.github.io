@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Sun, 19 Jul 2026 14:14:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 08:38:21 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,16 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>清理 Windows 更新缓存</title>
+      <link>https://blog.gucats.com/posts/e26b53d4.html</link>
+      <description>针对 Windows 更新卡住、安装失败或磁盘空间不足的问题，提供手动清理 SoftwareDistribution\Download 缓存文件夹的详细步骤，涵盖停止服务、删除文件及重建数据库，适用于 Windows Vista 及以上操作系统。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Mon, 03 Aug 2026 07:20:12 GMT</pubDate>
+    </item>
     <item>
       <title>从 VHD(X) 引导启动 Windows</title>
       <link>https://blog.gucats.com/posts/2a2b79ee.html</link>
@@ -79,8 +89,8 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
       <pubDate>Tue, 28 Apr 2026 12:07:24 GMT</pubDate>
     </item>
@@ -122,8 +132,8 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Sat, 14 Feb 2026 05:27:56 GMT</pubDate>
     </item>
     <item>
@@ -190,8 +200,8 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
-      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
       <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
       <pubDate>Thu, 16 Oct 2025 12:36:52 GMT</pubDate>
     </item>
@@ -231,18 +241,6 @@
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
       <pubDate>Mon, 06 Oct 2025 02:44:31 GMT</pubDate>
-    </item>
-    <item>
-      <title>开启 SMBv3 端到端加密</title>
-      <link>https://blog.gucats.com/posts/29b4a04d.html</link>
-      <description>讲解如何在 Windows 系统中开启 SMBv3 的端到端加密功能，提升文件共享的安全性，涵盖了使用 PowerShell 命令配置加密的具体步骤，并说明了适用的系统版本和性能影响。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
-      <pubDate>Thu, 24 Jul 2025 06:09:42 GMT</pubDate>
     </item>
   </channel>
 </rss>
