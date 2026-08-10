@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>为什么 Windows 11 总是占用更多的内存</title>
+      <link href="/posts/e8dc38ed.html"/>
+      <url>/posts/e8dc38ed.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="SysMain"><a href="#SysMain" class="headerlink" title="SysMain"></a>SysMain</h2><blockquote><p><code>SysMain</code> 的前身为 <code>SuperFetch</code>，自 Windows 10 版本 1809 起更名为 <code>SysMain</code>，再往前是 Windows XP 引入的 <code>Prefetch</code>。</p></blockquote><p><code>SysMain</code> 服务的运作是 Windows 11 内存占用的一个核心因素。<code>SysMain</code> 会学习用户的 Windows 使用习惯，将高频应用程序和数据预加载至内存备用列表 (<code>Standby List</code>)，以短时提高 Windows 的工作效率。当其他应用程序需要内存时，Windows 会立即释放这部分被占用缓存。但 <code>SysMian</code> 的占用会动态膨胀，在 32 GB 内存的 Windows 上甚至可达 10 GB 左右。</p><p>例如，在我的 Windows 上，开机了近 30 个小时，在“资源监视器” &gt; “内存” &gt; “物理内存”板块中可以看到，“备用”的部分就占用到了 <code>13072 MB</code> 的大小。“备用”所占的大小为 <code>SysMain</code> 预加载的数据 + 用户最近打开的文件缓存 + 应用程序释放的内存总和。</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Why-Does-Windows-11-Always-Use-More-RAM/Resmon.png" alt="资源监视器"></p><p>如果想知道更精细的分配，可以使用 <code><a href="https://learn.microsoft.com/sysinternals/downloads/rammap/?wt.mc_id=studentamb_474966">RAMMap</a></code> 来查看，只需要切换到 <code>File Summary</code> 标签页，<code>Standby</code> 那一列即是被缓存的大小。</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Why-Does-Windows-11-Always-Use-More-RAM/RAMMap.png" alt="RAMMap"></p><p>相较于其他 Windows，Windows 11 采用的是更加激进的内存管理模式，默认会占用更多的内存，以提高读写速度，减少等待时间。在这些被占用的内存中，有相当大一部分的内容均为缓存，不论是 <code>SysMain</code> 主动生成的缓存，抑或是其他存放到内存的缓存。而当有程序需要到较大的内存时，Windows 会主动释放较长时间不用的缓存内容，来让给相对应的程序使用。</p><p>此外，为减少对慢速页面文件的依赖，Windows 11 更频繁地使用 <code>Xpress</code> 算法，将冷数据压缩至原始大小的 30% 到 50% 后存放在物理内存中。这虽然能用 CPU 时间换取有效内存空间，但压缩数据本身也会计入“已用内存”，推高任务管理器中的数值。这看似是在偷内存，实则是利用现有的技术，更高效地管理可用内存空间，而不是只局限于眼前“可用内存小”这一利益。</p><h2 id="WebView2"><a href="#WebView2" class="headerlink" title="WebView2"></a>WebView2</h2><p>到了 Windows 11，WebView 技术栈大爆炸，从 <code>Electron</code>，再到 <code>React Native</code> 再到现在的 <code>Edge WebView2</code>，众多软件选择转向使用 WebView 以寻求更高效地开发，而不是使用原生技术以提高用户实际体验。对于 Microsoft（非 Windows）而言，开发更倾向于使用开发较为快速的 <code>Edge WebView2</code>，而不是使用原生的 <code>WinUI</code> 框架。<br><code>Electron</code> 所构建的应用程序，每个独立程序都会附带一个所需要的运行时，硬盘占用上会多出几百兆的占用，内存上若优化不当，则会像在后台多运行了一个浏览器一样多占用了更多的内存。<br>而 <code>Edge WebView2</code> 所构建的应用程序，除部分程序使用特定的版本外，Windows 会预装一个公共运行时，所有的 <code>Edge WebView2</code> 应用程序都会使用这一公共运行时。相较于 <code>Electron</code> 应用程序，<code>Edge WebView2</code> 应用程序减少了独立运行时这一硬盘开销，内存上若优化不当，也会像在后台多运行了一个浏览器一样多占用了更多的内存。但是在长时间挂起应用程序后，内存的占用基本会得到极大地释放。</p><ol><li>以“Windows 搜索”为例，在 <code>Edge WebView2</code> 模式，非“效率模式”下正常工作，内存占用可达约 <code>120 MB</code>，挂起时内存占用可降低到约 <code>35 MB</code>。</li></ol><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Why-Does-Windows-11-Always-Use-More-RAM/WebView2-Resources-Usage.png" alt="Windows 搜索资源占用"></p><ol start="2"><li>以“天气”为例，据 Windows Latest 测算，工作状态下可达到约 <code>1.2 GB</code> 的内存占用，挂起时内存占用约 <code>600 MB</code>。<sup><a href="#ref1">[1]</a></sup></li></ol><h2 id="基于虚拟化的安全"><a href="#基于虚拟化的安全" class="headerlink" title="基于虚拟化的安全"></a>基于虚拟化的安全</h2><p>为提升安全性，Windows 11 24H2 起默认启用了基于虚拟化的安全功能（VBS），该功能引入了新的安全模型，使 Windows 运行更加安全，不易受到恶意软件的侵袭，但其代价是需要额外的内存来运行虚拟化环境。根据 Broadcom 论坛用户反馈，Windows 11 在开启 <code>VBS</code> 时，<code>Secure System</code> 的占用可能高达 <code>2 GB</code><sup><a href="#ref1">[2]</a></sup>，而在正常情况下该进程仅占用约 <code>100 MB</code> 的内存。</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>  <li id="ref1"><a href="https://www.windowslatest.com/2026/08/09/windows-11s-weather-app-uses-5x-the-ram-of-macos-weather-and-it-still-shows-ads" target="_blank" rel="noopener">Windows 11 is a memory hog, even Microsoft’s Weather uses 1.2GB of RAM, 5x more than macOS Weather</a></li>  <li id="ref2"><a href="https://community.broadcom.com/discussion/windows-host-increased-memory-usage-vbs-redux" target="_blank" rel="noopener">Windows Host Increased Memory Usage - VBS Redux | VMware Workstation</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Small Talk </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Small Talk </tag>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用指定的 WebView2 启动应用程序</title>
+      <link href="/posts/d31e95c.html"/>
+      <url>/posts/d31e95c.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="复制-WebView2-文件夹"><a href="#复制-WebView2-文件夹" class="headerlink" title="复制 WebView2 文件夹"></a>复制 WebView2 文件夹</h2><p>打开到 Microsoft Edge WebView2 运行时的安装目录：<br><code>C:\Program Files (x86)\Microsoft\EdgeWebView\Application</code><br>将 <code>Application</code> 文件夹下名字为版本号的文件夹（如 <code>150.0.0.0</code>），复制到你想要的目录（例如复制到 <code>C:\Temp</code>，并将 <code>150.0.0.0</code> 命名为 <code>WebView2Folder</code>）</p><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><div class="note success"><p>推荐阅读：<a href="/posts/fc28aee6.html" title="显示文件扩展名">显示文件扩展名</a></p></div><p>新建一个文本文件，将文件名后缀改为 <code>.reg</code>，编辑它，输入以下模板内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Name.exe&quot;=&quot;path\\to\\folder&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Name.exe&quot;=&quot;path\\to\\folder&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Name.exe&quot;=&quot;path\\to\\folder&quot;</span><br></pre></td></tr></table></figure><p>例如，我的应用程序安装路径为 <code>C:\Apps\Test1</code>，目标可执行文件为 <code>Test1.exe</code>，复制出来的文件夹名称为 <code>WebView2Folder</code>，那么我的 <code>.reg</code> 文件内容如下：</p><div class="note warning"><p>注册表的路径表达要求双斜杠，例如 <code>C:\Apps\Test1</code> 应写为 <code>C:\\Apps\\Test1</code></p></div><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Test1.exe&quot;=&quot;C:\\Temp\\WebView2Folder&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Test1.exe&quot;=&quot;C:\\Temp\\WebView2Folder&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Test1.exe&quot;=&quot;C:\\Temp\\WebView2Folder&quot;</span><br></pre></td></tr></table></figure><p>如果只是想临时设置，让某个程序在本次启动的时候用指定的 Microsoft Edge WebView2 运行时，可以通过设置临时环境变量的方式<br>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>cmd.exe</code> 后按下 <kbd>Enter</kbd> 以打开“打开命令提示符”，输入如下命令：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> &quot;WEBVIEW2_BROWSER_EXECUTABLE_FOLDER=C:\Temp\WebView2Folder&quot;</span><br><span class="line">&quot;C:\Apps\Test1\Test1.exe&quot;</span><br></pre></td></tr></table></figure><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><a href="https://www.cnblogs.com/hezihang/p/22354730">给 App 指定 msedgewebview2.exe，不使用默认 WebView2 - 子航 - 博客园</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>清理 Windows 更新缓存</title>
       <link href="/posts/e26b53d4.html"/>
       <url>/posts/e26b53d4.html</url>
@@ -191,18 +247,18 @@
           
           <category> Windows </category>
           
-          <category> DISM </category>
-          
           <category> PowerShell </category>
+          
+          <category> DISM </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
             <tag> PowerShell </tag>
             
@@ -314,9 +370,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -336,9 +392,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> macOS </category>
+          
+          <category> Windows </category>
           
           <category> Linux </category>
           
@@ -529,9 +585,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -651,9 +707,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -744,9 +800,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -862,9 +918,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -1063,9 +1119,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -1094,9 +1150,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -1446,9 +1502,9 @@
       
         <tags>
             
-            <tag> DISM </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> DISM </tag>
             
         </tags>
       
@@ -1605,20 +1661,20 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> MS-DOS </tag>
             
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1964,9 +2020,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -1999,9 +2055,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -2125,6 +2181,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -2154,9 +2216,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -2185,9 +2247,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       

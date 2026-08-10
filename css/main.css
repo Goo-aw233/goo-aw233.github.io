@@ -1441,7 +1441,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0a3ca1;
+    background: #ffc2c7;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3273,4 +3273,50 @@ body::before {
   color: #fff !important;
   border-color: #0078d4 !important;
   border-radius: 4px !important;
+}
+.small-talk-list {
+  --st-border: rgba(0,0,0,0.08);
+}
+.small-talk-list .small-talk-list-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.small-talk-list .small-talk-item {
+  display: grid;
+  grid-template-columns: 9em 1fr 9em;
+  align-items: baseline;
+  padding: 16px 2px;
+  border-bottom: 1px dashed var(--st-border);
+}
+.small-talk-list .small-talk-item:last-child {
+  border-bottom: none;
+}
+.small-talk-list .small-talk-item .small-talk-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, 'Courier New', monospace;
+  font-size: 1em;
+  color: var(--text-color);
+  opacity: 0.75;
+}
+.small-talk-list .small-talk-item .small-talk-date i {
+  font-size: 1.05em;
+  opacity: 0.9;
+}
+.small-talk-list .small-talk-item .small-talk-link {
+  text-align: center;
+  font-size: 1.25em;
+  color: var(--link-color);
+  transition: color 0.2s ease;
+}
+.small-talk-list .small-talk-item .small-talk-link:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+@media (prefers-color-scheme: dark) {
+  .small-talk-list {
+    --st-border: rgba(255,255,255,0.12);
+  }
 }
