@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Mon, 10 Aug 2026 13:36:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 13:44:05 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -17,10 +17,7 @@
     <item>
       <title>为什么 Windows 11 总是占用更多的内存</title>
       <link>https://blog.gucats.com/posts/e8dc38ed.html</link>
-      <description>
-        <![CDATA[<h2 id="SysMain"><a href="#SysMain" class="headerlink" title="SysMain"></a>SysMain</h2><blockquote>
-<p><code>SysMain</code> 的前身为]]>
-      </description>
+      <description>深入解析 Windows 11 内存占用偏高的三大主因：SysMain 预缓存机制、WebView 框架的广泛应用程序，以及默认启用的虚拟化安全（VBS）功能，帮助用户理解系统“占用多”背后的设计逻辑。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/Small-Talk/">Small Talk</category>
       <category domain="https://blog.gucats.com/categories/Small-Talk/Windows/">Windows</category>
@@ -111,8 +108,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -239,8 +236,8 @@
       <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</category>
       <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/">VMware</category>
       <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/">Workstation</category>
-      <category domain="https://blog.gucats.com/tags/VMware-Workstation/">VMware Workstation</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/VMware-Workstation/">VMware Workstation</category>
       <pubDate>Thu, 16 Oct 2025 09:57:11 GMT</pubDate>
     </item>
   </channel>

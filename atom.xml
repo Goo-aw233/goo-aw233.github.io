@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-08-10T13:36:04.277Z</updated>
+  <updated>2026-08-10T13:44:05.325Z</updated>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -23,12 +23,9 @@
     <id>https://blog.gucats.com/posts/e8dc38ed.html</id>
     <link href="https://blog.gucats.com/posts/e8dc38ed.html"/>
     <published>2026-08-10T03:45:14.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="SysMain"><a href="#SysMain" class="headerlink" title="SysMain"></a>SysMain</h2><blockquote>
-<p><code>SysMain</code> 的前身为]]>
-    </summary>
+    <summary>深入解析 Windows 11 内存占用偏高的三大主因：SysMain 预缓存机制、WebView 框架的广泛应用程序，以及默认启用的虚拟化安全（VBS）功能，帮助用户理解系统“占用多”背后的设计逻辑。</summary>
     <title>为什么 Windows 11 总是占用更多的内存</title>
-    <updated>2026-08-10T13:36:04.277Z</updated>
+    <updated>2026-08-10T13:44:05.325Z</updated>
   </entry>
   <entry>
     <author>
@@ -140,8 +137,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -312,8 +309,8 @@
     <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
     <id>https://blog.gucats.com/posts/41eafc84.html</id>
     <link href="https://blog.gucats.com/posts/41eafc84.html"/>
     <published>2025-10-16T09:57:11.000Z</published>
