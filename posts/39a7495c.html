@@ -21,25 +21,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="海納百川，有容乃大">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GuCATs&#39;摸鱼站">
-<meta property="og:url" content="https://blog.gucats.com/tags/iOS/index.html">
+    <meta name="description" content="介绍如何安全地重置、卸载和清理 Windows Subsystem for Linux (WSL) 发行版，包括使用 wsl.exe 命令及手动清理残留缓存文件夹的方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卸载或重置 WSL 发行版">
+<meta property="og:url" content="https://blog.gucats.com/posts/39a7495c.html">
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
-<meta property="og:description" content="海納百川，有容乃大">
+<meta property="og:description" content="介绍如何安全地重置、卸载和清理 Windows Subsystem for Linux (WSL) 发行版，包括使用 wsl.exe 命令及手动清理残留缓存文件夹的方法。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-08-26T07:24:50.000Z">
+<meta property="article:modified_time" content="2026-08-26T07:45:42.297Z">
 <meta property="article:author" content="GuCATs">
-<meta property="article:tag" content="GuCATs, Goo-aw233, GeeBoCATs, GodDog322, Antipa, Starcourt, Rita, Rare, GodTNT233, 技术, 博客">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="软件">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.gucats.com/tags/iOS/">
+<link rel="canonical" href="https://blog.gucats.com/posts/39a7495c.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/iOS/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.gucats.com/posts/39a7495c.html","path":"posts/39a7495c.html","title":"卸载或重置 WSL 发行版"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: iOS | GuCATs'摸鱼站</title>
+<title>卸载或重置 WSL 发行版 | GuCATs'摸鱼站</title>
   
 
 
@@ -195,7 +199,7 @@ var _hmt = _hmt || [];
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -208,6 +212,7 @@ var _hmt = _hmt || [];
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">重置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">卸载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">清理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -285,156 +290,211 @@ var _hmt = _hmt || [];
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">iOS
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.gucats.com/posts/39a7495c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="卸载或重置 WSL 发行版 | GuCATs'摸鱼站">
+      <meta itemprop="description" content="介绍如何安全地重置、卸载和清理 Windows Subsystem for Linux (WSL) 发行版，包括使用 wsl.exe 命令及手动清理残留缓存文件夹的方法。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          卸载或重置 WSL 发行版
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+
+      <time title="创建时间：2026-08-26 15:24:50 / 修改时间：15:45:42" itemprop="dateCreated datePublished" datetime="2026-08-26T15:24:50+08:00">2026-08-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>458</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">介绍如何安全地重置、卸载和清理 Windows Subsystem for Linux (WSL) 发行版，包括使用 wsl.exe 命令及手动清理残留缓存文件夹的方法。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="重置"><a href="#重置" class="headerlink" title="重置"></a>重置</h2><p>重置 WSL 发行版的配置，但是保留数据</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl.exe --reset</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>关闭所有的 WSL 发行版</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl.exe --shutdown</span><br></pre></td></tr></table></figure>
+
+<p>列出已经安装的 WSL 发行版</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl.exe -l -v</span><br></pre></td></tr></table></figure>
+
+<p>注销 WSL 发行版，其中 <code>&lt;NAME&gt;</code> 为发行版名称，带有 <code>*</code> 的是默认发行版</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl.exe --unregister &lt;NAME&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><p>在文件资源管理器地址栏输入以下地址以打开 Windows 应用缓存文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%LocalAppData%\Packages</span><br></pre></td></tr></table></figure>
+
+<p>在文件夹中找到 WSL 发行版的缓存文件夹，如 Debian 的文件夹名称为 <code>TheDebianProject.DebianGNULinux_76v4gfsz19hv4</code>，Ubuntu 的文件夹名称前半部分为 <code>CanonicalGroupLimited.Ubuntu</code>，其他发行版可以在文件资源管理器中搜索相对应的发行版名称，选中文件夹将其删除即可</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>不要使用非 <code>wsl.exe --unregister</code> 的方式卸载 WSL 发行版，这会残留文件，且可能导致无法重新安装&#x2F;使用 WSL 发行版</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-03-02T11:27:40+08:00"
-              content="2024-03-02">
-          03-02
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/WeChat_Rewards_Code.png" alt="GuCATs 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/AFDIAN.png" alt="GuCATs AFDIAN">
+        <span>AFDIAN</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/338aca3d.html" itemprop="url">
-            <span itemprop="name">更新 IPCC 文件</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-26T21:38:45+08:00"
-              content="2022-03-26">
-          03-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/63c97083.html" itemprop="url">
-            <span itemprop="name">抓包获取旧版本 IPA</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-21T13:43:54+08:00"
-              content="2022-01-21">
-          01-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/7e9537c8.html" itemprop="url">
-            <span itemprop="name">iOS 安装双系统</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-06T12:56:12+08:00"
-              content="2022-01-06">
-          01-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/236330b.html" itemprop="url">
-            <span itemprop="name">IPA 砸壳</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-01T17:10:12+08:00"
-              content="2022-01-01">
-          01-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/be91420b.html" itemprop="url">
-            <span itemprop="name">安装 AFC2 和 AppSync</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-11-21T15:43:35+08:00"
-              content="2021-11-21">
-          11-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/68ecd02d.html" itemprop="url">
-            <span itemprop="name">注册美区 Apple 账户</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>GuCATs
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.gucats.com/posts/39a7495c.html" title="卸载或重置 WSL 发行版">https://blog.gucats.com/posts/39a7495c.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (Atom)</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (RSS2)</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/e8dc38ed.html" rel="prev" title="为什么 Windows 11 总是占用更多的内存">
+                  <i class="fa fa-angle-left"></i> 为什么 Windows 11 总是占用更多的内存
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>

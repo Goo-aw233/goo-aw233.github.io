@@ -28,24 +28,24 @@
 <meta property="og:site_name" content="GuCATs&#39;摸鱼站">
 <meta property="og:description" content="通过修改 AppxManifest.xml 文件中的 TargetDeviceFamily 节点，移除 AppX 和 MSIX 应用程序包对 Windows 系统版本的安装限制。支持在低版本系统上安装高版本要求的软件，提供详细的解压、修改和安装步骤，适用于多种场景。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Apple-Music-System-Requirements.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Failed-to-Install-on-Versions-Lower-than-22621.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Unzip-App-Package-Bundle.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/winver.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Edit-AppxManifest.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Apple-Music-System-Requirements.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Failed-to-Install-on-Versions-Lower-than-22621.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Unzip-App-Package-Bundle.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/winver.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Edit-AppxManifest.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-Microsoft-Store-on-Windows/Developer-Mode-in-Windows-10.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Install-Microsoft-Store-on-Windows/Developer-Mode-in-Windows-11.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Copy-App-Path.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Installing-App.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/App-Installed-Successfully.png">
-<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Running-Apple-Music.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Copy-App-Path.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Installing-App.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/App-Installed-Successfully.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Running-Apple-Music.png">
 <meta property="article:published_time" content="2023-01-12T11:54:10.000Z">
-<meta property="article:modified_time" content="2026-03-27T11:59:11.120Z">
+<meta property="article:modified_time" content="2026-08-26T07:13:03.165Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="软件">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Apple-Music-System-Requirements.png">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Apple-Music-System-Requirements.png">
 
 
 <link rel="canonical" href="https://blog.gucats.com/posts/2464f7a2.html">
@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-count">77</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -348,7 +348,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-27 19:59:11" itemprop="dateModified" datetime="2026-03-27T19:59:11+08:00">2026-03-27</time>
+      <time title="修改时间：2026-08-26 15:13:03" itemprop="dateModified" datetime="2026-08-26T15:13:03+08:00">2026-08-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -401,9 +401,9 @@ var _hmt = _hmt || [];
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如 Apple Music，把安装的版本限制在 Windows 11 22621.0 以上</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Apple-Music-System-Requirements.png" alt="系统要求"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Apple-Music-System-Requirements.png" alt="系统要求"></p>
 <p>而在低于 Windows 11 22621.0 的系统则会无法安装该软件</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Failed-to-Install-on-Versions-Lower-than-22621.png" alt="报错"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Failed-to-Install-on-Versions-Lower-than-22621.png" alt="报错"></p>
 <h2 id="下载包"><a href="#下载包" class="headerlink" title="下载包"></a>下载包</h2><p>详情请参阅：<a href="/posts/3d1dabad.html" title="获取微软商店应用的安装包">获取微软商店应用的安装包</a></p>
 <h2 id="修改包"><a href="#修改包" class="headerlink" title="修改包"></a>修改包</h2><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://7-zip.org/">7-Zip</a> 等解压缩软件打开应用包，并将其<font color=red>全部解压到空白文件夹内（因为不再将其打包成应用程序包，<strong>故不能再移动文件夹，文件夹名称要求只有英文，数字，和下划线组合</strong>）</font></p>
 <h3 id="找包"><a href="#找包" class="headerlink" title="找包"></a>找包</h3><p><font color=green><strong>如果你下载的是 <code>.AppX</code> 或 <code>.MSIX</code>，则不需要看此部分，请转到：<a href="#%E8%8E%B7%E5%8F%96-Windows-%E5%86%85%E9%83%A8%E7%89%88%E6%9C%AC%E5%8F%B7">获取 Windows 内部版本号</a></strong></font><br>如果你下载的是 <code>.AppXBundle</code> 或 <code>.MSIXBundle</code>，这是一个捆绑包，内含多个架构的包，必包含 <code>x64</code>，包含 <code>ARM</code>、<code>ARM64</code> 和 <code>x86</code> 的其中之一，或部分，或全部</p>
@@ -411,13 +411,13 @@ var _hmt = _hmt || [];
 </div>
 
 <p>找到匹配你 Windows 架构的包，并将其再次全部解压到空白文件夹内（因为不再将其打包成应用程序包，<strong>故不能再移动文件夹，文件夹名称要求只有英文，数字，和下划线组合</strong>）</font></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Unzip-App-Package-Bundle.png" alt="解压捆绑包"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Unzip-App-Package-Bundle.png" alt="解压捆绑包"></p>
 <h2 id="获取-Windows-内部版本号"><a href="#获取-Windows-内部版本号" class="headerlink" title="获取 Windows 内部版本号"></a>获取 Windows 内部版本号</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>winver.exe</code> 并按下 <kbd>Enter</kbd> 以回车来打开“关于‘Windows’”</p>
 <ul>
 <li>在“Microsoft Windows”的下一行，“版本 xxxx （OS 内部版本 xxxxx.xxxx）”即为你的 Windows 内部版本号总览</li>
 <li>“OS 内部版本”后面前半部分是你的 <strong>Windows 主要版本号</strong>（如 <code>28000.1</code> 前面的 <code>28000</code>）</li>
 </ul>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/winver.png" alt="关于“Windows”"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/winver.png" alt="关于“Windows”"></p>
 <h2 id="修改应用程序包清单"><a href="#修改应用程序包清单" class="headerlink" title="修改应用程序包清单"></a>修改应用程序包清单</h2><p>使用记事本或其他文本编辑工具打开文件夹内的 <code>AppxManifest.xml</code><br>按下 <kbd>Ctrl</kbd> + <kbd>F</kbd> 以打开“搜索”，并输入 <code>TargetDeviceFamily</code>，将所有结果里，引号（<code>&quot;</code>）内的版本号更改为你 <a href="#%E8%8E%B7%E5%8F%96-Windows-%E5%86%85%E9%83%A8%E7%89%88%E6%9C%AC%E5%8F%B7">Windows 主要版本号</a>并保存</p>
 <p>只需要更改 <code>TargetDeviceFamily</code> 那一行里，<code>MinVersion=&quot;10.0.</code> 和 <code>MaxVersionTested=&quot;10.0.</code> 之后的数字：</p>
 <ul>
@@ -425,7 +425,7 @@ var _hmt = _hmt || [];
 <li>对于部分 <code>AppxManifest.xml</code>，可能有多个 <code>TargetDeviceFamily</code>，如 <code>TargetDeviceFamily Name=&quot;Windows.Universal&quot;</code> 和 <code>TargetDeviceFamily Name=&quot;Windows.Desktop&quot;</code> 并存，这种情况下最好两个都修改</li>
 </ul>
 <p><strong>再将目录里 <code>AppxMetadata</code> 文件夹、<code>[Content_Types].xml</code>、<code>AppxBlockMap.xml</code> 和 <code>AppxSignature.p7x</code> 文件给删除</strong></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Edit-AppxManifest.png" alt="查找内容并更改"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Edit-AppxManifest.png" alt="查找内容并更改"></p>
 <details>
 
 <summary>如果实在不知道改什么</summary>
@@ -468,18 +468,18 @@ var _hmt = _hmt || [];
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="string">&quot;&lt;AppxManifest.xml 所在路径&gt;&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>在文件资源管理器顶部的地址栏中复制文件夹地址</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Copy-App-Path.png" alt="复制路径"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Copy-App-Path.png" alt="复制路径"></p>
 <p>比如我的路径在 <code>C:\Program Files\AM</code> 则命令为</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="string">&quot;C:\Program Files\AM&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>输入以下命令并回车以安装应用包</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-AppxPackage</span> <span class="literal">-Register</span> <span class="string">&quot;.\AppxManifest.xml&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Installing-App.png" alt="正在安装应用"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Installing-App.png" alt="正在安装应用"></p>
 <p>如果没有缺少相对应的软件运行库，则只需几秒钟即可完成安装</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/App-Installed-Successfully.png" alt="安装完成"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/App-Installed-Successfully.png" alt="安装完成"></p>
 <p>一般来说 Windows 10 2004 以上都可以正常运行</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-the-Installation-Restrictions-of-Windows-App-Packages/Running-Apple-Music.png" alt="运行 Apple Music"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Remove-Installation-Restrictions-of-Windows-App-Packages/Running-Apple-Music.png" alt="运行 Apple Music"></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol>
 <li>关于 <code>TargetDeviceFamily</code>，请参阅 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily/?wt.mc_id=studentamb_474966">TargetDeviceFamily (Windows 10) - Windows UWP application | Microsoft Learn</a></li>
 <li>Windows 10 及以上正式版内核版本号：<blockquote>
@@ -606,7 +606,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">135k</span>
+    <span title="站点总字数">136k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">

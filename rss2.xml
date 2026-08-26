@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Mon, 10 Aug 2026 13:44:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 07:45:42 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,19 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>卸载或重置 WSL 发行版</title>
+      <link>https://blog.gucats.com/posts/39a7495c.html</link>
+      <description>介绍如何安全地重置、卸载和清理 Windows Subsystem for Linux (WSL) 发行版，包括使用 wsl.exe 命令及手动清理残留缓存文件夹的方法。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
+      <pubDate>Wed, 26 Aug 2026 07:24:50 GMT</pubDate>
+    </item>
     <item>
       <title>为什么 Windows 11 总是占用更多的内存</title>
       <link>https://blog.gucats.com/posts/e8dc38ed.html</link>
@@ -108,8 +121,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -163,8 +176,8 @@
       <description>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
@@ -216,7 +229,7 @@
     <item>
       <title>安装 WSL 1</title>
       <link>https://blog.gucats.com/posts/8407e146.html</link>
-      <description>本文介绍了如何在 Windows 系统中安装 WSL 1，包括启用适用于 Linux 的 Windows 子系统功能、下载并安装 WSL 本体、设置默认版本以及安装 WSL 发行版的详细步骤。</description>
+      <description>本文介绍了如何在 Windows 系统中安装 Windows Subsystem for Linux 1（WSL 1），包括启用适用于 Linux 的 Windows 子系统功能、下载并安装 WSL 本体、设置默认版本以及安装 WSL 发行版的详细步骤。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -225,20 +238,6 @@
       <category domain="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/">软件</category>
       <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
       <pubDate>Thu, 16 Oct 2025 12:36:52 GMT</pubDate>
-    </item>
-    <item>
-      <title>VMware Workstation 挂载语言</title>
-      <link>https://blog.gucats.com/posts/41eafc84.html</link>
-      <description>VMware Workstation Pro 通过外挂本地化文件的方式，支持简体中文等额外语言的挂载。文章详细介绍了如何下载并放置语言文件、修改快捷方式目标路径，以及通过 preferences.ini 文件实现语言切换的方法。同时，还提供了使用 Resource Hacker 修改语言文件的扩展教程。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</category>
-      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/">VMware</category>
-      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/">Workstation</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/VMware-Workstation/">VMware Workstation</category>
-      <pubDate>Thu, 16 Oct 2025 09:57:11 GMT</pubDate>
     </item>
   </channel>
 </rss>
