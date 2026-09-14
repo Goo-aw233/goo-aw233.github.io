@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>强制开启 Windows 视觉效果</title>
+      <link href="/posts/8a4d2f12.html"/>
+      <url>/posts/8a4d2f12.html</url>
+      
+        <content type="html"><![CDATA[<p>Windows 11 中提供了圆角和各种材质效果，但是需要在安装显卡驱动的情况下才能够显示。但是 Windows 提供了一个注册表项目，可以强制开启这些视觉效果，而不需要安装显卡驱动<br>以下方法都是一样的，选择任意一个喜欢的方法即可</p><h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p><ul><li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li><li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li></ul></div><p>在 CMD 中输入如下命令并回车，随后重启 Windows，即可看到所有的效果都正常显示了</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg.exe add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm&quot; /v &quot;ForceEffectMode&quot; /t REG_DWORD /d <span class="number">2</span> /f</span><br></pre></td></tr></table></figure><h2 id="注册表文件"><a href="#注册表文件" class="headerlink" title="注册表文件"></a>注册表文件</h2><div class="note success"><p>推荐阅读：<a href="/posts/fc28aee6.html" title="显示文件扩展名">显示文件扩展名</a></p></div><p>在桌面新建一个文本文件，将其重命名为 <code>ForceEnableEffect.reg</code>，编辑它并输入如下内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]</span><br><span class="line">&quot;ForceEffectMode&quot;=dword:00000002</span><br></pre></td></tr></table></figure><p>保存后双击打开将其导入到注册表当中，随后重启 Windows，即可看到所有的效果都正常显示了</p><h2 id="手动写入注册表"><a href="#手动写入注册表" class="headerlink" title="手动写入注册表"></a>手动写入注册表</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>regedit.exe</code> 并按下回车来打开“注册表编辑器”</p><p>在“注册表编辑器”中，定位到路径 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm</code>，在目录内右键，选选择“新建” &gt; “DWORD (32 位)值”，将其命名为 <code>ForceEffectMode</code><br>双击新建的 <code>ForceEffectMode</code> 注册表键，将其设置为 <code>2</code> 并点击“确定”</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Force-Enable-Windows-Visual-Effects/ForceEffectMode-Registry-Key.png" alt="ForceEffectMode 注册表键"></p><p>随后重启 Windows，即可看到所有的效果都正常显示了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>卸载或重置 WSL 发行版</title>
       <link href="/posts/39a7495c.html"/>
       <url>/posts/39a7495c.html</url>
@@ -833,9 +860,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -864,9 +891,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -1430,7 +1457,7 @@
       <link href="/posts/4d7db012.html"/>
       <url>/posts/4d7db012.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>所有的建议在进入 OOBE 前拔掉以太网连接，并断开无线网络，等到进入桌面后再启用网络连接</p><h2 id="BypassNRO"><a href="#BypassNRO" class="headerlink" title="BypassNRO"></a>BypassNRO</h2><p><strong>在 Build 26200.5516 和 26120.3653 之后，Windows 移除了 <code>BypassNRO.cmd</code>，但是没有移除相对应的实现方式。若无法使用脚本，请自行根据脚本内容新建一个脚本，或使用 <a href="#ms-cxh">ms-cxh</a> 方式</strong></p><p>在 Windows 进入开箱体验（OOBE）阶段时，按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD 窗口，输入以下内容并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">oobe\BypassNRO.<span class="built_in">cmd</span></span><br></pre></td></tr></table></figure><p>完成后系统会自动重启，<strong>在重启之前务必断开所有网络连接</strong></p><p>重启之后就会有“我没有 Internet 连接”的选项</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/Before-Bypass.png" alt="执行脚本前"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/After-Bypass.png" alt="执行脚本后"></p><p>以下是 <code>BypassNRO.cmd</code> 的内容：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d <span class="number">1</span> /f</span><br><span class="line">shutdown /r /t <span class="number">0</span></span><br></pre></td></tr></table></figure><h2 id="ms-cxh"><a href="#ms-cxh" class="headerlink" title="ms-cxh"></a>ms-cxh</h2><p>在 Windows 进入开箱体验（OOBE）阶段时，按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD 窗口，输入以下内容并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">start</span> ms-cxh:localonly</span><br></pre></td></tr></table></figure><p>或者是</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">start</span> ms-cxh://setaddlocalonly</span><br></pre></td></tr></table></figure><div class="note info"><p>得益于 OOBE 采用了 WebView (EdgeHTML)，故可以通过控制台的形式来打开 <code>ms-cxh:</code>，只需要按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> 以打开控制台，输入以下内容并按下 <kbd>Enter</kbd> 以回车<br>与 CMD 直接执行命令的效果等价</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">WinJS</span>.<span class="property">Application</span>.<span class="title function_">restart</span>(<span class="string">&quot;ms-cxh://localonly&quot;</span>)</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/ms-cxh-in-OOBE.png" alt="ms-cxh 控件"></p></div><p>输入你的用户名与密码即可（密码可留空）<br><strong>启动 <code>ms-cxh</code> 之后不要关闭该窗口，否则需要重新走一遍 OOBE</strong></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/ms-cxh.png" alt="ms-cxh"></p><p>下一步后 Windows 会重启，重启完成后可以继续执行接下来的 OOBE 步骤</p><h2 id="OOBENetworkConnectionFlow"><a href="#OOBENetworkConnectionFlow" class="headerlink" title="OOBENetworkConnectionFlow"></a>OOBENetworkConnectionFlow</h2><p>在 Windows 进入开箱体验（OOBE）阶段时，按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD 窗口，输入以下内容并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span>.exe /f /im OOBENetworkConnectionFlow.exe</span><br></pre></td></tr></table></figure><p>或者输入命令打开任务管理器</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskmgr.exe</span><br></pre></td></tr></table></figure><p>找到名为 <code>OOBENetworkConnectionFlow.exe</code> 的进程，将其结束<br>再回到网络连接的界面，等待一会，OOBE 就会跳过网络连接，直接进入本地账户设置</p><h2 id="神秘小技巧"><a href="#神秘小技巧" class="headerlink" title="神秘小技巧"></a>神秘小技巧</h2><ol><li>随意输入一些错误的邮箱，并触发多次错误提示，即可在“登录选项”中出现本地账户的登录选项</li><li>在要求登录 Microsoft 账户的页面中，点击下方小字部分的“了解更多”（<code>Learn more</code>），即可打开本地账户创建的页面<sup><a href="#ref1">[1]</a></sup></li></ol><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>  <li id="ref1"><a href="https://www.windowslatest.com/2026/09/13/microsoft-blocked-every-windows-11-account-bypass-except-the-most-boring-link-on-its-own-page" target="_blank" rel="noopener">Microsoft blocked every Windows 11 account bypass except the most boring link on its own page</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>所有的建议在进入 OOBE 前拔掉以太网连接，并断开无线网络，等到进入桌面后再启用网络连接</p><h2 id="BypassNRO"><a href="#BypassNRO" class="headerlink" title="BypassNRO"></a>BypassNRO</h2><p><strong>在 Build 26200.5516 和 26120.3653 之后，Windows 移除了 <code>BypassNRO.cmd</code>，但是没有移除相对应的实现方式。若无法使用脚本，请自行根据脚本内容新建一个脚本，或使用 <a href="#ms-cxh">ms-cxh</a> 方式</strong></p><p>在 Windows 进入开箱体验（OOBE）阶段时，按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD 窗口，输入以下内容并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">oobe\BypassNRO.<span class="built_in">cmd</span></span><br></pre></td></tr></table></figure><p>完成后系统会自动重启，<strong>在重启之前务必断开所有网络连接</strong></p><p>重启之后就会有“我没有 Internet 连接”的选项</p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/Before-Bypass.png" alt="执行脚本前"></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/After-Bypass.png" alt="执行脚本后"></p><p>以下是 <code>BypassNRO.cmd</code> 的内容：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">reg.exe add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d <span class="number">1</span> /f</span><br><span class="line">shutdown.exe /r /t <span class="number">0</span></span><br></pre></td></tr></table></figure><h2 id="ms-cxh"><a href="#ms-cxh" class="headerlink" title="ms-cxh"></a>ms-cxh</h2><p>在 Windows 进入开箱体验（OOBE）阶段时，按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD 窗口，输入以下内容并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">start</span> ms-cxh:localonly</span><br></pre></td></tr></table></figure><p>或者是</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">start</span> ms-cxh://setaddlocalonly</span><br></pre></td></tr></table></figure><div class="note info"><p>得益于 OOBE 采用了 WebView (EdgeHTML)，故可以通过控制台的形式来打开 <code>ms-cxh:</code>，只需要按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> 以打开控制台，输入以下内容并按下 <kbd>Enter</kbd> 以回车<br>与 CMD 直接执行命令的效果等价</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">WinJS</span>.<span class="property">Application</span>.<span class="title function_">restart</span>(<span class="string">&quot;ms-cxh://localonly&quot;</span>)</span><br></pre></td></tr></table></figure><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/ms-cxh-in-OOBE.png" alt="ms-cxh 控件"></p></div><p>输入你的用户名与密码即可（密码可留空）<br><strong>启动 <code>ms-cxh</code> 之后不要关闭该窗口，否则需要重新走一遍 OOBE</strong></p><p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Bypass-Windows-11-OOBE-Networking-Requirement/ms-cxh.png" alt="ms-cxh"></p><p>下一步后 Windows 会重启，重启完成后可以继续执行接下来的 OOBE 步骤</p><h2 id="OOBENetworkConnectionFlow"><a href="#OOBENetworkConnectionFlow" class="headerlink" title="OOBENetworkConnectionFlow"></a>OOBENetworkConnectionFlow</h2><p>在 Windows 进入开箱体验（OOBE）阶段时，按下 <kbd>Shift</kbd> + <kbd>F10</kbd> 来打开 CMD 窗口，输入以下内容并按下 <kbd>Enter</kbd> 以回车</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span>.exe /f /im OOBENetworkConnectionFlow.exe</span><br></pre></td></tr></table></figure><p>或者输入命令打开任务管理器</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskmgr.exe</span><br></pre></td></tr></table></figure><p>找到名为 <code>OOBENetworkConnectionFlow.exe</code> 的进程，将其结束<br>再回到网络连接的界面，等待一会，OOBE 就会跳过网络连接，直接进入本地账户设置</p><h2 id="神秘小技巧"><a href="#神秘小技巧" class="headerlink" title="神秘小技巧"></a>神秘小技巧</h2><ol><li>随意输入一些错误的邮箱，并触发多次错误提示，即可在“登录选项”中出现本地账户的登录选项</li><li>在要求登录 Microsoft 账户的页面中，点击下方小字部分的“了解更多”（<code>Learn more</code>），即可打开本地账户创建的页面<sup><a href="#ref1">[1]</a></sup></li></ol><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>  <li id="ref1"><a href="https://www.windowslatest.com/2026/09/13/microsoft-blocked-every-windows-11-account-bypass-except-the-most-boring-link-on-its-own-page" target="_blank" rel="noopener">Microsoft blocked every Windows 11 account bypass except the most boring link on its own page</a></li></ol>]]></content>
       
       
       <categories>
@@ -2018,9 +2045,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -2053,9 +2080,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -2088,9 +2115,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -2119,9 +2146,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
@@ -2154,9 +2181,9 @@
             
             <tag> 软件 </tag>
             
-            <tag> Windows </tag>
-            
             <tag> iOS </tag>
+            
+            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             

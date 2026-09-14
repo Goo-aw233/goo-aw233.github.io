@@ -11,7 +11,21 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-08-26T07:45:42.297Z</updated>
+  <updated>2026-09-14T14:43:59.113Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/8a4d2f12.html</id>
+    <link href="https://blog.gucats.com/posts/8a4d2f12.html"/>
+    <published>2026-09-14T11:48:10.000Z</published>
+    <summary>介绍在 Windows 11 中通过修改注册表 DWM 项 ForceEffectMode 为 2，强制开启圆角、材质等视觉效果的方法，无需安装显卡驱动。包含命令行、注册表文件和手动编辑三种方式。</summary>
+    <title>强制开启 Windows 视觉效果</title>
+    <updated>2026-09-14T14:43:59.113Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -299,22 +313,5 @@
     <summary>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色/浅色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</summary>
     <title>Windows 未激活时切换主题</title>
     <updated>2026-04-30T07:21:22.859Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
-    <category term="软件" scheme="https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
-    <id>https://blog.gucats.com/posts/8407e146.html</id>
-    <link href="https://blog.gucats.com/posts/8407e146.html"/>
-    <published>2025-10-16T12:36:52.000Z</published>
-    <summary>本文介绍了如何在 Windows 系统中安装 Windows Subsystem for Linux 1（WSL 1），包括启用适用于 Linux 的 Windows 子系统功能、下载并安装 WSL 本体、设置默认版本以及安装 WSL 发行版的详细步骤。</summary>
-    <title>安装 WSL 1</title>
-    <updated>2026-08-26T07:25:22.439Z</updated>
   </entry>
 </feed>
