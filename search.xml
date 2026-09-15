@@ -51,9 +51,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -82,9 +82,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> Small Talk </tag>
+            
+            <tag> Windows </tag>
             
         </tags>
       
@@ -307,9 +307,9 @@
           
           <category> Windows </category>
           
-          <category> DISM </category>
-          
           <category> PowerShell </category>
+          
+          <category> DISM </category>
           
       </categories>
       
@@ -452,11 +452,11 @@
           
           <category> 教程 </category>
           
+          <category> macOS </category>
+          
           <category> Windows </category>
           
           <category> Linux </category>
-          
-          <category> macOS </category>
           
       </categories>
       
@@ -465,9 +465,9 @@
             
             <tag> Windows </tag>
             
-            <tag> Linux </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -608,9 +608,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
             <tag> Linux </tag>
             
@@ -889,11 +889,11 @@
       
         <tags>
             
+            <tag> Windows </tag>
+            
             <tag> 软件 </tag>
             
             <tag> iOS </tag>
-            
-            <tag> Windows </tag>
             
         </tags>
       
@@ -1065,9 +1065,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1241,9 +1241,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1297,9 +1297,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1413,9 +1413,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1498,9 +1498,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1591,9 +1591,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1721,9 +1721,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
@@ -1873,9 +1873,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1902,9 +1902,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -1985,9 +1985,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -2014,9 +2014,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -2043,11 +2043,11 @@
       
         <tags>
             
+            <tag> Windows </tag>
+            
             <tag> 软件 </tag>
             
             <tag> iOS </tag>
-            
-            <tag> Windows </tag>
             
         </tags>
       
@@ -2146,9 +2146,9 @@
       
         <tags>
             
-            <tag> iOS </tag>
-            
             <tag> Windows </tag>
+            
+            <tag> iOS </tag>
             
             <tag> 越狱 </tag>
             
@@ -2179,11 +2179,11 @@
       
         <tags>
             
+            <tag> Windows </tag>
+            
             <tag> 软件 </tag>
             
             <tag> iOS </tag>
-            
-            <tag> Windows </tag>
             
             <tag> 越狱 </tag>
             
