@@ -31,9 +31,10 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/Copy-oh-my-posh-Installation-Path.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/Set-oh-my-posh-Environment-Variable.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/wt-Font-Settings.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/VSCode-Terminal-Font-Settings.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/oh-my-posh-in-PowerShell.png">
 <meta property="article:published_time" content="2025-10-15T06:40:26.000Z">
-<meta property="article:modified_time" content="2026-10-04T03:41:14.608Z">
+<meta property="article:modified_time" content="2026-10-13T15:52:55.371Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="PowerShell">
 <meta property="article:tag" content="Windows">
@@ -216,7 +217,7 @@ var _hmt = _hmt || [];
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装并配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MSI-%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">MSI 安装程序配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">2.3.</span> <span class="nav-text">美化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">2.3.1.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93"><span class="nav-number">2.3.2.</span> <span class="nav-text">更换字体</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">3.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">准备工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装并配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MSI-%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">MSI 安装程序配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">2.3.</span> <span class="nav-text">美化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">2.3.1.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93"><span class="nav-number">2.3.2.</span> <span class="nav-text">更换字体</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Windows-%E7%BB%88%E7%AB%AF"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">Windows 终端</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#VS-Code"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">VS Code</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">3.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -231,7 +232,7 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -341,7 +342,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-10-04 11:41:14" itemprop="dateModified" datetime="2026-10-04T11:41:14+08:00">2026-10-04</time>
+      <time title="修改时间：2026-10-13 23:52:55" itemprop="dateModified" datetime="2026-10-13T23:52:55+08:00">2026-10-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -375,14 +376,14 @@ var _hmt = _hmt || [];
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
+      <span>4.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -395,19 +396,74 @@ var _hmt = _hmt || [];
     
     <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用 Windows 的时候我们或多或少会接触到 CMD 或 (Windows) PowerShell 等命令行工具，使用命令行工具时难免会觉得单调，这时就可以给 (Windows) PowerShell 配置 <code>Oh My Posh</code> 以美化，使其使用更加顺手及美观</p>
 <h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol>
-<li><strong>可选，（Windows 11 及更高版本自带）</strong>：<br> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://apps.microsoft.com/detail/9N0DX20HK701">Windows Terminal</a>（最低支持 Windows 10 19041，即 Windows 10 2004。老版本最低支持到 Windows 10 17763，即 Windows 10 1809）</li>
-<li><strong>可选</strong>：<br> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://aka.ms/PSWindows">PowerShell</a>，推荐使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/PowerShell/PowerShell/releases">MSI 包</a>安装<br> 扩展阅读：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/powershell/scripting/whats-new/differences-from-windows-powershell/?wt.mc_id=studentamb_474966">Windows PowerShell 5.1 和 PowerShell 7.x 之间的差异 - Microsoft Learn</a><br> <code>Oh My Posh</code> 支持 Windows PowerShell 和 PowerShell，你可以选择只在 Windows PowerShell 中配置</li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/JanDeDobbeleer/oh-my-posh/releases">Oh My Posh</a><br> <del>推荐选择 <code>install-arm64.msi</code>（ARM64）或 <code>install-x64.msi</code>（64 位），</del><br> 推荐选择 <code>install-arm64.msix</code>（ARM64）或 <code>install-x64.msix</code>（64 位） <div class="note success"><p>若你不知道你的 Windows 架构，请参阅：<a href="/posts/e3b15ad1.html" title="检查 CPU 与 Windows 的架构">检查 CPU 与 Windows 的架构</a></p>
+<li><p><strong>可选，（Windows 11 及更高版本自带）</strong>：<br> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://apps.microsoft.com/detail/9N0DX20HK701">Windows Terminal</a>（最低支持 Windows 10 19041，即 Windows 10 2004。老版本最低支持到 Windows 10 17763，即 Windows 10 1809）</p>
+</li>
+<li><p><strong>可选</strong>：<br> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://aka.ms/PSWindows">PowerShell</a>，推荐使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/PowerShell/PowerShell/releases">MSI 包</a>安装<br> 扩展阅读：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/powershell/scripting/whats-new/differences-from-windows-powershell/?wt.mc_id=studentamb_474966">Windows PowerShell 5.1 和 PowerShell 7.x 之间的差异 - Microsoft Learn</a><br> <code>Oh My Posh</code> 支持 Windows PowerShell 和 PowerShell，你可以选择只在 Windows PowerShell 中配置</p>
+</li>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/JanDeDobbeleer/oh-my-posh/releases">Oh My Posh</a><br> <del>推荐选择 <code>install-arm64.msi</code>（ARM64）或 <code>install-x64.msi</code>（64 位），</del><br> 推荐选择 <code>install-arm64.msix</code>（ARM64）或 <code>install-x64.msix</code>（64 位）</p>
+ <div class="note success"><p>若你不知道你的 Windows 架构，请参阅：<a href="/posts/e3b15ad1.html" title="检查 CPU 与 Windows 的架构">检查 CPU 与 Windows 的架构</a></p>
 </div></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.nerdfonts.com/font-downloads">Nerd Fonts</a><br> 官方推荐使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ryanoasis/nerd-fonts/releases">MesloLG Nerd Font</a>，选择 <code>Meslo.tar.xz</code> 或 <code>Meslo.zip</code> 下载即可，我安装的是 <code>MesloLGMNerdFont-Regular.ttf</code></li>
+<li><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.nerdfonts.com/font-downloads">Nerd Fonts</a><br> 官方推荐使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ryanoasis/nerd-fonts/releases">MesloLG Nerd Font</a>，选择 <code>Meslo.tar.xz</code> 或 <code>Meslo.zip</code> 下载，将其解压后安装即可（<code>Melso.tar.xz</code> 最小）<br> 我使用的主题为 <code>powerlevel10k_rainbow</code>，故安装的是 <code>MesloLGMNerdFontMono-Regular.ttf</code></p>
+ <details>
+
+ <summary>关于字体的选择</summary>
+
+<p> <strong>以下为 Gemini 3.8 Flash Low 对于 <code>Meslo.tar.xz</code> 下字体的解释</strong></p>
+<ol>
+<li>基础尺寸与行高（LG 后面的字母：S &#x2F; M &#x2F; L）<br>代表 Line Gap（行距&#x2F;行高）：<ul>
+<li>LGS (Small)：紧凑行距，行间距最小，单屏能显示的代码行数最多。</li>
+<li>LGM (Medium)：中等行距，平衡型。</li>
+<li>LGL (Large)：宽松行距，行间距最大，呼吸感更强。</li>
+</ul>
+</li>
+<li>数字 0 的显示样式（是否带 DZ）<ul>
+<li>无 DZ：数字 0 内部是斜杠（Slashed Zero: 0̸）。</li>
+<li>带 DZ (Dotted Zero)：数字 0 内部是实心圆点（0̇），便于与字母 O 区分。</li>
+</ul>
+</li>
+<li>图标与字宽策略（(无) vs Mono vs Propo）<br>Nerd Font 引入了几千个特殊开发图标（Git、Docker、文件夹等），这三者决定了这些图标的宽度占用：<table>
+<thead>
+<tr>
+<th align="center">后缀</th>
+<th align="center">图标占用宽度</th>
+<th align="center">适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">无后缀 (标准版，如 MesloLGS Nerd Font)</td>
+<td align="center">双倍字宽 (2格)</td>
+<td align="center">最推荐日常使用（Terminal、VS Code 等主流环境完美兼容，图标大且清晰）。</td>
+</tr>
+<tr>
+<td align="center">Mono (如 MesloLGS Nerd Font Mono)</td>
+<td align="center">严格单倍字宽 (1格)</td>
+<td align="center">适用于某些强制要求所有字符必须严格等宽、否则图标会乱码或重叠的老旧终端。缺点是部分复杂图标压缩后偏小。</td>
+</tr>
+<tr>
+<td align="center">Propo (如 MesloLGS Nerd Font Propo)</td>
+<td align="center">比例宽度 (不定宽)</td>
+<td align="center">仅适合纯文本编辑器、聊天或 UI 界面，不适合严苛对齐的终端命令行。</td>
+</tr>
+</tbody></table>
+</li>
+<li>字重与斜体<ul>
+<li>Regular：常规体</li>
+<li>Bold：粗体</li>
+<li>Italic：斜体</li>
+<li>BoldItalic：粗斜体</li>
+</ul>
+</li>
+<li>选择建议<br>VS Code &#x2F; Windows Terminal &#x2F; iTerm2 等主流终端：直接选择 MesloLGS Nerd Font（或习惯大行距选 LGM &#x2F; LGL）。<br>喜欢点状 0 而非斜杠 0：选择带 DZ 的版本（如 MesloLGSDZ Nerd Font）。<br>使用 Oh My Posh &#x2F; Powerlevel10k (p10k)：官方通常推荐直接安装 MesloLGS Nerd Font。</li>
+</ol>
+ </details></li>
 </ol>
 <h2 id="安装并配置"><a href="#安装并配置" class="headerlink" title="安装并配置"></a>安装并配置</h2><details>
 
 <summary>仅 <code>.MSI</code> 安装需要配置环境变量，<code>.MSIX</code> 安装不需要配置环境变量</summary>
 
-<h3 id="MSI-安装程序配置环境变量"><a href="#MSI-安装程序配置环境变量" class="headerlink" title="MSI 安装程序配置环境变量"></a>MSI 安装程序配置环境变量</h3><p>安装完成 <code>Oh My Posh</code> 后，按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>%LocalAppData%\Programs\oh-my-posh\bin</code> 后按下 <kbd>Enter</kbd>，在打开的文件资源管理器窗口中右键顶部的地址栏，并选择“复制地址”</p>
+<h3 id="MSI-安装程序配置环境变量"><a href="#MSI-安装程序配置环境变量" class="headerlink" title="MSI 安装程序配置环境变量"></a>MSI 安装程序配置环境变量</h3><p>安装完成 <code>Oh My Posh</code> 后，按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>%LocalAppData%\Programs\oh-my-posh\bin</code> 后按下 <kbd>Enter</kbd> 以回车，在打开的文件资源管理器窗口中右键顶部的地址栏，并选择“复制地址”</p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/Copy-oh-my-posh-Installation-Path.png" alt="复制 Oh My Posh 安装路径"></p>
-<p>再次按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>SystemPropertiesAdvanced.exe</code> 后按下 <kbd>Enter</kbd> 以打开“高级系统设置”<br>点击右下角的“环境变量(N)…”，在“系统变量(S)”中找到 <code>Path</code> 的变量，并点击“编辑(I)…”，点击右边的“新建(N)”，将复制的 <code>Oh My Posh</code> 安装路径粘贴进去</p>
+<p>再次按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>SystemPropertiesAdvanced.exe</code> 后按下 <kbd>Enter</kbd> 以回车来打开“高级系统设置”<br>点击右下角的“环境变量(N)…”，在“系统变量(S)”中找到 <code>Path</code> 的变量，并点击“编辑(I)…”，点击右边的“新建(N)”，将复制的 <code>Oh My Posh</code> 安装路径粘贴进去</p>
 <p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/Set-oh-my-posh-Environment-Variable.png" alt="设置 Oh My Posh 环境变量"></p>
 </details>
 
@@ -472,17 +528,19 @@ var _hmt = _hmt || [];
 <summary>若是 Windows PowerShell</summary>
 
 <p>自动寻找主题文件路径（推荐）：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">oh</span><span class="literal">-my-posh</span>.exe init pwsh <span class="literal">--config</span> <span class="string">&quot;powerlevel10k_rainbow&quot;</span> | <span class="built_in">Invoke-Expression</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">oh</span><span class="literal">-my-posh</span>.exe init powershell <span class="literal">--config</span> <span class="string">&quot;powerlevel10k_rainbow&quot;</span> | <span class="built_in">Invoke-Expression</span></span><br></pre></td></tr></table></figure>
 
 <p>带有指定的主题文件路径：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">oh</span><span class="literal">-my-posh</span>.exe init powershell <span class="literal">--config</span> <span class="string">&quot;<span class="variable">$Env:POSH_THEMES_PATH</span>/powerlevel10k_rainbow.omp.json&quot;</span> | <span class="built_in">Invoke-Expression</span></span><br></pre></td></tr></table></figure>
 
 </details>
 
-<h4 id="更换字体"><a href="#更换字体" class="headerlink" title="更换字体"></a>更换字体</h4><p>在终端中打开“设置” &gt; “配置文件” &gt; Windows PowerShell（或 PowerShell） &gt; “外观” &gt; “字体”<br>将字体设置为 <code>MesloLGM Nerd Font</code> 并保存，使用多个字体时用逗号（<code>,</code>）隔开，如 <code>Cascadia Mono, MesloLGM Nerd Font</code></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/wt-Font-Settings.png" alt="设置终端字体"></p>
+<h4 id="更换字体"><a href="#更换字体" class="headerlink" title="更换字体"></a>更换字体</h4><h5 id="Windows-终端"><a href="#Windows-终端" class="headerlink" title="Windows 终端"></a>Windows 终端</h5><p>在终端中打开“设置” &gt; “配置文件” &gt; “默认值”（或 Windows PowerShell，或 PowerShell，“默认值”为全局） &gt; “外观” &gt; “字体”<br>将字体设置为 <code>MesloLGM Nerd Font Mono</code> 并保存，使用多个字体时用逗号（<code>,</code>）隔开，如 <code>MesloLGM Nerd Font Mono, Cascadia Mono</code><br><strong>推荐将 MesloLGM Nerd Font Mono 设为首个字体，避免图标被其他字体所覆盖，但是会导致 Windows 终端默认启动窗口偏大</strong></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/wt-Font-Settings.png" alt="设置 Windows 终端字体"></p>
+<h5 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h5><p>在 VS Code 中，按下 <kbd>CTRL</kbd> + <kbd>,</kbd>，在“设置”顶部的搜索框中，输入 <code>terminal.integrated.fontFamily</code><br>将字体设置为 <code>&#39;MesloLGM Nerd Font Mono&#39;</code> 并保存，使用多个字体时用逗号（<code>,</code>）隔开，含有空格的字体要用单引号包裹（<code>&#39;&#39;</code>），如 <code>&#39;MesloLGM Nerd Font Mono&#39;, &#39;Cascadia Mono&#39;, monospace</code><br><strong>推荐将 MesloLGM Nerd Font Mono 设为首个字体，避免图标被其他字体所覆盖</strong></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/VSCode-Terminal-Font-Settings.png" alt="设置 VS Code 终端字体"></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>最终效果</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/oh-my-posh-in-PowerShell.png" alt="效果"></p>
+<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Configure-oh-my-posh-in-Windows/oh-my-posh-in-PowerShell.png" alt="Windows 终端"></p>
 <p><code>.MSI</code> 的方式安装的应该不限制 Windows 的版本，或许 Windows 7 都能用（？）<br>自 Windows 10 版本 1709 起，Windows 才支持 <code>.MSIX</code>，早于 Windows 10 版本 1709 的 Windows，请参阅：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://learn.microsoft.com/windows/msix/msix-core/msixcore/?wt.mc_id=studentamb_474966">MSIX 核心 - MSIX | Microsoft Learn</a><br>对于 Windows 7&#x2F;8&#x2F;8.1，建议尝试更新 Windows PowerShell 版本，请参阅：<a href="/posts/eec4704f.html" title="升级 Windows PowerShell 版本">升级 Windows PowerShell 版本</a></p>
 <h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
   <li id="ref1"><a href="https://blog.lichenrobo.com/server-net/server-deploy/powershell-oh-my-posh" target="_blank" rel="noopener external nofollow noreferrer">PowerShell 美化——oh-my-posh 的配置与使用 - 地衣君的Blog</a></li>
@@ -607,14 +665,14 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">138k</span>
+    <span title="站点总字数">142k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:05</span>
+    <span title="站点阅读时长">2:09</span>
   </span>
 </div>
 <div class="busuanzi-count">

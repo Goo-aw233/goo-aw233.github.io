@@ -29,7 +29,7 @@
 <meta property="og:description" content="本文介绍如何为特定应用程序指定使用非默认的 Microsoft Edge WebView2 运行时，包括通过复制 EdgeWebView 文件夹、配置注册表或设置临时环境变量的方法。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-08-09T16:41:03.000Z">
-<meta property="article:modified_time" content="2026-08-09T17:03:11.108Z">
+<meta property="article:modified_time" content="2026-10-13T16:18:04.507Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -225,7 +225,7 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -327,9 +327,15 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2026-08-10 00:41:03 / 修改时间：01:03:11" itemprop="dateCreated datePublished" datetime="2026-08-10T00:41:03+08:00">2026-08-10</time>
+      <time title="创建时间：2026-08-10 00:41:03" itemprop="dateCreated datePublished" datetime="2026-08-10T00:41:03+08:00">2026-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-10-14 00:18:04" itemprop="dateModified" datetime="2026-10-14T00:18:04+08:00">2026-10-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -390,7 +396,7 @@ var _hmt = _hmt || [];
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Test1.exe&quot;=&quot;C:\\Temp\\WebView2Folder&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Test1.exe&quot;=&quot;C:\\Temp\\WebView2Folder&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder]</span><br><span class="line">&quot;Test1.exe&quot;=&quot;C:\\Temp\\WebView2Folder&quot;</span><br></pre></td></tr></table></figure>
 
-<p>如果只是想临时设置，让某个程序在本次启动的时候用指定的 Microsoft Edge WebView2 运行时，可以通过设置临时环境变量的方式<br>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>cmd.exe</code> 后按下 <kbd>Enter</kbd> 以打开“打开命令提示符”，输入如下命令：</p>
+<p>如果只是想临时设置，让某个程序在本次启动的时候用指定的 Microsoft Edge WebView2 运行时，可以通过设置临时环境变量的方式<br>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>cmd.exe</code> 后，按下 <kbd>Enter</kbd> 以回车来打开“打开命令提示符”，输入如下命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> &quot;WEBVIEW2_BROWSER_EXECUTABLE_FOLDER=C:\Temp\WebView2Folder&quot;</span><br><span class="line">&quot;C:\Apps\Test1\Test1.exe&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -513,14 +519,14 @@ var _hmt = _hmt || [];
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">138k</span>
+    <span title="站点总字数">142k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:05</span>
+    <span title="站点阅读时长">2:09</span>
   </span>
 </div>
 <div class="busuanzi-count">

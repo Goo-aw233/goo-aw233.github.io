@@ -11,7 +11,21 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-09-14T14:43:59.113Z</updated>
+  <updated>2026-10-13T16:30:59.827Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/7ce64874.html</id>
+    <link href="https://blog.gucats.com/posts/7ce64874.html"/>
+    <published>2026-10-13T11:15:40.000Z</published>
+    <summary>aaa</summary>
+    <title>在 Windows 配置 SMB 文件夹共享</title>
+    <updated>2026-10-13T16:30:59.827Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -24,7 +38,7 @@
     <published>2026-09-14T11:48:10.000Z</published>
     <summary>介绍在 Windows 11 中通过修改注册表 DWM 项 ForceEffectMode 为 2，强制开启圆角、材质等视觉效果的方法，无需安装显卡驱动。包含命令行、注册表文件和手动编辑三种方式。</summary>
     <title>强制开启 Windows 视觉效果</title>
-    <updated>2026-09-14T14:43:59.113Z</updated>
+    <updated>2026-10-13T16:18:04.506Z</updated>
   </entry>
   <entry>
     <author>
@@ -70,7 +84,7 @@
     <published>2026-08-09T16:41:03.000Z</published>
     <summary>本文介绍如何为特定应用程序指定使用非默认的 Microsoft Edge WebView2 运行时，包括通过复制 EdgeWebView 文件夹、配置注册表或设置临时环境变量的方法。</summary>
     <title>使用指定的 WebView2 启动应用程序</title>
-    <updated>2026-08-09T17:03:11.108Z</updated>
+    <updated>2026-10-13T16:18:04.507Z</updated>
   </entry>
   <entry>
     <author>
@@ -168,8 +182,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -299,19 +313,5 @@
     <summary>通过修改注册表快速切换 Windows 区域设置，支持调整设备设置区域和国家或地区的详细操作。提供了禁用和启用 UCPD 服务的命令，以及修改地理位置标识符和 ISO 3166-1 Alpha-2 Code 的方法，适用于需要自定义区域配置的场景。</summary>
     <title>通过注册表修改 Windows 区域设定</title>
     <updated>2026-03-27T12:00:16.166Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <id>https://blog.gucats.com/posts/c95bd458.html</id>
-    <link href="https://blog.gucats.com/posts/c95bd458.html"/>
-    <published>2025-10-16T15:30:02.000Z</published>
-    <summary>讲解了在 Windows 未激活状态下切换主题的两种方法，包括通过控制面板的个性化页面切换主题，以及通过修改注册表开启深色/浅色模式的具体步骤。文章还介绍了如何使用 .reg 文件快速导入注册表项，并通过重启 explorer.exe 使更改立即生效。</summary>
-    <title>Windows 未激活时切换主题</title>
-    <updated>2026-04-30T07:21:22.859Z</updated>
   </entry>
 </feed>
