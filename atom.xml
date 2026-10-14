@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-10-13T16:30:59.827Z</updated>
+  <updated>2026-10-14T06:55:25.307Z</updated>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -22,9 +22,9 @@
     <id>https://blog.gucats.com/posts/7ce64874.html</id>
     <link href="https://blog.gucats.com/posts/7ce64874.html"/>
     <published>2026-10-13T11:15:40.000Z</published>
-    <summary>aaa</summary>
+    <summary>本文介绍在 Windows 中配置 SMB 文件夹共享的完整流程，包括启用 SMB 直通等可选功能、创建专用用户、配置安全策略与防火墙、设置共享权限和 NTFS 安全权限，并使用指定凭据连接或映射网络驱动器。</summary>
     <title>在 Windows 配置 SMB 文件夹共享</title>
-    <updated>2026-10-13T16:30:59.827Z</updated>
+    <updated>2026-10-14T06:55:25.307Z</updated>
   </entry>
   <entry>
     <author>
@@ -258,11 +258,11 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
     <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
+    <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
     <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
     <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>
     <published>2026-01-08T04:08:43.000Z</published>

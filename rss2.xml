@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 16:30:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 06:55:25 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -17,7 +17,7 @@
     <item>
       <title>在 Windows 配置 SMB 文件夹共享</title>
       <link>https://blog.gucats.com/posts/7ce64874.html</link>
-      <description>aaa</description>
+      <description>本文介绍在 Windows 中配置 SMB 文件夹共享的完整流程，包括启用 SMB 直通等可选功能、创建专用用户、配置安全策略与防火墙、设置共享权限和 NTFS 安全权限，并使用指定凭据连接或映射网络驱动器。</description>
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
@@ -197,11 +197,11 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
       <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
+      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
       <pubDate>Thu, 08 Jan 2026 04:08:43 GMT</pubDate>
     </item>
     <item>

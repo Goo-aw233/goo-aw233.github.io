@@ -481,9 +481,9 @@
           
           <category> Windows </category>
           
-          <category> macOS </category>
-          
           <category> Linux </category>
+          
+          <category> macOS </category>
           
       </categories>
       
@@ -492,9 +492,9 @@
             
             <tag> Windows </tag>
             
-            <tag> macOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -887,9 +887,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -1748,9 +1748,9 @@
           
           <category> 教程 </category>
           
-          <category> Windows </category>
-          
           <category> MS-DOS </category>
+          
+          <category> Windows </category>
           
       </categories>
       
@@ -2107,9 +2107,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -2142,9 +2142,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
