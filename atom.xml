@@ -11,7 +11,22 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-10-14T06:55:25.307Z</updated>
+  <updated>2026-10-14T10:34:20.517Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="编程" scheme="https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="Web" scheme="https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/Web/"/>
+    <category term="编程" scheme="https://blog.gucats.com/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="Web" scheme="https://blog.gucats.com/tags/Web/"/>
+    <id>https://blog.gucats.com/posts/4369bcc.html</id>
+    <link href="https://blog.gucats.com/posts/4369bcc.html"/>
+    <published>2026-10-14T10:13:12.000Z</published>
+    <summary>使用浏览器 DevTools 控制台和 TextDecoder，重新解析网页中编码不正确的 JSON，并自动下载为 JSON 或文本文件。</summary>
+    <title>重新解析网页中不正确编码的 JSON</title>
+    <updated>2026-10-14T10:34:20.517Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -182,8 +197,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
+    <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -258,11 +273,11 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
     <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
+    <category term="Linux" scheme="https://blog.gucats.com/tags/Linux/"/>
     <id>https://blog.gucats.com/posts/20ffdbc4.html</id>
     <link href="https://blog.gucats.com/posts/20ffdbc4.html"/>
     <published>2026-01-08T04:08:43.000Z</published>
@@ -299,19 +314,5 @@
     <summary>使用 PowerShell 管理 Microsoft Defender 防病毒的详细教程，涵盖添加和移除排除项、获取防病毒状态、启动扫描、更新定义等操作。适用于 Windows Server Core 和其他无图形界面的环境。</summary>
     <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
     <updated>2026-03-27T12:01:45.166Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <id>https://blog.gucats.com/posts/168b633e.html</id>
-    <link href="https://blog.gucats.com/posts/168b633e.html"/>
-    <published>2025-10-20T14:06:09.000Z</published>
-    <summary>通过修改注册表快速切换 Windows 区域设置，支持调整设备设置区域和国家或地区的详细操作。提供了禁用和启用 UCPD 服务的命令，以及修改地理位置标识符和 ISO 3166-1 Alpha-2 Code 的方法，适用于需要自定义区域配置的场景。</summary>
-    <title>通过注册表修改 Windows 区域设定</title>
-    <updated>2026-03-27T12:00:16.166Z</updated>
   </entry>
 </feed>
