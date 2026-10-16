@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Wed, 14 Oct 2026 10:34:20 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 07:21:33 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,16 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>关闭 VMD 与 IRST 但不重装系统</title>
+      <link>https://blog.gucats.com/posts/ed7814c3.html</link>
+      <description>在不重装系统的情况下关闭 Intel VMD 与 IRST。通过 msconfig 预先配置安全引导，重启进入 UEFI BIOS 关闭 VMD/IRST，让 Windows 在安全模式下加载 NVMe 驱动，再取消安全引导并恢复正常启动，从而避免因存储控制器切换导致系统无法引导。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Fri, 16 Oct 2026 04:58:20 GMT</pubDate>
+    </item>
     <item>
       <title>重新解析网页中不正确编码的 JSON</title>
       <link>https://blog.gucats.com/posts/4369bcc.html</link>
@@ -224,18 +234,6 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Fri, 24 Oct 2025 12:02:48 GMT</pubDate>
-    </item>
-    <item>
-      <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
-      <link>https://blog.gucats.com/posts/1bb5bc04.html</link>
-      <description>使用 PowerShell 管理 Microsoft Defender 防病毒的详细教程，涵盖添加和移除排除项、获取防病毒状态、启动扫描、更新定义等操作。适用于 Windows Server Core 和其他无图形界面的环境。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
-      <pubDate>Fri, 24 Oct 2025 07:59:55 GMT</pubDate>
     </item>
   </channel>
 </rss>

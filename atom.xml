@@ -11,7 +11,21 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-10-14T10:34:20.517Z</updated>
+  <updated>2026-10-16T07:21:33.336Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/ed7814c3.html</id>
+    <link href="https://blog.gucats.com/posts/ed7814c3.html"/>
+    <published>2026-10-16T04:58:20.000Z</published>
+    <summary>在不重装系统的情况下关闭 Intel VMD 与 IRST。通过 msconfig 预先配置安全引导，重启进入 UEFI BIOS 关闭 VMD/IRST，让 Windows 在安全模式下加载 NVMe 驱动，再取消安全引导并恢复正常启动，从而避免因存储控制器切换导致系统无法引导。</summary>
+    <title>关闭 VMD 与 IRST 但不重装系统</title>
+    <updated>2026-10-16T07:21:33.336Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -298,21 +312,5 @@
     <summary>本文介绍了如何使用 manage-bde 命令管理 BitLocker 功能，包括查看状态、启用加密、禁用加密、暂停加密、恢复加密、修改密码和升级加密版本的详细操作步骤。</summary>
     <title>使用 manage-bde 管理 BitLocker</title>
     <updated>2026-03-27T12:07:48.244Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
-    <id>https://blog.gucats.com/posts/1bb5bc04.html</id>
-    <link href="https://blog.gucats.com/posts/1bb5bc04.html"/>
-    <published>2025-10-24T07:59:55.000Z</published>
-    <summary>使用 PowerShell 管理 Microsoft Defender 防病毒的详细教程，涵盖添加和移除排除项、获取防病毒状态、启动扫描、更新定义等操作。适用于 Windows Server Core 和其他无图形界面的环境。</summary>
-    <title>使用 PowerShell 管理 Microsoft Defender 防病毒</title>
-    <updated>2026-03-27T12:01:45.166Z</updated>
   </entry>
 </feed>
