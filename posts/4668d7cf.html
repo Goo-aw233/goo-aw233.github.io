@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="介绍如何关闭 Windows 11 24H2 及更新版本中，默认启用的 Device Guard 和 Credential Guard 功能，以及 VBS，详细说明了使用 PowerShell 和 Microsoft 提供的工具禁用虚拟化安全功能的步骤，适用于解决虚拟机兼容性问题。">
 <meta property="og:type" content="article">
@@ -72,9 +72,7 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
@@ -172,7 +170,7 @@ var _hmt = _hmt || [];
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -238,18 +236,18 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -406,8 +404,8 @@ var _hmt = _hmt || [];
 </div>
 
 <p>自 Windows 11 24H2 起，Microsoft 为所有全新安装和升级的 Windows 11 默认开启了 Device&#x2F;Credential Guard，这可能会影响 VMware Workstation 及其他虚拟机在内的虚拟化产品。但是 Microsoft 提供了一个 <code>Device Guard and Credential Guard Hardware Readiness Tool</code> 来关闭 Device&#x2F;Credential Guard 和 VBS</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/VMware-Workstation-Pro-Notice.png" alt="VMware Workstation Pro 提示"></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/VMware-Workstation-Pro-Warning.png" alt="VMware Workstation Pro 警告"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/VMware-Workstation-Pro-Notice.png" alt="VMware Workstation Pro 提示" loading="lazy"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/VMware-Workstation-Pro-Warning.png" alt="VMware Workstation Pro 警告" loading="lazy"></p>
 <h2 id="开启开发者模式"><a href="#开启开发者模式" class="headerlink" title="开启开发者模式"></a>开启开发者模式</h2><p>从以下路径开启 <a href="ms-settings:developers" rel="external nofollow noreferrer">Windows 开发人员模式</a></p>
 <ul>
 <li>Windows 设置 &gt; 更新和安全 &gt; 开发者选项 &gt; 开发人员模式</li>
@@ -416,25 +414,25 @@ var _hmt = _hmt || [];
 <li>Windows 设置 &gt; 系统 &gt; 高级 &gt; 开发人员模式</li>
 </ul>
 <h2 id="下载并执行"><a href="#下载并执行" class="headerlink" title="下载并执行"></a>下载并执行</h2><p>从 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.microsoft.com/en-us/download/details.aspx?id=53337">Microsoft 下载中心</a>下载 <code>Device Guard and Credential Guard Hardware Readiness Tool</code>，并解压至空白文件夹</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Unzip-Folder.png" alt="解压缩文件夹"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Unzip-Folder.png" alt="解压缩文件夹" loading="lazy"></p>
 <p>右键“开始”菜单，并选择“终端管理员”或“Windows PowerShell(管理员)”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Right-Click-the-Start-Menu.png" alt="右键开始菜单"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Right-Click-the-Start-Menu.png" alt="右键开始菜单" loading="lazy"></p>
 <p><strong>需要确保终端运行的 Shell 为 <code>Windows PowerShell</code> 或 <code>PowerShell</code></strong></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Run-as-PowerShell.png" alt="运行为 Windows PowerShell"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Run-as-PowerShell.png" alt="运行为 Windows PowerShell" loading="lazy"></p>
 <p>打开解压的文件夹，点击上方的文件资源管理器顶部的地址栏，并右键选择“复制”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Copy-as-Path.png" alt="复制路径"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Copy-as-Path.png" alt="复制路径" loading="lazy"></p>
 <p>输入 <code>cd</code>，按下<kbd>空格</kbd>键后右键粘贴复制到剪切板的路径，并按下 <kbd>Enter</kbd> 以回车</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Paste-Path-to-Folder.png"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Paste-Path-to-Folder.png" loading="lazy"></p>
 <p>切换目录后再输入以下代码并按下 <kbd>Enter</kbd> 以回车</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\DG_Readiness_Tool_v3.<span class="number">6</span>.ps1 <span class="literal">-Disable</span></span><br></pre></td></tr></table></figure>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Execute-PowerShell-Script.png" alt="执行 PowerShell 脚本"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Execute-PowerShell-Script.png" alt="执行 PowerShell 脚本" loading="lazy"></p>
 <p>完成后重启电脑</p>
 <p>重启后 Windows 会进入 <code>Credential Guard Opt-out Tool</code>，此时多次按下 <kbd>Windows 徽标键</kbd>（<kbd>WIN</kbd>）或 <kbd>F3</kbd> 即可继续</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Credential-Guard-Opt-out-Tool.png" alt="Credential-Guard-Opt-out-Tool"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Credential-Guard-Opt-out-Tool.png" alt="Credential-Guard-Opt-out-Tool" loading="lazy"></p>
 <p>完成后电脑会再次重启，进入 Windows 后即可看到 Device&#x2F;Credential Guard 和 VBS 已关闭</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Disabled.png" alt="Device&#x2F;Credential Guard 和 VBS 已关闭"></p>
-<h2 id="疑难解答"><a href="#疑难解答" class="headerlink" title="疑难解答"></a>疑难解答</h2><h3 id="已启用，但未在运行"><a href="#已启用，但未在运行" class="headerlink" title="已启用，但未在运行"></a>已启用，但未在运行</h3><div class="note danger"><p>使用雷电模拟器的 <code>HyperV-off.exe</code> 工具时，这有几率导致 Windows 安全中心提示“不支持标准硬件安全性”<br><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Standard-Hardware-Security-Not-Supported.png" alt="不支持标准硬件安全性"><br>但是可以尝试：先使用 <code>HyperV-off.exe</code> 关闭<strong>并重启</strong>，再使用 <code>.\DG_Readiness_Tool_v3.6.ps1 -Enable</code> 来开启，<strong>但不重启</strong>，最后使用 <code>.\DG_Readiness_Tool_v3.6.ps1 -Disable</code> 来关闭并重启，即可看到“基于虚拟化的安全性”显示为“未启用”的状态，但是不会导致 Windows 安全中心提示“不支持标准硬件安全性”</p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Disabled.png" alt="Device&#x2F;Credential Guard 和 VBS 已关闭" loading="lazy"></p>
+<h2 id="疑难解答"><a href="#疑难解答" class="headerlink" title="疑难解答"></a>疑难解答</h2><h3 id="已启用，但未在运行"><a href="#已启用，但未在运行" class="headerlink" title="已启用，但未在运行"></a>已启用，但未在运行</h3><div class="note danger"><p>使用雷电模拟器的 <code>HyperV-off.exe</code> 工具时，这有几率导致 Windows 安全中心提示“不支持标准硬件安全性”<br><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Disable-Device-Credential-Guard/Standard-Hardware-Security-Not-Supported.png" alt="不支持标准硬件安全性" loading="lazy"><br>但是可以尝试：先使用 <code>HyperV-off.exe</code> 关闭<strong>并重启</strong>，再使用 <code>.\DG_Readiness_Tool_v3.6.ps1 -Enable</code> 来开启，<strong>但不重启</strong>，最后使用 <code>.\DG_Readiness_Tool_v3.6.ps1 -Disable</code> 来关闭并重启，即可看到“基于虚拟化的安全性”显示为“未启用”的状态，但是不会导致 Windows 安全中心提示“不支持标准硬件安全性”</p>
 </div>
 <p>若在 <code>msinfo32.exe</code> 里，“基于虚拟化的安全性”显示为“已启用，但未在运行”，你还可以尝试：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://help.ldmnq.com/docs/xu-ni-fu-wu-hyperv-guan-bi-jiao-cheng">虚拟服务（hyper-v）关闭教程-常见问题客服中心_新手指南FAQ_雷电模拟器</a></p>
 <h3 id="此设置由管理员进行管理"><a href="#此设置由管理员进行管理" class="headerlink" title="此设置由管理员进行管理"></a>此设置由管理员进行管理</h3><p>若在 Windows 安全中心里，“内核隔离”部分，有任意一个或多个选项提示“此设置由管理员进行管理”，请尝试直接删除注册表项 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard</code><br>或者使用命令直接移除该注册表项</p>
@@ -576,7 +574,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:13</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
 <div class="busuanzi-count">

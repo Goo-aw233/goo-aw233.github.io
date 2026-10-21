@@ -11,7 +11,24 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-10-16T07:21:33.336Z</updated>
+  <updated>2026-10-21T15:57:54.360Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="编程" scheme="https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="Web" scheme="https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/Web/"/>
+    <category term="Hexo" scheme="https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/Web/Hexo/"/>
+    <category term="编程" scheme="https://blog.gucats.com/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="Web" scheme="https://blog.gucats.com/tags/Web/"/>
+    <category term="Hexo" scheme="https://blog.gucats.com/tags/Hexo/"/>
+    <id>https://blog.gucats.com/posts/48b2ec17.html</id>
+    <link href="https://blog.gucats.com/posts/48b2ec17.html"/>
+    <published>2026-10-21T15:21:30.000Z</published>
+    <summary>记录更新 Hexo 核心、各类插件及主题的完整步骤，涵盖使用 npm-check-updates 批量升级依赖、处理新版 npm install-scripts 安全策略警告与常见踩坑排查。</summary>
+    <title>更新 Hexo 及其插件</title>
+    <updated>2026-10-21T15:57:54.360Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -39,7 +56,7 @@
     <published>2026-10-14T10:13:12.000Z</published>
     <summary>使用浏览器 DevTools 控制台和 TextDecoder，重新解析网页中编码不正确的 JSON，并自动下载为 JSON 或文本文件。</summary>
     <title>重新解析网页中不正确编码的 JSON</title>
-    <updated>2026-10-14T10:34:20.517Z</updated>
+    <updated>2026-10-21T15:21:57.635Z</updated>
   </entry>
   <entry>
     <author>
@@ -211,8 +228,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -286,8 +303,8 @@
       <name>GuCATs</name>
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="Linux" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="macOS" scheme="https://blog.gucats.com/tags/macOS/"/>
@@ -298,19 +315,5 @@
     <summary>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</summary>
     <title>为 Steam 安装浏览器扩展</title>
     <updated>2026-03-30T10:45:30.456Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <id>https://blog.gucats.com/posts/ecf11bf4.html</id>
-    <link href="https://blog.gucats.com/posts/ecf11bf4.html"/>
-    <published>2025-10-24T12:02:48.000Z</published>
-    <summary>本文介绍了如何使用 manage-bde 命令管理 BitLocker 功能，包括查看状态、启用加密、禁用加密、暂停加密、恢复加密、修改密码和升级加密版本的详细操作步骤。</summary>
-    <title>使用 manage-bde 管理 BitLocker</title>
-    <updated>2026-03-27T12:07:48.244Z</updated>
   </entry>
 </feed>

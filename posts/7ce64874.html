@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="本文介绍在 Windows 中配置 SMB 文件夹共享的完整流程，包括启用 SMB 直通等可选功能、创建专用用户、配置安全策略与防火墙、设置共享权限和 NTFS 安全权限，并使用指定凭据连接或映射网络驱动器。">
 <meta property="og:type" content="article">
@@ -64,9 +64,7 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
@@ -164,7 +162,7 @@ var _hmt = _hmt || [];
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -230,18 +228,18 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -402,7 +400,7 @@ var _hmt = _hmt || [];
 <div class="note warning"><p>仅当需要兼容旧设备时（如不支持 SMBv2&#x2F;v3），才考虑启用“SMB 1.0&#x2F;CIFS 文件共享支持”，且需了解其安全风险。<sup><a href="#ref1">[1]</a></sup></p>
 </div>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Enable-SMB-Direct.png" alt="SMB 直通"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Enable-SMB-Direct.png" alt="SMB 直通" loading="lazy"></p>
 <h2 id="创建专用用户"><a href="#创建专用用户" class="headerlink" title="创建专用用户"></a>创建专用用户</h2><p>在 CMD 中输入如下命令</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span>.exe user &lt;用户名&gt; &lt;密码&gt; /add</span><br></pre></td></tr></table></figure>
 
@@ -453,15 +451,15 @@ var _hmt = _hmt || [];
 <div class="note primary"><p>切勿在机场、咖啡厅、商场等地勾选“公用”，除非你明确知道自己在可信公用网络中使用。</p>
 </div>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Configure-Firewall-Rules.png" alt="配置 Windows Defender 防火墙规则"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Configure-Firewall-Rules.png" alt="配置 Windows Defender 防火墙规则" loading="lazy"></p>
 <h2 id="配置共享文件夹"><a href="#配置共享文件夹" class="headerlink" title="配置共享文件夹"></a>配置共享文件夹</h2><div class="note success"><p>推荐阅读：<a href="/posts/29b4a04d.html" title="开启 SMBv3 端到端加密">开启 SMBv3 端到端加密</a></p>
 </div>
 
 <p>右键要共享的文件，选择“属性”</p>
 <h3 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h3><p>在“属性”窗口中，切换到“共享”的选项卡<br>在选项卡中，点击“高级共享…”，勾选“共享此文件夹”，点击“权限”，在“权限”窗口中点击“添加”，在“选择用户或组”对话框中输入用户名，点击“确定”后根据需要勾选是否允许读取或写入文件夹<br><strong>推荐移除 <code>Everyone</code> 以防止所有人未经许可通过 SMB 访问你的共享文件夹</strong></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Configure-Shared-Folder-Permissions.png" alt="配置共享文件夹权限"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Configure-Shared-Folder-Permissions.png" alt="配置共享文件夹权限" loading="lazy"></p>
 <h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>切换到“安全”选项卡，点击“编辑” &gt; “添加”，在“选择用户或组”对话框中输入用户名，点击“确定”后根据需要勾选是否允许读取或写入文件夹<br><strong>推荐移除 <code>Everyone</code> 以防止所有人未经许可通过 SMB 访问你的共享文件夹</strong></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Configure-Folder-Security-Permissions.png" alt="配置文件夹安全权限"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Configure-SMB-Sharing/Configure-Folder-Security-Permissions.png" alt="配置文件夹安全权限" loading="lazy"></p>
 <h2 id="连接到-SMB"><a href="#连接到-SMB" class="headerlink" title="连接到 SMB"></a>连接到 SMB</h2><p>在在 Linux&#x2F;Unix 等系统上，常用的 SMB 实现是 Samba<br>在连接到 SMB 时，使用上面创建的用户名与密码登录到 SMB 即可，无需使用 Windows 当前登录的用户</p>
 <p>在 Windows 中，点击文件资源管理器顶部的“…” &gt; “映射网络驱动器”<br>“文件夹”部分输入地址，例如 <code>\\IP\&lt;文件夹名称&gt;</code><br><strong>必须勾选“使用其他凭据连接”，并使用使用上面创建的用户名与密码登录</strong></p>
 <h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
@@ -591,7 +589,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:13</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -19,6 +19,17 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 NexT.utils = {
 
+  scrollTo(target, top) {
+    if (window.CSS?.supports('scroll-behavior', 'smooth')) {
+      target.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+    } else {
+      target.scrollTo(0, top);
+    }
+  },
+
   registerExtURL() {
     document.querySelectorAll('span.exturl').forEach(element => {
       const link = document.createElement('a');
@@ -193,12 +204,7 @@ NexT.utils = {
     }, { passive: true });
 
     backToTop?.addEventListener('click', () => {
-      window.anime({
-        targets  : document.scrollingElement,
-        duration : 500,
-        easing   : 'linear',
-        scrollTop: 0
-      });
+      NexT.utils.scrollTo(window, 0);
     });
   },
 
@@ -258,12 +264,7 @@ NexT.utils = {
         }, 1000);
         if (!CONFIG.stickytabs) return;
         const offset = nav.parentNode.getBoundingClientRect().top + window.scrollY + 10;
-        window.anime({
-          targets  : document.scrollingElement,
-          duration : 500,
-          easing   : 'linear',
-          scrollTop: offset
-        });
+        NexT.utils.scrollTo(window, offset);
       });
     });
 
@@ -311,15 +312,8 @@ NexT.utils = {
       element.addEventListener('click', event => {
         event.preventDefault();
         const offset = target.getBoundingClientRect().top + window.scrollY;
-        window.anime({
-          targets  : document.scrollingElement,
-          duration : 500,
-          easing   : 'linear',
-          scrollTop: offset,
-          complete : () => {
-            history.pushState(null, document.title, element.href);
-          }
-        });
+        NexT.utils.scrollTo(window, offset);
+        history.pushState(null, document.title, element.href);
       });
       return target;
     });
@@ -342,8 +336,6 @@ NexT.utils = {
     const target = navItemList[index];
     if (!target || target.classList.contains('active-current')) return;
 
-    const singleHeight = navItemList[navItemList.length - 1].offsetHeight;
-
     nav.querySelectorAll('.active').forEach(navItem => {
       navItem.classList.remove('active', 'active-current');
     });
@@ -356,9 +348,13 @@ NexT.utils = {
       if (activateEle.classList.contains('nav-item')) {
         activateEle.classList.add('active');
       } else { // .nav-child or .nav
-        // scrollHeight isn't reliable for transitioning child items.
+        // Exclude nested lists so each item's own wrapped row is counted once.
+        const listItemHeight = [...activateEle.children].reduce((height, navItem) => {
+          const navChild = [...navItem.children].find(element => element.classList.contains('nav-child'));
+          return height + navItem.getBoundingClientRect().height - (navChild?.getBoundingClientRect().height || 0);
+        }, 0);
         // The last nav-item in a list has a margin-bottom of 5px.
-        navChildHeight += (singleHeight * activateEle.childElementCount) + 5;
+        navChildHeight += listItemHeight + 5;
         activateEle.style.setProperty('--height', `${navChildHeight}px`);
       }
       activateEle = activateEle.parentElement;
@@ -367,12 +363,7 @@ NexT.utils = {
     // Scrolling to center active TOC element if TOC content is taller then viewport.
     const tocElement = document.querySelector(CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini' ? '.sidebar-panel-container' : '.sidebar');
     if (!document.querySelector('.sidebar-toc-active')) return;
-    window.anime({
-      targets  : tocElement,
-      duration : 200,
-      easing   : 'linear',
-      scrollTop: tocElement.scrollTop - (tocElement.offsetHeight / 2) + target.getBoundingClientRect().top - tocElement.getBoundingClientRect().top
-    });
+    NexT.utils.scrollTo(tocElement, tocElement.scrollTop - (tocElement.offsetHeight / 2) + target.getBoundingClientRect().top - tocElement.getBoundingClientRect().top);
   },
 
   updateSidebarPosition() {

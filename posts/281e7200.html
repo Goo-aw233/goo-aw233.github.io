@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="通过挂载和修改微 PE 映像，自定义内置组件，支持添加软件、驱动以及其他个性化设置。详细讲解了映像挂载、修改、保存和替换的操作步骤，适用于需要定制 PE 工具的场景。">
 <meta property="og:type" content="article">
@@ -73,9 +73,7 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
@@ -173,7 +171,7 @@ var _hmt = _hmt || [];
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -239,18 +237,18 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -405,22 +403,22 @@ var _hmt = _hmt || [];
 <li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.wepe.com.cn/">微 PE</a></li>
 </ol>
 <h2 id="释放映像"><a href="#释放映像" class="headerlink" title="释放映像"></a>释放映像</h2><p>使用 UltraISO 打开 PE 镜像文件，在 <code>WEPE</code> 文件夹下找到名为 <code>WEPE64.WIM</code> 的文件（或者是 <code>WEPE32.WIM</code>），提取到空白文件夹</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/WEPE64-File.png" alt="WEPE64.WIM 文件"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/WEPE64-File.png" alt="WEPE64.WIM 文件" loading="lazy"></p>
 <p>打开 Dism++，点击“文件(F)” &gt; “挂载映像”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Mount-Image.png" alt="挂载映像"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Mount-Image.png" alt="挂载映像" loading="lazy"></p>
 <p>在第一个框选择 <code>WEPE64.WIM</code> 文件（或者是 WEPE32.WIM），第二个框选择需要挂载到的目录（请选择空白文件夹，最好只有英文与阿拉伯数字），一般情况下目标映像可以不用改动</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Select-the-Image-to-Mount.png" alt="选择挂载的映像"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Select-the-Image-to-Mount.png" alt="选择挂载的映像" loading="lazy"></p>
 <p>挂载完后就可以在挂载目录下看到文件了</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Image-Mounted.png" alt="挂载目录"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Image-Mounted.png" alt="挂载目录" loading="lazy"></p>
 <h2 id="修改映像"><a href="#修改映像" class="headerlink" title="修改映像"></a>修改映像</h2><h3 id="添加软件"><a href="#添加软件" class="headerlink" title="添加软件"></a>添加软件</h3><p>打开 <code>Program Files</code> 文件夹，在里面新建文件夹并重命名，将你需要的软件放进去（最好是能直接运行的免安装版，<font size=5 color=red>名称不要有空格，名称不要有空格，名称不要有空格</font>）</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Place-the-App-Into-Program-Files-Folder.png" alt="存放软件"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Place-the-App-Into-Program-Files-Folder.png" alt="存放软件" loading="lazy"></p>
 <p>完成后找到 <code>Program Files</code> 文件夹最下面的 <code>PETools.ini</code> 文件并打开<br>找到 <code>//创建桌面快捷方式</code> 这一行，在下面新建一行，然后输入代码</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LINK <span class="variable">%Desktop%</span>\&lt;快捷方式名称&gt;,<span class="variable">%ProgramFiles%</span>\软件目录\主程序名</span><br></pre></td></tr></table></figure>
 
 <p>假如我要放入的程序叫 <code>AIDA64</code>，软件目录在 <code>AIDA64</code>，主程序名为 <code>aida64.exe</code>，则代码应为</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LINK <span class="variable">%Desktop%</span>\AIDA64,<span class="variable">%ProgramFiles%</span>\AIDA64\aida64.exe</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Create-Desktop-Shortcut.png" alt="创建桌面快捷方式"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Create-Desktop-Shortcut.png" alt="创建桌面快捷方式" loading="lazy"></p>
 <hr>
 <p>找到 <code>//创建开始菜单所有程序快捷方式</code> 这一行，在下面随便找个你想要的位置新建一行，然后输入代码</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LINK <span class="variable">%Programs%</span>\&lt;需要放置快捷方式的文件夹&gt;\&lt;快捷方式名称&gt;,<span class="variable">%ProgramFiles%</span>\软件目录\主程序名</span><br></pre></td></tr></table></figure>
@@ -428,23 +426,23 @@ var _hmt = _hmt || [];
 <p>与上面相同，假如我「需要放置快捷方式的文件夹叫 <code>硬件检测</code>」（这个部分可以去除），放入的程序叫 <code>AIDA64</code>，软件目录在 <code>AIDA64</code>，主程序名为 <code>aida64.exe</code>，则代码应为</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LINK <span class="variable">%Programs%</span>\硬件检测\AIDA64,<span class="variable">%ProgramFiles%</span>\AIDA64\aida64.exe</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Create-Start-Menu-Shortcut.png" alt="创建“开始”菜单快捷方式"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Create-Start-Menu-Shortcut.png" alt="创建“开始”菜单快捷方式" loading="lazy"></p>
 <p>完成后保存文件</p>
 <hr>
 <h3 id="添加驱动"><a href="#添加驱动" class="headerlink" title="添加驱动"></a>添加驱动</h3><p>在 Dism++ 侧栏中点击“驱动管理”，然后点击右下角“添加驱动”，并选择驱动所在文件夹（一般选择 <code>ini 文件</code>的所在目录或上层目录就行）</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Add-Drivers.png" alt="添加驱动"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Add-Drivers.png" alt="添加驱动" loading="lazy"></p>
 <h3 id="其他改动"><a href="#其他改动" class="headerlink" title="其他改动"></a>其他改动</h3><p>其他改动就和正常 Windows 没什么不同，自行摸索摸索就好</p>
 <h2 id="保存映像"><a href="#保存映像" class="headerlink" title="保存映像"></a>保存映像</h2><p>先退出所有正在打开<strong>关于 PE 的文件夹</strong><br>点击“文件(F)” &gt; “保存映像	Ctrl+S”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Save-Image.png" alt="保存映像"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Save-Image.png" alt="保存映像" loading="lazy"></p>
 <p>然后选择“直接保存”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Save-Directly.png" alt="直接保存"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Save-Directly.png" alt="直接保存" loading="lazy"></p>
 <p>完成后按下键盘上的 <kbd>Delete</kbd> 键即可卸载镜像</p>
 <p>使用 7-Zip 等压缩软件打开 <code>WEPE64.WIM</code>，并删除名为 <code>[DELETED]</code> 的文件夹<br>如果提示无法访问或只读这类报错，可能是因为映像有问题，比如 <code>fbwf.cfg</code> 与 <code>fbwf.sys</code> 版本不相匹配（不知道怎么办就算了，反正又不大）</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Remove-DELETED-Folder.png" alt="删除 [DELETED] 文件夹"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Remove-DELETED-Folder.png" alt="删除 [DELETED] 文件夹" loading="lazy"></p>
 <p>用 UltraISO 打开到 PE 的镜像，将 <code>WEPE64.WIM</code> 替换进去，然后点击保存即可</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Replace-WIM-File.png" alt="替换文件"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Replace-WIM-File.png" alt="替换文件" loading="lazy"></p>
 <h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>完成后可以在虚拟机试试，或者直接在电脑看看效果</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Final-Result.png" alt="最终结果"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Modify-WePE-Built-In-Components/Final-Result.png" alt="最终结果" loading="lazy"></p>
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>上文中出现的 <code>%Programs%</code>、<code>%Desktop%</code> 都属于相对路径，这么写是为了适应变化，不用为绝对路径找不到文件而烦恼<br>部分 Windows 相对路径如下表：<br><strong>所有的 <code>C:</code> 均代表系统盘根目录，对于 PE 来说一般是 <code>X:</code></strong></p>
 <ul>
 <li>%AppData% &gt; C:\Users&lt;用户名&gt;\AppData\Roaming</li>
@@ -590,7 +588,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:13</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
 <div class="busuanzi-count">

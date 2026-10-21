@@ -17,9 +17,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="详细介绍在 VMware Workstation Pro 中安装 macOS 虚拟机的完整流程，包括使用 Auto-Unlocker 或 Unlocker 解锁 Apple macOS 选项、创建虚拟机、选择镜像文件（ISO&#x2F;CDR&#x2F;DMG）、配置网络与硬件，并针对 Intel 和 AMD 处理器提供机型模拟配置，以及安装时磁盘格式化和 USB 兼容性问题的解决方案。">
 <meta property="og:type" content="article">
@@ -71,9 +71,7 @@
 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
@@ -171,7 +169,7 @@ var _hmt = _hmt || [];
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>links</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -237,18 +235,18 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -413,23 +411,23 @@ var _hmt = _hmt || [];
 </ol>
 <h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true">VMware Workstation Pro</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/paolo-projects/auto-unlocker/releases/latest">Auto-Unlocker</a><br>较老版本的 VMware Workstation Pro，可能无法使用较新的 Auto-Unlocker，可以尝试使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/DrDonk/unlocker/releases/latest">Unlocker</a>，该工具同样兼容新版 VMware Workstation Pro<br>macOS 镜像文件（<code>.ISO</code>、<code>.CDR</code>、<code>.DMG</code> 都可以使用，<code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a>）</p>
 <h2 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h2><h3 id="Auto-Unlocker"><a href="#Auto-Unlocker" class="headerlink" title="Auto-Unlocker"></a>Auto-Unlocker</h3><p>将 <code>Auto-Unlocker.zip</code> 解压到空白文件夹，并运行根目录下的 <code>Unlock.exe</code><br>回到桌面，右键 <code>VMware Workstation Pro</code> 的快捷方式，并选择“打开文件所在的位置”，这就是 VMware Workstation Pro 的安装路径</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png" alt="打开文件所在的位置"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Open-File-Location.png" alt="打开文件所在的位置" loading="lazy"></p>
 <p>26H1 默认安装路径：<code>C:\Program Files\VMware\VMware Workstation</code><br>25H2u1 及以前版本默认安装路径（64 位）：<code>C:\Program Files (x86)\VMware\VMware Workstation</code></p>
 <p>在打开的 <code>Auto-Unlocker</code> 窗口中，选择 <code>VMware Install Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径<br>随后，再选择 <code>VMware x64 Location</code> 旁边的 <code>Browse</code>，选择到 VMware Workstation Pro 的安装路径下的 <code>x64</code> 文件夹<br>完成后，确保 <code>Download Tools</code> 被勾选，最后点击 <code>Patch</code> 以开始解锁 <code>Apple macOS</code> 选项并下载 <code>darwin.iso</code> 和 <code>darwinPre15.iso</code> 这两个 VMware Tools</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker.png" alt="Auto-Unlocker"></p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker-Success.png" alt="修补完成"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker.png" alt="Auto-Unlocker" loading="lazy"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Auto-Unlocker-Success.png" alt="修补完成" loading="lazy"></p>
 <h3 id="Unlocker"><a href="#Unlocker" class="headerlink" title="Unlocker"></a>Unlocker</h3><p>将压缩包解压到空白文件夹，进入到 <code>windows</code> 文件夹<br>按住 <kbd>SHIFT</kbd>，并按下右键，选择“在此处打开 PowerShell 窗口”（Windows 11 或安装终端的 Windows 可以直接右键选择“在终端中打开”）<br>输入命令以解锁 macOS</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./unlock.exe install</span><br></pre></td></tr></table></figure>
 
 <p>等待一下即可完成解锁，然后按任意键即可退出</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Unlocker.png" alt="Unlocker"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Unlocker.png" alt="Unlocker" loading="lazy"></p>
 <h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><hr>
 <p><code>.DMG</code> 格式的镜像请参阅：<a href="/posts/31dfa174.html" title="VMware 虚拟机用 DMG 安装 macOS">VMware 虚拟机用 DMG 安装 macOS</a></p>
 <hr>
 <p>选择镜像文件时，若镜像格式为 <code>.CDR</code>，可以更改文件类型为“所有文件”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Select-File-Types.png" alt="选择文件类型"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Select-File-Types.png" alt="选择文件类型" loading="lazy"></p>
 <p>出现“无法检测此光盘映像中的操作系统”无需理会，点击下一步即可，选择好正确的 macOS 版本<br>创建磁盘的时候选择“将虚拟磁盘存储为单个文件”</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Store-Virtual-Disk-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Store-Virtual-Disk-as-a-Single-File.png" alt="将虚拟磁盘存储为单个文件" loading="lazy"></p>
 <p>完成后点击“编辑虚拟机设置”</p>
 <ol>
 <li>在“处理器”设置中，将<strong>处理器个数</strong>设置为 <code>1</code>，<strong>处理器核心数</strong>随意，最大不超过物理核心数的一半为最佳；内存分配不超过物理内存的一半为最佳</li>
@@ -444,13 +442,13 @@ var _hmt = _hmt || [];
 
 <h3 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h3><p>macOS 安装与 Windows 不同，需要手动格式化磁盘</p>
 <p>macOS 10.13 及更新版本可在主界面直接选择磁盘工具</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-New.png" alt="macOS 磁盘工具"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-New.png" alt="macOS 磁盘工具" loading="lazy"></p>
 <p>文件系统选择“APFS”，分区表选择 GUID</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-New.png" alt="macOS “抹掉”选项"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-New.png" alt="macOS “抹掉”选项" loading="lazy"></p>
 <p>macOS 12 及更早的版本）则需要在上方的实用工具打开</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-Old.png" alt="“实用工具”的“磁盘工具”"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Disk-Utility-Old.png" alt="“实用工具”的“磁盘工具”" loading="lazy"></p>
 <p>若文件系统不支持 APFS，则选择“Mac OS 扩展 (日志式)”，分区表选择 GUID</p>
-<p><img data-src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-Old.png" alt="OS X “抹掉”选项"></p>
+<p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-macOS-on-VMWP/Erase-Disk-Old.png" alt="OS X “抹掉”选项" loading="lazy"></p>
 <details>
 
 <summary>关于选项</summary>
@@ -532,8 +530,8 @@ var _hmt = _hmt || [];
 </div>
 
           <div class="post-tags">
-              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
               <a href="/tags/macOS/" rel="tag"># macOS</a>
+              <a href="/tags/VMware-Workstation/" rel="tag"># VMware Workstation</a>
           </div>
 
         
@@ -586,7 +584,7 @@ var _hmt = _hmt || [];
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:13</span>
+    <span title="站点阅读时长">2:14</span>
   </span>
 </div>
 <div class="busuanzi-count">
