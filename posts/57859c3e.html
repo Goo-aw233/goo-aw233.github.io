@@ -52,7 +52,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/in-Windows.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Taskmgr.png">
 <meta property="article:published_time" content="2022-07-10T13:33:43.000Z">
-<meta property="article:modified_time" content="2026-10-13T16:18:04.507Z">
+<meta property="article:modified_time" content="2026-10-27T15:29:21.440Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="QEMU">
 <meta property="article:tag" content="Windows">
@@ -248,7 +248,7 @@ var _hmt = _hmt || [];
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">85</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -358,7 +358,7 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-10-14 00:18:04" itemprop="dateModified" datetime="2026-10-14T00:18:04+08:00">2026-10-14</time>
+      <time title="修改时间：2026-10-27 23:29:21" itemprop="dateModified" datetime="2026-10-27T23:29:21+08:00">2026-10-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -488,7 +488,7 @@ var _hmt = _hmt || [];
 
 <h4 id="UEFI-固件"><a href="#UEFI-固件" class="headerlink" title="UEFI 固件"></a>UEFI 固件</h4><p>Fedora 与 QEMU 提供的 edk2 固件无法正常使用，故使用 <code>kraxel</code> 的 edk2-git 固件构建（存档）<br><a target="_blank" rel="noopener external nofollow noreferrer" href="http://releases.linaro.org/components/kernel/uefi-linaro/16.02/release/qemu64">Linaro Releases</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://gbcs6-my.sharepoint.com/:f:/g/personal/gucats_gbcs6_onmicrosoft_com/IgB96Szl1YYaTYOQC19zlfkoAc98_9R-Qxb4H-nS8-9bnB4?e=vLMidk">OneDrive</a><br>下载完成后打开压缩包，定位到路径：<code>edk2.git-aarch64-0-20220719.209.gf0064ac3af.EOL.no.nore.updates.noarch.rpm\edk2.git-aarch64-0-20220719.209.gf0064ac3af.EOL.no.nore.updates.noarch.cpio\.\usr\share\edk2.git\aarch64</code>，将里面的 <code>QEMU_EFI.fd</code> 和 <code>vars-template-pflash.raw</code> 解压出来到“存放文件夹”</p>
 <h4 id="VirtIO-驱动光盘"><a href="#VirtIO-驱动光盘" class="headerlink" title="VirtIO 驱动光盘"></a>VirtIO 驱动光盘</h4><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso">最新版下载链接</a><br>将下载好的文件，放入到“存放文件夹”</p>
-<h2 id="配置-QEMU-环境变量"><a href="#配置-QEMU-环境变量" class="headerlink" title="配置 QEMU 环境变量"></a>配置 QEMU 环境变量</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>SystemPropertiesAdvanced.exe</code> 后，按下 <kbd>Enter</kbd> 以回车来打开“高级系统设置”<br>在弹出的“高级系统设置”程序里，点击“环境变量”</p>
+<h2 id="配置-QEMU-环境变量"><a href="#配置-QEMU-环境变量" class="headerlink" title="配置 QEMU 环境变量"></a>配置 QEMU 环境变量</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>SystemPropertiesAdvanced.exe</code> 后，按下 <kbd>Enter</kbd> 以回车来打开“系统属性”<br>在弹出的“系统属性”的“高级”选项卡里，点击“环境变量”</p>
 <p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/SystemPropertiesAdvanced.png" alt="高级系统设置" loading="lazy"></p>
 <p>在“系统变量”里找到名为 <code>Path</code> 的项并双击，点击旁边的“新建”，最后在矩形框中输入 QEMU 的安装目录</p>
 <p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Install-WoA-on-QEMU/Environment_Variables.png" alt="环境变量" loading="lazy"></p>
@@ -871,14 +871,14 @@ qemu-system-aarch64.exe ^
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">147k</span>
+    <span title="站点总字数">151k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">2:14</span>
+    <span title="站点阅读时长">2:18</span>
   </span>
 </div>
 <div class="busuanzi-count">

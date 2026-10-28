@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Wed, 21 Oct 2026 15:57:54 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 09:40:48 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,26 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>创建 Windows 本地账户</title>
+      <link>https://blog.gucats.com/posts/f00fcc5d.html</link>
+      <description>汇总 Windows 系统中通过 net 命令、本地用户和组 (lusrmgr.msc) 以及高级用户账户控制 (netplwiz) 创建和配置本地账户的完整方法。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Wed, 28 Oct 2026 08:20:45 GMT</pubDate>
+    </item>
+    <item>
+      <title>重命名 Windows 用户名与计算机名称</title>
+      <link>https://blog.gucats.com/posts/9c39dfbf.html</link>
+      <description>不重装系统、不换账号，彻底修改 Windows 计算机名、账户登录名、底层 User 文件夹路径及注册表映射的完整指南。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Tue, 27 Oct 2026 15:22:00 GMT</pubDate>
+    </item>
     <item>
       <title>更新 Hexo 及其插件</title>
       <link>https://blog.gucats.com/posts/48b2ec17.html</link>
@@ -211,32 +231,6 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Fri, 06 Mar 2026 03:10:03 GMT</pubDate>
-    </item>
-    <item>
-      <title>使用 DISM 清理 WinSxS 文件夹</title>
-      <link>https://blog.gucats.com/posts/87461802.html</link>
-      <description>通过 DISM 工具清理 Windows 系统中的 WinSxS 文件夹，详细介绍了分析组件存储大小、执行清理命令、设置定时任务以及重设基准版本的操作方法，帮助释放系统盘空间并优化存储管理。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
-      <pubDate>Sat, 14 Feb 2026 05:27:56 GMT</pubDate>
-    </item>
-    <item>
-      <title>为 Steam 安装浏览器扩展</title>
-      <link>https://blog.gucats.com/posts/20ffdbc4.html</link>
-      <description>讲解如何在 Steam 中安装浏览器扩展的完整流程，包括打开扩展页、通过 Chrome 应用商店或拖拽安装扩展，以及解决扩展不兼容问题的强制卸载方法，适用于 Windows、macOS 和 Linux 系统。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/">macOS</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/macOS/">macOS</category>
-      <category domain="https://blog.gucats.com/tags/Linux/">Linux</category>
-      <pubDate>Thu, 08 Jan 2026 04:08:43 GMT</pubDate>
     </item>
   </channel>
 </rss>
