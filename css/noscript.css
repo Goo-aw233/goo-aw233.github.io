@@ -13,7 +13,6 @@ body {
   visibility: visible;
 }
 .use-motion .column,
-.use-motion .site-brand-container .toggle,
 .use-motion .footer {
   opacity: initial;
 }
