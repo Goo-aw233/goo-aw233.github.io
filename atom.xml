@@ -11,7 +11,25 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-10-28T09:40:48.951Z</updated>
+  <updated>2026-10-31T16:30:40.342Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
+    <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
+    <id>https://blog.gucats.com/posts/5142f5cf.html</id>
+    <link href="https://blog.gucats.com/posts/5142f5cf.html"/>
+    <published>2026-10-31T15:50:15.000Z</published>
+    <summary>在 Windows 虚拟机中切换登录用户或断开会话后，VMware Tools 托盘消失及剪贴板/文件拖拽失效的排查与一键重置重启命令。</summary>
+    <title>重启 VMware Tools 服务</title>
+    <updated>2026-10-31T16:30:40.342Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -24,7 +42,7 @@
     <published>2026-10-28T08:20:45.000Z</published>
     <summary>汇总 Windows 系统中通过 net 命令、本地用户和组 (lusrmgr.msc) 以及高级用户账户控制 (netplwiz) 创建和配置本地账户的完整方法。</summary>
     <title>创建 Windows 本地账户</title>
-    <updated>2026-10-28T09:40:48.951Z</updated>
+    <updated>2026-10-31T15:57:53.400Z</updated>
   </entry>
   <entry>
     <author>
@@ -55,7 +73,7 @@
     <published>2026-10-21T15:21:30.000Z</published>
     <summary>记录更新 Hexo 核心、各类插件及主题的完整步骤，涵盖使用 npm-check-updates 批量升级依赖、处理新版 npm install-scripts 安全策略警告与常见踩坑排查。</summary>
     <title>更新 Hexo 及其插件</title>
-    <updated>2026-10-21T15:57:54.360Z</updated>
+    <updated>2026-10-31T16:12:29.635Z</updated>
   </entry>
   <entry>
     <author>
@@ -98,7 +116,7 @@
     <published>2026-10-13T11:15:40.000Z</published>
     <summary>本文介绍在 Windows 中配置 SMB 文件夹共享的完整流程，包括启用 SMB 直通等可选功能、创建专用用户、配置安全策略与防火墙、设置共享权限和 NTFS 安全权限，并使用指定凭据连接或映射网络驱动器。</summary>
     <title>在 Windows 配置 SMB 文件夹共享</title>
-    <updated>2026-10-14T06:55:25.307Z</updated>
+    <updated>2026-10-31T16:13:52.362Z</updated>
   </entry>
   <entry>
     <author>
@@ -112,7 +130,7 @@
     <published>2026-09-14T11:48:10.000Z</published>
     <summary>介绍在 Windows 11 中通过修改注册表 DWM 项 ForceEffectMode 为 2，强制开启圆角、材质等视觉效果的方法，无需安装显卡驱动。包含命令行、注册表文件和手动编辑三种方式。</summary>
     <title>强制开启 Windows 视觉效果</title>
-    <updated>2026-10-13T16:18:04.506Z</updated>
+    <updated>2026-10-31T15:55:16.577Z</updated>
   </entry>
   <entry>
     <author>
@@ -200,7 +218,7 @@
     <published>2026-06-21T06:28:35.000Z</published>
     <summary>使用注册表或 fsutil 为指定或所有卷，启用或禁用 8.3 命名规则，而已存在的文件或文件夹可以通过手动指定的方式指定其短文件名，并使用 8.3 命名规则搭配 rmdir 或 del 命令以移除顽固的幽灵文件夹或文件。</summary>
     <title>移除幽灵文件和文件夹</title>
-    <updated>2026-06-21T07:29:23.543Z</updated>
+    <updated>2026-10-29T12:33:43.039Z</updated>
   </entry>
   <entry>
     <author>
@@ -256,8 +274,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
@@ -266,7 +284,7 @@
     <published>2026-04-28T12:07:24.000Z</published>
     <summary>通过使用 DISM 和 PowerShell 命令管理 Windows 保留存储，包括获取当前状态、启用和禁用保留存储，以优化系统更新和存储空间。</summary>
     <title>管理保留的存储</title>
-    <updated>2026-07-09T13:22:31.476Z</updated>
+    <updated>2026-10-31T15:57:01.458Z</updated>
   </entry>
   <entry>
     <author>
@@ -280,7 +298,7 @@
     <published>2026-03-18T14:37:55.000Z</published>
     <summary>通过多种方法启用文件扩展名显示，包括修改注册表、使用命令行以及在不同版本的 Windows 文件资源管理器中调整设置。适用于 Windows XP 至 Windows 11 的详细操作步骤，涵盖图形界面和命令行方式，提供了便捷的解决方案。</summary>
     <title>显示文件扩展名</title>
-    <updated>2026-03-27T11:58:53.699Z</updated>
+    <updated>2026-10-31T15:54:05.206Z</updated>
   </entry>
   <entry>
     <author>
@@ -295,19 +313,5 @@
     <summary>在 Windows 系统中获取文件路径的多种方法，包括通过属性窗口手动拼接路径，以及在 Windows 10 和 Windows 11 中使用快捷选项快速复制文件路径的操作步骤，适用于不同版本的系统环境。</summary>
     <title>获取文件路径</title>
     <updated>2026-03-27T12:16:00.398Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <id>https://blog.gucats.com/posts/e3b15ad1.html</id>
-    <link href="https://blog.gucats.com/posts/e3b15ad1.html"/>
-    <published>2026-03-06T03:10:03.000Z</published>
-    <summary>提供多种方法检查 CPU 和 Windows 系统架构的详细步骤，包括通过 Windows 设置、控制面板、系统信息、 PowerShell 和 CMD 等工具查看架构信息，并对常见架构类型进行解释，适用于不同场景的需求。</summary>
-    <title>检查 CPU 与 Windows 的架构</title>
-    <updated>2026-03-27T12:19:03.387Z</updated>
   </entry>
 </feed>

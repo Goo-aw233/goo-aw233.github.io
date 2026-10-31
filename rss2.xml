@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Wed, 28 Oct 2026 09:40:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 16:30:40 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,20 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>重启 VMware Tools 服务</title>
+      <link>https://blog.gucats.com/posts/5142f5cf.html</link>
+      <description>在 Windows 虚拟机中切换登录用户或断开会话后，VMware Tools 托盘消失及剪贴板/文件拖拽失效的排查与一键重置重启命令。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</category>
+      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/">VMware</category>
+      <category domain="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/">Workstation</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/VMware-Workstation/">VMware Workstation</category>
+      <pubDate>Sat, 31 Oct 2026 15:50:15 GMT</pubDate>
+    </item>
     <item>
       <title>创建 Windows 本地账户</title>
       <link>https://blog.gucats.com/posts/f00fcc5d.html</link>
@@ -195,8 +209,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -221,16 +235,6 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Wed, 18 Mar 2026 14:20:10 GMT</pubDate>
-    </item>
-    <item>
-      <title>检查 CPU 与 Windows 的架构</title>
-      <link>https://blog.gucats.com/posts/e3b15ad1.html</link>
-      <description>提供多种方法检查 CPU 和 Windows 系统架构的详细步骤，包括通过 Windows 设置、控制面板、系统信息、 PowerShell 和 CMD 等工具查看架构信息，并对常见架构类型进行解释，适用于不同场景的需求。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <pubDate>Fri, 06 Mar 2026 03:10:03 GMT</pubDate>
     </item>
   </channel>
 </rss>
