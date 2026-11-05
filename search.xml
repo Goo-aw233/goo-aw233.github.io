@@ -512,9 +512,9 @@
           
           <category> Windows </category>
           
-          <category> DISM </category>
-          
           <category> PowerShell </category>
+          
+          <category> DISM </category>
           
       </categories>
       
@@ -770,7 +770,7 @@
       <link href="/posts/c95bd458.html"/>
       <url>/posts/c95bd458.html</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 未激活时不允许切换主题，但是可以通过修改注册表的方式让 Windows 启用深色模式或浅色模式，抑或是通过残留的控制面板中个性化项目来切换主题</p><h2 id="打开控制面板的个性化页面"><a href="#打开控制面板的个性化页面" class="headerlink" title="打开控制面板的个性化页面"></a>打开控制面板的个性化页面</h2><p>在控制面板中修改主题，不需要重启文件资源管理器，但是随着 Windows 的更新，控制面板可能会被移除</p><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入以下命令后，按下 <kbd>Enter</kbd> 以回车来打开控制面板的“个性化页面”</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explorer.exe shell:::&#123;ED834ED6-<span class="number">4</span>B5A-<span class="number">4</span>bfe-<span class="number">8</span>F11-A626DCB6A921&#125;</span><br></pre></td></tr></table></figure><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Switch-Themes-When-Windows-is-Not-Activated/Personalization-in-Control-Panel.png" alt="个性化" loading="lazy"></p><h2 id="注册表开启深色模式"><a href="#注册表开启深色模式" class="headerlink" title="注册表开启深色模式"></a>注册表开启深色模式</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>regedit.exe</code> 后，按下 <kbd>Enter</kbd> 以回车来打开“注册表编辑器”<br>接着定位到以下路径：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</span><br></pre></td></tr></table></figure><p>找到名为 <code>AppsUseLightTheme</code> 和 <code>SystemUsesLightTheme</code> 这两个注册表项目，双击打开后将他们的值都设为 <code>0</code></p><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Switch-Themes-When-Windows-is-Not-Activated/Edit-Registry-Key.png" alt="修改注册表项" loading="lazy"></p><details><summary>也可以直接编写一个 <code>.reg</code> 文件以导入</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]</span><br><span class="line">&quot;AppsUseLightTheme&quot;=dword:00000000</span><br><span class="line">&quot;SystemUsesLightTheme&quot;=dword:00000000</span><br></pre></td></tr></table></figure></details><p>完成后发现只有“开始”菜单变成暗色主题了，这时候需要再重启 <code>explorer.exe</code> 即可立即生效<br>按下 <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ESC</kbd> 以打开任务管理器，搜索 <code>explorer.exe</code> 并选择“重启任务”即可</p><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Switch-Themes-When-Windows-is-Not-Activated/Restart-Explorer.png" alt="重启 explorer.exe" loading="lazy"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://www.thewindowsclub.com/add-personalize-classic-to-context-menu-in-windows-10">How to add Personalize (Classic) to Context Menu in Windows 11</a></li><li><a href="https://winmoes.com/noticetutorial/study/11161.html">Windows 10中添加或删除个性化（经典）上下文菜单 ★ 枫の主题社</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows 未激活时不允许切换到深色背景主题或其他主题，但是可以通过修改注册表的方式让 Windows 启用深色模式或浅色模式，抑或是通过残留的控制面板中个性化项目来切换主题</p><h2 id="打开控制面板的个性化页面"><a href="#打开控制面板的个性化页面" class="headerlink" title="打开控制面板的个性化页面"></a>打开控制面板的个性化页面</h2><p>在控制面板中修改主题，不需要重启文件资源管理器，但是随着 Windows 的更新，控制面板可能会被移除</p><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入以下命令后，按下 <kbd>Enter</kbd> 以回车来打开控制面板的“个性化页面”</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explorer.exe shell:::&#123;ED834ED6-<span class="number">4</span>B5A-<span class="number">4</span>bfe-<span class="number">8</span>F11-A626DCB6A921&#125;</span><br></pre></td></tr></table></figure><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Switch-Themes-When-Windows-is-Not-Activated/Personalization-in-Control-Panel.png" alt="个性化" loading="lazy"></p><h2 id="注册表开启深色模式"><a href="#注册表开启深色模式" class="headerlink" title="注册表开启深色模式"></a>注册表开启深色模式</h2><p>按下 <kbd>WIN</kbd> + <kbd>R</kbd> 以打开“运行”，输入 <code>regedit.exe</code> 后，按下 <kbd>Enter</kbd> 以回车来打开“注册表编辑器”<br>接着定位到以下路径：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize</span><br></pre></td></tr></table></figure><p>找到名为 <code>AppsUseLightTheme</code> 和 <code>SystemUsesLightTheme</code> 这两个注册表项目，双击打开后将他们的值都设为 <code>0</code></p><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Switch-Themes-When-Windows-is-Not-Activated/Edit-Registry-Key.png" alt="修改注册表项" loading="lazy"></p><details><summary>也可以直接编写一个 <code>.reg</code> 文件以导入</summary><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]</span><br><span class="line">&quot;AppsUseLightTheme&quot;=dword:00000000</span><br><span class="line">&quot;SystemUsesLightTheme&quot;=dword:00000000</span><br></pre></td></tr></table></figure></details><p>完成后发现只有“开始”菜单变成暗色主题了，这时候需要再重启 <code>explorer.exe</code> 即可立即生效<br>按下 <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ESC</kbd> 以打开任务管理器，搜索 <code>explorer.exe</code> 并选择“重启任务”即可</p><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Switch-Themes-When-Windows-is-Not-Activated/Restart-Explorer.png" alt="重启 explorer.exe" loading="lazy"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol><li><a href="https://www.thewindowsclub.com/add-personalize-classic-to-context-menu-in-windows-10">How to add Personalize (Classic) to Context Menu in Windows 11</a></li><li><a href="https://winmoes.com/noticetutorial/study/11161.html">Windows 10中添加或删除个性化（经典）上下文菜单 ★ 枫の主题社</a></li></ol>]]></content>
       
       
       <categories>
@@ -1092,9 +1092,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -1953,9 +1953,9 @@
           
           <category> 教程 </category>
           
-          <category> MS-DOS </category>
-          
           <category> Windows </category>
+          
+          <category> MS-DOS </category>
           
       </categories>
       
@@ -2312,9 +2312,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
@@ -2347,9 +2347,9 @@
       
         <tags>
             
-            <tag> VMware Workstation </tag>
-            
             <tag> macOS </tag>
+            
+            <tag> VMware Workstation </tag>
             
         </tags>
       
