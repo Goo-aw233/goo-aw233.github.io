@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>阻止 Microsoft GameInput 安装</title>
+      <link href="/posts/460b8694.html"/>
+      <url>/posts/460b8694.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Microsoft GameInput 是随 Gaming Services 分发的控制器输入组件，部分用户在卸载后仍会被自动重新安装<br>可以通过“卸载 + 创建同名占位文件夹 + 拒绝写入权限”的方式，阻止其再次安装到 <code>C:\Program Files\Microsoft GameInput</code></p><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p><strong>使用疑难解答程序包来卸载可以确保 Microsoft GameInput 被正确删除，卸载完成后推荐先重启一次 Windows 以确保所有组件均被删除</strong></p><p>请参阅：<a href="/posts/bf075fa8.html" title="卸载失效的安装程序">卸载失效的安装程序</a><br>按照文章的步骤，将 <code>Microsoft GameInput</code> 卸载<br>（其 GUID 可能为 <code>&#123;DE540882-68F6-4A5E-888D-7E7902BB4CE7&#125;</code>）</p><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Prevent-Installation-of-Microsoft-GameInput/Uninstall-Microsoft-GameInput.png" alt="卸载 Microsoft GameInput" loading="lazy"></p><div class="note default"><p>对于 <code>Microsoft GameInput</code> 的安装程序，一般存放于如下路径：<br><code>C:\Program Files\WindowsApps\Microsoft.GamingServices_&lt;版本&gt;_&lt;架构&gt;__8wekyb3d8bbwe\GameInputRedist.msi</code></p></div><h2 id="修改文件夹权限"><a href="#修改文件夹权限" class="headerlink" title="修改文件夹权限"></a>修改文件夹权限</h2><div class="note warning"><p>对 <code>Everyone</code> 设置完全拒绝后，该文件夹将无法被任何账户访问（包括管理员）</p></div><div class="note success"><details><summary>使用命令行快速解决</summary><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p><ul><li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li><li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li></ul><p>如果运行的控制台不为 CMD（命令提示符），请输入 <code>cmd.exe</code> 以启动它</p><p>拒绝权限：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> &quot;C:\Program Files\Microsoft GameInput&quot;</span><br><span class="line">icacls.exe &quot;C:\Program Files\Microsoft GameInput&quot; /deny &quot;Everyone:(F)&quot; /t</span><br></pre></td></tr></table></figure><p>若文件夹已存在，<code>mkdir</code> 的报错可忽略，直接执行下一条命令即可</p></details></div><h3 id="拒绝权限"><a href="#拒绝权限" class="headerlink" title="拒绝权限"></a>拒绝权限</h3><p>卸载完成后，在 <code>C:\Program Files</code> 下，创建一个名为 <code>Microsoft GameInput</code> 的文件夹<br>（如果已经存在，就先删除，随后再创建）</p><p>右键 <code>Microsoft GameInput</code> 文件夹，选择“属性” &gt; “安全” &gt; “编辑” &gt; “添加”<br>在“选择用户和组”窗口中，输入 <code>Everyone</code>，并点击“确定”<br>在“安全”选项卡中，将 <code>Everyone</code> 的“允许”权限<strong>全部取消勾选</strong>，将“拒绝”的权限<strong>全部勾选</strong></p><p><img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Prevent-Installation-of-Microsoft-GameInput/Change-Everyone-Reject-Permissions.png" alt="拒绝 Everyone 权限" loading="lazy"></p><h3 id="恢复权限"><a href="#恢复权限" class="headerlink" title="恢复权限"></a>恢复权限</h3><div class="note info"><p>若反悔想重新安装 <code>Microsoft GameInput</code>，可以使用如下方法移除文件夹权限，并移除文件夹</p></div><div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p><ul><li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li><li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li></ul><p>如果运行的控制台不为 CMD（命令提示符），请输入 <code>cmd.exe</code> 以启动它</p></div><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">takeown.exe /f &quot;C:\Program Files\Microsoft GameInput&quot; /r /d y</span><br><span class="line">icacls.exe &quot;C:\Program Files\Microsoft GameInput&quot; /remove:d &quot;Everyone&quot; /t</span><br><span class="line"><span class="built_in">rmdir</span> /s /q &quot;C:\Program Files\Microsoft GameInput&quot;</span><br></pre></td></tr></table></figure><p>如果第二条命令失败，改用重置为继承权限：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">icacls.exe &quot;C:\Program Files\Microsoft GameInput&quot; /reset /t</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>重启 VMware Tools 服务</title>
       <link href="/posts/5142f5cf.html"/>
       <url>/posts/5142f5cf.html</url>
@@ -512,9 +539,9 @@
           
           <category> Windows </category>
           
-          <category> PowerShell </category>
-          
           <category> DISM </category>
+          
+          <category> PowerShell </category>
           
       </categories>
       
@@ -1092,9 +1119,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -2312,9 +2339,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       
@@ -2347,9 +2374,9 @@
       
         <tags>
             
-            <tag> macOS </tag>
-            
             <tag> VMware Workstation </tag>
+            
+            <tag> macOS </tag>
             
         </tags>
       

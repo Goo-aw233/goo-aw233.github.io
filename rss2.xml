@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 16:30:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 09:42:42 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,16 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>阻止 Microsoft GameInput 安装</title>
+      <link>https://blog.gucats.com/posts/460b8694.html</link>
+      <description>通过卸载、创建占位文件夹并拒绝 Everyone 权限，阻止 Microsoft GameInput 被自动重新安装。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Sat, 07 Nov 2026 08:04:56 GMT</pubDate>
+    </item>
     <item>
       <title>重启 VMware Tools 服务</title>
       <link>https://blog.gucats.com/posts/5142f5cf.html</link>
@@ -209,8 +219,8 @@
       <author>GuCATs</author>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/">DISM</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/">PowerShell</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
@@ -225,16 +235,6 @@
       <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
       <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
       <pubDate>Wed, 18 Mar 2026 14:37:55 GMT</pubDate>
-    </item>
-    <item>
-      <title>获取文件路径</title>
-      <link>https://blog.gucats.com/posts/837d5d4c.html</link>
-      <description>在 Windows 系统中获取文件路径的多种方法，包括通过属性窗口手动拼接路径，以及在 Windows 10 和 Windows 11 中使用快捷选项快速复制文件路径的操作步骤，适用于不同版本的系统环境。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <pubDate>Wed, 18 Mar 2026 14:20:10 GMT</pubDate>
     </item>
   </channel>
 </rss>
