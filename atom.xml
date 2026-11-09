@@ -11,7 +11,7 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-11-09T13:58:04.099Z</updated>
+  <updated>2026-11-09T14:09:38.792Z</updated>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -24,7 +24,7 @@
     <published>2026-11-09T12:59:12.000Z</published>
     <summary>解决 Windows 10/11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。</summary>
     <title>重置 IE 与 Explorer 的搜索引擎</title>
-    <updated>2026-11-09T13:58:04.099Z</updated>
+    <updated>2026-11-09T14:09:38.792Z</updated>
   </entry>
   <entry>
     <author>
@@ -302,8 +302,8 @@
     </author>
     <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
+    <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
