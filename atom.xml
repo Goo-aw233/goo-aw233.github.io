@@ -11,7 +11,21 @@
   <rights>All rights reserved 2026, GuCATs</rights>
   <subtitle>海納百川，有容乃大</subtitle>
   <title>GuCATs'摸鱼站</title>
-  <updated>2026-11-07T09:42:42.912Z</updated>
+  <updated>2026-11-09T13:47:11.545Z</updated>
+  <entry>
+    <author>
+      <name>GuCATs</name>
+    </author>
+    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <id>https://blog.gucats.com/posts/73ebed9d.html</id>
+    <link href="https://blog.gucats.com/posts/73ebed9d.html"/>
+    <published>2026-11-09T12:59:12.000Z</published>
+    <summary>解决 Windows 10/11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。</summary>
+    <title>重置 IE 与 Explorer 的搜索引擎</title>
+    <updated>2026-11-09T13:47:11.545Z</updated>
+  </entry>
   <entry>
     <author>
       <name>GuCATs</name>
@@ -299,19 +313,5 @@
     <summary>通过使用 DISM 和 PowerShell 命令管理 Windows 保留存储，包括获取当前状态、启用和禁用保留存储，以优化系统更新和存储空间。</summary>
     <title>管理保留的存储</title>
     <updated>2026-10-31T15:57:01.458Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>GuCATs</name>
-    </author>
-    <category term="教程" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
-    <id>https://blog.gucats.com/posts/fc28aee6.html</id>
-    <link href="https://blog.gucats.com/posts/fc28aee6.html"/>
-    <published>2026-03-18T14:37:55.000Z</published>
-    <summary>通过多种方法启用文件扩展名显示，包括修改注册表、使用命令行以及在不同版本的 Windows 文件资源管理器中调整设置。适用于 Windows XP 至 Windows 11 的详细操作步骤，涵盖图形界面和命令行方式，提供了便捷的解决方案。</summary>
-    <title>显示文件扩展名</title>
-    <updated>2026-10-31T15:54:05.206Z</updated>
   </entry>
 </feed>

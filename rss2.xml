@@ -6,7 +6,7 @@
     <description>海納百川，有容乃大</description>
     <language>zh-CN</language>
     <copyright>All rights reserved 2026, GuCATs</copyright>
-    <lastBuildDate>Sat, 07 Nov 2026 09:42:42 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 13:47:11 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <image>
       <url>https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png</url>
@@ -14,6 +14,16 @@
       <link>https://blog.gucats.com/</link>
     </image>
     <atom:link href="https://blog.gucats.com/rss2.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>重置 IE 与 Explorer 的搜索引擎</title>
+      <link>https://blog.gucats.com/posts/73ebed9d.html</link>
+      <description>解决 Windows 10/11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。</description>
+      <author>GuCATs</author>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
+      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
+      <pubDate>Mon, 09 Nov 2026 12:59:12 GMT</pubDate>
+    </item>
     <item>
       <title>阻止 Microsoft GameInput 安装</title>
       <link>https://blog.gucats.com/posts/460b8694.html</link>
@@ -225,16 +235,6 @@
       <category domain="https://blog.gucats.com/tags/DISM/">DISM</category>
       <category domain="https://blog.gucats.com/tags/PowerShell/">PowerShell</category>
       <pubDate>Tue, 28 Apr 2026 12:07:24 GMT</pubDate>
-    </item>
-    <item>
-      <title>显示文件扩展名</title>
-      <link>https://blog.gucats.com/posts/fc28aee6.html</link>
-      <description>通过多种方法启用文件扩展名显示，包括修改注册表、使用命令行以及在不同版本的 Windows 文件资源管理器中调整设置。适用于 Windows XP 至 Windows 11 的详细操作步骤，涵盖图形界面和命令行方式，提供了便捷的解决方案。</description>
-      <author>GuCATs</author>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      <category domain="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</category>
-      <category domain="https://blog.gucats.com/tags/Windows/">Windows</category>
-      <pubDate>Wed, 18 Mar 2026 14:37:55 GMT</pubDate>
     </item>
   </channel>
 </rss>

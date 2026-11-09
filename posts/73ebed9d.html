@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png">
+  <link rel="mask-icon" href="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Favicon.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha256-4Lad8m4ZWW1Lgb9+sMVLYEfnIh7BjV1NQMEe79Pviks=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.css" integrity="sha256-mdaMxrItEW6hMIVJJNPKuX0B7KCSJQVEv3mVY4N2we4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.gucats.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"vs2015","dark":"vs2015"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":300},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="解决 Windows 10&#x2F;11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重置 IE 与 Explorer 的搜索引擎">
+<meta property="og:url" content="https://blog.gucats.com/posts/73ebed9d.html">
+<meta property="og:site_name" content="GuCATs&#39;摸鱼站">
+<meta property="og:description" content="解决 Windows 10&#x2F;11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-11-09T12:59:12.000Z">
+<meta property="article:modified_time" content="2026-11-09T13:47:11.545Z">
+<meta property="article:author" content="GuCATs">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.gucats.com/posts/73ebed9d.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.gucats.com/posts/73ebed9d.html","path":"posts/73ebed9d.html","title":"重置 IE 与 Explorer 的搜索引擎"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>重置 IE 与 Explorer 的搜索引擎 | GuCATs'摸鱼站</title>
+  
+
+
+
+
+  <script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tv0aelb214");
+</script>
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.1.14/fancybox/fancybox.umd.js" integrity="sha256-QnJV4HT5r8i89ovZGRD86iynZqHerEbT2xt69vDM36I=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<meta name="baidu-site-verification" content="codeva-cUDE4yeiTB" />
+
+
+
+<meta name="msvalidate.01" content="0F4E55A98D34BC9B4ABBE33CB4988150" />
+
+
+
+<meta name="google-site-verification" content="b1jg-ZW0xRTOyo9xjdP9dhkmPRXMiG8fxtHKU1eXGSI" />
+<meta name="google-site-verification" content="6IezFJ8lnF-XE6JIqkBlbmhtxZ6cMygFrc5oJe2njqg" />
+
+
+
+<meta name="yandex-verification" content="681b2baea28a6c0a" />
+<meta name="yandex-verification" content="9fd6a05b4e7ffb4e" />
+
+
+
+
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "16c1664386bb49b8a56af11009161ccf"}'></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6ffe0a3dd7056984c8def3f2a59be11a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="GuCATs'摸鱼站" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="GuCATs'摸鱼站" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-search popup-trigger" aria-label="搜索" role="button">
+      <i class="fa fa-search fa-fw fa-lg"></i>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GuCATs'摸鱼站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">海納百川，有容乃大</p>
+  </div>
+
+  <div class="site-nav-toggle" aria-label="切换导航栏" role="button">
+      <i class="fa fa-ellipsis fa-fw fa-lg"></i>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-small-talk"><a href="/small-talk/" rel="section"><i class="fa fa-comments fa-fw"></i>Small Talk</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-expired-articles"><a href="/expired-articles/" rel="section"><i class="fa fa-trash fa-fw"></i>失效的文章</a></li><li class="menu-item menu-item-resources"><a href="/resources/" rel="section"><i class="fa fa-folder-open fa-fw"></i>资源</a></li><li class="menu-item menu-item-help"><a href="/help/" rel="section"><i class="fa fa-question-circle fa-fw"></i>帮助</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友情链接</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  
+  <template id="search-popup-template"><div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div></template>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%BD%AE%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E4%B8%BA-Bing"><span class="nav-number">2.</span> <span class="nav-text">重置搜索引擎为 Bing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GuCATs"
+      src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+  <p class="site-author-name" itemprop="name">GuCATs</p>
+  <div class="site-description" itemprop="description">海納百川，有容乃大</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">88</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Goo-aw233" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Goo-aw233" rel="noopener me external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS (Atom) → &#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS (Atom)</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/rss2.xml" title="RSS (RSS2) → &#x2F;rss2.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS (RSS2)</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener external nofollow noreferrer" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+<div class="links-of-blogroll-title">
+  <i class="fa fa-bullhorn fa-fw"></i> 公告
+</div>
+<div style="margin-top: 10px; font-size: 14px;">
+  1. 原站点 goo-aw233.github.io 已重定向至 blog.gucats.com<br>
+  2. 若无法加载<del>“访客地图”</del>与“访客统计”，请关闭广告拦截器
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.gucats.com/posts/73ebed9d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/Avatar.jpg">
+      <meta itemprop="name" content="GuCATs">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GuCATs'摸鱼站">
+      <meta itemprop="description" content="海納百川，有容乃大">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="重置 IE 与 Explorer 的搜索引擎 | GuCATs'摸鱼站">
+      <meta itemprop="description" content="解决 Windows 10&#x2F;11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          重置 IE 与 Explorer 的搜索引擎
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-11-09 20:59:12 / 修改时间：21:47:11" itemprop="dateCreated datePublished" datetime="2026-11-09T20:59:12+08:00">2026-11-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">解决 Windows 10/11 禁用 Internet Explorer 后，文件资源管理器（explorer.exe）地址栏搜索仍被强制锁定或回退至百度（带 80035161 渠道号）的问题，通过绕过 EUPP 哈希校验彻底重置为 Bing、Google 或自定义搜索引擎。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>相关阅读：<a href="/posts/6c22b95c.html" title="在 Windows 打开 Internet Explorer">在 Windows 打开 Internet Explorer</a></p>
+<p>在 Windows 10 与 Windows 11 中，即使微软已经停用独立的 Internet Explorer 11 并重定向至 Microsoft Edge，系统底层的外壳程序（<code>explorer.exe</code>）在地址栏输入非路径关键词时，依然会调用遗留的 <code>SearchScopes</code> 注册表接口发起网页搜索</p>
+<p>在简体中文版 Windows 镜像中，系统出厂预设了带有渠道推广标识的百度搜索（URL 包含 <code>tn=80035161_2_dg</code>）<br>如果仅通过注册表编辑器或常规脚本直接修改 <code>SearchScopes</code>，系统内置的 <strong>EUPP（End User Personalization Protection，终端用户个性化保护）</strong> 防篡改哈希校验机制会判定该配置失效，从而<strong>强制回滚到出厂预设的百度</strong></p>
+<p>使用 Windows PowerShell 脚本，可以使底层 <code>FeatureControl</code> 写入豁免配置关闭外壳进程的 EUPP 校验，并同步清洗 <code>HKEY_CURRENT_USER</code> 与 <code>HKEY_LOCAL_MACHINE</code> 下的所有残留项，实现彻底将资源管理器与 Internet Explorer 接口的默认搜索引擎重置为 Bing 或第三方搜索引擎</p>
+<h2 id="重置搜索引擎为-Bing"><a href="#重置搜索引擎为-Bing" class="headerlink" title="重置搜索引擎为 Bing"></a>重置搜索引擎为 Bing</h2><div class="note success"><p>推荐阅读：<a href="/posts/fc28aee6.html" title="显示文件扩展名">显示文件扩展名</a></p>
+</div>
+
+<p>新建文本文档，重命名为 <code>ResetIESearchScopesToBing.ps1</code>，将以下 Windows PowerShell 脚本内容保存</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Stop-Process</span> <span class="literal">-Name</span> iexplore <span class="literal">-Force</span> <span class="literal">-ErrorAction</span> SilentlyContinue</span><br><span class="line"></span><br><span class="line"><span class="variable">$targetProcesses</span> = <span class="selector-tag">@</span>(</span><br><span class="line">    <span class="string">&quot;cscript.exe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;explorer.exe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;iexplore.exe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;mshta.exe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;powershell.exe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pwsh.exe&quot;</span>,</span><br><span class="line">    <span class="string">&quot;wscript.exe&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="variable">$featurePaths</span> = <span class="selector-tag">@</span>(</span><br><span class="line">    <span class="string">&quot;HKLM:\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_EUPP_GLOBAL_FORCE_DISABLE&quot;</span>,</span><br><span class="line">    <span class="string">&quot;HKLM:\SOFTWARE\WOW6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_EUPP_GLOBAL_FORCE_DISABLE&quot;</span>,</span><br><span class="line">    <span class="string">&quot;HKCU:\Software\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_EUPP_GLOBAL_FORCE_DISABLE&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$path</span> <span class="keyword">in</span> <span class="variable">$featurePaths</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="operator">-not</span> (<span class="built_in">Test-Path</span> <span class="variable">$path</span>)) &#123; <span class="built_in">New-Item</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Force</span> | <span class="built_in">Out-Null</span> &#125;</span><br><span class="line">    <span class="keyword">foreach</span> (<span class="variable">$proc</span> <span class="keyword">in</span> <span class="variable">$targetProcesses</span>) &#123;</span><br><span class="line">        <span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Name</span> <span class="variable">$proc</span> <span class="literal">-Type</span> DWord <span class="literal">-Value</span> <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清理 EUPP 散列缓存</span></span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;HKCU:\Software\Microsoft\Internet Explorer\EUPP&quot;</span> <span class="literal">-Recurse</span> <span class="literal">-Force</span> <span class="literal">-ErrorAction</span> SilentlyContinue</span><br><span class="line"></span><br><span class="line"><span class="variable">$bingGuid</span> = <span class="string">&quot;&#123;0633EE93-D776-472f-A0FF-E1416B8B2E3A&#125;&quot;</span></span><br><span class="line"><span class="variable">$bingProps</span> = <span class="selector-tag">@</span>&#123;</span><br><span class="line">    <span class="string">&quot;DisplayName&quot;</span>            = <span class="string">&quot;Bing&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURL&quot;</span>             = <span class="string">&quot;http://www.bing.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURLFallback&quot;</span>     = <span class="string">&quot;http://www.bing.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;URL&quot;</span>                    = <span class="string">&quot;http://www.bing.com/search?q=&#123;searchTerms&#125;&amp;src=IE-SearchBox&amp;FORM=IESR02&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURL&quot;</span>         = <span class="string">&quot;http://api.bing.com/qsml.aspx?query=&#123;searchTerms&#125;&amp;maxwidth=&#123;ie:maxWidth&#125;&amp;rowheight=&#123;ie:rowHeight&#125;&amp;sectionHeight=&#123;ie:sectionHeight&#125;&amp;FORM=IESS02&amp;market=&#123;language&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURLFallback&quot;</span> = <span class="string">&quot;http://api.bing.com/qsml.aspx?query=&#123;searchTerms&#125;&amp;maxwidth=&#123;ie:maxWidth&#125;&amp;rowheight=&#123;ie:rowHeight&#125;&amp;sectionHeight=&#123;ie:sectionHeight&#125;&amp;FORM=IESS02&amp;market=&#123;language&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;NTURL&quot;</span>                  = <span class="string">&quot;http://www.bing.com/search?q=&#123;searchTerms&#125;&amp;src=IE-SearchBox&amp;FORM=IENTSR&quot;</span></span><br><span class="line">    <span class="string">&quot;NTTopResultURL&quot;</span>         = <span class="string">&quot;http://www.bing.com/search?q=&#123;searchTerms&#125;&amp;src=IE-SearchBox&amp;FORM=IENTTR&quot;</span></span><br><span class="line">    <span class="string">&quot;NTSuggestionsURL&quot;</span>       = <span class="string">&quot;http://api.bing.com/qsml.aspx?query=&#123;searchTerms&#125;&amp;market=&#123;language&#125;&amp;maxwidth=&#123;ie:maxWidth&#125;&amp;rowheight=&#123;ie:rowHeight&#125;&amp;sectionHeight=&#123;ie:sectionHeight&#125;&amp;FORM=IENTSS&quot;</span></span><br><span class="line">    <span class="string">&quot;NTLogoURL&quot;</span>              = <span class="string">&quot;http://go.microsoft.com/fwlink/?LinkID=403856&amp;language=&#123;language&#125;&amp;scale=&#123;scalelevel&#125;&amp;contrast=&#123;contrast&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;ShowSearchSuggestions&quot;</span>  = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$scopesRoots</span> = <span class="selector-tag">@</span>(</span><br><span class="line">    <span class="string">&quot;HKCU:\Software\Microsoft\Internet Explorer\SearchScopes&quot;</span>,</span><br><span class="line">    <span class="string">&quot;HKLM:\SOFTWARE\Microsoft\Internet Explorer\SearchScopes&quot;</span>,</span><br><span class="line">    <span class="string">&quot;HKLM:\SOFTWARE\WOW6432Node\Microsoft\Internet Explorer\SearchScopes&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$root</span> <span class="keyword">in</span> <span class="variable">$scopesRoots</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Test-Path</span> <span class="variable">$root</span>) &#123;</span><br><span class="line">        <span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$root</span> <span class="literal">-Name</span> <span class="string">&quot;DefaultScope&quot;</span> <span class="literal">-Value</span> <span class="variable">$bingGuid</span> <span class="literal">-ErrorAction</span> SilentlyContinue</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 删除旧百度或推广项</span></span><br><span class="line">        <span class="built_in">Get-ChildItem</span> <span class="literal">-Path</span> <span class="variable">$root</span> <span class="literal">-ErrorAction</span> SilentlyContinue | <span class="built_in">ForEach-Object</span> &#123;</span><br><span class="line">            <span class="variable">$prop</span> = <span class="built_in">Get-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$_</span>.PsPath <span class="literal">-ErrorAction</span> SilentlyContinue</span><br><span class="line">            <span class="keyword">if</span> (<span class="variable">$prop</span>.URL <span class="operator">-like</span> <span class="string">&quot;*baidu.com*&quot;</span> <span class="operator">-or</span> <span class="variable">$prop</span>.URL <span class="operator">-like</span> <span class="string">&quot;*80035161*&quot;</span> <span class="operator">-or</span> <span class="variable">$_</span>.PSChildName <span class="operator">-eq</span> <span class="string">&quot;&#123;64AF4D11-6492-4C25-B014-B6C6CEE3B0C5&#125;&quot;</span>) &#123;</span><br><span class="line">                <span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="variable">$_</span>.PsPath <span class="literal">-Recurse</span> <span class="literal">-Force</span> <span class="literal">-ErrorAction</span> SilentlyContinue</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 写入 Bing</span></span><br><span class="line">        <span class="variable">$bingPath</span> = <span class="built_in">Join-Path</span> <span class="variable">$root</span> <span class="variable">$bingGuid</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="operator">-not</span> (<span class="built_in">Test-Path</span> <span class="variable">$bingPath</span>)) &#123; <span class="built_in">New-Item</span> <span class="literal">-Path</span> <span class="variable">$bingPath</span> <span class="literal">-Force</span> | <span class="built_in">Out-Null</span> &#125;</span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$key</span> <span class="keyword">in</span> <span class="variable">$bingProps</span>.Keys) &#123;</span><br><span class="line">            <span class="variable">$val</span> = <span class="variable">$bingProps</span><span class="function">[<span class="variable">$key</span>]</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="variable">$val</span> <span class="operator">-is</span> [<span class="built_in">int</span>]) &#123;</span><br><span class="line">                <span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$bingPath</span> <span class="literal">-Name</span> <span class="variable">$key</span> <span class="literal">-Type</span> DWord <span class="literal">-Value</span> <span class="variable">$val</span> <span class="literal">-Force</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$bingPath</span> <span class="literal">-Name</span> <span class="variable">$key</span> <span class="literal">-Type</span> String <span class="literal">-Value</span> <span class="variable">$val</span> <span class="literal">-Force</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统一修正 SearchUrl 默认模板</span></span><br><span class="line"><span class="variable">$searchUrlPaths</span> = <span class="selector-tag">@</span>(</span><br><span class="line">    <span class="string">&quot;HKCU:\Software\Microsoft\Internet Explorer\SearchUrl&quot;</span>,</span><br><span class="line">    <span class="string">&quot;HKLM:\SOFTWARE\Microsoft\Internet Explorer\SearchUrl&quot;</span>,</span><br><span class="line">    <span class="string">&quot;HKLM:\SOFTWARE\WOW6432Node\Microsoft\Internet Explorer\SearchUrl&quot;</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$path</span> <span class="keyword">in</span> <span class="variable">$searchUrlPaths</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="operator">-not</span> (<span class="built_in">Test-Path</span> <span class="variable">$path</span>)) &#123; <span class="built_in">New-Item</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Force</span> | <span class="built_in">Out-Null</span> &#125;</span><br><span class="line">    <span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Name</span> <span class="string">&quot;(Default)&quot;</span> <span class="literal">-Value</span> <span class="string">&quot;http://www.bing.com/search?q=%s&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Stop-Process</span> <span class="literal">-Name</span> explorer <span class="literal">-Force</span></span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><p>所有的操作都需要管理员身份，执行前请二选一执行以下操作：</p>
+<ul>
+<li>按下 <kbd>WIN</kbd> + <kbd>X</kbd> 以打开“高级菜单”，选择“终端管理员”，“Windows PowerShell (管理员)”或“命令提示符(管理员)”</li>
+<li>按下 <kbd>WIN</kbd> + <kbd>Q</kbd> 或 <kbd>WIN</kbd> + <kbd>S</kbd> 以打开“Windows 搜索”，输入 <code>wt.exe</code>（终端）、<code>cmd.exe</code>（命令提示符）或 <code>powershell.exe</code>（Windows PowerShell），选择最佳匹配结果并点击“以管理员身份运行”</li>
+</ul>
+<p>如果运行的控制台不为 CMD（命令提示符），请输入 <code>cmd.exe</code> 以启动它</p>
+</div>
+
+<p>在以管理员身份运行的 CMD 中，执行这个脚本：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell.exe -ExecutionPolicy Bypass -File &quot;文件路径&quot;</span><br></pre></td></tr></table></figure>
+
+<p>例如，我将 <code>ResetIESearchScopesToBing.ps1</code> 保存到了 C 盘根目录，则命令如下：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell.exe -ExecutionPolicy Bypass -File &quot;C:\ResetIESearchScopesToBing.ps1&quot;</span><br></pre></td></tr></table></figure>
+
+<p><span style="background-color: black; color: black; cursor: pointer;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">Windows PowerShell 下可以直接执行：<br>&amp; “C:\ResetIESearchScopesToBing.ps1”<br>但是要手动打开 Windows 开发者模式</span></p>
+<details>
+
+<summary>如果使用其他搜索引擎</summary>
+
+<p>如果需要去除网站图标与搜索联想，仅需要保留 <code>$bingProps</code> 字段的 <code>DisplayName</code>、<code>URL</code> 与 <code>ShowSearchSuggestions</code>（该项设为 <code>0</code>）<br>以下为旧模板，将其中的内容替换为新模板内容即可</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$bingGuid</span> = <span class="string">&quot;&#123;0633EE93-D776-472f-A0FF-E1416B8B2E3A&#125;&quot;</span></span><br><span class="line"><span class="variable">$bingProps</span> = <span class="selector-tag">@</span>&#123;</span><br><span class="line">    <span class="string">&quot;DisplayName&quot;</span>            = <span class="string">&quot;Bing&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURL&quot;</span>             = <span class="string">&quot;http://www.bing.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURLFallback&quot;</span>     = <span class="string">&quot;http://www.bing.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;URL&quot;</span>                    = <span class="string">&quot;http://www.bing.com/search?q=&#123;searchTerms&#125;&amp;src=IE-SearchBox&amp;FORM=IESR02&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURL&quot;</span>         = <span class="string">&quot;http://api.bing.com/qsml.aspx?query=&#123;searchTerms&#125;&amp;maxwidth=&#123;ie:maxWidth&#125;&amp;rowheight=&#123;ie:rowHeight&#125;&amp;sectionHeight=&#123;ie:sectionHeight&#125;&amp;FORM=IESS02&amp;market=&#123;language&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURLFallback&quot;</span> = <span class="string">&quot;http://api.bing.com/qsml.aspx?query=&#123;searchTerms&#125;&amp;maxwidth=&#123;ie:maxWidth&#125;&amp;rowheight=&#123;ie:rowHeight&#125;&amp;sectionHeight=&#123;ie:sectionHeight&#125;&amp;FORM=IESS02&amp;market=&#123;language&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;NTURL&quot;</span>                  = <span class="string">&quot;http://www.bing.com/search?q=&#123;searchTerms&#125;&amp;src=IE-SearchBox&amp;FORM=IENTSR&quot;</span></span><br><span class="line">    <span class="string">&quot;NTTopResultURL&quot;</span>         = <span class="string">&quot;http://www.bing.com/search?q=&#123;searchTerms&#125;&amp;src=IE-SearchBox&amp;FORM=IENTTR&quot;</span></span><br><span class="line">    <span class="string">&quot;NTSuggestionsURL&quot;</span>       = <span class="string">&quot;http://api.bing.com/qsml.aspx?query=&#123;searchTerms&#125;&amp;market=&#123;language&#125;&amp;maxwidth=&#123;ie:maxWidth&#125;&amp;rowheight=&#123;ie:rowHeight&#125;&amp;sectionHeight=&#123;ie:sectionHeight&#125;&amp;FORM=IENTSS&quot;</span></span><br><span class="line">    <span class="string">&quot;NTLogoURL&quot;</span>              = <span class="string">&quot;http://go.microsoft.com/fwlink/?LinkID=403856&amp;language=&#123;language&#125;&amp;scale=&#123;scalelevel&#125;&amp;contrast=&#123;contrast&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;ShowSearchSuggestions&quot;</span>  = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Name</span> <span class="string">&quot;(Default)&quot;</span> <span class="literal">-Value</span> <span class="string">&quot;http://www.bing.com/search?q=%s&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>DuckDuckGo：</p>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$bingGuid</span> = <span class="string">&quot;&#123;4B4A9E24-D4C8-4D46-9D6C-8684D3D7E951&#125;&quot;</span></span><br><span class="line"><span class="variable">$bingProps</span> = <span class="selector-tag">@</span>&#123;</span><br><span class="line">    <span class="string">&quot;DisplayName&quot;</span>            = <span class="string">&quot;DuckDuckGo&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURL&quot;</span>             = <span class="string">&quot;https://duckduckgo.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURLFallback&quot;</span>     = <span class="string">&quot;https://duckduckgo.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;URL&quot;</span>                    = <span class="string">&quot;https://duckduckgo.com/?q=&#123;searchTerms&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURL&quot;</span>         = <span class="string">&quot;https://duckduckgo.com/ac/?q=&#123;searchTerms&#125;&amp;type=list&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURLFallback&quot;</span> = <span class="string">&quot;https://duckduckgo.com/ac/?q=&#123;searchTerms&#125;&amp;type=list&quot;</span></span><br><span class="line">    <span class="string">&quot;ShowSearchSuggestions&quot;</span>  = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Name</span> <span class="string">&quot;(Default)&quot;</span> <span class="literal">-Value</span> <span class="string">&quot;https://duckduckgo.com/?q=%s&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Google：</p>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$bingGuid</span> = <span class="string">&quot;&#123;B4B52382-774A-4847-B053-C8B99E26F225&#125;&quot;</span></span><br><span class="line"><span class="variable">$bingProps</span> = <span class="selector-tag">@</span>&#123;</span><br><span class="line">    <span class="string">&quot;DisplayName&quot;</span>            = <span class="string">&quot;Google&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURL&quot;</span>             = <span class="string">&quot;https://www.google.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;FaviconURLFallback&quot;</span>     = <span class="string">&quot;https://www.google.com/favicon.ico&quot;</span></span><br><span class="line">    <span class="string">&quot;URL&quot;</span>                    = <span class="string">&quot;https://www.google.com/search?q=&#123;searchTerms&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURL&quot;</span>         = <span class="string">&quot;https://www.google.com/complete/search?output=toolbar&amp;q=&#123;searchTerms&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;SuggestionsURLFallback&quot;</span> = <span class="string">&quot;https://www.google.com/complete/search?output=toolbar&amp;q=&#123;searchTerms&#125;&quot;</span></span><br><span class="line">    <span class="string">&quot;ShowSearchSuggestions&quot;</span>  = <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Name</span> <span class="string">&quot;(Default)&quot;</span> <span class="literal">-Value</span> <span class="string">&quot;https://www.google.com/search?q=%s&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他：<br>  其他搜索引擎可以自己搜集一下他们的 GUID，或自定义<br>   可通过 PowerShell 命令以生成标准 GUID：<code>[guid]::NewGuid().ToString(&quot;B&quot;).ToUpper()</code></p>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$bingGuid</span> = <span class="string">&quot;标准 GUID 值&quot;</span></span><br><span class="line"><span class="variable">$bingProps</span> = <span class="selector-tag">@</span>&#123;</span><br><span class="line">    <span class="string">&quot;DisplayName&quot;</span>           = <span class="string">&quot;显示名称&quot;</span></span><br><span class="line">    <span class="string">&quot;URL&quot;</span>                   = <span class="string">&quot;https://example.com/search?q=&#123;searchTerms&#125;&quot;</span> <span class="comment"># 关键词必须为 &#123;searchTerms&#125;</span></span><br><span class="line">    <span class="string">&quot;ShowSearchSuggestions&quot;</span> = <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 底层模板中的关键词必须为 %s</span></span><br><span class="line"><span class="built_in">Set-ItemProperty</span> <span class="literal">-Path</span> <span class="variable">$path</span> <span class="literal">-Name</span> <span class="string">&quot;(Default)&quot;</span> <span class="literal">-Value</span> <span class="string">&quot;https://example.com/search?q=%s&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</details>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol>
+<li><p>URL 后缀中的 <code>pc=EUPP_</code> 是什么<br>在切换为 Bing 后，如果在资源管理器地址栏输入内容搜索，最终打开的链接可能会附带 <code>&amp;pc=EUPP_</code> 参数<br>这是 Windows 外壳组件在调用 Bing 接口时原生组装的 Partner Code（渠道归因标识），代表流量来源于 Windows 外壳环境</p>
+</li>
+<li><p>为什么没有通过图形界面修改的方案<br>在 Windows 10&#x2F;11 弃用 Internet Explorer 之后，Windows 中绝大部分 Internet Explorer 相关的窗口被删除，“管理加载项”窗口已经被系统动态库移除了“搜索提供程序”选项卡</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/WeChat_Rewards_Code.png" alt="GuCATs 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets1@main/Imgs/Blog/AFDIAN.png" alt="GuCATs AFDIAN">
+        <span>AFDIAN</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>GuCATs
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://blog.gucats.com/posts/73ebed9d.html" title="重置 IE 与 Explorer 的搜索引擎">https://blog.gucats.com/posts/73ebed9d.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (Atom)</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS (RSS2)</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/460b8694.html" rel="prev" title="阻止 Microsoft GameInput 安装">
+                  <i class="fa fa-angle-left"></i> 阻止 Microsoft GameInput 安装
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2021 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa-solid fa-tower-cell"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">GuCATs</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">165k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">2:30</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<div class="run-time">
+  <i class="far fa-clock"></i>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+</div>
+
+<script>
+  var now = new Date();
+  function createtime() {
+    var grt = new Date("11/15/2021 00:00:00"); 
+    now.setTime(now.getTime() + 250);
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    var dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+    var hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    var mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * mnum * 60) - (60 * hnum * 60);
+    var seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    var snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+    document.getElementById("timeDate").innerHTML = "本站已运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval(createtime, 250);
+</script>
+
+
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Goo-aw233" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
