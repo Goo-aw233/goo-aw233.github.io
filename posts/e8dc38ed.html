@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Why-Does-Windows-11-Always-Use-More-RAM/RAMMap.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/Goo-aw233/BlogAssets2@main/Imgs/Why-Does-Windows-11-Always-Use-More-RAM/WebView2-Resources-Usage.png">
 <meta property="article:published_time" content="2026-08-10T03:45:14.000Z">
-<meta property="article:modified_time" content="2026-08-10T13:44:05.325Z">
+<meta property="article:modified_time" content="2026-11-09T14:27:43.318Z">
 <meta property="article:author" content="GuCATs">
 <meta property="article:tag" content="Small Talk">
 <meta property="article:tag" content="Windows">
@@ -325,9 +325,15 @@ var _hmt = _hmt || [];
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2026-08-10 11:45:14 / 修改时间：21:44:05" itemprop="dateCreated datePublished" datetime="2026-08-10T11:45:14+08:00">2026-08-10</time>
+      <time title="创建时间：2026-08-10 11:45:14" itemprop="dateCreated datePublished" datetime="2026-08-10T11:45:14+08:00">2026-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-11-09 22:27:43" itemprop="dateModified" datetime="2026-11-09T22:27:43+08:00">2026-11-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -393,6 +399,7 @@ var _hmt = _hmt || [];
 <ol start="2">
 <li>以“天气”为例，据 Windows Latest 测算，工作状态下可达到约 <code>1.2 GB</code> 的内存占用，挂起时内存占用约 <code>600 MB</code>。<sup><a href="#ref1">[1]</a></sup></li>
 </ol>
+<p><strong>当然，极好的消息是，Microsoft 正在积极推进使用 WinUI 原生开发，而不是使用 Edge WebView2</strong></p>
 <h2 id="基于虚拟化的安全"><a href="#基于虚拟化的安全" class="headerlink" title="基于虚拟化的安全"></a>基于虚拟化的安全</h2><p>为提升安全性，Windows 11 24H2 起默认启用了基于虚拟化的安全功能（VBS），该功能引入了新的安全模型，使 Windows 运行更加安全，不易受到恶意软件的侵袭，但其代价是需要额外的内存来运行虚拟化环境。根据 Broadcom 论坛用户反馈，Windows 11 在开启 <code>VBS</code> 时，<code>Secure System</code> 的占用可能高达 <code>2 GB</code><sup><a href="#ref1">[2]</a></sup>，而在正常情况下该进程仅占用约 <code>100 MB</code> 的内存。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
   <li id="ref1"><a href="https://www.windowslatest.com/2026/08/09/windows-11s-weather-app-uses-5x-the-ram-of-macos-weather-and-it-still-shows-ads" target="_blank" rel="noopener external nofollow noreferrer">Windows 11 is a memory hog, even Microsoft’s Weather uses 1.2GB of RAM, 5x more than macOS Weather</a></li>

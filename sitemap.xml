@@ -11,6 +11,33 @@
   </url>
   
   <url>
+    <loc>https://blog.gucats.com/posts/9c39dfbf.html</loc>
+    
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/posts/c916af86.html</loc>
+    
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/posts/e8dc38ed.html</loc>
+    
+    <lastmod>2026-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.gucats.com/posts/60fbf8fb.html</loc>
     
     <lastmod>2026-11-09</lastmod>
@@ -308,15 +335,6 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/posts/9c39dfbf.html</loc>
-    
-    <lastmod>2026-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.gucats.com/expired-articles/index.html</loc>
     
     <lastmod>2026-10-21</lastmod>
@@ -443,15 +461,6 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/posts/e8dc38ed.html</loc>
-    
-    <lastmod>2026-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.gucats.com/posts/68ecd02d.html</loc>
     
     <lastmod>2026-08-10</lastmod>
@@ -525,15 +534,6 @@
   
   <url>
     <loc>https://blog.gucats.com/posts/bb8161a8.html</loc>
-    
-    <lastmod>2026-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/posts/c916af86.html</loc>
     
     <lastmod>2026-07-10</lastmod>
     
@@ -896,56 +896,7 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/tags/MS-DOS/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/VMware-Workstation/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/DISM/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.gucats.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/UUP/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/PowerShell/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/macOS/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/tags/Linux/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -966,7 +917,49 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/tags/Debian/</loc>
+    <loc>https://blog.gucats.com/tags/macOS/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/tags/DISM/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/tags/UUP/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/tags/PowerShell/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/tags/Linux/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/tags/MS-DOS/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/tags/VMware-Workstation/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1000,6 +993,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.gucats.com/tags/Debian/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1024,7 +1024,7 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/MS-DOS/</loc>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1038,7 +1038,21 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/</loc>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1059,13 +1073,6 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/macOS/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -1073,21 +1080,7 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/iOS/%E8%B6%8A%E7%8B%B1/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/Debian/</loc>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/MS-DOS/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1101,14 +1094,21 @@
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <loc>https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/Web/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.gucats.com/categories/%E7%BC%96%E7%A8%8B/Web/</loc>
+    <loc>https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Linux/Debian/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
