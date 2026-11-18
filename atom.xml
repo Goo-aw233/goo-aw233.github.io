@@ -49,8 +49,8 @@
     <category term="虚拟机" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     <category term="VMware" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/"/>
     <category term="Workstation" scheme="https://blog.gucats.com/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/VMware/Workstation/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="VMware Workstation" scheme="https://blog.gucats.com/tags/VMware-Workstation/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <id>https://blog.gucats.com/posts/5142f5cf.html</id>
     <link href="https://blog.gucats.com/posts/5142f5cf.html"/>
     <published>2026-10-31T15:50:15.000Z</published>
@@ -183,8 +183,8 @@
     </author>
     <category term="Small Talk" scheme="https://blog.gucats.com/categories/Small-Talk/"/>
     <category term="Windows" scheme="https://blog.gucats.com/categories/Small-Talk/Windows/"/>
-    <category term="Small Talk" scheme="https://blog.gucats.com/tags/Small-Talk/"/>
     <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
+    <category term="Small Talk" scheme="https://blog.gucats.com/tags/Small-Talk/"/>
     <id>https://blog.gucats.com/posts/e8dc38ed.html</id>
     <link href="https://blog.gucats.com/posts/e8dc38ed.html"/>
     <published>2026-08-10T03:45:14.000Z</published>
@@ -294,7 +294,7 @@
     <published>2026-04-28T12:09:42.000Z</published>
     <summary>查找 GUID，通过使用 MicrosoftProgram_Install_and_Uninstall.meta.diagcab 疑难解答工具，卸载 Windows 上失效的安装程序，清理注册表和缓存目录。</summary>
     <title>卸载失效的安装程序</title>
-    <updated>2026-07-09T13:19:32.706Z</updated>
+    <updated>2026-11-18T10:42:41.215Z</updated>
   </entry>
   <entry>
     <author>
@@ -304,8 +304,8 @@
     <category term="Windows" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/DISM/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/categories/%E6%95%99%E7%A8%8B/Windows/PowerShell/"/>
-    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="DISM" scheme="https://blog.gucats.com/tags/DISM/"/>
+    <category term="Windows" scheme="https://blog.gucats.com/tags/Windows/"/>
     <category term="PowerShell" scheme="https://blog.gucats.com/tags/PowerShell/"/>
     <id>https://blog.gucats.com/posts/269758b0.html</id>
     <link href="https://blog.gucats.com/posts/269758b0.html"/>
